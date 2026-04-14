@@ -1,2 +1,357 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>FP Radar</title><link>https://insforca.github.io/fp-radar-rss/</link><description>Inicializando...</description></channel></rss>
+<?xml version="1.0" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>FP Radar :: Señales de mercado FP</title>
+    <link>https://insforca.github.io/fp-radar-rss/</link>
+    <description>Señales de mercado para Formación Profesional en España — IOS scores, LinkedIn Pulse y más.</description>
+    <language>es</language>
+    <lastBuildDate>Tue, 14 Apr 2026 06:54:58 +0000</lastBuildDate>
+    <atom:link href="https://insforca.github.io/fp-radar-rss/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>ROJA</title>
+      <link>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</link>
+      <guid>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</guid>
+      <description>[IOS: 75] LinkedIn Pulse (Juan, Hostelería y Turismo Tenerife): 'La FP DUAL en Canarias ya NO es opcional — es modalidad obligatoria.' Artículo técnico sobre determinación RA y evaluación compartida: tutor empresa NO califica módulos, aporta evidencias; profesorado evalúa y decide. Plan Formativo Individualizado (PFI) bajo liderazgo pedagógico del centro. Sector hostelería Tenerife: la Dual obliga a mayor planificación pero revaloriza al profesorado.</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>AMARILLA</title>
+      <link>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</link>
+      <guid>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</guid>
+      <description>[IOS: 65] Cámara de Comercio de Gran Canaria: Curso Formación Tutores/as de Empresa FP Dual Canarias (#EuropaSeSiente). Contenidos: marco normativo FP Dual Canarias, acogida del aprendiz, planificación y seguimiento formación, evaluación aprendizaje en empresa, de trabajador/a a formador/a. Plazas limitadas.</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>AMARILLA</title>
+      <link>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</link>
+      <guid>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</guid>
+      <description>[IOS: 63] Ashotel circular 023/2026: 9ª convocatoria FP Dual Alemana en hostelería Tenerife (FEDA Madrid / AHK Spanien). Titulación profesional alemana + Deutsches Sprachdiplom I. Empresas hoteleras acogen alumnos multilingüe: 360€/mes beca alumno + ~290€/mes aportación escuela. Rotación todos departamentos (cocina, restaurante, pisos, recepción). 40h/semana. Convenio FEDA + FREMAP. Contacto: Cornelia Kerz (FEDA Madrid).</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>AMARILLA</title>
+      <link>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</link>
+      <guid>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</guid>
+      <description>[IOS: 52] SCE Canarias: Concesión definitiva FPED 2025 — 67.561.836,25€ (Grado C: 42,6M€ + especialidades: 24,9M€). Programación 2025-2026: Tenerife 457 cursos, Gran Canaria 550, Lanzarote 237. Hostelería, turismo e IA reforzadas. DATO CRÍTICO: solo 40 PFAE en marcha de 127 concedidos — 87 proyectos (68%) sin iniciar. Formación en empresa: 3€/hora/alumno.</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>DUAL CANARIAS</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/educacion/cec/publicaciones/presentacion-del-informe-sobre-la-realidad-educativa-2026-contexto-escolarizacion-y-recursos/&amp;ct=ga&amp;cd=CAEYBCoUMTEyNDUyMTIyNTQ5ODM1ODk5NTQyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1PKcKjh-v04QsIA6doIPPp</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/educacion/cec/publicaciones/presentacion-del-informe-sobre-la-realidad-educativa-2026-contexto-escolarizacion-y-recursos/&amp;ct=ga&amp;cd=CAEYBCoUMTEyNDUyMTIyNTQ5ODM1ODk5NTQyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1PKcKjh-v04QsIA6doIPPp</guid>
+      <description>[IOS: 42] Presentación del Informe sobre la realidad educativa 2026. Contexto,
+escolarización y recursos.
+Gobierno de Canarias
+31 enero, 2025. Visita al nuevo Centro Integrado de Formación Profesional
+de Adeje dentro del seguimiento de la implantación de la FP Dual. 4 ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>VERDE</title>
+      <link>https://www.instagram.com/p/DW9B9T1Fr5b/</link>
+      <guid>https://www.instagram.com/p/DW9B9T1Fr5b/</guid>
+      <description>[IOS: 38] Instagram @fp_canarias (10 abr 2026, @educacion_gobcan): 'La FP en Canarias ampliará su oferta con nuevos estudios, dobles...' Señal expansión oferta FP 2026/2027. Contexto: admisiones en curso, pruebas acceso 9 mayo 2026.</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>DUAL CANARIAS</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesjosearencibiagil/%3Fp%3D15897&amp;ct=ga&amp;cd=CAEYACoUMTQ1NzI4MjM4MjYyNTAyMjQ5MDEyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3zCeyQY88xdyRUhpP2XzId</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesjosearencibiagil/%3Fp%3D15897&amp;ct=ga&amp;cd=CAEYACoUMTQ1NzI4MjM4MjYyNTAyMjQ5MDEyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3zCeyQY88xdyRUhpP2XzId</guid>
+      <description>[IOS: 35] Cierre de las instalaciones y paso a clases telemáticas por alerta
+meteorológica
+Gobierno de Canarias
+Formación Profesional (FCT y FP Dual): El alumnado que se encuentra
+realizando la Formación en Centros de Trabajo o cursando la modalidad Dual,
+NO ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>SOLICITUD DE PLAZAS próximo curso 26-27 ESO - Gobierno de Canarias
+Gobierno de Canarias
+Implantación FP DUAL Canarias. B</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/14/solicitud-de-plazas-proximo-curso-24-25-eso/&amp;ct=ga&amp;cd=CAEYACoUMTYxNjgxMDYwNDIxNDM0OTQ1OTEyHDA5MWM2YWM3MDkyNTY0YTg6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1tfsIUQZDn1lEoSfrhwYRq</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/14/solicitud-de-plazas-proximo-curso-24-25-eso/&amp;ct=ga&amp;cd=CAEYACoUMTYxNjgxMDYwNDIxNDM0OTQ1OTEyHDA5MWM2YWM3MDkyNTY0YTg6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1tfsIUQZDn1lEoSfrhwYRq</guid>
+      <description>[IOS: 34] SOLICITUD DE PLAZAS próximo curso 26-27 ESO - Gobierno de Canarias
+Gobierno de Canarias
+Implantación FP DUAL Canarias. BECAS FORMACIÓN PROFESIONAL DUAL. “EL FSE
+invierte en tu futuro. Este centro participa en el Programa de Cooperación
+...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>El profesorado del centro viaja a Finlandia para aprender sobre su sistema
+educativo de ...
+Gobierno de Canarias
+... For</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/03/13/profesorado-viaja-finlandia-aprender-sistema-educativo-formacion-profesional/&amp;ct=ga&amp;cd=CAEYACoSNDQ4OTQyMDkwNDMzNDgxMzk3MhwwOTFjNmFjNzA5MjU2NGE4OmNvbTplczpFUzpS&amp;usg=AOvVaw0vw1UVPdZR0Yhd1rixz4fc</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/03/13/profesorado-viaja-finlandia-aprender-sistema-educativo-formacion-profesional/&amp;ct=ga&amp;cd=CAEYACoSNDQ4OTQyMDkwNDMzNDgxMzk3MhwwOTFjNmFjNzA5MjU2NGE4OmNvbTplczpFUzpS&amp;usg=AOvVaw0vw1UVPdZR0Yhd1rixz4fc</guid>
+      <description>[IOS: 32] El profesorado del centro viaja a Finlandia para aprender sobre su sistema
+educativo de ...
+Gobierno de Canarias
+... Formación Profesional, FP Dual, Red de Emprendimiento, Red de ...
+Canarias · Aviso Legal Política de privacidad Sugerencias y reclamaciones.</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>SUSPENSIÓN ACT. LECTIVA | I.E.S PÉREZ GALDÓS - Gobierno de Canarias
+Gobierno de Canarias
+... FP DUAL. DOCUMENTOS. BOLETÍ</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesperezgaldos/2026/03/18/suspension-actividad-lectiva-2/&amp;ct=ga&amp;cd=CAEYAyoTMTcyMzA5MDQzMzUzNjgxOTQwNTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3FnevPTybVBrYKaUrkCcmd</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesperezgaldos/2026/03/18/suspension-actividad-lectiva-2/&amp;ct=ga&amp;cd=CAEYAyoTMTcyMzA5MDQzMzUzNjgxOTQwNTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3FnevPTybVBrYKaUrkCcmd</guid>
+      <description>[IOS: 30] SUSPENSIÓN ACT. LECTIVA | I.E.S PÉREZ GALDÓS - Gobierno de Canarias
+Gobierno de Canarias
+... FP DUAL. DOCUMENTOS. BOLETÍN FAMILIAS 25-26 · PGA ACCESO PROFESORADO ·
+PGA ... La Consejería de Educación, Formación Profesional, Actividad Física
+y ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Educación adapta la actividad lectiva en Gran Canaria ante la evolución de
+la situación ...
+Gobierno de Canarias
+... FP </title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesagaldar/2026/03/24/salida-anticipada-de-alumnado-y-suspension-de-actividad-lectiva/&amp;ct=ga&amp;cd=CAEYBCoTODQ0MTQ3MDExMjQ3MTU5MzA5MjIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw10hyLE18l488bIgrw6ArVZ</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesagaldar/2026/03/24/salida-anticipada-de-alumnado-y-suspension-de-actividad-lectiva/&amp;ct=ga&amp;cd=CAEYBCoTODQ0MTQ3MDExMjQ3MTU5MzA5MjIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw10hyLE18l488bIgrw6ArVZ</guid>
+      <description>[IOS: 29] Educación adapta la actividad lectiva en Gran Canaria ante la evolución de
+la situación ...
+Gobierno de Canarias
+... FP DUAL [NUEVO] · FORMACIÓN PROFESIONAL DUAL · Becas para el alumnado
+de FP ... Canarias y en coordinación con los servicios de emergencias del
+Cabildo ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Una experiencia con mucho sabor | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+Becas para la FP Dual 2022/23 · </title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/03/16/una-experiencia-con-mucho-sabor/&amp;ct=ga&amp;cd=CAEYACoTMjU0MjA1MDEzMjg1MzAzMjU3NDIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3JBiFC1iZxQjMRy9I7ZfoZ</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/03/16/una-experiencia-con-mucho-sabor/&amp;ct=ga&amp;cd=CAEYACoTMjU0MjA1MDEzMjg1MzAzMjU3NDIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3JBiFC1iZxQjMRy9I7ZfoZ</guid>
+      <description>[IOS: 29] Una experiencia con mucho sabor | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+Becas para la FP Dual 2022/23 · Programa: Impulso a la FP DUAL · Evaluación
+y Acreditación de Competencias Profesionales · Redes y Proyectos · AULA ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>SOLICITUD DE PLAZAS próximo curso 26-27 ESO - Gobierno de Canarias
+Gobierno de Canarias
+Implantación FP DUAL Canarias ..</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/14/solicitud-de-plazas-proximo-curso-24-25-eso/&amp;ct=ga&amp;cd=CAEYACoUMTQwMjI5MDEzMjA1NjAyMDk3MzcyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1tfsIUQZDn1lEoSfrhwYRq</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/14/solicitud-de-plazas-proximo-curso-24-25-eso/&amp;ct=ga&amp;cd=CAEYACoUMTQwMjI5MDEzMjA1NjAyMDk3MzcyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1tfsIUQZDn1lEoSfrhwYRq</guid>
+      <description>[IOS: 29] SOLICITUD DE PLAZAS próximo curso 26-27 ESO - Gobierno de Canarias
+Gobierno de Canarias
+Implantación FP DUAL Canarias ... “EL FSE invierte en tu futuro. Este
+centro participa en el Programa de Cooperación territorial “Impulso de la FP
+Dual” ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Donación de libros del AMPA | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+... FP Dual 2022/23 · Programa: Impu</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/02/24/donacion-de-libros-del-ampa/&amp;ct=ga&amp;cd=CAEYAyoTMTcxNTg1OTMyODE5MDQ1NTA3NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3Jm_VWQnKlrAPP8ZFQTUsU</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/02/24/donacion-de-libros-del-ampa/&amp;ct=ga&amp;cd=CAEYAyoTMTcxNTg1OTMyODE5MDQ1NTA3NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3Jm_VWQnKlrAPP8ZFQTUsU</guid>
+      <description>[IOS: 29] Donación de libros del AMPA | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+... FP Dual 2022/23 · Programa: Impulso a la FP DUAL · Evaluación y
+Acreditación de Competencias Profesionales · Redes y Proyectos · AULA ATECA
+...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>URGENTE: Suspensión de docencia lectiva presencial el martes 24 (turno de
+tarde y noche ...
+Gobierno de Canarias
+Siguien</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iespuertodelacruztelesforobravo/2026/03/24/urgente-suspension-de-docencia-lectiva-presencial-el-martes-24-turno-de-tarde-y-noche-y-miercoles-25-todos-los-turnos-paso-a-la-modalidad-telematica/&amp;ct=ga&amp;cd=CAEYAioTODQ0MTQ3MDExMjQ3MTU5MzA5MjIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw23zX9DatY9oATAtctgtVrd</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iespuertodelacruztelesforobravo/2026/03/24/urgente-suspension-de-docencia-lectiva-presencial-el-martes-24-turno-de-tarde-y-noche-y-miercoles-25-todos-los-turnos-paso-a-la-modalidad-telematica/&amp;ct=ga&amp;cd=CAEYAioTODQ0MTQ3MDExMjQ3MTU5MzA5MjIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw23zX9DatY9oATAtctgtVrd</guid>
+      <description>[IOS: 28] URGENTE: Suspensión de docencia lectiva presencial el martes 24 (turno de
+tarde y noche ...
+Gobierno de Canarias
+Siguiendo las últimas indicaciones de la Dirección General de Emergencias y
+Protección Civil del Gobierno de Canarias ... FP Dual, FPempresa, InnovAS
+...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Fernando Clavijo sitúa la Formación Profesional en el centro de la ... -
+Gobierno de Canarias
+Portal de Noticias del Gob</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/noticias/fernando-clavijo-situa-la-formacion-profesional-en-el-centro-de-la-transformacion-economica-de-canarias/&amp;ct=ga&amp;cd=CAEYACoUMTIzMTkzNzg5MTYwODg3NDIzNjAyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1WLBbBzEeSlCjyP705bohq</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/noticias/fernando-clavijo-situa-la-formacion-profesional-en-el-centro-de-la-transformacion-economica-de-canarias/&amp;ct=ga&amp;cd=CAEYACoUMTIzMTkzNzg5MTYwODg3NDIzNjAyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw1WLBbBzEeSlCjyP705bohq</guid>
+      <description>[IOS: 28] Fernando Clavijo sitúa la Formación Profesional en el centro de la ... -
+Gobierno de Canarias
+Portal de Noticias del Gobierno de Canarias
+... FP Dual. El presidente de Canarias, Fernando Clavijo, inauguró este
+jueves el IV Congreso de Formación Profesional de Canarias, celebrado en el
+...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Entrevista a los coordinadores de las redes de Orientación Profesional, de
+... - Gobierno de Canarias
+Gobierno de Canari</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesvillademazo/2026/02/26/entrevista-a-los-coordinadores-de-las-redes-de-orientacion-profesional-de-innovacion-y-de-emprendimiento-y-del-proyecto-de-integracion-de-la-fp-dual-en-el-centro/&amp;ct=ga&amp;cd=CAEYAioUMTI2MzQwNDg1NzczOTk2NDcwNzQyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3abGWSZniQ7eLaQgxsv3EF</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesvillademazo/2026/02/26/entrevista-a-los-coordinadores-de-las-redes-de-orientacion-profesional-de-innovacion-y-de-emprendimiento-y-del-proyecto-de-integracion-de-la-fp-dual-en-el-centro/&amp;ct=ga&amp;cd=CAEYAioUMTI2MzQwNDg1NzczOTk2NDcwNzQyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3abGWSZniQ7eLaQgxsv3EF</guid>
+      <description>[IOS: 28] Entrevista a los coordinadores de las redes de Orientación Profesional, de
+... - Gobierno de Canarias
+Gobierno de Canarias
+Entrevista a los coordinadores de las redes de Orientación Profesional, de
+Innovación y de Emprendimiento y del proyecto de Integración de la FP Dual
+...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Pruebas de Certificación – Horarios 2026 – CIFP VIRGEN DE CANDELARIA -
+Gobierno de Canarias
+Gobierno de Canarias
+... FP </title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/cifpvirgendecandelaria/2026/02/24/pruebas-de-certificacion-horarios-2026/&amp;ct=ga&amp;cd=CAEYASoTMTcxNTg1OTMyODE5MDQ1NTA3NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw0rdF8IOFe37IXwhWhah3XQ</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/cifpvirgendecandelaria/2026/02/24/pruebas-de-certificacion-horarios-2026/&amp;ct=ga&amp;cd=CAEYASoTMTcxNTg1OTMyODE5MDQ1NTA3NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw0rdF8IOFe37IXwhWhah3XQ</guid>
+      <description>[IOS: 28] Pruebas de Certificación – Horarios 2026 – CIFP VIRGEN DE CANDELARIA -
+Gobierno de Canarias
+Gobierno de Canarias
+... FP DUAL · Horario general del centro · Horarios Grupos 2025-26 ·
+Igualdad · INDUSTRIA 4.0 · INNOVACIÓN · INNOVACIÓN COCINA CANARIA 5.0 ·
+INNOVACIÓN ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>Proyecto «Descubre la salud en tu plato» | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+... FP Dual 2022/23 · P</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/03/27/proyecto-descubre-la-salud-en-tu-plato/&amp;ct=ga&amp;cd=CAEYASoUMTc0MDA4NzE1MjU3NjY5NTAzODAyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw0qses-vyd4aRWu-mYuxYP3</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesteror/2026/03/27/proyecto-descubre-la-salud-en-tu-plato/&amp;ct=ga&amp;cd=CAEYASoUMTc0MDA4NzE1MjU3NjY5NTAzODAyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw0qses-vyd4aRWu-mYuxYP3</guid>
+      <description>[IOS: 27] Proyecto «Descubre la salud en tu plato» | IES Teror - Gobierno de Canarias
+Gobierno de Canarias
+... FP Dual 2022/23 · Programa: Impulso a la FP DUAL · Evaluación y ...
+Canarias en colaboración entre la Consejería de Educación y la Consejería de
+Sanidad ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>SUSPENSIÓN DE LA ACTIVIDAD LECTIVA PRESENCIAL – IES BARRANCO LAS LAJAS
+Gobierno de Canarias
+... Canaria, Tenerife y La P</title>
+      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/24/suspension-de-la-actividad-lectiva-presencial-3/&amp;ct=ga&amp;cd=CAEYBSoTMTU0OTE2MDI5MTMwMzgyODk0NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3SAOZ7ntUO3BPRBNf-OxeE</link>
+      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iesbarrancodelaslajas/2026/03/24/suspension-de-la-actividad-lectiva-presencial-3/&amp;ct=ga&amp;cd=CAEYBSoTMTU0OTE2MDI5MTMwMzgyODk0NTIcZmYyMWZkZDU1MDZjNTdhZjpjb206ZXM6RVM6Ug&amp;usg=AOvVaw3SAOZ7ntUO3BPRBNf-OxeE</guid>
+      <description>[IOS: 27] SUSPENSIÓN DE LA ACTIVIDAD LECTIVA PRESENCIAL – IES BARRANCO LAS LAJAS
+Gobierno de Canarias
+... Canaria, Tenerife y La Palma. Estas islas mañana pasarán a la ...
+Implantación FP DUAL Canarias. BECAS FORMACIÓN PROFESIONAL DUAL. “EL FSE ...</description>
+      <pubDate>Tue, 14 Apr 2026 06:54:58 +0000</pubDate>
+      <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>El tutor de empresa en la FP Dual: el puente que transforma talento ...</title>
+      <link>https://es.linkedin.com/pulse/el-tutor-de-empresa-en-la-fp-dual-puente-que-talento-juan-kmyee</link>
+      <guid>https://es.linkedin.com/pulse/el-tutor-de-empresa-en-la-fp-dual-puente-que-talento-juan-kmyee</guid>
+      <description>[IOS: 16] No basta con ser un crack en lo técnico. Los mejores tutores destacan por su empatía, capacidad de comunicación, liderazgo y habilidad para ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>Bye bye 5/2002, welcome 3/2022 - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</link>
+      <guid>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</guid>
+      <description>[IOS: 16] - Se elimina el Catálogo Nacional de Cualificaciones Profesionales ... La FP DUAL en Canarias: determinación de Resultados de Aprendizaje y ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>CANARIAS</category>
+    </item>
+    <item>
+      <title>La FP Dual no nació ayer: más de 50 años de recorrido en Europa y ...</title>
+      <link>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</link>
+      <guid>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</guid>
+      <description>[IOS: 15] La FP Dual se basa en el aprendizaje práctico en el centro de trabajo, facilitando la adquisición de competencias profesionales en entornos ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>Acredita tus competencias - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</link>
+      <guid>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</guid>
+      <description>[IOS: 15] La Cualificación Profesional de la que solicites acreditación deberá estar incluida tanto en el Catálogo Nacional de Cualificaciones ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>La Crisis de la FP Dual en Madrid: ¿Falta de Planificación o ...</title>
+      <link>https://es.linkedin.com/pulse/la-crisis-de-fp-dual-en-madrid-falta-planificaci%C3%B3n-o-estrategia-jvmkf</link>
+      <guid>https://es.linkedin.com/pulse/la-crisis-de-fp-dual-en-madrid-falta-planificaci%C3%B3n-o-estrategia-jvmkf</guid>
+      <description>[IOS: 14] Asignación de horas lectivas para la tutorización del alumnado, garantizando una adecuada orientación y apoyo en su formación práctica.</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>Del SEPE a la nueva Agencia Español de Empleo: claves de su ...</title>
+      <link>https://es.linkedin.com/pulse/del-sepe-la-nueva-agencia-espa%C3%B1ol-de-empleo-claves-su</link>
+      <guid>https://es.linkedin.com/pulse/del-sepe-la-nueva-agencia-espa%C3%B1ol-de-empleo-claves-su</guid>
+      <description>[IOS: 11] La Agencia tendrá, además de otras que se le atribuyan, las siguientes competencias: — Elaborar y elevar al Ministerio de Trabajo y Economía Social las ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>Itinerarios de Entrada al sector por Formación Profesional - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/itinerarios-de-entrada-al-sector-por-formaci%C3%B3n-luis-lozano-</link>
+      <guid>https://es.linkedin.com/pulse/itinerarios-de-entrada-al-sector-por-formaci%C3%B3n-luis-lozano-</guid>
+      <description>[IOS: 10] Sí se han creado dentro del INCUAL algunos Instrumentos de Acreditación, como las guías de demostración de competencias y glosarios. Tampoco ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>La ruta a la evaluación formativa - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</link>
+      <guid>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</guid>
+      <description>[IOS: 10] La FP DUAL en Canarias: determinación de Resultados de Aprendizaje y procedimiento de evaluación. Juan Gutiérrez Valdemoro 2 meses. 30 años ...</description>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <category>CANARIAS</category>
+    </item>
+    <item>
+      <title>Las cualificaciones profesionales #FP - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</link>
+      <guid>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</guid>
+      <description>[IOS: 9] La cualificación profesional es el “conjunto de competencias profesionales con significación en el empleo que pueden ser adquiridas mediante ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+  </channel>
+</rss>
