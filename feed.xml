@@ -1,123 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>FP Radar :: Inteligencia FP España</title>
+    <title>FP Radar :: Señales de mercado FP</title>
     <link>https://insforca.github.io/fp-radar-rss/</link>
-    <description>Señales de mercado para Formación Profesional en España. Foco: Canarias, hostelería y turismo de lujo. Sistema: Radar FP · Powered by SureThing.</description>
-    <language>es-ES</language>
-    <lastBuildDate>Tue, 21 Apr 2026 07:00:16 +0000</lastBuildDate>
+    <description>Señales de mercado para Formación Profesional en España — IOS scores, LinkedIn Pulse y más.</description>
+    <language>es</language>
+    <lastBuildDate>Tue, 21 Apr 2026 07:00:17 +0000</lastBuildDate>
     <atom:link href="https://insforca.github.io/fp-radar-rss/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>[IOS 16][CANARIAS] Bye bye 5/2002, welcome 3/2022 - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</link>
-      <guid>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 16 | LinkedIn Pulse | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Bye bye 5/2002, welcome 3/2022 - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:23Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 16][NACIONAL] El tutor de empresa en la FP Dual: el puente que transforma talento ...</title>
+      <title>El tutor de empresa en la FP Dual: el puente que transforma talento ...</title>
       <link>https://es.linkedin.com/pulse/el-tutor-de-empresa-en-la-fp-dual-puente-que-talento-juan-kmyee</link>
       <guid>https://es.linkedin.com/pulse/el-tutor-de-empresa-en-la-fp-dual-puente-que-talento-juan-kmyee</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 16 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;El tutor de empresa en la FP Dual: el puente que transforma talento ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/el-tutor-de-empresa-en-la-fp-dual-puente-que-talento-juan-kmyee'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:17Z</pubDate>
+      <description>[IOS: 16] No basta con ser un crack en lo técnico. Los mejores tutores destacan por su empatía, capacidad de comunicación, liderazgo y habilidad para ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
     </item>
     <item>
-      <title>[IOS 15][NACIONAL] Acredita tus competencias - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</link>
-      <guid>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 15 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Acredita tus competencias - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:26Z</pubDate>
+      <title>Bye bye 5/2002, welcome 3/2022 - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</link>
+      <guid>https://es.linkedin.com/pulse/bye-52002-welcome-32022-silvia-orta-cruz</guid>
+      <description>[IOS: 16] - Se elimina el Catálogo Nacional de Cualificaciones Profesionales ... La FP DUAL en Canarias: determinación de Resultados de Aprendizaje y ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>CANARIAS</category>
     </item>
     <item>
-      <title>[IOS 15][NACIONAL] La FP Dual no nació ayer: más de 50 años de recorrido en Europa y ...</title>
-      <link>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</link>
-      <guid>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 15 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;La FP Dual no nació ayer: más de 50 años de recorrido en Europa y ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:17Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 15][CANARIAS] La FP DUAL en Canarias: determinación de Resultados ... - LinkedIn</title>
+      <title>La FP DUAL en Canarias: determinación de Resultados ... - LinkedIn</title>
       <link>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</link>
       <guid>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 15 | LinkedIn Pulse | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;La FP DUAL en Canarias: determinación de Resultados ... - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:16Z</pubDate>
+      <description>[IOS: 15] Es elaborado y aprobado por el centro educativo. · Se diseña en coordinación con la empresa, pero bajo liderazgo pedagógico del profesorado.</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>CANARIAS</category>
     </item>
     <item>
-      <title>[IOS 14][NACIONAL] La Crisis de la FP Dual en Madrid: ¿Falta de Planificación o ...</title>
+      <title>La FP Dual no nació ayer: más de 50 años de recorrido en Europa y ...</title>
+      <link>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</link>
+      <guid>https://es.linkedin.com/pulse/la-fp-dual-naci%C3%B3-ayer-m%C3%A1s-de-50-a%C3%B1os-recorrido-en-y-juan-hq8qe</guid>
+      <description>[IOS: 15] La FP Dual se basa en el aprendizaje práctico en el centro de trabajo, facilitando la adquisición de competencias profesionales en entornos ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>Acredita tus competencias - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</link>
+      <guid>https://es.linkedin.com/pulse/acredita-tus-competencias-david-rodr%C3%ADguez-morillas</guid>
+      <description>[IOS: 15] La Cualificación Profesional de la que solicites acreditación deberá estar incluida tanto en el Catálogo Nacional de Cualificaciones ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
+    </item>
+    <item>
+      <title>La Crisis de la FP Dual en Madrid: ¿Falta de Planificación o ...</title>
       <link>https://es.linkedin.com/pulse/la-crisis-de-fp-dual-en-madrid-falta-planificaci%C3%B3n-o-estrategia-jvmkf</link>
       <guid>https://es.linkedin.com/pulse/la-crisis-de-fp-dual-en-madrid-falta-planificaci%C3%B3n-o-estrategia-jvmkf</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 14 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;La Crisis de la FP Dual en Madrid: ¿Falta de Planificación o ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/la-crisis-de-fp-dual-en-madrid-falta-planificaci%C3%B3n-o-estrategia-jvmkf'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:19Z</pubDate>
+      <description>[IOS: 14] Asignación de horas lectivas para la tutorización del alumnado, garantizando una adecuada orientación y apoyo en su formación práctica.</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
     </item>
     <item>
-      <title>[IOS 11][NACIONAL] Del SEPE a la nueva Agencia Español de Empleo: claves de su ...</title>
+      <title>Del SEPE a la nueva Agencia Español de Empleo: claves de su ...</title>
       <link>https://es.linkedin.com/pulse/del-sepe-la-nueva-agencia-espa%C3%B1ol-de-empleo-claves-su</link>
       <guid>https://es.linkedin.com/pulse/del-sepe-la-nueva-agencia-espa%C3%B1ol-de-empleo-claves-su</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 11 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Del SEPE a la nueva Agencia Español de Empleo: claves de su ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/del-sepe-la-nueva-agencia-espa%C3%B1ol-de-empleo-claves-su'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:11Z</pubDate>
+      <description>[IOS: 11] La Agencia tendrá, además de otras que se le atribuyan, las siguientes competencias: — Elaborar y elevar al Ministerio de Trabajo y Economía Social las ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
     </item>
     <item>
-      <title>[IOS 10][CANARIAS] La ruta a la evaluación formativa - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</link>
-      <guid>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 10 | LinkedIn Pulse | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;La ruta a la evaluación formativa - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-12T06:30:29Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 10][NACIONAL] Itinerarios de Entrada al sector por Formación Profesional - LinkedIn</title>
+      <title>Itinerarios de Entrada al sector por Formación Profesional - LinkedIn</title>
       <link>https://es.linkedin.com/pulse/itinerarios-de-entrada-al-sector-por-formaci%C3%B3n-luis-lozano-</link>
       <guid>https://es.linkedin.com/pulse/itinerarios-de-entrada-al-sector-por-formaci%C3%B3n-luis-lozano-</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 10 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Itinerarios de Entrada al sector por Formación Profesional - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/itinerarios-de-entrada-al-sector-por-formaci%C3%B3n-luis-lozano-'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:28Z</pubDate>
+      <description>[IOS: 10] Sí se han creado dentro del INCUAL algunos Instrumentos de Acreditación, como las guías de demostración de competencias y glosarios. Tampoco ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
     </item>
     <item>
-      <title>[IOS 9][NACIONAL] BOLETÍN INFORMATIVO COLEGIAL 06/2024 - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/bolet%C3%ADn-informativo-colegial-062024-colef-andalucia-ceuta-y-melilla-on6ff</link>
-      <guid>https://es.linkedin.com/pulse/bolet%C3%ADn-informativo-colegial-062024-colef-andalucia-ceuta-y-melilla-on6ff</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 9 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;BOLETÍN INFORMATIVO COLEGIAL 06/2024 - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/bolet%C3%ADn-informativo-colegial-062024-colef-andalucia-ceuta-y-melilla-on6ff'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-13T06:30:34Z</pubDate>
+      <title>La ruta a la evaluación formativa - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</link>
+      <guid>https://es.linkedin.com/pulse/la-ruta-evaluaci%C3%B3n-formativa-%C3%B3scar-boluda-ivars-eqpjf</guid>
+      <description>[IOS: 10] La FP DUAL en Canarias: determinación de Resultados de Aprendizaje y procedimiento de evaluación. Juan Gutiérrez Valdemoro 2 meses. 30 años ...</description>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <category>CANARIAS</category>
     </item>
     <item>
-      <title>[IOS 9][NACIONAL] Acreditación por la experiencia profesional - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/acreditaci%C3%B3n-por-la-experiencia-profesional-antonio-corral</link>
-      <guid>https://es.linkedin.com/pulse/acreditaci%C3%B3n-por-la-experiencia-profesional-antonio-corral</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 9 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Acreditación por la experiencia profesional - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/acreditaci%C3%B3n-por-la-experiencia-profesional-antonio-corral'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:26Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 9][NACIONAL] Las cualificaciones profesionales #FP - LinkedIn</title>
+      <title>Las cualificaciones profesionales #FP - LinkedIn</title>
       <link>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</link>
       <guid>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 9 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Las cualificaciones profesionales #FP - LinkedIn&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:25Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 8][NACIONAL] TODO SOBRE LA FORMACIÓN PROFESIONAL EN ESPAÑA</title>
-      <link>https://es.linkedin.com/pulse/todo-sobre-la-formaci%C3%B3n-profesional-en-espa%C3%B1a-futureo-orientaci%C3%B3n</link>
-      <guid>https://es.linkedin.com/pulse/todo-sobre-la-formaci%C3%B3n-profesional-en-espa%C3%B1a-futureo-orientaci%C3%B3n</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 8 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;TODO SOBRE LA FORMACIÓN PROFESIONAL EN ESPAÑA&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/todo-sobre-la-formaci%C3%B3n-profesional-en-espa%C3%B1a-futureo-orientaci%C3%B3n'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:29Z</pubDate>
-    </item>
-    <item>
-      <title>[IOS 8][NACIONAL] Centros de Referencia Nacional, un punto de encuentro para la ...</title>
-      <link>https://es.linkedin.com/pulse/centros-de-referencia-nacional-un-punto-encuentro-para-la-formaci%C3%B3n-</link>
-      <guid>https://es.linkedin.com/pulse/centros-de-referencia-nacional-un-punto-encuentro-para-la-formaci%C3%B3n-</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 8 | LinkedIn Pulse | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Centros de Referencia Nacional, un punto de encuentro para la ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/centros-de-referencia-nacional-un-punto-encuentro-para-la-formaci%C3%B3n-'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>LinkedIn Pulse</category>
-      <pubDate>2026-04-10T10:51:28Z</pubDate>
+      <description>[IOS: 9] La cualificación profesional es el “conjunto de competencias profesionales con significación en el empleo que pueden ser adquiridas mediante ...</description>
+      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <category>NACIONAL</category>
     </item>
   </channel>
 </rss>
