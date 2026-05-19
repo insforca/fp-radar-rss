@@ -5,14 +5,14 @@
     <link>https://insforca.github.io/fp-radar-rss/</link>
     <description>Señales de mercado para Formación Profesional en España — IOS scores, LinkedIn Pulse y más.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 18 May 2026 07:01:28 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 May 2026 07:00:23 +0000</lastBuildDate>
     <atom:link href="https://insforca.github.io/fp-radar-rss/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>ROJA</title>
       <link>https://www.farodevigo.es/gran-vigo/2026/04/26/horario-nocturno-domingos-festivos-o-129515001.amp.html</link>
       <guid>https://www.farodevigo.es/gran-vigo/2026/04/26/horario-nocturno-domingos-festivos-o-129515001.amp.html</guid>
       <description>[IOS: 83] Faro de Vigo denuncia malos tratos FP Dual hosteleria: domingos/festivos, 12h entre turno, tareas repetitivas, mano de obra barata. CIFP Manuel Antonio. Profesores trasladan quejas a Educacion para reforzar vigilancia tutores empresa.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Vacio practico/abuso</category>
       <category>Espana/Vigo</category>
     </item>
@@ -21,7 +21,7 @@
       <link>https://hecansa.com/formacion.php</link>
       <guid>https://hecansa.com/formacion.php</guid>
       <description>[IOS: 83] Hecansa FP Dual Intensiva: modelo de empresa integrado 50% teórico/50% empresa. Remuneración contratos en alternancia. Colaboradores: Barceló, H10, Princess, Satocan, Iberostar.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Modelo validado</category>
       <category>Canarias</category>
     </item>
@@ -30,17 +30,35 @@
       <link>https://www.biosferadigital.com/articulo/economia/camara-convoca-empresas-docentes-jornada-alianzas-que-forman/20260424155722159887.amp.html</link>
       <guid>https://www.biosferadigital.com/articulo/economia/camara-convoca-empresas-docentes-jornada-alianzas-que-forman/20260424155722159887.amp.html</guid>
       <description>[IOS: 79] Camara Lanzarote jornada Alianzas que forman 28-abr Arrecife. FP Dual Intensiva hosteleria/turismo 26/27: 50% empresa, contrato formacion. Coordinada DGFP Canarias. Ponente Roberto Ramirez CIFP.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Evento Dual/empresas</category>
       <category>Lanzarote</category>
+    </item>
+    <item>
+      <title>ROJA</title>
+      <link>https://cadenaser.com/canarias/2026/05/11/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo-radio-club-tenerife/</link>
+      <guid>https://cadenaser.com/canarias/2026/05/11/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo-radio-club-tenerife/</guid>
+      <description>[IOS: 77] Hecansa oferta 280+ plazas ciclos formativos hosteleria turismo 2026/27. Empresa publica Consejeria Turismo Empleo. Cadena SER reportaje. Dual Intensiva operativa: 50% empresa hotel (Barceló, H10, Princess, Iberostar, Satocan).</description>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
+      <category>Hecansa/hosteleria/plazas</category>
+      <category>Canarias</category>
     </item>
     <item>
       <title>ROJA</title>
       <link>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</link>
       <guid>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</guid>
       <description>[IOS: 75] LinkedIn Pulse (Juan, Hostelería y Turismo Tenerife): 'La FP DUAL en Canarias ya NO es opcional — es modalidad obligatoria.' Artículo técnico sobre determinación RA y evaluación compartida: tutor empresa NO califica módulos, aporta evidencias; profesorado evalúa y decide. Plan Formativo Individualizado (PFI) bajo liderazgo pedagógico del centro. Sector hostelería Tenerife: la Dual obliga a mayor planificación pero revaloriza al profesorado.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>AMARILLA</title>
+      <link>https://www.magisnet.com/2026/05/canarias-consolida-su-apuesta-por-la-fp-mas-alumnado-mas-oferta-y-una-red-mas-cercana-al-territorio/</link>
+      <guid>https://www.magisnet.com/2026/05/canarias-consolida-su-apuesta-por-la-fp-mas-alumnado-mas-oferta-y-una-red-mas-cercana-al-territorio/</guid>
+      <description>[IOS: 66] Canarias consolida apuesta FP: +10% alumnado, +11.5% oferta, red mas cercana territorio. Poli Suarez visita jornadas Conectando Talento IES Ana Luisa Benitez. Balance positivo legislatura: institucionalizacion Dual modelo.</description>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
+      <category>Balance FP Canarias</category>
       <category>Canarias</category>
     </item>
     <item>
@@ -48,7 +66,7 @@
       <link>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</link>
       <guid>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</guid>
       <description>[IOS: 65] Cámara de Comercio de Gran Canaria: Curso Formación Tutores/as de Empresa FP Dual Canarias (#EuropaSeSiente). Contenidos: marco normativo FP Dual Canarias, acogida del aprendiz, planificación y seguimiento formación, evaluación aprendizaje en empresa, de trabajador/a a formador/a. Plazas limitadas.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
@@ -57,7 +75,7 @@
       <link>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</link>
       <guid>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</guid>
       <description>[IOS: 63] Ashotel circular 023/2026: 9ª convocatoria FP Dual Alemana en hostelería Tenerife (FEDA Madrid / AHK Spanien). Titulación profesional alemana + Deutsches Sprachdiplom I. Empresas hoteleras acogen alumnos multilingüe: 360€/mes beca alumno + ~290€/mes aportación escuela. Rotación todos departamentos (cocina, restaurante, pisos, recepción). 40h/semana. Convenio FEDA + FREMAP. Contacto: Cornelia Kerz (FEDA Madrid).</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
@@ -66,7 +84,7 @@
       <link>https://www.farodevigo.es/economia/2026/04/27/hosteleria-gallega-defiende-regularizacion-migrantes-129571976.html</link>
       <guid>https://www.farodevigo.es/economia/2026/04/27/hosteleria-gallega-defiende-regularizacion-migrantes-129571976.html</guid>
       <description>[IOS: 55] Hosteleria gallega defiende regularizacion migrantes para cubrir falta mano de obra: hay que darles futuro y formacion. Presidente Hosteleria Espana + Hosteleria A Coruna. Debate nacional: migrantes vs formacion local. FP Dual Intensiva canaria como respuesta alternativa.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Escasez mano obra/debate</category>
       <category>Espana/Galicia</category>
     </item>
@@ -75,7 +93,7 @@
       <link>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</link>
       <guid>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</guid>
       <description>[IOS: 52] SCE Canarias: Concesión definitiva FPED 2025 — 67.561.836,25€ (Grado C: 42,6M€ + especialidades: 24,9M€). Programación 2025-2026: Tenerife 457 cursos, Gran Canaria 550, Lanzarote 237. Hostelería, turismo e IA reforzadas. DATO CRÍTICO: solo 40 PFAE en marcha de 127 concedidos — 87 proyectos (68%) sin iniciar. Formación en empresa: 3€/hora/alumno.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
@@ -84,7 +102,7 @@
       <link>https://www.canarias7.es/gastronomia-c7/formacion-profesional-hosteleria-mira-cine-edicion-foro-20260416130838-nt.html</link>
       <guid>https://www.canarias7.es/gastronomia-c7/formacion-profesional-hosteleria-mira-cine-edicion-foro-20260416130838-nt.html</guid>
       <description>[IOS: 44] IV Foro Cultura Gastronomía Salud ULPGC-DISA: FP hostelería reflexiona sector via cine como herramienta educativa.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Evento/educación</category>
       <category>Gran Canaria</category>
     </item>
@@ -97,7 +115,7 @@ escolarización y recursos.
 Gobierno de Canarias
 31 enero, 2025. Visita al nuevo Centro Integrado de Formación Profesional
 de Adeje dentro del seguimiento de la implantación de la FP Dual. 4 ...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
@@ -106,8 +124,26 @@ de Adeje dentro del seguimiento de la implantación de la FP Dual. 4 ...</descri
       <link>https://www.instagram.com/p/DW9B9T1Fr5b/</link>
       <guid>https://www.instagram.com/p/DW9B9T1Fr5b/</guid>
       <description>[IOS: 38] Instagram @fp_canarias (10 abr 2026, @educacion_gobcan): 'La FP en Canarias ampliará su oferta con nuevos estudios, dobles...' Señal expansión oferta FP 2026/2027. Contexto: admisiones en curso, pruebas acceso 9 mayo 2026.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>VERDE</title>
+      <link>https://www.canarias7.es/gastronomia-c7/gastrocanarias-2026-convierte-escenario-heineken-gran-foro-20260515140000-nt.html</link>
+      <guid>https://www.canarias7.es/gastronomia-c7/gastrocanarias-2026-convierte-escenario-heineken-gran-foro-20260515140000-nt.html</guid>
+      <description>[IOS: 36] GastroCanarias 2026 Escenario Heineken: gran foro profesional futuro gastronomia Canarias. Hub Gastronomico Trends Talks cocineros, hoteleros, empresarios, periodistas, disenadores, productores.</description>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
+      <category>GastroCanarias/sector</category>
+      <category>Canarias</category>
+    </item>
+    <item>
+      <title>VERDE</title>
+      <link>https://www.laprovincia.es/canarias/2026/05/14/oferta-fp-adaptada-crece-proximo-130239620.html</link>
+      <guid>https://www.laprovincia.es/canarias/2026/05/14/oferta-fp-adaptada-crece-proximo-130239620.html</guid>
+      <description>[IOS: 35] Oferta FP Adaptada crece 24.2% curso 2026/27 Canarias. 82 plazas nuevas. Consejeria Educacion impulsa inclusion FP Adaptada.</description>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
+      <category>FP Adaptada inclusion</category>
       <category>Canarias</category>
     </item>
     <item>
@@ -120,15 +156,12 @@ Gobierno de Canarias
 Formación Profesional (FCT y FP Dual): El alumnado que se encuentra
 realizando la Formación en Centros de Trabajo o cursando la modalidad Dual,
 NO ...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
     <item>
-      <title>Encuentro de FEPECO y ASEPEYO – CIFP VIRGEN DE CANDELARIA - Gobierno de
-Canarias
-Gobierno de Canarias
-LinkedIn. Categorí</title>
+      <title>VERDE</title>
       <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/cifpvirgendecandelaria/2026/05/05/encuentro-de-fepeco-y-asepeyo/&amp;ct=ga&amp;cd=CAEYACoTMzg0NzU3MzQ4MjgyMDI0NDA1MTIcMDkxYzZhYzcwOTI1NjRhODpjb206ZXM6RVM6Ug&amp;usg=AOvVaw10fxX8fXA9Ug-Gjqwnuo0m</link>
       <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/cifpvirgendecandelaria/2026/05/05/encuentro-de-fepeco-y-asepeyo/&amp;ct=ga&amp;cd=CAEYACoTMzg0NzU3MzQ4MjgyMDI0NDA1MTIcMDkxYzZhYzcwOTI1NjRhODpjb206ZXM6RVM6Ug&amp;usg=AOvVaw10fxX8fXA9Ug-Gjqwnuo0m</guid>
       <description>[IOS: 34] Encuentro de FEPECO y ASEPEYO – CIFP VIRGEN DE CANDELARIA - Gobierno de
@@ -136,7 +169,7 @@ Canarias
 Gobierno de Canarias
 LinkedIn. Categorías: Formación profesional, Noticias. Navegación de
 entradas. Anterior: Convocatoria ...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>AMBOS</category>
       <category>Canarias</category>
     </item>
@@ -149,7 +182,7 @@ Gobierno de Canarias
 Implantación FP DUAL Canarias. BECAS FORMACIÓN PROFESIONAL DUAL. “EL FSE
 invierte en tu futuro. Este centro participa en el Programa de Cooperación
 ...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>CANARIAS</category>
       <category>Canarias</category>
     </item>
@@ -163,58 +196,9 @@ Yaiza te Informa
 la FP Dual Intensiva aumenta la empleabilidad de los estudiantes y facilita
 a las empresas acceder a perfiles excelentes. Por. redacción. -. 27 abril
 ...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>NACIONAL</category>
       <category>Espana</category>
-    </item>
-    <item>
-      <title>VERDE</title>
-      <link>https://www.laprovincia.es/canarias/2026/04/27/formacion-profesional-canarias-resiste-caida-129590721.html</link>
-      <guid>https://www.laprovincia.es/canarias/2026/04/27/formacion-profesional-canarias-resiste-caida-129590721.html</guid>
-      <description>[IOS: 33] Informe CEC 2026: FP Canarias resiste caida demografica y aumenta matriculacion. FP unico nivel educativo que crece de forma sostenida. Grado superior (Sanidad, Servicios Sociales) como tractores. Desigualdad territorial: alta presion vs despoblamiento. Presidenta CEC Natalia Alvarez.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
-      <category>Informe CEC/tendencias</category>
-      <category>Canarias</category>
-    </item>
-    <item>
-      <title>DUAL NACIONAL</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www.cope.es/emisoras/region-de-murcia/murcia-provincia/murcia-san-javier/noticias/modalidad-fp-dual-intensiva-llega-region-murcia-convenio-beneficiaria-1500-alumnos-20260425_3350766.html&amp;ct=ga&amp;cd=CAEYACoSOTQzMDE0MTkzMDU2NTcyODE1MhxlYmRmN2U5MWRiYzQ0MWM4OmNvbTplczpFUzpS&amp;usg=AOvVaw3QRXFuAjHgBHisA4GOf1kG</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www.cope.es/emisoras/region-de-murcia/murcia-provincia/murcia-san-javier/noticias/modalidad-fp-dual-intensiva-llega-region-murcia-convenio-beneficiaria-1500-alumnos-20260425_3350766.html&amp;ct=ga&amp;cd=CAEYACoSOTQzMDE0MTkzMDU2NTcyODE1MhxlYmRmN2U5MWRiYzQ0MWM4OmNvbTplczpFUzpS&amp;usg=AOvVaw3QRXFuAjHgBHisA4GOf1kG</guid>
-      <description>[IOS: 33] La modalidad de FP dual intensiva llega a la Región de Murcia con un
-convenio que ...
-COPE
-... Hostelería y Turismo han sido las responsables de ... Estudiar FP y
-cobrar un sueldo: la nueva formación dual intensiva llega a la hostelería
-...</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
-      <category>NACIONAL</category>
-      <category>Espana</category>
-    </item>
-    <item>
-      <title>DUAL CANARIAS</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://mirametv.com/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo/&amp;ct=ga&amp;cd=CAEYACoUMTMzNzcxNzExNTk4OTgxMDM4ODIyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw0XGFJnduNdWdcNZKjUMPO-</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://mirametv.com/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo/&amp;ct=ga&amp;cd=CAEYACoUMTMzNzcxNzExNTk4OTgxMDM4ODIyHGZmMjFmZGQ1NTA2YzU3YWY6Y29tOmVzOkVTOlI&amp;usg=AOvVaw0XGFJnduNdWdcNZKjUMPO-</guid>
-      <description>[IOS: 32] Hecansa oferta más de 280 plazas para estudiar ciclos formativos de
-hostelería y turismo
-mirametv.com
-Hecansa aumenta la empleabilidad de su alumnado con la FP dual intensiva.
-El 70% de los estudiantes egresados de Hoteles Escuela de Canarias recibe.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
-      <category>CANARIAS</category>
-      <category>Canarias</category>
-    </item>
-    <item>
-      <title>VERDE</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/03/13/profesorado-viaja-finlandia-aprender-sistema-educativo-formacion-profesional/&amp;ct=ga&amp;cd=CAEYACoSNDQ4OTQyMDkwNDMzNDgxMzk3MhwwOTFjNmFjNzA5MjU2NGE4OmNvbTplczpFUzpS&amp;usg=AOvVaw0vw1UVPdZR0Yhd1rixz4fc</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/03/13/profesorado-viaja-finlandia-aprender-sistema-educativo-formacion-profesional/&amp;ct=ga&amp;cd=CAEYACoSNDQ4OTQyMDkwNDMzNDgxMzk3MhwwOTFjNmFjNzA5MjU2NGE4OmNvbTplczpFUzpS&amp;usg=AOvVaw0vw1UVPdZR0Yhd1rixz4fc</guid>
-      <description>[IOS: 32] El profesorado del centro viaja a Finlandia para aprender sobre su sistema
-educativo de ...
-Gobierno de Canarias
-... Formación Profesional, FP Dual, Red de Emprendimiento, Red de ...
-Canarias · Aviso Legal Política de privacidad Sugerencias y reclamaciones.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
-      <category>CANARIAS</category>
-      <category>Canarias</category>
     </item>
     <item>
       <title>El tutor de empresa en la FP Dual: el puente que transforma talento ...</title>
@@ -281,11 +265,11 @@ Canarias · Aviso Legal Política de privacidad Sugerencias y reclamaciones.</de
       <category>CANARIAS</category>
     </item>
     <item>
-      <title>Las cualificaciones profesionales #FP - LinkedIn</title>
-      <link>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</link>
-      <guid>https://es.linkedin.com/pulse/las-cualificaciones-profesionales-fp-antonio-corral</guid>
-      <description>[IOS: 9] La cualificación profesional es el “conjunto de competencias profesionales con significación en el empleo que pueden ser adquiridas mediante ...</description>
-      <pubDate>Fri, 10 Apr 2026 00:00:00 +0000</pubDate>
+      <title>Arte electrónico - LinkedIn</title>
+      <link>https://es.linkedin.com/pulse/arte-electr%C3%B3nico-aurelio-mendiguch%C3%ADa-garc%C3%ADa</link>
+      <guid>https://es.linkedin.com/pulse/arte-electr%C3%B3nico-aurelio-mendiguch%C3%ADa-garc%C3%ADa</guid>
+      <description>[IOS: 10] Experto los grupos del trabajo estándares del Catálogo Nacional de Estándares de Competencias Profesionales. INCUAL-Ministerio de Educación. 3 años.</description>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
       <category>NACIONAL</category>
     </item>
     <item>
@@ -293,7 +277,7 @@ Canarias · Aviso Legal Política de privacidad Sugerencias y reclamaciones.</de
       <link>https://fpdualtenerife.com</link>
       <guid>https://fpdualtenerife.com</guid>
       <description>[IOS: 75,2] FP Dual Alemana hostelería (Hotelfachmann) 9ª edición plazo abierto. Financiación empresa + remuneración 360€/mes. FEDA Madrid, Cabildo, AHK colaboran.</description>
-      <pubDate>Mon, 18 May 2026 07:01:28 +0000</pubDate>
+      <pubDate>Tue, 19 May 2026 07:00:23 +0000</pubDate>
       <category>Dual alemana</category>
       <category>Tenerife</category>
     </item>
