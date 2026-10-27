@@ -1,0 +1,149 @@
+{
+ "editions": [
+  {
+   "date": "2026-10-27",
+   "headline": "FP Dual intensiva Consejo Gobierno Coremur Murcia",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "FP Dual intensiva Consejo Gobierno Coremur Murcia",
+     "ambito": "España",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Vivir Ediciones · vivirediciones.es",
+     "url": "https://vivirediciones.es/fp-dual-intensiva-consejo-gobierno-coremur-murcia/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "warn",
+     "titular": "CCELPA publica una guía para desarrollar la FP Dual en la empresa, con instrucciones de la…",
+     "ambito": "España",
+     "por_que": "Cambio normativo: conviene ver cómo afecta a centros, docentes y alumnado.",
+     "fuente": "ccelpa.org",
+     "url": "https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "up",
+     "titular": "Fundación InnovaSur: referente en IA y ciberseguridad para la FP Dual",
+     "ambito": "España",
+     "por_que": "La FP gira hacia perfiles digitales con demanda real en empresas.",
+     "fuente": "Vivir Ediciones · vivirediciones.es",
+     "url": "https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/",
+     "tema": "Digital"
+    },
+    {
+     "trend": "eq",
+     "titular": "La Escuela de Pesca de Arrecife: el centro que quiso enseñar a Lanzarote a vivir del mar",
+     "ambito": "Canarias",
+     "por_que": "Buena práctica de centro que se puede copiar en otros institutos.",
+     "fuente": "La Voz de Lanzarote · lavozdelanzarote.com",
+     "url": "https://www.lavozdelanzarote.com/actualidad/mas-noticias/escuela-pesca-arrecife-centro-quiso-ensenar-lanzarote-vivir-mar_246731_102_amp.html",
+     "tema": "Centros"
+    },
+    {
+     "trend": "warn",
+     "titular": "El CIFP Virgen de Candelaria acoge una convocatoria de Dualiza InnovaLab en Tenerife",
+     "ambito": "Canarias",
+     "por_que": "Hay plazo abierto: revisa requisitos y fechas antes de que cierre.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/cifpvirgendecandelaria/2026/10/15/el-cifp-virgen-de-candelaria-acoge-una-convocatoria-de-dualiza-innovalab-en-tenerife/",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "warn",
+     "titular": "El Gobierno aprobará antes del 29N el decreto para asegurar la calidad de los centros de…",
+     "ambito": "España",
+     "por_que": "Cambio normativo: conviene ver cómo afecta a centros, docentes y alumnado.",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/andalucia/noticia-gobierno-aprobara-antes-29n-decreto-asegurar-calidad-centros-formacion-profesional-fp-20261022142830.html",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "eq",
+     "titular": "¡Llegan los Recreos de Mentes Activas! · IES Puerto de la Cruz",
+     "ambito": "Canarias",
+     "por_que": "Buena práctica de centro que se puede copiar en otros institutos.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iespuertodelacruztelesforobravo/2026/10/26/llegan-los-recreos-de-mentes-activas/",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "Expofuturo Grupo Newport 2026",
+     "ambito": "Canarias",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iespolitecnicolaspalmas/expofuturo-grupo-newport-2026-2/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "warn",
+     "titular": "Resultados sorteo público y convocatoria Junta Electoral renovación parcial CE",
+     "ambito": "Canarias",
+     "por_que": "Hay plazo abierto: revisa requisitos y fechas antes de que cierre.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iestias/2026/10/15/resultados-sorteo-publico-y-convocatoria-junta-electoral-renovacion-parcial-ce/",
+     "tema": "Convocatoria"
+    }
+   ],
+   "boletines": {
+    "canarias": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19"
+     }
+    ],
+    "espana": [
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1098/2026: modifica la Orden EDU/2157/2010, de 30 de julio, por la que se regula el…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21874",
+      "fecha": "2026-10-21"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1095/2026: establece la equivalencia entre determinados estudios del sistema educativo…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21755",
+      "fecha": "2026-10-19"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1107/2026: a propuesta del Departamento de Educación y Formación Profesional de la…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22089",
+      "fecha": "2026-10-23"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1109/2026: de 14 de octubre, por la que, a propuesta del Departamento de Educación y…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22091",
+      "fecha": "2026-10-23"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1102/2026: corrigen errores en la Orden EFD/1036/2026, de 29 de septiembre, por la que, a…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21959",
+      "fecha": "2026-10-22"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1103/2026: de 14 de octubre, por la que, a propuesta de la Consejería de Educación de la…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21960",
+      "fecha": "2026-10-22"
+     }
+    ],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "PFAE 2026: subvenciones a entidades para proyectos de formación en alternancia (34,6 M€)",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/198/3416.html",
+      "fecha": "2026-10-02",
+      "hasta": "2/11"
+     }
+    ]
+   }
+  }
+ ]
+}
