@@ -14,13 +14,13 @@
      "tema": "FP Dual"
     },
     {
-     "trend": "warn",
-     "titular": "CCELPA publica una guía para desarrollar la FP Dual en la empresa, con instrucciones de la…",
+     "trend": "up",
+     "titular": "CCELPA, proyecto Impulsa FP Dual: programa de formación virtual para tutores/as e…",
      "ambito": "España",
-     "por_que": "Cambio normativo: conviene ver cómo afecta a centros, docentes y alumnado.",
+     "por_que": "La FP gira hacia perfiles digitales con demanda real en empresas.",
      "fuente": "ccelpa.org",
-     "url": "https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf",
-     "tema": "Normativa"
+     "url": "https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/",
+     "tema": "Digital"
     },
     {
      "trend": "up",
@@ -110,27 +110,15 @@
      },
      {
       "fuente": "BOE",
-      "titulo": "Orden EFD/1107/2026: a propuesta del Departamento de Educación y Formación Profesional de la…",
-      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22089",
-      "fecha": "2026-10-23"
+      "titulo": "Real Decreto 828/2026: regula la concesión directa de subvenciones para la financiación de las…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21451",
+      "fecha": "2026-10-15"
      },
      {
       "fuente": "BOE",
-      "titulo": "Orden EFD/1109/2026: de 14 de octubre, por la que, a propuesta del Departamento de Educación y…",
-      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22091",
-      "fecha": "2026-10-23"
-     },
-     {
-      "fuente": "BOE",
-      "titulo": "Orden EFD/1102/2026: corrigen errores en la Orden EFD/1036/2026, de 29 de septiembre, por la que, a…",
-      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21959",
-      "fecha": "2026-10-22"
-     },
-     {
-      "fuente": "BOE",
-      "titulo": "Orden EFD/1103/2026: de 14 de octubre, por la que, a propuesta de la Consejería de Educación de la…",
-      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21960",
-      "fecha": "2026-10-22"
+      "titulo": "Resolución: publica el Acuerdo de la Conferencia Sectorial de Educación de 18 de septiembre de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-21515",
+      "fecha": "2026-10-15"
      }
     ],
     "oposiciones": [],
