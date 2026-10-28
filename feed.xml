@@ -2,11 +2,11 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>FP Radar :: Inteligencia FP España</title>
-    <link>https://insforca.github.io/fp-radar-rss/</link>
+    <link>https://fpaldia.es/</link>
     <description>Señales de mercado para Formación Profesional en España. Foco: Canarias, hostelería y turismo de lujo. Sistema: Radar FP · Powered by SureThing.</description>
     <language>es-ES</language>
     <lastBuildDate>Wed, 28 Oct 2026 07:00:38 +0000</lastBuildDate>
-    <atom:link href="https://insforca.github.io/fp-radar-rss/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://fpaldia.es/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>[IOS 89][Hecansa/preinscripcion/Dual Intensiva] Hecansa abre preinscripcion FP Dual Intensiva 2026/27: plazo cierra 26 junio 2026. Ciclos: Direccion de Cocina, Guest Ex</title>
       <link>https://hecansa.com/preinscripcion.php</link>
