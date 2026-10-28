@@ -6,7 +6,7 @@
 <title>FP Radar · FP al día</title>
 <meta name="description" content="FP Radar: señales de la Formación Profesional en España y Canarias de los últimos 30 días, de FP al día.">
 <link rel="canonical" href="https://fpaldia.es/radar/">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg:#050810;
@@ -70,6 +70,11 @@ body {
   gap:20px;
   overflow-x:auto;
   flex:1;
+  scrollbar-width:none;
+}
+
+.topbar-ticker::-webkit-scrollbar {
+  display:none;
 }
 
 .topbar-item {
@@ -683,6 +688,18 @@ body.embed .t-wrap {
 .foot { margin:18px 0 8px; font-size:9px; color:var(--t3); letter-spacing:.05em; display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; }
 .foot a { color:var(--t2); }
 
+
+/* Estilo de la portada fpaldia.es (28/10/2026): título en Archivo ancha, señales en Inter Tight; cifras y etiquetas siguen en mono */
+.h-title { font-family:'Archivo',sans-serif; font-stretch:125%; font-size:14px; letter-spacing:.1em; }
+.td-inner, .lock-title, .lock-text { font-family:'Inter Tight',system-ui,sans-serif; letter-spacing:0; }
+.td-inner { font-size:12px; font-weight:500; }
+.sub-btn { font-family:'Inter Tight',system-ui,sans-serif; letter-spacing:.02em; text-transform:none; font-size:12px; border-radius:999px; }
+.lock-title { font-size:15px; }
+@media (max-width: 700px) {
+  .c-text .td-inner { font-size:14px; line-height:1.38; }
+  .sub-btn { font-size:12px; }
+}
+
 @media (max-width: 768px) {
   .sb-item {
     min-width: 80px;
@@ -768,7 +785,7 @@ body.embed .t-wrap {
 
 <header class="header">
   <div class="h-left">
-    <span class="h-title"><a href="/radar/">FP RADAR</a></span>
+    <span class="h-title"><a href="/" title="fpaldia.es">FP RADAR</a></span>
     <span class="h-sep">|</span>
     <span class="h-sub">Sistema de Inteligencia Estratégica</span>
     <span class="live-badge"><span class="dot"></span>ÚLTIMOS 30 DÍAS</span>
