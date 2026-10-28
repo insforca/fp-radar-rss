@@ -702,6 +702,49 @@ body.embed .t-wrap {
     max-width: 200px;
   }
 }
+
+/* Móvil (Iván, 28/10/2026): la tabla pasa a tarjetas, cifras en rejilla, controles con scroll horizontal */
+@media (max-width: 700px) {
+  body { font-size:12px; }
+  .topbar-right { display:none; }
+  .header { height:auto; padding:8px 12px; gap:8px; flex-wrap:wrap; position:static; }
+  .h-sub, .h-sep, .h-date { display:none; }
+  .h-clock { font-size:11px; }
+  .sub-btn { padding:6px 9px; }
+  .body { padding:10px; }
+  .statusbar { display:grid; grid-template-columns:repeat(2,1fr); }
+  .sb-item { min-width:0; border-right:none; border-bottom:1px solid var(--border2); padding:9px 10px; }
+  .sb-item:first-child { grid-column:1 / -1; }
+  .sb-val { font-size:20px; }
+  .sb-label, .sb-sub { font-size:9px; }
+  .controls { flex-direction:column; align-items:stretch; }
+  .ctrl-block { flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .ctrl-btn { padding:8px 11px; font-size:10px; }
+  .search-box { max-width:none; padding:7px 10px; }
+  .search-box input { font-size:13px; }
+  .count-lbl { margin-left:0; }
+  html, body { overflow-x:hidden; }
+  .h-right > div { display:none; }
+  .t-wrap { overflow-x:visible; }
+  table, tbody { display:block; width:100%; min-width:0; }
+  thead { display:none; }
+  tbody tr { width:100%; display:flex; flex-wrap:wrap; align-items:center; gap:6px 10px; padding:11px 12px; }
+  tbody td { padding:0; }
+  .c-idx { display:none; }
+  .c-date { order:1; font-size:10px; }
+  .c-amb { order:2; }
+  .c-alr { order:3; }
+  .c-alr .ch-nil { display:none; }
+  .c-ext { order:4; margin-left:auto; }
+  .c-text { order:5; flex-basis:100%; max-width:100%; min-width:0; }
+  .c-text .td-inner { white-space:normal; max-width:100%; overflow-wrap:anywhere; font-size:13px; line-height:1.4;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; }
+  .c-dual, .c-fpg, .c-prio { order:6; display:flex; align-items:center; gap:4px; }
+  .c-dual::before, .c-fpg::before, .c-prio::before, .c-ios::before { content:attr(data-l); font-size:8px; font-weight:700; color:var(--t3); letter-spacing:.08em; }
+  .c-ios { order:7; flex:1; min-width:130px; display:flex; align-items:center; gap:6px; }
+  .lock-text { font-size:12px; }
+  .foot { flex-direction:column; }
+}
 </style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
@@ -968,16 +1011,16 @@ function renderTable() {
     var senal = r.url ? '<a href="'+esc(r.url)+'" target="_blank" rel="noopener" title="'+tip+'">'+sn+'</a>' : '<span title="'+tip+'">'+sn+'</span>';
     
     h += '<tr class="'+rowClass+'">';
-    h += '<td class="td-idx">' + (i+1) + '</td>';
-    h += '<td class="td-date">' + r.fecha + '</td>';
-    h += '<td class="td-text"><span class="td-inner">' + senal + '</span></td>';
-    h += '<td class="td-r">' + scoreCell(r.dual, 80, 50) + '</td>';
-    h += '<td class="td-r">' + scoreCell(r.fpGeneral, 75, 50) + '</td>';
-    h += '<td>' + iosBar(r.ios) + '</td>';
-    h += '<td>' + pillAmbito(r.ambito) + '</td>';
-    h += '<td>' + chipAlerta(r.alerta) + '</td>';
-    h += '<td class="td-r">' + priorityBadge(r.prioridad) + '</td>';
-    h += '<td>' + chipExtra(r) + '</td>';
+    h += '<td class="td-idx c-idx">' + (i+1) + '</td>';
+    h += '<td class="td-date c-date">' + r.fecha + '</td>';
+    h += '<td class="td-text c-text"><span class="td-inner">' + senal + '</span></td>';
+    h += '<td class="td-r c-dual" data-l="DUAL">' + scoreCell(r.dual, 80, 50) + '</td>';
+    h += '<td class="td-r c-fpg" data-l="FP GEN">' + scoreCell(r.fpGeneral, 75, 50) + '</td>';
+    h += '<td class="c-ios" data-l="IOS">' + iosBar(r.ios) + '</td>';
+    h += '<td class="c-amb">' + pillAmbito(r.ambito) + '</td>';
+    h += '<td class="c-alr">' + chipAlerta(r.alerta) + '</td>';
+    h += '<td class="td-r c-prio" data-l="PRIO">' + priorityBadge(r.prioridad) + '</td>';
+    h += '<td class="c-ext">' + chipExtra(r) + '</td>';
     h += '</tr>';
   }
   h += '</tbody></table>';

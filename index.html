@@ -1,6 +1,199 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8">
-<title>FP al día</title>
-<meta http-equiv="refresh" content="0; url=/radar/">
-<link rel="canonical" href="https://fpaldia.es/radar/">
-</head><body><p><a href="/radar/">FP Radar · FP al día</a></p></body></html>
+<!-- Portada de fpaldia.es (Iván, 28/10/2026): pitch general con acceso a los dos productos (newsletter y FP Radar) y
+     anuncio de las secciones en desarrollo. Las cifras se leen en vivo de /radar/radar.json. Publica codigo/radar_web.py. -->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FP al día · Inteligencia sobre la Formación Profesional en España</title>
+<meta name="description" content="Por fuera, una newsletter de FP que sale los martes y los viernes. Por dentro, un radar que recopila noticias, normativa y convocatorias de Formación Profesional y las ordena para ver hacia dónde se mueve el sector.">
+<link rel="canonical" href="https://fpaldia.es/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FP al día · La FP en España, al día">
+<meta property="og:description" content="Newsletter de FP los martes y los viernes, y FP Radar: el dashboard que ordena lo que se publica sobre Formación Profesional.">
+<meta property="og:url" content="https://fpaldia.es/">
+<meta property="og:image" content="https://fpaldia.es/marca/fp-al-dia-portada.png">
+<link rel="icon" type="image/png" href="/marca/fp-al-dia-avatar.png">
+<link rel="alternate" type="application/rss+xml" title="FP al día" href="https://fpaldia.es/fp-al-dia/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600..800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cal:#FFFFFF;--picon:#0E1621;--atl:#0057B8;--sol:#FFC400;--rojo:#C60B1E;--gris:#55606E;--linea:#E3E8EF;--fondo:#F5F7FA;--wa:#25D366;--li:#0A66C2}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--cal);color:var(--picon);font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--atl)}
+.bar{height:6px;background:linear-gradient(90deg,var(--atl) 0 40%,var(--sol) 40% 75%,var(--rojo) 75% 100%)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+nav .logo img{height:54px;width:auto;display:block}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-weight:700;font-size:15px}
+nav ul a{color:var(--picon);text-decoration:none}
+nav ul a:hover{color:var(--atl)}
+.hero{background:var(--atl);color:#fff;border-radius:24px;padding:56px 48px;margin:8px 0 28px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--sol);opacity:.18}
+.kicker{display:inline-block;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+h1{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:800;font-size:clamp(36px,6vw,64px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 18px;max-width:780px}
+h1 .sol{color:var(--sol)}
+.lead{font-size:clamp(17px,2.2vw,21px);max-width:720px;margin:0 0 28px;opacity:.95}
+.lead b{color:#fff}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px}
+.btn.sol{background:var(--sol);color:var(--picon)}
+.btn.blanco{background:#fff;color:var(--atl)}
+.btn.li{background:var(--li);color:#fff}
+.btn.wa{background:var(--wa);color:#fff}
+.btn svg{width:20px;height:20px;fill:currentColor}
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 56px}
+.cifra{background:var(--fondo);border:1px solid var(--linea);border-radius:18px;padding:18px 20px}
+.cifra b{display:block;font-size:34px;font-weight:800;color:var(--atl);letter-spacing:-.02em;line-height:1.1}
+.cifra span{font-size:14px;color:var(--gris);font-weight:600}
+h2{font-size:clamp(26px,3.6vw,36px);letter-spacing:-.02em;line-height:1.15;margin:0 0 10px}
+.sub{color:var(--gris);margin:0 0 26px;max-width:680px}
+section{margin:0 0 64px}
+.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.paso{border-top:4px solid var(--atl);padding:18px 4px 0}
+.paso:nth-child(2){border-color:var(--sol)}.paso:nth-child(3){border-color:var(--rojo)}
+.paso h3{margin:0 0 6px;font-size:19px}
+.paso p{margin:0;color:#2F3A47;font-size:16px}
+.productos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.prod{border:1px solid var(--linea);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#fff;box-shadow:0 1px 0 rgba(14,22,33,.04)}
+.prod .tag{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:#EAF1FA;color:var(--atl)}
+.prod.radar{background:#050810;color:#C8D5E8;border-color:#243045}
+.prod.radar .tag{background:rgba(245,158,11,.15);color:#F59E0B}
+.prod.radar h3{color:#F59E0B;font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.04em}
+.prod h3{margin:0;font-size:24px}
+.prod p{margin:0}
+.prod ul{margin:0;padding-left:18px}
+.prod .ctas{margin-top:auto;padding-top:8px}
+.btn.ambar{background:#F59E0B;color:#000}
+.btn.borde{border:2px solid currentColor;color:inherit}
+.dev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dev .item{border:1px dashed #B9C4D1;border-radius:18px;padding:22px;background:var(--fondo)}
+.dev .item small{display:inline-block;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rojo);margin-bottom:8px}
+.dev .item h3{margin:0 0 6px;font-size:18px}
+.dev .item p{margin:0;font-size:15px;color:#2F3A47}
+.contacto{background:var(--picon);color:#fff;border-radius:24px;padding:40px 44px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.contacto h2{color:#fff;margin:0 0 6px}
+.contacto p{margin:0;opacity:.85}
+footer{padding:26px 0 40px;color:var(--gris);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
+footer a{color:var(--gris)}
+@media (max-width:820px){
+  nav ul{display:none}
+  .hero{padding:36px 22px;border-radius:20px}
+  .cifras{grid-template-columns:repeat(2,1fr)}
+  .pasos,.productos,.dev{grid-template-columns:1fr}
+  .contacto{padding:28px 22px}
+  .btn{width:100%;justify-content:center}
+}
+</style>
+<script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="bar"></div>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="/"><img src="/marca/fp-al-dia-logo.png" alt="FP al día"></a>
+    <ul>
+      <li><a href="/fp-al-dia/">Newsletter</a></li>
+      <li><a href="/radar/">FP Radar</a></li>
+      <li><a href="#en-desarrollo">Próximamente</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <span class="kicker">Formación Profesional · España y Canarias</span>
+    <h1>La FP en España, <span class="sol">al día</span>.</h1>
+    <p class="lead">Por fuera es una newsletter que sale <b>los martes y los viernes</b>. Por dentro es un <b>radar de inteligencia</b> que recopila todo lo que se publica sobre FP (noticias, normativa y convocatorias) y lo ordena para ver hacia dónde se mueve el sector.</p>
+    <div class="ctas">
+      <a class="btn sol" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis</a>
+      <a class="btn blanco" href="/radar/">Explorar FP Radar →</a>
+    </div>
+  </header>
+
+  <div class="cifras" aria-label="FP Radar en cifras">
+    <div class="cifra"><b id="n-total">2.600+</b><span>señales de FP registradas</span></div>
+    <div class="cifra"><b id="n-30">300+</b><span>en los últimos 30 días</span></div>
+    <div class="cifra"><b id="n-leg">100+</b><span>de normativa y boletines</span></div>
+    <div class="cifra"><b>2</b><span>ediciones por semana</span></div>
+  </div>
+
+  <section>
+    <h2>Cómo funciona</h2>
+    <p class="sub">Cada día entra información nueva. Se filtra, se ordena y lo importante llega a quien trabaja en FP.</p>
+    <div class="pasos">
+      <div class="paso"><h3>1. Recopila</h3><p>BOE, BOC, consejerías, Erasmus+, centros y prensa. Cada señal queda registrada con su fecha y su fuente.</p></div>
+      <div class="paso"><h3>2. Ordena</h3><p>Se clasifica por tema, territorio y urgencia, y se puntúa para separar lo que importa del ruido.</p></div>
+      <div class="paso"><h3>3. Publica</h3><p>Dos veces por semana, una edición breve con enlaces comprobados a la fuente original.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dos formas de seguir la FP</h2>
+    <p class="sub">La newsletter, para estar al día en cinco minutos. El radar, para ver el conjunto.</p>
+    <div class="productos">
+      <article class="prod">
+        <span class="tag">Newsletter · gratis</span>
+        <h3>FP al día</h3>
+        <p>Martes y viernes, entre 5 y 10 noticias de FP de Canarias y España, con convocatorias y normativa del BOE y del BOC.</p>
+        <ul>
+          <li>Por qué importa cada noticia, en una línea</li>
+          <li>Plazos abiertos y enlace directo al trámite</li>
+          <li>En LinkedIn, por email o por RSS</li>
+        </ul>
+        <div class="ctas">
+          <a class="btn li" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete en LinkedIn</a>
+          <a class="btn borde" href="/fp-al-dia/">Leer la última edición</a>
+          <a class="btn wa" href="https://chat.whatsapp.com/JqRm4jgN8ZR86CtosWYq9M" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Grupo de WhatsApp</a>
+        </div>
+      </article>
+      <article class="prod radar">
+        <span class="tag">Dashboard · inteligencia</span>
+        <h3>FP RADAR</h3>
+        <p>Todas las señales del sector en una tabla viva: ámbito, alertas, normativa, certificados y un índice de oportunidad para cada una.</p>
+        <ul>
+          <li>Filtros por Canarias, nacional, alertas y legislación</li>
+          <li>Búsqueda en todas las señales</li>
+          <li>Últimos 30 días en abierto</li>
+        </ul>
+        <div class="ctas">
+          <a class="btn ambar" href="/radar/">Abrir FP Radar →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="en-desarrollo">
+    <h2>Lo que viene</h2>
+    <p class="sub">Los datos del radar son la base de nuevas herramientas que estamos preparando.</p>
+    <div class="dev">
+      <div class="item"><small>En desarrollo</small><h3>Herramienta para docentes</h3><p>Qué certificados y módulos puedes impartir según tu titulación y tu experiencia.</p></div>
+      <div class="item"><small>En desarrollo</small><h3>Radar a medida</h3><p>Alertas y resúmenes filtrados por territorio, familia profesional o tema, para centros y entidades.</p></div>
+      <div class="item"><small>En desarrollo</small><h3>Tendencias del sector</h3><p>Hacia dónde se mueve la FP: qué temas suben, qué normativa llega y dónde hay oportunidades.</p></div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <div>
+      <h2>¿Hablamos?</h2>
+      <p>Centros, empresas de FP Dual, entidades y docentes: escríbenos.</p>
+    </div>
+    <a class="btn sol" href="mailto:hola@fpaldia.es">hola@fpaldia.es</a>
+  </section>
+
+  <footer>
+    <span>FP al día · Hecho en Canarias · 2026</span>
+    <span><a href="/fp-al-dia/">Newsletter</a> · <a href="/fp-al-dia/archivo/">Archivo</a> · <a href="/radar/">FP Radar</a> · <a href="/fp-al-dia/rss/">RSS</a></span>
+  </footer>
+</div>
+<script>
+fetch('/radar/radar.json', {cache: 'no-cache'}).then(function(r){ return r.json(); }).then(function(d){
+  var f = function(n){ return Number(n).toLocaleString('es-ES'); };
+  if (d.stats && d.stats.total) document.getElementById('n-total').textContent = f(d.stats.total);
+  if (d.rows) document.getElementById('n-30').textContent = f(d.rows.length);
+  if (d.stats && d.stats.legislacion) document.getElementById('n-leg').textContent = f(d.stats.legislacion);
+}).catch(function(){});
+</script>
+</body>
+</html>
