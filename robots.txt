@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /fp-al-dia/prueba-
+Sitemap: https://fpaldia.es/sitemap.xml
