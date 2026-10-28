@@ -1,6 +1,8 @@
 <!doctype html>
-<!-- Portada de fpaldia.es (Iván, 28/10/2026): pitch general con acceso a los dos productos (newsletter y FP Radar) y
-     anuncio de las secciones en desarrollo. Las cifras se leen en vivo de /radar/radar.json. Publica codigo/radar_web.py. -->
+<!-- Portada de fpaldia.es, v2 (Iván, 28/10/2026): estilo editorial monocromo (referencia motionsites.ai / prompt «Orvante»),
+     adaptado a FP al día: sin fotos ni marcas ajenas, sin cifras inventadas. En el hero, una vista previa en vivo de FP Radar
+     (lee /radar/radar.json) para que la gente entre al dashboard. Tres secciones: hero, manifiesto que se rellena al hacer
+     scroll y panel «lo que viene». Unidad u = min(100vw/1440, 1.333px); en móvil u = 100vw/390. Publica codigo/radar_web.py. -->
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -16,184 +18,431 @@
 <link rel="icon" type="image/png" href="/marca/fp-al-dia-avatar.png">
 <link rel="alternate" type="application/rss+xml" title="FP al día" href="https://fpaldia.es/fp-al-dia/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600..800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--cal:#FFFFFF;--picon:#0E1621;--atl:#0057B8;--sol:#FFC400;--rojo:#C60B1E;--gris:#55606E;--linea:#E3E8EF;--fondo:#F5F7FA;--wa:#25D366;--li:#0A66C2}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--cal);color:var(--picon);font-family:'Manrope',system-ui,sans-serif;font-size:17px;line-height:1.55}
-a{color:var(--atl)}
-.bar{height:6px;background:linear-gradient(90deg,var(--atl) 0 40%,var(--sol) 40% 75%,var(--rojo) 75% 100%)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
-nav .logo img{height:54px;width:auto;display:block}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-weight:700;font-size:15px}
-nav ul a{color:var(--picon);text-decoration:none}
-nav ul a:hover{color:var(--atl)}
-.hero{background:var(--atl);color:#fff;border-radius:24px;padding:56px 48px;margin:8px 0 28px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--sol);opacity:.18}
-.kicker{display:inline-block;background:rgba(255,255,255,.14);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
-h1{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:800;font-size:clamp(36px,6vw,64px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 18px;max-width:780px}
-h1 .sol{color:var(--sol)}
-.lead{font-size:clamp(17px,2.2vw,21px);max-width:720px;margin:0 0 28px;opacity:.95}
-.lead b{color:#fff}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:800;text-decoration:none;font-size:16px}
-.btn.sol{background:var(--sol);color:var(--picon)}
-.btn.blanco{background:#fff;color:var(--atl)}
-.btn.li{background:var(--li);color:#fff}
-.btn.wa{background:var(--wa);color:#fff}
-.btn svg{width:20px;height:20px;fill:currentColor}
-.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 56px}
-.cifra{background:var(--fondo);border:1px solid var(--linea);border-radius:18px;padding:18px 20px}
-.cifra b{display:block;font-size:34px;font-weight:800;color:var(--atl);letter-spacing:-.02em;line-height:1.1}
-.cifra span{font-size:14px;color:var(--gris);font-weight:600}
-h2{font-size:clamp(26px,3.6vw,36px);letter-spacing:-.02em;line-height:1.15;margin:0 0 10px}
-.sub{color:var(--gris);margin:0 0 26px;max-width:680px}
-section{margin:0 0 64px}
-.pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.paso{border-top:4px solid var(--atl);padding:18px 4px 0}
-.paso:nth-child(2){border-color:var(--sol)}.paso:nth-child(3){border-color:var(--rojo)}
-.paso h3{margin:0 0 6px;font-size:19px}
-.paso p{margin:0;color:#2F3A47;font-size:16px}
-.productos{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.prod{border:1px solid var(--linea);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#fff;box-shadow:0 1px 0 rgba(14,22,33,.04)}
-.prod .tag{align-self:flex-start;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:#EAF1FA;color:var(--atl)}
-.prod.radar{background:#050810;color:#C8D5E8;border-color:#243045}
-.prod.radar .tag{background:rgba(245,158,11,.15);color:#F59E0B}
-.prod.radar h3{color:#F59E0B;font-family:'JetBrains Mono',ui-monospace,monospace;letter-spacing:.04em}
-.prod h3{margin:0;font-size:24px}
-.prod p{margin:0}
-.prod ul{margin:0;padding-left:18px}
-.prod .ctas{margin-top:auto;padding-top:8px}
-.btn.ambar{background:#F59E0B;color:#000}
-.btn.borde{border:2px solid currentColor;color:inherit}
-.dev{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.dev .item{border:1px dashed #B9C4D1;border-radius:18px;padding:22px;background:var(--fondo)}
-.dev .item small{display:inline-block;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--rojo);margin-bottom:8px}
-.dev .item h3{margin:0 0 6px;font-size:18px}
-.dev .item p{margin:0;font-size:15px;color:#2F3A47}
-.contacto{background:var(--picon);color:#fff;border-radius:24px;padding:40px 44px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
-.contacto h2{color:#fff;margin:0 0 6px}
-.contacto p{margin:0;opacity:.85}
-footer{padding:26px 0 40px;color:var(--gris);font-size:14px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
-footer a{color:var(--gris)}
-@media (max-width:820px){
-  nav ul{display:none}
-  .hero{padding:36px 22px;border-radius:20px}
-  .cifras{grid-template-columns:repeat(2,1fr)}
-  .pasos,.productos,.dev{grid-template-columns:1fr}
-  .contacto{padding:28px 22px}
-  .btn{width:100%;justify-content:center}
+:root{
+  --u:min(calc(100vw / 1440), 1.333px);
+  --paper:#dadada; --ink:#111; --black:#000; --txt:#f4f4f4; --grey:#6f6f6f; --frame:#cdcdcd;
+  --sol:#FFC400; --line:rgba(255,255,255,.14); --line2:rgba(255,255,255,.28);
+  --wide:'Archivo',sans-serif; --ui:'Inter Tight',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--ink);font-family:var(--ui);font-weight:500;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:calc(8*var(--u));background:var(--ink);color:#fff;
+  border-radius:999px;font-size:calc(14*var(--u));font-weight:600;height:calc(46*var(--u));padding:0 calc(22*var(--u));transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.wide{font-family:var(--wide);font-stretch:118%;text-transform:uppercase;letter-spacing:.04em}
+
+/* ── HERO ─────────────────────────────────────────────── */
+.hero{position:relative;height:calc(938*var(--u));background:var(--paper);overflow:hidden;max-width:calc(1440*var(--u));margin:0 auto}
+.hero-bg{position:absolute;inset:0;background:var(--paper)}
+.abs{position:absolute}
+.topline{display:contents}
+nav.pill{left:calc(57*var(--u));top:calc(61*var(--u));height:calc(48*var(--u));background:#fff;border-radius:999px;display:flex;align-items:center;padding:calc(4*var(--u));z-index:5}
+nav.pill a{position:relative;z-index:1;font-size:calc(14*var(--u));padding:0 calc(18*var(--u));height:calc(40*var(--u));display:flex;align-items:center;border-radius:999px;transition:color .25s}
+nav.pill a.on{color:#fff}
+nav.pill .slider{position:absolute;z-index:0;top:calc(4*var(--u));height:calc(40*var(--u));background:var(--ink);border-radius:999px;transition:left .35s cubic-bezier(.2,.8,.2,1),width .35s cubic-bezier(.2,.8,.2,1)}
+.date{left:calc(1000*var(--u));top:calc(70*var(--u));font-size:calc(13*var(--u));line-height:1.35;color:#333}
+.date b{display:block;font-weight:600;color:var(--ink)}
+.contact{left:calc(1237*var(--u));top:calc(63*var(--u));width:calc(144*var(--u))}
+.title{left:calc(57*var(--u));top:calc(246*var(--u));font-family:var(--wide);font-stretch:104%;font-weight:640;font-size:calc(90*var(--u));line-height:.86;letter-spacing:-.06em;color:var(--ink)}
+.title .ln{display:block;overflow:hidden;padding:.12em 0 .04em;margin-top:-.12em}
+.title .ln span{display:block}
+.title .sol{color:var(--ink);position:relative}
+.yr{left:calc(339*var(--u));top:calc(272*var(--u));font-size:calc(15*var(--u));color:#444}
+.about{left:calc(57*var(--u));top:calc(458*var(--u));width:calc(300*var(--u))}
+.about .k{font-size:calc(13*var(--u));color:#444;letter-spacing:.04em}
+.about .k i{display:inline-block;width:calc(7*var(--u));height:calc(7*var(--u));border-radius:50%;background:var(--ink);margin-right:calc(8*var(--u));vertical-align:middle}
+.about p{font-size:calc(14*var(--u));line-height:1.45;margin-top:calc(16*var(--u));color:#222}
+.about .btn{position:absolute;top:calc(126*var(--u));left:0}
+
+/* Vista previa del dashboard (ocupa el lugar de la foto) */
+.preview{left:calc(430*var(--u));top:calc(150*var(--u));width:calc(560*var(--u));height:calc(690*var(--u));z-index:2;display:block}
+.pv{width:100%;height:100%;display:flex;flex-direction:column;background:#050810;border-radius:calc(18*var(--u));overflow:hidden;position:relative;
+  box-shadow:0 calc(40*var(--u)) calc(90*var(--u)) rgba(0,0,0,.28);font-family:var(--mono);color:#c8d5e8;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.preview:hover .pv{transform:translateY(calc(-6*var(--u)))}
+.pv-top{background:#f59e0b;color:#000;font-size:calc(10*var(--u));font-weight:700;letter-spacing:.12em;padding:calc(5*var(--u)) calc(14*var(--u));display:flex;gap:calc(16*var(--u));white-space:nowrap;overflow:hidden}
+.pv-head{display:flex;align-items:center;justify-content:space-between;padding:calc(12*var(--u)) calc(14*var(--u));border-bottom:1px solid #243045}
+.pv-head b{color:#f59e0b;font-size:calc(14*var(--u));letter-spacing:.08em}
+.pv-live{font-size:calc(9*var(--u));color:#10b981;border:1px solid rgba(16,185,129,.35);padding:calc(2*var(--u)) calc(6*var(--u));border-radius:2px;letter-spacing:.1em}
+.pv-live::before{content:"";display:inline-block;width:calc(5*var(--u));height:calc(5*var(--u));border-radius:50%;background:#10b981;margin-right:calc(5*var(--u));vertical-align:middle;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.2}}
+.pv-kpi{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid #243045}
+.pv-kpi div{padding:calc(10*var(--u)) calc(14*var(--u));border-right:1px solid #1a2438}
+.pv-kpi div:last-child{border-right:none}
+.pv-kpi small{display:block;font-size:calc(8*var(--u));letter-spacing:.1em;color:#2e4060;font-weight:700}
+.pv-kpi strong{font-size:calc(22*var(--u));line-height:1.1}
+.pv-rows{position:relative;flex:1;min-height:0;overflow:hidden;
+  -webkit-mask:linear-gradient(180deg,#000 75%,transparent);mask:linear-gradient(180deg,#000 75%,transparent)}
+.pv-track{animation:roll 40s linear infinite}
+@keyframes roll{to{transform:translateY(-50%)}}
+.pv-row{padding:calc(10*var(--u)) calc(14*var(--u));border-bottom:1px solid #1a2438;display:grid;grid-template-columns:auto 1fr;gap:calc(4*var(--u)) calc(10*var(--u));align-items:center}
+.pv-row .d{font-size:calc(9*var(--u));color:#2e4060}
+.pv-row .t{grid-column:1/-1;font-size:calc(11.5*var(--u));color:#c8d5e8;line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.pv-row .m{display:flex;gap:calc(8*var(--u));align-items:center;font-size:calc(8*var(--u))}
+.pill-a{padding:1px calc(5*var(--u));border:1px solid rgba(6,182,212,.3);color:#06b6d4;letter-spacing:.07em}
+.pill-a.n{color:#a78bfa;border-color:rgba(139,92,246,.3)}
+.pill-r{padding:1px calc(5*var(--u));border:1px solid rgba(239,68,68,.3);color:#f87171;letter-spacing:.07em}
+.bar-ios{width:calc(60*var(--u));height:3px;background:#243045;position:relative}
+.bar-ios i{position:absolute;left:0;top:0;bottom:0;background:#10b981}
+.pv-cta{position:absolute;left:50%;bottom:calc(78*var(--u));transform:translateX(-50%);background:#f59e0b;color:#000;font-family:var(--ui);
+  font-weight:700;font-size:calc(14*var(--u));padding:calc(12*var(--u)) calc(22*var(--u));border-radius:999px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .2s}
+.preview:hover .pv-cta{transform:translateX(-50%) translateY(-2px)}
+.plate{left:calc(518*var(--u));top:calc(800*var(--u));width:calc(384*var(--u));height:calc(73*var(--u));z-index:3;border-radius:calc(14*var(--u));
+  background:rgba(17,17,17,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:space-between;padding:0 calc(22*var(--u));color:#fff;
+  border:1px solid rgba(255,255,255,.12)}
+.plate .mark{width:calc(30*var(--u));height:calc(30*var(--u))}
+.plate .nm{font-family:var(--wide);font-stretch:125%;font-weight:700;font-size:calc(22*var(--u));letter-spacing:.06em}
+.plate .menu{width:calc(22*var(--u));display:grid;gap:calc(6*var(--u))}
+.plate .menu i{display:block;height:2px;background:#fff}
+
+/* Marco de cifras */
+.frame{left:calc(57*var(--u));top:calc(693*var(--u));width:calc(341*var(--u));height:calc(208*var(--u));background:var(--frame);border-radius:calc(14*var(--u));padding:calc(6*var(--u));display:grid;grid-template-columns:1fr 1fr;gap:calc(6*var(--u))}
+.fc{border-radius:calc(10*var(--u));padding:calc(12*var(--u));position:relative;overflow:hidden;display:flex;flex-direction:column}
+.fc.dark{background:var(--ink);color:#fff}
+.fc .num{font-size:calc(30*var(--u));font-weight:600;letter-spacing:-.03em;line-height:1}
+.fc .lab{font-size:calc(11*var(--u));opacity:.7;margin-top:calc(3*var(--u))}
+.srcs{display:grid;grid-template-columns:repeat(2,1fr);gap:calc(4*var(--u)) calc(6*var(--u));margin:calc(10*var(--u)) 0 auto;font-size:calc(8.5*var(--u));opacity:.8;letter-spacing:.04em}
+.srcs span::before{content:"◆ ";color:var(--sol)}
+.fc .bar{margin-top:calc(8*var(--u));background:#fff;color:var(--ink);border-radius:999px;font-size:calc(11*var(--u));font-weight:600;padding:calc(7*var(--u)) calc(10*var(--u));display:flex;justify-content:space-between;transition:transform .2s}
+.fc .bar:hover{transform:translateY(-1px)}
+.fc.spark{background:#1a1a1a;color:#fff;justify-content:flex-end;text-align:right}
+.fc.spark .feed{position:absolute;left:calc(12*var(--u));right:calc(12*var(--u));top:calc(10*var(--u));font-size:calc(9*var(--u));opacity:.7;display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:calc(6*var(--u))}
+.fc.spark svg{position:absolute;left:calc(10*var(--u));right:calc(10*var(--u));top:calc(36*var(--u));width:calc(100% - 20*var(--u));height:calc(70*var(--u))}
+
+/* Columna derecha */
+.growth{left:calc(1196*var(--u));top:calc(258*var(--u));height:calc(44*var(--u));padding:0 calc(6*var(--u)) 0 calc(16*var(--u));border-radius:999px;background:rgba(255,255,255,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;gap:calc(10*var(--u));font-size:calc(13*var(--u))}
+.growth i{width:calc(32*var(--u));height:calc(32*var(--u));border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-style:normal;font-size:calc(14*var(--u))}
+.avail{right:calc(57*var(--u));top:calc(442*var(--u));text-align:right;font-size:calc(22*var(--u));line-height:1.2;letter-spacing:-.02em}
+.avail i{display:inline-block;width:calc(9*var(--u));height:calc(9*var(--u));border-radius:50%;background:var(--sol);margin-right:calc(8*var(--u));vertical-align:middle}
+.out{right:calc(57*var(--u));top:calc(560*var(--u));width:calc(300*var(--u))}
+.out .h{display:flex;justify-content:space-between;font-size:calc(13*var(--u));margin-bottom:calc(10*var(--u))}
+.out .h b{font-weight:600}
+.out .card{display:block;height:calc(196*var(--u));border-radius:calc(12*var(--u));overflow:hidden;position:relative;background:#0057B8}
+.out .card img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.out .card:hover img{transform:scale(1.3)}
+.out .arrow{position:absolute;right:calc(12*var(--u));top:calc(12*var(--u));width:calc(40*var(--u));height:calc(40*var(--u));border-radius:50%;background:rgba(255,255,255,.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:grid;place-items:center;color:#fff;font-size:calc(18*var(--u));transition:transform .4s}
+.out .card:hover .arrow{transform:rotate(45deg)}
+.out .prog{position:absolute;left:calc(14*var(--u));right:calc(14*var(--u));bottom:calc(14*var(--u));height:2px;background:rgba(255,255,255,.35)}
+.out .prog i{display:block;height:100%;width:62%;background:#fff;transform-origin:left}
+
+/* ── BARRA ────────────────────────────────────────────── */
+.strip{background:var(--black);color:var(--txt);height:calc(111*var(--u));border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 calc(57*var(--u));font-size:calc(14*var(--u))}
+.strip .g{color:var(--grey)}
+.strip .mid{display:flex;align-items:center;gap:calc(12*var(--u))}
+.strip .mid i{width:calc(34*var(--u));height:calc(34*var(--u));border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-style:normal;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(4px)}}
+
+/* ── MANIFIESTO ───────────────────────────────────────── */
+.statement{background:var(--black);color:var(--txt);padding:calc(170*var(--u)) 0 calc(230*var(--u));text-align:center}
+.statement p.big{width:calc(830*var(--u));max-width:92vw;margin:0 auto;font-size:calc(52*var(--u));line-height:1.33;letter-spacing:-.028em;font-weight:500}
+.statement p.big span{color:var(--grey);transition:color .15s}
+.statement p.sub{margin-top:calc(150*var(--u));font-size:calc(23*var(--u));line-height:1.4;color:var(--txt)}
+.statement p.sub em{font-style:normal;color:var(--grey)}
+
+/* ── PANEL ────────────────────────────────────────────── */
+.trust{background:var(--black);color:var(--txt);padding:0 0 calc(150*var(--u))}
+.panel{width:calc(1302*var(--u));max-width:94vw;margin:0 auto;border:1px solid var(--line2);border-radius:calc(14*var(--u));padding:calc(36*var(--u));display:flex;gap:calc(28*var(--u));overflow:hidden;position:relative;min-height:calc(429*var(--u))}
+.p-left{flex:0 0 calc(420*var(--u));position:relative}
+.p-left h2{font-size:calc(55*var(--u));font-weight:500;line-height:1.02;letter-spacing:-.035em}
+.p-left p{font-size:calc(14.5*var(--u));line-height:1.5;color:#aaa;margin-top:calc(22*var(--u));max-width:calc(360*var(--u))}
+.p-left .cta{display:flex;gap:calc(10*var(--u));margin-top:calc(24*var(--u));flex-wrap:wrap}
+.p-left .cta .btn{background:#fff;color:#000}
+.p-left .cta .btn.alt{background:transparent;color:#fff;border:1px solid var(--line2)}
+.tile{position:absolute;width:calc(88*var(--u));height:calc(88*var(--u));border-radius:calc(12*var(--u));background:rgba(255,255,255,.08);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);display:grid;place-items:center;font-size:calc(34*var(--u))}
+.tile.a{left:calc(300*var(--u));top:calc(-18*var(--u))}
+.tile.b{left:calc(330*var(--u));top:calc(118*var(--u))}
+.tile.b span{display:grid;grid-template-columns:repeat(2,calc(10*var(--u)));gap:calc(8*var(--u))}
+.tile.b span i{width:calc(10*var(--u));height:calc(10*var(--u));border-radius:50%;background:#fff}
+.cards{display:flex;gap:calc(14*var(--u));align-items:stretch;flex:1;min-width:0}
+.tc{height:calc(326*var(--u));border-radius:calc(8*var(--u));padding:calc(20*var(--u));display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.8,.2,1);flex:none}
+.tc:hover{transform:translateY(calc(-6*var(--u)))}
+.tc.light{background:#d6d6d6;color:#111;width:calc(293*var(--u))}
+.tc.dk{background:#262626;width:calc(298*var(--u))}
+.tc.yl{background:#0057B8;width:calc(240*var(--u));color:#fff;position:relative;overflow:hidden}
+.av{display:grid;grid-template-columns:repeat(4,calc(48*var(--u)));gap:calc(10*var(--u))}
+.av i{width:calc(48*var(--u));height:calc(48*var(--u));border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font-style:normal;font-size:calc(9.5*var(--u));font-weight:700;letter-spacing:.02em}
+.tc .n{font-size:calc(43*var(--u));font-weight:600;letter-spacing:-.03em;margin-top:auto;line-height:1}
+.tc .l{font-size:calc(13*var(--u));opacity:.75;margin-top:calc(4*var(--u))}
+.tc.dk .badge{width:calc(140*var(--u));margin:calc(4*var(--u)) auto auto}
+.tc.dk .note{font-size:calc(12*var(--u));color:#9a9a9a;line-height:1.45;margin-top:calc(8*var(--u))}
+.tc.yl .k{font-size:calc(11*var(--u));letter-spacing:.1em;opacity:.8}
+.tc.yl h3{font-size:calc(26*var(--u));line-height:1.1;margin-top:calc(10*var(--u));font-weight:600}
+.tc.yl .go{margin-top:auto;background:var(--sol);color:#000;border-radius:999px;font-weight:700;font-size:calc(13*var(--u));padding:calc(10*var(--u)) calc(14*var(--u));text-align:center}
+foot, footer{display:block}
+footer{background:var(--black);color:#8a8a8a;font-size:calc(13*var(--u));padding:0 calc(57*var(--u)) calc(60*var(--u));display:flex;justify-content:space-between;flex-wrap:wrap;gap:calc(12*var(--u));max-width:calc(1440*var(--u));margin:0 auto}
+footer a{color:#cfcfcf}
+
+/* ── MÓVIL ────────────────────────────────────────────── */
+@media (max-width:760px){
+  :root{--u:calc(100vw / 390)}
+  .hero{height:auto;padding:calc(20*var(--u)) calc(16*var(--u)) calc(28*var(--u));display:flex;flex-direction:column;gap:calc(18*var(--u))}
+  .abs{position:relative;left:auto!important;top:auto!important;right:auto!important}
+  .topline{display:flex;justify-content:space-between;align-items:center}
+  nav.pill{height:calc(44*var(--u))}
+  nav.pill a{font-size:calc(12.5*var(--u));padding:0 calc(11*var(--u));height:calc(36*var(--u))}
+  nav.pill .slider{height:calc(36*var(--u))}
+  .date{display:none}
+  .contact{width:calc(44*var(--u));height:calc(44*var(--u));padding:0}
+  .contact .t{display:none}
+  .title{font-size:calc(64*var(--u))}
+  .yr{display:none}
+  .about{width:auto}
+  .about .btn{position:static;margin-top:calc(16*var(--u))}
+  .preview{width:100%;height:calc(470*var(--u))}
+  .plate{width:100%;margin-top:calc(-50*var(--u));height:calc(60*var(--u))}
+  .growth{align-self:flex-start}
+  .avail{text-align:left}
+  .frame{width:100%;height:calc(208*var(--u))}
+  .out{width:100%}
+  .strip{padding:0 calc(16*var(--u));font-size:calc(11*var(--u))}
+  .statement{padding:calc(80*var(--u)) calc(16*var(--u)) calc(100*var(--u))}
+  .statement p.big{font-size:calc(28*var(--u));width:auto;max-width:none}
+  .statement p.sub{font-size:calc(17*var(--u));margin-top:calc(60*var(--u))}
+  .trust{padding:0 calc(16*var(--u)) calc(80*var(--u))}
+  .panel{flex-direction:column;max-width:none;width:100%;padding:calc(22*var(--u))}
+  .p-left{flex:none}
+  .p-left h2{font-size:calc(40*var(--u))}
+  .tile.a{left:auto;right:0;top:calc(-6*var(--u));width:calc(64*var(--u));height:calc(64*var(--u))}
+  .tile.b{display:none}
+  .cards{flex-direction:column}
+  .tc{width:100%!important;height:auto;min-height:calc(240*var(--u))}
+  .tc .n{margin-top:calc(18*var(--u))}
+  footer{padding:0 calc(16*var(--u)) calc(40*var(--u));flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
 }
 </style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div class="bar"></div>
-<div class="wrap">
-  <nav>
-    <a class="logo" href="/"><img src="/marca/fp-al-dia-logo.png" alt="FP al día"></a>
-    <ul>
-      <li><a href="/fp-al-dia/">Newsletter</a></li>
-      <li><a href="/radar/">FP Radar</a></li>
-      <li><a href="#en-desarrollo">Próximamente</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
 
-  <header class="hero">
-    <span class="kicker">Formación Profesional · España y Canarias</span>
-    <h1>La FP en España, <span class="sol">al día</span>.</h1>
-    <p class="lead">Por fuera es una newsletter que sale <b>los martes y los viernes</b>. Por dentro es un <b>radar de inteligencia</b> que recopila todo lo que se publica sobre FP (noticias, normativa y convocatorias) y lo ordena para ver hacia dónde se mueve el sector.</p>
-    <div class="ctas">
-      <a class="btn sol" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis</a>
-      <a class="btn blanco" href="/radar/">Explorar FP Radar →</a>
-    </div>
-  </header>
+<!-- ═════════ HERO ═════════ -->
+<section class="hero" id="hero">
+  <div class="topline">
+    <nav class="pill abs" id="nav" aria-label="Secciones">
+      <span class="slider" id="slider"></span>
+      <a href="/" class="on">Inicio</a>
+      <a href="/fp-al-dia/">Newsletter</a>
+      <a href="/radar/">FP Radar</a>
+      <a href="#lo-que-viene">Próximamente</a>
+    </nav>
+    <a class="btn contact abs fx" href="mailto:hola@fpaldia.es" aria-label="Contacto"><span class="t">Contacto</span> ↗</a>
+  </div>
+  <div class="date abs fx"><b id="dia">—</b><span id="fecha">—</span></div>
 
-  <div class="cifras" aria-label="FP Radar en cifras">
-    <div class="cifra"><b id="n-total">2.600+</b><span>señales de FP registradas</span></div>
-    <div class="cifra"><b id="n-30">300+</b><span>en los últimos 30 días</span></div>
-    <div class="cifra"><b id="n-leg">100+</b><span>de normativa y boletines</span></div>
-    <div class="cifra"><b>2</b><span>ediciones por semana</span></div>
+  <h1 class="title abs" aria-label="FP al día">
+    <span class="ln"><span>FP</span></span>
+    <span class="ln"><span class="sol">AL DÍA</span></span>
+  </h1>
+  <div class="yr abs fx">(’26)</div>
+
+  <div class="about abs fx">
+    <div class="k"><i></i>(SOBRE)</div>
+    <p>Una newsletter de FP los martes y los viernes. Por dentro, un radar que ordena todo lo que se publica sobre Formación Profesional.</p>
+    <a class="btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis ↗</a>
   </div>
 
-  <section>
-    <h2>Cómo funciona</h2>
-    <p class="sub">Cada día entra información nueva. Se filtra, se ordena y lo importante llega a quien trabaja en FP.</p>
-    <div class="pasos">
-      <div class="paso"><h3>1. Recopila</h3><p>BOE, BOC, consejerías, Erasmus+, centros y prensa. Cada señal queda registrada con su fecha y su fuente.</p></div>
-      <div class="paso"><h3>2. Ordena</h3><p>Se clasifica por tema, territorio y urgencia, y se puntúa para separar lo que importa del ruido.</p></div>
-      <div class="paso"><h3>3. Publica</h3><p>Dos veces por semana, una edición breve con enlaces comprobados a la fuente original.</p></div>
+  <a class="preview abs" id="preview" href="/radar/" aria-label="Abrir FP Radar">
+    <div class="pv" id="pv">
+      <div class="pv-top" id="pvTicker"><span>TOTAL —</span><span>ALERTAS —</span><span>LEGISLACIÓN —</span><span>CANARIAS —</span><span>NACIONAL —</span></div>
+      <div class="pv-head"><b>FP RADAR</b><span class="pv-live">ÚLTIMOS 30 DÍAS</span></div>
+      <div class="pv-kpi">
+        <div><small>SEÑALES</small><strong id="k1" style="color:#f59e0b">—</strong></div>
+        <div><small>IOS MEDIA</small><strong id="k2" style="color:#06b6d4">—</strong></div>
+        <div><small>ALERTAS</small><strong id="k3" style="color:#ef4444">—</strong></div>
+        <div><small>30 DÍAS</small><strong id="k4" style="color:#10b981">—</strong></div>
+      </div>
+      <div class="pv-rows"><div class="pv-track" id="pvTrack"></div></div>
+      <span class="pv-cta">Abrir el dashboard ↗</span>
     </div>
-  </section>
+  </a>
+  <div class="plate abs fx" aria-hidden="true">
+    <svg class="mark" viewBox="0 0 30 30"><path d="M3 26 15 4l5 9-7 13z" fill="#fff"/><path d="M17 26l5-9 5 9z" fill="#FFC400"/></svg>
+    <span class="nm">FP RADAR</span>
+    <span class="menu"><i></i><i></i></span>
+  </div>
 
-  <section>
-    <h2>Dos formas de seguir la FP</h2>
-    <p class="sub">La newsletter, para estar al día en cinco minutos. El radar, para ver el conjunto.</p>
-    <div class="productos">
-      <article class="prod">
-        <span class="tag">Newsletter · gratis</span>
-        <h3>FP al día</h3>
-        <p>Martes y viernes, entre 5 y 10 noticias de FP de Canarias y España, con convocatorias y normativa del BOE y del BOC.</p>
-        <ul>
-          <li>Por qué importa cada noticia, en una línea</li>
-          <li>Plazos abiertos y enlace directo al trámite</li>
-          <li>En LinkedIn, por email o por RSS</li>
-        </ul>
-        <div class="ctas">
-          <a class="btn li" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete en LinkedIn</a>
-          <a class="btn borde" href="/fp-al-dia/">Leer la última edición</a>
-          <a class="btn wa" href="https://chat.whatsapp.com/JqRm4jgN8ZR86CtosWYq9M" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>Grupo de WhatsApp</a>
-        </div>
-      </article>
-      <article class="prod radar">
-        <span class="tag">Dashboard · inteligencia</span>
-        <h3>FP RADAR</h3>
-        <p>Todas las señales del sector en una tabla viva: ámbito, alertas, normativa, certificados y un índice de oportunidad para cada una.</p>
-        <ul>
-          <li>Filtros por Canarias, nacional, alertas y legislación</li>
-          <li>Búsqueda en todas las señales</li>
-          <li>Últimos 30 días en abierto</li>
-        </ul>
-        <div class="ctas">
-          <a class="btn ambar" href="/radar/">Abrir FP Radar →</a>
-        </div>
-      </article>
+  <div class="frame abs fx">
+    <div class="fc dark">
+      <div class="num" id="cTotal" data-n="2664">0</div>
+      <div class="lab">Señales registradas</div>
+      <div class="srcs"><span>BOE</span><span>BOC</span><span>SCE</span><span>Erasmus+</span><span>Centros</span><span>Prensa</span></div>
+      <a class="bar" href="/radar/">Abrir el radar <span>↗</span></a>
     </div>
-  </section>
+    <a class="fc spark" href="/radar/">
+      <div class="feed"><span>Radar · feed</span><span id="feedFecha">—</span></div>
+      <svg viewBox="0 0 140 70" preserveAspectRatio="none" id="spark" aria-hidden="true"></svg>
+      <div class="num" id="c30" data-n="345">0</div>
+      <div class="lab">señales en los<br>últimos 30 días</div>
+    </a>
+  </div>
 
-  <section id="en-desarrollo">
-    <h2>Lo que viene</h2>
-    <p class="sub">Los datos del radar son la base de nuevas herramientas que estamos preparando.</p>
-    <div class="dev">
-      <div class="item"><small>En desarrollo</small><h3>Herramienta para docentes</h3><p>Qué certificados y módulos puedes impartir según tu titulación y tu experiencia.</p></div>
-      <div class="item"><small>En desarrollo</small><h3>Radar a medida</h3><p>Alertas y resúmenes filtrados por territorio, familia profesional o tema, para centros y entidades.</p></div>
-      <div class="item"><small>En desarrollo</small><h3>Tendencias del sector</h3><p>Hacia dónde se mueve la FP: qué temas suben, qué normativa llega y dónde hay oportunidades.</p></div>
+  <div class="growth abs fx">Martes y viernes <i>✓</i></div>
+  <div class="avail abs fx">Nueva edición<br><i></i>cada semana</div>
+  <div class="out abs fx">
+    <div class="h"><span>Última edición</span><b>FP al día</b><span id="edFecha">[27.10]</span></div>
+    <a class="card" href="/fp-al-dia/">
+      <img src="/marca/fp-al-dia-portada.png" alt="Última edición de FP al día">
+      <span class="arrow">↗</span>
+      <span class="prog"><i id="prog"></i></span>
+    </a>
+  </div>
+</section>
+
+<!-- ═════════ BARRA ═════════ -->
+<div class="strip wide"><span>EST <span class="g">2026</span></span><a class="mid" href="#manifiesto"><i>↓</i>SCROLL</a><span class="g">FP EN DETALLE</span></div>
+
+<!-- ═════════ MANIFIESTO ═════════ -->
+<section class="statement" id="manifiesto">
+  <p class="big" id="big">Por fuera es una newsletter que sale los martes y los viernes. Por dentro es un radar de inteligencia que recopila todo lo que se publica sobre FP y lo ordena para ver hacia dónde se mueve el sector.</p>
+  <p class="sub">Noticias, normativa y convocatorias, de Canarias a toda España.<br><em>Esos datos son la base de lo que viene.</em></p>
+</section>
+
+<!-- ═════════ LO QUE VIENE ═════════ -->
+<section class="trust" id="lo-que-viene">
+  <div class="panel" id="panel">
+    <div class="p-left">
+      <h2>Datos que<br>se convierten<br>en nuevas<br>herramientas</h2>
+      <div class="tile a" aria-hidden="true">✳</div>
+      <div class="tile b" aria-hidden="true"><span><i></i><i></i><i></i><i></i></span></div>
+      <p>FP Radar registra cada día lo que se publica sobre Formación Profesional. Con esos datos preparamos herramientas para docentes, centros y empresas de FP Dual.</p>
+      <div class="cta">
+        <a class="btn" href="/radar/">Explorar FP Radar ↗</a>
+        <a class="btn alt" href="mailto:hola@fpaldia.es">hola@fpaldia.es</a>
+      </div>
     </div>
-  </section>
-
-  <section id="contacto" class="contacto">
-    <div>
-      <h2>¿Hablamos?</h2>
-      <p>Centros, empresas de FP Dual, entidades y docentes: escríbenos.</p>
+    <div class="cards">
+      <div class="tc light">
+        <div class="av" id="av"><i>BOE</i><i>BOC</i><i>SCE</i><i>EU+</i><i>CIFP</i><i>IES</i><i>PRENSA</i><i>DUAL</i></div>
+        <div class="n"><span id="t1" data-n="2664">0</span></div>
+        <div class="l">señales de FP registradas desde febrero de 2026</div>
+      </div>
+      <div class="tc dk">
+        <svg class="badge" viewBox="0 0 140 110" aria-hidden="true">
+          <g fill="none" stroke="#bbb" stroke-width="1.6" stroke-linecap="round">
+            <path d="M40 92C18 80 12 52 22 28"/><path d="M100 92c22-12 28-40 18-64"/>
+            <path d="M24 40c-6-2-10-7-10-12 6 0 10 4 11 9M20 56c-6 0-11-4-12-9 6-1 11 2 13 7M25 72c-6 2-11 0-14-5 5-2 11 0 14 4M33 84c-5 3-11 3-14-1 5-3 10-3 14 0"/>
+            <path d="M116 40c6-2 10-7 10-12-6 0-10 4-11 9M120 56c6 0 11-4 12-9-6-1-11 2-13 7M115 72c6 2 11 0 14-5-5-2-11 0-14 4M107 84c5 3 11 3 14-1-5-3-10-3-14 0"/>
+          </g>
+          <text x="70" y="44" text-anchor="middle" fill="#ddd" font-family="Archivo" font-stretch="110%" font-size="6.5" letter-spacing="1">EN DESARROLLO</text>
+          <text x="70" y="66" text-anchor="middle" fill="#fff" font-family="Inter Tight" font-weight="700" font-size="22">2026</text>
+          <text x="70" y="82" text-anchor="middle" fill="#FFC400" font-family="Archivo" font-stretch="118%" font-size="8" letter-spacing="1.2">FP AL DÍA</text>
+        </svg>
+        <div class="n"><span id="t2" data-n="3">0</span></div>
+        <div class="l">herramientas en desarrollo</div>
+        <div class="note">Para docentes (qué certificados puedes impartir), radar a medida para centros y tendencias del sector.</div>
+      </div>
+      <a class="tc yl" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">
+        <span class="k">NEWSLETTER · GRATIS</span>
+        <h3>Recíbela los martes y los viernes</h3>
+        <span class="go">Suscríbete ↗</span>
+      </a>
     </div>
-    <a class="btn sol" href="mailto:hola@fpaldia.es">hola@fpaldia.es</a>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <span>FP al día · Hecho en Canarias · 2026</span>
-    <span><a href="/fp-al-dia/">Newsletter</a> · <a href="/fp-al-dia/archivo/">Archivo</a> · <a href="/radar/">FP Radar</a> · <a href="/fp-al-dia/rss/">RSS</a></span>
-  </footer>
-</div>
+<footer>
+  <span>FP al día · Hecho en Canarias · 2026</span>
+  <span><a href="/fp-al-dia/">Newsletter</a> · <a href="/fp-al-dia/archivo/">Archivo</a> · <a href="/radar/">FP Radar</a> · <a href="https://chat.whatsapp.com/JqRm4jgN8ZR86CtosWYq9M" target="_blank" rel="noopener">WhatsApp</a> · <a href="/fp-al-dia/rss/">RSS</a></span>
+</footer>
+
 <script>
-fetch('/radar/radar.json', {cache: 'no-cache'}).then(function(r){ return r.json(); }).then(function(d){
-  var f = function(n){ return Number(n).toLocaleString('es-ES'); };
-  if (d.stats && d.stats.total) document.getElementById('n-total').textContent = f(d.stats.total);
-  if (d.rows) document.getElementById('n-30').textContent = f(d.rows.length);
-  if (d.stats && d.stats.legislacion) document.getElementById('n-leg').textContent = f(d.stats.legislacion);
-}).catch(function(){});
+(function(){
+  var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches || /[?&]static=1/.test(location.search);   // static=1: sin animaciones (capturas)
+  var fmt = function(n){ return Number(n).toLocaleString('es-ES'); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+
+  // Fecha
+  var d = new Date(), dias = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  document.getElementById('dia').textContent = dias[d.getDay()];
+  document.getElementById('fecha').textContent = String(d.getDate()).padStart(2,'0') + '.' + String(d.getMonth()+1).padStart(2,'0') + '.' + d.getFullYear() + ' · Canarias';
+
+  // Pastilla del menú que se desliza
+  var nav = document.getElementById('nav'), slider = document.getElementById('slider'), links = nav.querySelectorAll('a');
+  function moveTo(a){ slider.style.left = a.offsetLeft + 'px'; slider.style.width = a.offsetWidth + 'px'; links.forEach(function(x){ x.classList.toggle('on', x === a); }); }
+  var home = links[0]; requestAnimationFrame(function(){ moveTo(home); });
+  links.forEach(function(a){ a.addEventListener('mouseenter', function(){ moveTo(a); }); });
+  nav.addEventListener('mouseleave', function(){ moveTo(home); });
+  window.addEventListener('resize', function(){ moveTo(home); });
+
+  // Contadores
+  function count(el, to, ms){
+    if (RM) { el.textContent = fmt(to); return; }
+    var t0 = performance.now();
+    (function step(t){ var p = Math.min((t - t0) / ms, 1); el.textContent = fmt(Math.round((1 - Math.pow(1 - p, 3)) * to)); if (p < 1) requestAnimationFrame(step); })(t0);
+  }
+
+  // Animación de entrada
+  if (!RM && document.body.animate) {
+    document.querySelectorAll('.title .ln span').forEach(function(s, i){
+      s.animate([{transform:'translateY(105%)'},{transform:'none'}], {duration:1000, delay:120 + i*110, easing:'cubic-bezier(.2,.8,.2,1)', fill:'both'});
+    });
+    document.getElementById('pv').animate([{transform:'translateY(40px)', filter:'blur(10px)', opacity:0},{transform:'none', filter:'blur(0)', opacity:1}], {duration:1300, easing:'cubic-bezier(.2,.8,.2,1)', fill:'both'});
+    nav.animate([{transform:'translateY(-20px)', opacity:0},{transform:'none', opacity:1}], {duration:700, easing:'ease-out', fill:'both'});
+    document.querySelectorAll('.fx').forEach(function(el, i){
+      el.animate([{transform:'translateY(14px)', opacity:0},{transform:'none', opacity:1}], {duration:800, delay:250 + i*55, easing:'cubic-bezier(.2,.8,.2,1)', fill:'both'});
+    });
+    document.getElementById('prog').animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}], {duration:1600, delay:700, easing:'ease-out', fill:'both'});
+  }
+
+  // Datos en vivo de FP Radar
+  fetch('/radar/radar.json', {cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(data){
+    var s = data.stats || {}, rows = data.rows || [];
+    document.getElementById('pvTicker').innerHTML = ['TOTAL ' + fmt(s.total), 'IOS MEDIA ' + s.iosMedia, 'ALERTAS ' + fmt(s.alertas), 'LEGISLACIÓN ' + fmt(s.legislacion), 'CERTIFICADOS ' + fmt(s.certificados), 'CANARIAS ' + fmt(s.canarias), 'NACIONAL ' + fmt(s.nacional)].map(function(x){ return '<span>' + x + '</span>'; }).join('');
+    document.getElementById('k1').textContent = fmt(s.total); document.getElementById('k2').textContent = s.iosMedia;
+    document.getElementById('k3').textContent = fmt(s.alertas); document.getElementById('k4').textContent = fmt(rows.length);
+    document.getElementById('cTotal').dataset.n = s.total; document.getElementById('c30').dataset.n = rows.length;
+    document.getElementById('t1').dataset.n = s.total;
+    if (data.hasta) { var p = data.hasta.split('-'); document.getElementById('feedFecha').textContent = p[2] + '/' + p[1]; }
+    var top = rows.slice().sort(function(a, b){ return (b.fecha > a.fecha) - (b.fecha < a.fecha) || b.ios - a.ios; }).slice(0, 14);
+    var html = top.map(function(r){
+      var amb = r.ambito ? '<span class="pill-a' + (r.ambito === 'NACIONAL' ? ' n' : '') + '">' + esc(r.ambito.split('/')[0]) + '</span>' : '';
+      var alr = r.alerta ? '<span class="pill-r">' + esc(r.alerta) + '</span>' : '';
+      return '<div class="pv-row"><span class="d">' + r.fecha + '</span><span class="m">' + amb + alr + '<span class="bar-ios"><i style="width:' + Math.min(100, r.ios) + '%"></i></span>' + r.ios + '</span><span class="t">' + esc(r.texto.split('\n')[0]) + '</span></div>';
+    }).join('');
+    document.getElementById('pvTrack').innerHTML = html + html;   // duplicado para el bucle continuo
+    // mini gráfico: señales por día en los últimos 30 días
+    var porDia = {}; rows.forEach(function(r){ porDia[r.fecha] = (porDia[r.fecha] || 0) + 1; });
+    var dias = Object.keys(porDia).sort(), mx = Math.max.apply(null, dias.map(function(k){ return porDia[k]; }).concat([1]));
+    var w = 140 / Math.max(dias.length, 1), bars = dias.map(function(k, i){ var h = 64 * porDia[k] / mx; return '<rect x="' + (i*w + 0.5).toFixed(1) + '" y="' + (68 - h).toFixed(1) + '" width="' + Math.max(w - 1.5, 1).toFixed(1) + '" height="' + h.toFixed(1) + '" fill="#FFC400" opacity=".85"/>'; }).join('');
+    document.getElementById('spark').innerHTML = bars;
+  }).catch(function(){}).finally(function(){
+    count(document.getElementById('cTotal'), +document.getElementById('cTotal').dataset.n, 1400);
+    count(document.getElementById('c30'), +document.getElementById('c30').dataset.n, 1400);
+  });
+
+  // Deriva de la vista previa con el scroll (0,12×)
+  var pvBox = document.getElementById('preview');
+  // Manifiesto: cada palabra en su span; se rellenan de gris a blanco al hacer scroll (borde suave de 3 palabras)
+  var big = document.getElementById('big');
+  big.innerHTML = big.textContent.trim().split(/\s+/).map(function(w){ return '<span>' + w + '</span> '; }).join('');
+  var words = big.querySelectorAll('span');
+  function mix(t){ var a = [111,111,111], b = [244,244,244]; return 'rgb(' + a.map(function(v, i){ return Math.round(v + (b[i] - v) * t); }).join(',') + ')'; }
+  function onScroll(){
+    var y = window.scrollY;
+    if (!RM && window.innerWidth > 760) pvBox.style.transform = 'translateY(' + (y * 0.12) + 'px)';
+    var r = big.getBoundingClientRect(), vh = window.innerHeight;
+    var p = RM ? 1 : Math.min(Math.max((vh * 0.85 - r.top) / (r.height + vh * 0.35), 0), 1);
+    var pos = p * (words.length + 3);
+    words.forEach(function(w, i){ w.style.color = mix(Math.min(Math.max(pos - i, 0) / 3, 1)); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Panel: contadores y «avatares» al entrar en pantalla
+  var done = false;
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting || done) return; done = true;
+      count(document.getElementById('t1'), +document.getElementById('t1').dataset.n, 1400);
+      count(document.getElementById('t2'), 3, 1000);
+      if (!RM) document.querySelectorAll('#av i').forEach(function(a, i){ a.animate([{transform:'scale(.4)', opacity:0},{transform:'none', opacity:1}], {duration:500, delay:i*70, easing:'cubic-bezier(.3,1.4,.5,1)', fill:'both'}); });
+    });
+  }, {threshold:.35}).observe(document.getElementById('panel'));
+})();
 </script>
 </body>
 </html>
