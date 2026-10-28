@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FP Radar · FP al día</title>
+<meta name="description" content="FP Radar: señales de la Formación Profesional en España y Canarias de los últimos 30 días, de FP al día.">
+<link rel="canonical" href="https://fpaldia.es/radar/">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#050810;
+  --s1:#090d18;
+  --s2:#0d1220;
+  --s3:#111828;
+  --border:#1a2438;
+  --border2:#243045;
+  --amber:#f59e0b;
+  --amber-d:#92600a;
+  --cyan:#06b6d4;
+  --cyan-d:#0e5f72;
+  --green:#10b981;
+  --red:#ef4444;
+  --purple:#8b5cf6;
+  --teal:#14b8a6;
+  --orange:#f97316;
+  --t1:#c8d5e8;
+  --t2:#6b829e;
+  --t3:#2e4060;
+  --mono:'JetBrains Mono','Courier New',monospace;
+}
+
+*,*::before,*::after {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html {
+  scrollbar-width:thin;
+  scrollbar-color:var(--border2) var(--bg);
+}
+
+body {
+  font-family:var(--mono);
+  font-size:11px;
+  background:var(--bg);
+  color:var(--t1);
+  min-height:100vh;
+  letter-spacing:.01em;
+}
+
+.topbar {
+  background:var(--amber);
+  color:#000;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  padding:3px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.topbar-ticker {
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  flex:1;
+}
+
+.topbar-item {
+  white-space:nowrap;
+}
+
+.topbar-right {
+  display:flex;
+  gap:14px;
+  flex-shrink:0;
+}
+
+.header {
+  background:var(--s1);
+  border-bottom:1px solid var(--border2);
+  padding:0 14px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.h-left {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.h-title {
+  font-size:13px;
+  font-weight:700;
+  color:var(--amber);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.h-sep {
+  color:var(--t3);
+}
+
+.h-sub {
+  font-size:9px;
+  color:var(--t2);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.live-badge {
+  display:flex;
+  align-items:center;
+  gap:4px;
+  font-size:9px;
+  font-weight:700;
+  color:var(--green);
+  letter-spacing:.1em;
+  border:1px solid rgba(16,185,129,.3);
+  padding:2px 6px;
+  border-radius:2px;
+  background:rgba(16,185,129,.06);
+}
+
+.dot {
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--green);
+  animation:blink 1.4s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,100%{opacity:1;}
+  50%{opacity:.2;}
+}
+
+.h-right {
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.h-clock {
+  font-size:13px;
+  font-weight:700;
+  color:var(--amber);
+  letter-spacing:.08em;
+}
+
+.h-date {
+  font-size:9px;
+  color:var(--t2);
+  letter-spacing:.05em;
+}
+
+.body {
+  max-width:1400px;
+  margin:0 auto;
+  padding:10px 14px;
+}
+
+.statusbar {
+  display:flex;
+  align-items:center;
+  border:1px solid var(--border2);
+  border-radius:2px;
+  margin-bottom:10px;
+  overflow-x:auto;
+  background:var(--s1);
+  flex-wrap:wrap;
+}
+
+.sb-item {
+  flex:1;
+  padding:8px 12px 7px;
+  border-right:1px solid var(--border2);
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+  min-width:100px;
+}
+
+.sb-item:last-child {
+  border-right:none;
+}
+
+.sb-item.alert {
+  background:rgba(239,68,68,.04);
+}
+
+.sb-item.legislacion {
+  background:rgba(245,158,11,.04);
+}
+
+.sb-label {
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--t3);
+}
+
+.sb-val {
+  font-size:22px;
+  font-weight:700;
+  color:var(--t1);
+  line-height:1;
+}
+
+.sb-val.amber { color:var(--amber); }
+.sb-val.red { color:var(--red); }
+.sb-val.cyan { color:var(--cyan); }
+.sb-val.green { color:var(--green); }
+.sb-val.purple { color:var(--purple); }
+.sb-val.teal { color:var(--teal); }
+.sb-val.orange { color:var(--orange); }
+
+.sb-foot {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  margin-top:2px;
+}
+
+.sb-sub {
+  font-size:8px;
+  color:var(--t3);
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+
+.controls {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:8px;
+  flex-wrap:wrap;
+}
+
+.ctrl-block {
+  display:flex;
+  align-items:center;
+  border:1px solid var(--border2);
+  border-radius:2px;
+  overflow:hidden;
+  background:var(--s1);
+  flex-wrap:wrap;
+}
+
+.ctrl-btn {
+  padding:4px 10px;
+  border:none;
+  background:transparent;
+  color:var(--t2);
+  font-family:var(--mono);
+  font-size:9px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  cursor:pointer;
+  transition:background .1s,color .1s;
+  white-space:nowrap;
+  border-right:1px solid var(--border2);
+}
+
+.ctrl-btn:last-child {
+  border-right:none;
+}
+
+.ctrl-btn:hover {
+  background:var(--s3);
+  color:var(--t1);
+}
+
+.ctrl-btn.active {
+  background:var(--amber);
+  color:#000;
+}
+
+.search-box {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  background:var(--s1);
+  border:1px solid var(--border2);
+  border-radius:2px;
+  padding:3px 9px;
+  flex:1;
+  min-width:180px;
+  max-width:280px;
+}
+
+.search-box input {
+  background:transparent;
+  border:none;
+  outline:none;
+  color:var(--t1);
+  font-family:var(--mono);
+  font-size:10px;
+  width:100%;
+  letter-spacing:.02em;
+}
+
+.search-box input::placeholder {
+  color:var(--t3);
+}
+
+.search-pfx {
+  font-size:9px;
+  font-weight:700;
+  color:var(--t3);
+  white-space:nowrap;
+  letter-spacing:.05em;
+}
+
+.count-lbl {
+  font-size:9px;
+  color:var(--t3);
+  letter-spacing:.05em;
+  margin-left:auto;
+  white-space:nowrap;
+}
+
+.count-lbl span {
+  color:var(--amber);
+}
+
+.t-wrap {
+  border:1px solid var(--border2);
+  border-radius:2px;
+  overflow-x:auto;
+  background:var(--s1);
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+  min-width:900px;
+}
+
+thead tr {
+  background:var(--s2);
+  border-bottom:1px solid var(--amber-d);
+}
+
+thead th {
+  padding:6px 10px;
+  font-size:8px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--amber);
+  text-align:left;
+  white-space:nowrap;
+  cursor:default;
+}
+
+thead th.r {
+  text-align:right;
+}
+
+tbody tr {
+  border-bottom:1px solid var(--border);
+  transition:background .08s;
+}
+
+tbody tr:last-child {
+  border-bottom:none;
+}
+
+tbody tr:hover {
+  background:var(--s3);
+}
+
+tbody tr.has-alert {
+  border-left:2px solid var(--red);
+}
+
+tbody tr.has-legislacion {
+  border-left:2px solid var(--amber);
+}
+
+tbody td {
+  padding:6px 10px;
+  vertical-align:middle;
+  font-size:10px;
+  color:var(--t2);
+}
+
+.td-idx {
+  color:var(--t3);
+  font-size:9px;
+  min-width:28px;
+}
+
+.td-date {
+  white-space:nowrap;
+  font-size:9px;
+  color:var(--t3);
+}
+
+.td-text {
+  max-width:380px;
+}
+
+.td-inner {
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width:380px;
+  color:var(--t1);
+}
+
+.td-inner a {
+  color:var(--t1);
+  text-decoration:none;
+  border-bottom:1px solid var(--t3);
+  transition:border-color .1s;
+}
+
+.td-inner a:hover {
+  border-color:var(--amber);
+  color:var(--amber);
+}
+
+.td-r {
+  text-align:right;
+}
+
+.score {
+  font-size:10px;
+  font-weight:700;
+}
+
+.score.hi { color:var(--red); }
+.score.mid { color:var(--amber); }
+.score.lo { color:var(--t2); }
+
+.ios-wrap {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:70px;
+}
+
+.ios-track {
+  flex:1;
+  height:3px;
+  background:var(--border2);
+  border-radius:1px;
+  overflow:hidden;
+}
+
+.ios-fill {
+  height:100%;
+  border-radius:1px;
+}
+
+.ios-fill.hi { background:var(--green); }
+.ios-fill.mid { background:var(--amber); }
+.ios-fill.lo { background:var(--t3); }
+
+.ios-num {
+  font-size:9px;
+  color:var(--t2);
+  min-width:18px;
+  text-align:right;
+}
+
+.chip {
+  display:inline-flex;
+  align-items:center;
+  padding:1px 5px;
+  border-radius:1px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.07em;
+  white-space:nowrap;
+  text-transform:uppercase;
+}
+
+.ch-dc {
+  background:rgba(239,68,68,.12);
+  color:#f87171;
+  border:1px solid rgba(239,68,68,.25);
+}
+
+.ch-dn {
+  background:rgba(245,158,11,.12);
+  color:#fbbf24;
+  border:1px solid rgba(245,158,11,.25);
+}
+
+.ch-fc {
+  background:rgba(249,115,22,.12);
+  color:#fb923c;
+  border:1px solid rgba(249,115,22,.25);
+}
+
+.ch-fn {
+  background:rgba(16,185,129,.12);
+  color:#34d399;
+  border:1px solid rgba(16,185,129,.25);
+}
+
+.ch-leg {
+  background:rgba(245,158,11,.2);
+  color:var(--amber);
+  border:1px solid var(--amber);
+}
+
+.ch-cert {
+  background:rgba(6,182,212,.12);
+  color:var(--cyan);
+  border:1px solid rgba(6,182,212,.25);
+}
+
+.ch-nil {
+  color:var(--t3);
+  font-size:9px;
+}
+
+.pill {
+  display:inline-block;
+  padding:1px 5px;
+  border-radius:1px;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+
+.pl-c {
+  background:rgba(6,182,212,.1);
+  color:var(--cyan);
+  border:1px solid rgba(6,182,212,.2);
+}
+
+.pl-n {
+  background:rgba(139,92,246,.1);
+  color:#a78bfa;
+  border:1px solid rgba(139,92,246,.2);
+}
+
+.pl-a {
+  background:rgba(20,184,166,.1);
+  color:var(--teal);
+  border:1px solid rgba(20,184,166,.2);
+}
+
+.priority-badge {
+  display:inline-block;
+  padding:1px 5px;
+  border-radius:1px;
+  font-size:8px;
+  font-weight:700;
+  text-align:center;
+  min-width:28px;
+}
+
+.priority-high {
+  background:rgba(245,158,11,.3);
+  color:var(--amber);
+  border:1px solid var(--amber);
+}
+
+.priority-mid {
+  background:rgba(6,182,212,.2);
+  color:var(--cyan);
+  border:1px solid rgba(6,182,212,.3);
+}
+
+.priority-low {
+  background:rgba(46,64,96,.5);
+  color:var(--t2);
+  border:1px solid var(--t3);
+}
+
+.loading {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:60px;
+  gap:10px;
+  color:var(--t3);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.spinner {
+  width:14px;
+  height:14px;
+  border:1px solid var(--border2);
+  border-top-color:var(--amber);
+  border-radius:50%;
+  animation:spin .6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform:rotate(360deg); }
+}
+
+.empty {
+  text-align:center;
+  padding:40px;
+  color:var(--t3);
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+body.embed .topbar,
+body.embed .header {
+  display:none;
+}
+
+body.embed .body {
+  padding:0;
+  max-width:none;
+}
+
+body.embed .controls {
+  padding:8px 10px 0;
+}
+
+body.embed .t-wrap {
+  border-radius:0;
+  border-left:none;
+  border-right:none;
+  border-bottom:none;
+}
+
+::-webkit-scrollbar {
+  width:5px;
+  height:5px;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background:var(--border2);
+  border-radius:2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:var(--t3);
+}
+
+.h-title a { color:inherit; text-decoration:none; }
+.sub-btn {
+  font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+  color:#000; background:var(--amber); padding:5px 10px; border-radius:2px; text-decoration:none; white-space:nowrap;
+}
+.sub-btn:hover { background:#fbbf24; }
+.lock { position:relative; margin-top:-1px; border:1px solid var(--border2); border-top:none; background:var(--s1); overflow:hidden; }
+.lock-rows { filter:blur(4px); opacity:.45; pointer-events:none; user-select:none; padding:6px 10px; }
+.lock-row { display:flex; gap:18px; padding:7px 0; border-bottom:1px solid var(--border); color:var(--t2); font-size:10px; }
+.lock-row b { flex:1; color:var(--t1); font-weight:400; }
+.lock-cta { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  text-align:center; padding:16px; background:linear-gradient(180deg, rgba(9,13,24,.2) 0%, rgba(9,13,24,.92) 55%); }
+.lock-arrow { font-size:22px; color:var(--amber); animation:bob 1.6s ease-in-out infinite; }
+@keyframes bob { 0%,100%{transform:translateY(0);} 50%{transform:translateY(5px);} }
+.lock-title { font-size:13px; font-weight:700; color:var(--t1); letter-spacing:.04em; }
+.lock-text { font-size:10px; color:var(--t2); max-width:460px; line-height:1.6; }
+.foot { margin:18px 0 8px; font-size:9px; color:var(--t3); letter-spacing:.05em; display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; }
+.foot a { color:var(--t2); }
+
+@media (max-width: 768px) {
+  .sb-item {
+    min-width: 80px;
+    padding: 6px 8px;
+  }
+  .sb-val {
+    font-size: 18px;
+  }
+  .ctrl-btn {
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+  .td-text {
+    max-width: 200px;
+  }
+  .td-inner {
+    max-width: 200px;
+  }
+}
+</style>
+<script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-ticker">
+    <span class="topbar-item">TOTAL <span id="tk-total">—</span></span>
+    <span class="topbar-item">IOS MEDIA <span id="tk-ios">—</span></span>
+    <span class="topbar-item">ALERTAS <span id="tk-alertas">—</span></span>
+    <span class="topbar-item">LEGISLACIÓN <span id="tk-legislacion">—</span></span>
+    <span class="topbar-item">CERTIFICADOS <span id="tk-certificados">—</span></span>
+    <span class="topbar-item">CANARIAS <span id="tk-canarias">—</span></span>
+    <span class="topbar-item">NACIONAL <span id="tk-nacional">—</span></span>
+  </div>
+  <div class="topbar-right">
+    <span>FP AL DÍA</span>
+    <span>ISLAS CANARIAS</span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="h-left">
+    <span class="h-title"><a href="/radar/">FP RADAR</a></span>
+    <span class="h-sep">|</span>
+    <span class="h-sub">Sistema de Inteligencia Estratégica</span>
+    <span class="live-badge"><span class="dot"></span>ÚLTIMOS 30 DÍAS</span>
+  </div>
+  <div class="h-right">
+    <a class="sub-btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis</a>
+    <div style="text-align:right">
+      <div class="h-clock" id="clock">—</div>
+      <div class="h-date" id="dateStr">—</div>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="statusbar">
+    <div class="sb-item">
+      <div class="sb-label">Total señales</div>
+      <div class="sb-val amber" id="sc-total">—</div>
+      <div class="sb-foot"><span class="sb-sub">acumulado</span></div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-label">IOS media</div>
+      <div class="sb-val cyan" id="sc-ios">—</div>
+      <div class="sb-foot"><span class="sb-sub">índice oportunidad</span></div>
+    </div>
+    <div class="sb-item alert">
+      <div class="sb-label">Alertas</div>
+      <div class="sb-val red" id="sc-alertas">—</div>
+      <div class="sb-foot"><span class="sb-sub">señales prioritarias</span></div>
+    </div>
+    <div class="sb-item legislacion">
+      <div class="sb-label">Legislación</div>
+      <div class="sb-val orange" id="sc-legislacion">—</div>
+      <div class="sb-foot"><span class="sb-sub">BOC, BOE, Decretos</span></div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-label">Certificados</div>
+      <div class="sb-val teal" id="sc-certificados">—</div>
+      <div class="sb-foot"><span class="sb-sub">cert. profesionalidad</span></div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-label">Canarias</div>
+      <div class="sb-val cyan" id="sc-canarias">—</div>
+      <div class="sb-foot"><span class="sb-sub">ámbito local</span></div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-label">Nacional</div>
+      <div class="sb-val purple" id="sc-nacional">—</div>
+      <div class="sb-foot"><span class="sb-sub">ámbito estatal</span></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-block">
+      <button class="ctrl-btn active" onclick="setTab('TODOS',this)">ALL</button>
+      <button class="ctrl-btn" onclick="setTab('CANARIAS',this)">CAN</button>
+      <button class="ctrl-btn" onclick="setTab('NACIONAL',this)">NAC</button>
+      <button class="ctrl-btn" onclick="setTab('AMBOS',this)">AMB</button>
+      <button class="ctrl-btn" onclick="setTab('ALERTAS',this)">⚑ ALR</button>
+      <button class="ctrl-btn" onclick="setTab('LEGISLACION',this)">📜 LEG</button>
+      <button class="ctrl-btn" onclick="setTab('CERTIFICADOS',this)">📄 CERT</button>
+    </div>
+    <div class="search-box">
+      <span class="search-pfx">SRH›</span>
+      <input type="text" id="searchInput" placeholder="filtrar señales…" oninput="renderTable()">
+    </div>
+    <span class="count-lbl" id="countTag"></span>
+  </div>
+
+  <div class="t-wrap" id="tableWrap">
+    <div class="loading"><div class="spinner"></div><span>Cargando señales…</span></div>
+  </div>
+
+  <div class="lock" id="lock">
+    <div class="lock-rows" aria-hidden="true">
+      <div class="lock-row"><span>████-██-██</span><b>████████ ██████ ███ ██████████ █████████ ██ ████████</b><span>██</span><span>███</span></div>
+      <div class="lock-row"><span>████-██-██</span><b>██████ ███████████ ████ ██ ███ ███████ ██████</b><span>██</span><span>███</span></div>
+      <div class="lock-row"><span>████-██-██</span><b>███████ ██ ████████ █████ ██████████ ███████████</b><span>██</span><span>███</span></div>
+      <div class="lock-row"><span>████-██-██</span><b>█████████ ██████ ████ ███████ ██ ████</b><span>██</span><span>███</span></div>
+      <div class="lock-row"><span>████-██-██</span><b>████ ███████████ ██████ ███ █████████ ██████</b><span>██</span><span>███</span></div>
+      <div class="lock-row"><span>████-██-██</span><b>██████████ ███ ███████ ████ ██████████ ████</b><span>██</span><span>███</span></div>
+    </div>
+    <div class="lock-cta">
+      <div class="lock-arrow">↓</div>
+      <div class="lock-title">🔒 <span id="lockCount">Más señales</span> en el histórico</div>
+      <div class="lock-text">Aquí ves las señales de los últimos 30 días. El histórico completo es para la comunidad de FP al día: suscríbete gratis a la newsletter.</div>
+      <a class="sub-btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete a FP al día</a>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Actualizado: <span id="genAt">—</span></span>
+    <span><a href="/fp-al-dia/">FP al día · última edición</a> · <a href="/fp-al-dia/archivo/">Archivo</a> · <a href="/fp-al-dia/feed.xml">RSS</a></span>
+  </div>
+</div>
+
+<script>
+var allRows = [], activeTab = 'TODOS';
+if(window.location.search.indexOf('embed=1') !== -1) document.body.classList.add('embed');
+var DAYS = ['DOM','LUN','MAR','MIÉ','JUE','VIE','SÁB'];
+var MONTHS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+
+function tickClock() {
+  var d = new Date();
+  document.getElementById('clock').textContent = d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0') + ':' + d.getSeconds().toString().padStart(2,'0');
+  document.getElementById('dateStr').textContent = DAYS[d.getDay()] + ' ' + d.getDate().toString().padStart(2,'0') + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+}
+setInterval(tickClock, 1000);
+tickClock();
+
+function animateCount(el, target, ms) {
+  var s = performance.now();
+  function step(n) {
+    var p = Math.min((n - s) / ms, 1);
+    el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+    if(p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function chipAlerta(a) {
+  if(!a) return '<span class="ch-nil">—</span>';
+  var cls = a === 'DUAL CANARIAS' ? 'ch-dc' : a === 'DUAL NACIONAL' ? 'ch-dn' : a === 'FP CANARIAS' ? 'ch-fc' : 'ch-fn';
+  return '<span class="chip '+cls+'">'+esc(a)+'</span>';
+}
+
+function esLegislacion(texto) {
+  var t = texto.toLowerCase();
+  return t.indexOf('boc') !== -1 || t.indexOf('boe') !== -1 || t.indexOf('decreto') !== -1 || 
+         t.indexOf('ley') !== -1 || t.indexOf('real decreto') !== -1 || t.indexOf('orden ministerial') !== -1 ||
+         t.indexOf('resolucion') !== -1 || t.indexOf('convocatoria') !== -1;
+}
+
+function esCertificado(texto) {
+  return texto.toLowerCase().indexOf('certificado de profesionalidad') !== -1;
+}
+
+function chipExtra(row) {
+  var chips = [];
+  if(esLegislacion(row.texto)) chips.push('<span class="chip ch-leg">📜 LEG</span>');
+  if(esCertificado(row.texto)) chips.push('<span class="chip ch-cert">📄 CERT</span>');
+  return chips.join(' ');
+}
+
+function pillAmbito(a) {
+  if(!a) return '<span class="ch-nil">—</span>';
+  var cls = a === 'CANARIAS' ? 'pl-c' : a === 'NACIONAL' ? 'pl-n' : 'pl-a';
+  return '<span class="pill '+cls+'">'+esc(a)+'</span>';
+}
+
+function iosBar(val) {
+  var v = Math.max(0, Math.min(100, Number(val) || 0));
+  var cls = v >= 65 ? 'hi' : v >= 40 ? 'mid' : 'lo';
+  return '<div class="ios-wrap"><div class="ios-track"><div class="ios-fill '+cls+'" style="width:'+v+'%"></div></div><span class="ios-num">'+v+'</span></div>';
+}
+
+function scoreCell(val, hi, mid) {
+  var v = Number(val) || 0;
+  var cls = v >= hi ? 'hi' : v >= mid ? 'mid' : 'lo';
+  return '<span class="score '+cls+'">'+v+'</span>';
+}
+
+function priorityBadge(priority) {
+  var p = Number(priority) || 0;
+  var cls = p >= 70 ? 'priority-high' : (p >= 40 ? 'priority-mid' : 'priority-low');
+  return '<span class="priority-badge '+cls+'">'+p+'</span>';
+}
+
+function setTab(tab, btn) {
+  activeTab = tab;
+  document.querySelectorAll('.ctrl-btn').forEach(function(b) { b.classList.remove('active'); });
+  if(btn) btn.classList.add('active');
+  renderTable();
+}
+
+function renderStats(stats, rows) {
+  animateCount(document.getElementById('sc-total'), stats.total || 0, 900);
+  animateCount(document.getElementById('sc-ios'), stats.iosMedia || 0, 850);
+  animateCount(document.getElementById('sc-alertas'), stats.alertas || 0, 800);
+  animateCount(document.getElementById('sc-legislacion'), stats.legislacion || 0, 800);
+  animateCount(document.getElementById('sc-certificados'), stats.certificados || 0, 800);
+  animateCount(document.getElementById('sc-canarias'), stats.canarias || 0, 880);
+  animateCount(document.getElementById('sc-nacional'), stats.nacional || 0, 880);
+  
+  document.getElementById('tk-total').textContent = stats.total || 0;
+  document.getElementById('tk-ios').textContent = stats.iosMedia || 0;
+  document.getElementById('tk-alertas').textContent = stats.alertas || 0;
+  document.getElementById('tk-legislacion').textContent = stats.legislacion || 0;
+  document.getElementById('tk-certificados').textContent = stats.certificados || 0;
+  document.getElementById('tk-canarias').textContent = stats.canarias || 0;
+  document.getElementById('tk-nacional').textContent = stats.nacional || 0;
+}
+
+function renderTable() {
+  var q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+  var rows = allRows.slice();
+  
+  if(activeTab === 'CANARIAS') rows = rows.filter(function(r) { return r.ambito === 'CANARIAS'; });
+  else if(activeTab === 'NACIONAL') rows = rows.filter(function(r) { return r.ambito === 'NACIONAL'; });
+  else if(activeTab === 'AMBOS') rows = rows.filter(function(r) { return r.ambito === 'AMBOS'; });
+  else if(activeTab === 'ALERTAS') rows = rows.filter(function(r) { return r.alerta !== ''; });
+  else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return esLegislacion(r.texto); });
+  else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return esCertificado(r.texto); });
+  
+  if(q) rows = rows.filter(function(r) { return r.texto.toLowerCase().indexOf(q) !== -1; });
+  
+  var ct = document.getElementById('countTag');
+  if(ct) ct.innerHTML = '<span>' + rows.length.toLocaleString() + '</span> SEÑALES';
+  
+  if(!rows.length) {
+    document.getElementById('tableWrap').innerHTML = '<div class="empty">[ SIN RESULTADOS ]</div>';
+    return;
+  }
+  
+  var h = '<table><thead><tr>' +
+          '<th>#</th>' +
+          '<th>FECHA</th>' +
+          '<th>SEÑAL</th>' +
+          '<th class="r" title="Relevancia FP Dual (0–100)">DUAL</th>' +
+          '<th class="r" title="Relevancia FP general (0–100)">FP GEN</th>' +
+          '<th title="Índice de Oportunidad Estratégica (0–100)">IOS</th>' +
+          '<th>ÁMBITO</th>' +
+          '<th>ALERTA</th>' +
+          '<th class="r" title="Prioridad (0–100)">PRIO</th>' +
+          '<th>EXTRA</th>' +
+          '</tr></thead><tbody>';
+  
+  for(var i = 0; i < rows.length; i++) {
+    var r = rows[i];
+    var rowClass = '';
+    if(r.alerta) rowClass = 'has-alert';
+    else if(esLegislacion(r.texto)) rowClass = 'has-legislacion';
+    
+    var sn = esc(r.texto.substring(0, 120)) + (r.texto.length > 120 ? '…' : '');
+    var tip = r.texto.replace(/"/g, '&quot;');
+    var senal = r.url ? '<a href="'+esc(r.url)+'" target="_blank" rel="noopener" title="'+tip+'">'+sn+'</a>' : '<span title="'+tip+'">'+sn+'</span>';
+    
+    h += '<tr class="'+rowClass+'">';
+    h += '<td class="td-idx">' + (i+1) + '</td>';
+    h += '<td class="td-date">' + r.fecha + '</td>';
+    h += '<td class="td-text"><span class="td-inner">' + senal + '</span></td>';
+    h += '<td class="td-r">' + scoreCell(r.dual, 80, 50) + '</td>';
+    h += '<td class="td-r">' + scoreCell(r.fpGeneral, 75, 50) + '</td>';
+    h += '<td>' + iosBar(r.ios) + '</td>';
+    h += '<td>' + pillAmbito(r.ambito) + '</td>';
+    h += '<td>' + chipAlerta(r.alerta) + '</td>';
+    h += '<td class="td-r">' + priorityBadge(r.prioridad) + '</td>';
+    h += '<td>' + chipExtra(r) + '</td>';
+    h += '</tr>';
+  }
+  h += '</tbody></table>';
+  document.getElementById('tableWrap').innerHTML = h;
+}
+
+// Datos: radar.json (últimos 30 días + cifras del histórico completo), generado por codigo/radar_web.py
+fetch('radar.json', {cache: 'no-cache'})
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    allRows = data.rows || [];
+    renderStats(data.stats || {}, allRows);
+    renderTable();
+    var resto = (data.stats && data.stats.total || 0) - allRows.length;
+    if(resto > 0) document.getElementById('lockCount').textContent = '+' + resto.toLocaleString('es-ES') + ' señales';
+    if(data.generado) document.getElementById('genAt').textContent = data.generado;
+  })
+  .catch(function(error) {
+    console.error('Error al cargar datos:', error);
+    document.getElementById('tableWrap').innerHTML = '<div class="empty">ERROR AL CARGAR DATOS</div>';
+  });
+</script>
+</body>
+</html>
