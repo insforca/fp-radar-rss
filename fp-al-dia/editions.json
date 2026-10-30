@@ -132,6 +132,116 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-10-30",
+   "headline": "Hecansa invierte 11 millones de fondos europeos para liderar la FP Dual en Canarias",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "Hecansa invierte 11 millones de fondos europeos para liderar la FP Dual en Canarias",
+     "ambito": "Canarias",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Libertad Digital · libertaddigital.com",
+     "url": "https://www.libertaddigital.com/canarias/2026-10-27/hecansa-invierte-11-millones-de-fondos-europeos-para-liderar-la-fp-dual-en-canarias-7482302/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "El Consejo Canario de Formación Profesional analiza la evolución de estas enseñanzas y…",
+     "ambito": "Canarias",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Portal de Noticias del Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/noticias/el-consejo-canario-de-formacion-profesional-analiza-la-evolucion-de-estas-ensenanzas-y-su-situacion-en-las-islas/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Erasmus Days · IES SAN MATÍAS",
+     "ambito": "Canarias",
+     "por_que": "Oportunidad de movilidad europea para alumnado y profesorado de FP.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iessanmatias/2026/10/29/erasmus-days/",
+     "tema": "Erasmus+"
+    },
+    {
+     "trend": "eq",
+     "titular": "Estadística de Inserción Laboral. Formación Profesional (FP). 2024",
+     "ambito": "Canarias",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www.gobiernodecanarias.org/istac/.content/noticias/estadistica-insercion-laboral-formacion-profesional-canarias-2024.html",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "eq",
+     "titular": "Domínguez defiende diversificar la economía canaria para crear empleo más estable y de…",
+     "ambito": "Canarias",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "Libertad Digital · libertaddigital.com",
+     "url": "https://www.libertaddigital.com/canarias/2026-10-27/dominguez-defiende-diversificar-la-economia-canaria-para-crear-empleo-mas-estable-y-de-mayor-valor-7482763/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "eq",
+     "titular": "Educación refuerza el papel de la Inspección para estrechar la relación entre centros y…",
+     "ambito": "Canarias",
+     "por_que": "Buena práctica de centro que se puede copiar en otros institutos.",
+     "fuente": "Portal de Noticias del Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/noticias/educacion-refuerza-el-papel-de-la-inspeccion-para-estrechar-la-relacion-entre-centros-y-familias/",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "ISTAC · Casi la mitad de los estudiantes titulados en Ciclos Formativos de Grado Superior",
+     "ambito": "Canarias",
+     "por_que": "Movimiento en la FP que conviene tener en el radar.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www.gobiernodecanarias.org/istac/.content/noticias/estadistica-insercion-laboral-formacion-profesional-canarias-noticia-2024.html",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "¡PRÓXIMAMENTE! Cafetería Escolar · CIFP Telde",
+     "ambito": "Canarias",
+     "por_que": "Buena práctica de centro que se puede copiar en otros institutos.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/cifpprofesorantoniocabreraperez/2026/10/28/proximamente-cafeteria-escolar/",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "El Gobierno aprueba 15 millones para el mantenimiento de la red de centros de excelencia",
+     "ambito": "España",
+     "por_que": "Mejora de calidad en la FP: referencia para otros centros.",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-aprueba-15-millones-mantenimiento-red-centros-excelencia-formacion-profesional-20261027130835.html",
+     "tema": "Calidad"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "SCE: listas de empleo de docentes interinos para los PFAE y otros programas de empleo",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "3/11",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "PFAE 2026: subvenciones a entidades para proyectos de formación en alternancia (34,6 M€)",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/198/3416.html",
+      "fecha": "2026-10-02",
+      "hasta": "3/11",
+      "tramite": null
+     }
+    ]
+   }
   }
  ]
 }
