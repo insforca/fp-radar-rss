@@ -775,11 +775,11 @@ body.embed .t-wrap {
     <span class="topbar-item">LEGISLACIÓN <span id="tk-legislacion">—</span></span>
     <span class="topbar-item">CERTIFICADOS <span id="tk-certificados">—</span></span>
     <span class="topbar-item">CANARIAS <span id="tk-canarias">—</span></span>
-    <span class="topbar-item">NACIONAL <span id="tk-nacional">—</span></span>
+    <span class="topbar-item">RESTO DE ESPAÑA <span id="tk-nacional">—</span></span>
   </div>
   <div class="topbar-right">
     <span>FP AL DÍA</span>
-    <span>ISLAS CANARIAS</span>
+    <span>ESPAÑA</span>
   </div>
 </div>
 
@@ -829,21 +829,18 @@ body.embed .t-wrap {
     <div class="sb-item">
       <div class="sb-label">Canarias</div>
       <div class="sb-val cyan" id="sc-canarias">—</div>
-      <div class="sb-foot"><span class="sb-sub">ámbito local</span></div>
+      <div class="sb-foot"><span class="sb-sub">origen del proyecto</span></div>
     </div>
     <div class="sb-item">
-      <div class="sb-label">Nacional</div>
+      <div class="sb-label">Resto de España</div>
       <div class="sb-val purple" id="sc-nacional">—</div>
-      <div class="sb-foot"><span class="sb-sub">ámbito estatal</span></div>
+      <div class="sb-foot"><span class="sb-sub">otras comunidades y estatal</span></div>
     </div>
   </div>
 
   <div class="controls">
     <div class="ctrl-block">
       <button class="ctrl-btn active" onclick="setTab('TODOS',this)">ALL</button>
-      <button class="ctrl-btn" onclick="setTab('CANARIAS',this)">CAN</button>
-      <button class="ctrl-btn" onclick="setTab('NACIONAL',this)">NAC</button>
-      <button class="ctrl-btn" onclick="setTab('AMBOS',this)">AMB</button>
       <button class="ctrl-btn" onclick="setTab('ALERTAS',this)">⚑ ALR</button>
       <button class="ctrl-btn" onclick="setTab('LEGISLACION',this)">📜 LEG</button>
       <button class="ctrl-btn" onclick="setTab('CERTIFICADOS',this)">📄 CERT</button>
@@ -852,6 +849,7 @@ body.embed .t-wrap {
       <span class="search-pfx">SRH›</span>
       <input type="text" id="searchInput" placeholder="filtrar señales…" oninput="renderTable()">
     </div>
+    <select id="comunidadSel" aria-label="Comunidad" onchange="renderTable()" style="background:var(--bg2,#0d1117);color:inherit;border:1px solid #2a3442;font:inherit;font-size:11px;padding:7px 8px;margin-left:8px;max-width:190px"><option value="">Todas las comunidades</option></select>
     <span class="count-lbl" id="countTag"></span>
   </div>
 
@@ -936,7 +934,7 @@ function chipExtra(row) {
 
 function pillAmbito(a) {
   if(!a) return '<span class="ch-nil">—</span>';
-  var cls = a === 'CANARIAS' ? 'pl-c' : a === 'NACIONAL' ? 'pl-n' : 'pl-a';
+  var cls = a === 'Canarias' ? 'pl-c' : a === 'Nacional' ? 'pl-n' : 'pl-a';
   return '<span class="pill '+cls+'">'+esc(a)+'</span>';
 }
 
@@ -983,14 +981,21 @@ function renderStats(stats, rows) {
   document.getElementById('tk-nacional').textContent = stats.nacional || 0;
 }
 
+function cargarComunidades() {
+  var sel = document.getElementById('comunidadSel'), vistas = {};
+  allRows.forEach(function(r) { if(r.comunidad) vistas[r.comunidad] = (vistas[r.comunidad] || 0) + 1; });
+  Object.keys(vistas).sort(function(a, b) { return a.localeCompare(b, 'es'); }).forEach(function(c) {
+    var o = document.createElement('option'); o.value = c; o.textContent = c + ' (' + vistas[c] + ')'; sel.appendChild(o);
+  });
+}
+
 function renderTable() {
   var q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
   var rows = allRows.slice();
   
-  if(activeTab === 'CANARIAS') rows = rows.filter(function(r) { return r.ambito === 'CANARIAS'; });
-  else if(activeTab === 'NACIONAL') rows = rows.filter(function(r) { return r.ambito === 'NACIONAL'; });
-  else if(activeTab === 'AMBOS') rows = rows.filter(function(r) { return r.ambito === 'AMBOS'; });
-  else if(activeTab === 'ALERTAS') rows = rows.filter(function(r) { return r.alerta !== ''; });
+  var com = (document.getElementById('comunidadSel') || {}).value;
+  if(com) rows = rows.filter(function(r) { return r.comunidad === com; });
+  if(activeTab === 'ALERTAS') rows = rows.filter(function(r) { return r.alerta !== ''; });
   else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return esLegislacion(r.texto); });
   else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return esCertificado(r.texto); });
   
@@ -1008,12 +1013,9 @@ function renderTable() {
           '<th>#</th>' +
           '<th>FECHA</th>' +
           '<th>SEÑAL</th>' +
-          '<th class="r" title="Relevancia FP Dual (0–100)">DUAL</th>' +
-          '<th class="r" title="Relevancia FP general (0–100)">FP GEN</th>' +
-          '<th title="Índice de Oportunidad Estratégica (0–100)">IOS</th>' +
-          '<th>ÁMBITO</th>' +
+          '<th title="Índice propio de FP Radar, de fórmula no pública (0–100)">IOS</th>' +
+          '<th>COMUNIDAD</th>' +
           '<th>ALERTA</th>' +
-          '<th class="r" title="Prioridad (0–100)">PRIO</th>' +
           '<th>EXTRA</th>' +
           '</tr></thead><tbody>';
   
@@ -1031,12 +1033,9 @@ function renderTable() {
     h += '<td class="td-idx c-idx">' + (i+1) + '</td>';
     h += '<td class="td-date c-date">' + r.fecha + '</td>';
     h += '<td class="td-text c-text"><span class="td-inner">' + senal + '</span></td>';
-    h += '<td class="td-r c-dual" data-l="DUAL">' + scoreCell(r.dual, 80, 50) + '</td>';
-    h += '<td class="td-r c-fpg" data-l="FP GEN">' + scoreCell(r.fpGeneral, 75, 50) + '</td>';
     h += '<td class="c-ios" data-l="IOS">' + iosBar(r.ios) + '</td>';
-    h += '<td class="c-amb">' + pillAmbito(r.ambito) + '</td>';
+    h += '<td class="c-amb">' + pillAmbito(r.comunidad) + '</td>';
     h += '<td class="c-alr">' + chipAlerta(r.alerta) + '</td>';
-    h += '<td class="td-r c-prio" data-l="PRIO">' + priorityBadge(r.prioridad) + '</td>';
     h += '<td class="c-ext">' + chipExtra(r) + '</td>';
     h += '</tr>';
   }
@@ -1049,6 +1048,7 @@ fetch('radar.json', {cache: 'no-cache'})
   .then(function(r) { return r.json(); })
   .then(function(data) {
     allRows = data.rows || [];
+    cargarComunidades();
     renderStats(data.stats || {}, allRows);
     renderTable();
     var resto = (data.stats && data.stats.total || 0) - allRows.length;

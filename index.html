@@ -400,7 +400,7 @@ footer a{color:#cfcfcf}
     if (data.hasta) { var p = data.hasta.split('-'); document.getElementById('feedFecha').textContent = p[2] + '/' + p[1]; }
     var top = rows.slice().sort(function(a, b){ return (b.fecha > a.fecha) - (b.fecha < a.fecha) || b.ios - a.ios; }).slice(0, 14);
     var html = top.map(function(r){
-      var amb = r.ambito ? '<span class="pill-a' + (r.ambito === 'NACIONAL' ? ' n' : '') + '">' + esc(r.ambito.split('/')[0]) + '</span>' : '';
+      var amb = r.comunidad ? '<span class="pill-a' + (r.comunidad === 'Canarias' ? '' : ' n') + '">' + esc(r.comunidad) + '</span>' : '';
       var alr = r.alerta ? '<span class="pill-r">' + esc(r.alerta) + '</span>' : '';
       return '<div class="pv-row"><span class="d">' + r.fecha + '</span><span class="m">' + amb + alr + '<span class="bar-ios"><i style="width:' + Math.min(100, r.ios) + '%"></i></span>' + r.ios + '</span><span class="t">' + esc(r.texto.split('\n')[0]) + '</span></div>';
     }).join('');
