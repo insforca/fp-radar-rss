@@ -927,8 +927,8 @@ function esCertificado(texto) {
 
 function chipExtra(row) {
   var chips = [];
-  if(esLegislacion(row.texto)) chips.push('<span class="chip ch-leg">📜 LEG</span>');
-  if(esCertificado(row.texto)) chips.push('<span class="chip ch-cert">📄 CERT</span>');
+  if(row.leg) chips.push('<span class="chip ch-leg">📜 LEG</span>');
+  if(row.cert) chips.push('<span class="chip ch-cert">📄 CERT</span>');
   return chips.join(' ');
 }
 
@@ -997,10 +997,10 @@ function renderTable() {
   var com = (document.getElementById('comunidadSel') || {}).value;
   if(com) rows = rows.filter(function(r) { return r.comunidad === com; });
   if(activeTab === 'ALERTAS') rows = rows.filter(function(r) { return r.alerta !== ''; });
-  else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return esLegislacion(r.texto); });
-  else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return esCertificado(r.texto); });
+  else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return r.leg; });
+  else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return r.cert; });
   
-  if(q) rows = rows.filter(function(r) { return r.texto.toLowerCase().indexOf(q) !== -1; });
+  if(q) rows = rows.filter(function(r) { return (r.titular + ' ' + r.medio + ' ' + r.resumen + ' ' + r.comunidad).toLowerCase().indexOf(q) !== -1; });
   
   var ct = document.getElementById('countTag');
   if(ct) ct.innerHTML = '<span>' + rows.length.toLocaleString() + '</span> SEÑALES';
@@ -1024,10 +1024,10 @@ function renderTable() {
     var r = rows[i];
     var rowClass = '';
     if(r.alerta) rowClass = 'has-alert';
-    else if(esLegislacion(r.texto)) rowClass = 'has-legislacion';
+    else if(r.leg) rowClass = 'has-legislacion';
     
-    var sn = esc(r.texto.substring(0, 120)) + (r.texto.length > 120 ? '…' : '');
-    var tip = r.texto.replace(/"/g, '&quot;');
+    var sn = esc(r.titular.substring(0, 120)) + (r.titular.length > 120 ? '…' : '');
+    var tip = ((r.medio ? r.medio + ' · ' : '') + r.resumen).replace(/"/g, '&quot;');
     var senal = r.url ? '<a href="'+esc(r.url)+'" target="_blank" rel="noopener" title="'+tip+'">'+sn+'</a>' : '<span title="'+tip+'">'+sn+'</span>';
     
     h += '<tr class="'+rowClass+'">';

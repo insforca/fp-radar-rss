@@ -403,7 +403,7 @@ footer a{color:#cfcfcf}
     var html = top.map(function(r){
       var amb = r.comunidad ? '<span class="pill-a' + (r.comunidad === 'Canarias' ? '' : ' n') + '">' + esc(r.comunidad) + '</span>' : '';
       var alr = r.alerta ? '<span class="pill-r">' + esc(r.alerta) + '</span>' : '';
-      return '<div class="pv-row"><span class="d">' + r.fecha + '</span><span class="m">' + amb + alr + '<span class="bar-ios"><i style="width:' + Math.min(100, r.ios) + '%"></i></span>' + r.ios + '</span><span class="t">' + esc(r.texto.split('\n')[0]) + '</span></div>';
+      return '<div class="pv-row"><span class="d">' + r.fecha + '</span><span class="m">' + amb + alr + '<span class="bar-ios"><i style="width:' + Math.min(100, r.ios) + '%"></i></span>' + r.ios + '</span><span class="t">' + esc(r.titular.split('\n')[0]) + '</span></div>';
     }).join('');
     document.getElementById('pvTrack').innerHTML = html + html;   // duplicado para el bucle continuo
     // mini gráfico: señales por día en los últimos 30 días
