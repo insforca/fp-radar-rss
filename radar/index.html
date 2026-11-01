@@ -804,7 +804,7 @@ body.embed .t-wrap {
     <div class="sb-item">
       <div class="sb-label">Total señales</div>
       <div class="sb-val amber" id="sc-total">—</div>
-      <div class="sb-foot"><span class="sb-sub">acumulado</span></div>
+      <div class="sb-foot"><span class="sb-sub" id="sc-pend">acumulado</span></div>
     </div>
     <div class="sb-item">
       <div class="sb-label">IOS media</div>
@@ -965,6 +965,7 @@ function setTab(tab, btn) {
 
 function renderStats(stats, rows) {
   animateCount(document.getElementById('sc-total'), stats.total || 0, 900);
+  if(stats.pendientes) document.getElementById('sc-pend').textContent = stats.pendientes.toLocaleString('es-ES') + ' pendientes de verificación';
   animateCount(document.getElementById('sc-ios'), stats.iosMedia || 0, 850);
   animateCount(document.getElementById('sc-alertas'), stats.alertas || 0, 800);
   animateCount(document.getElementById('sc-legislacion'), stats.legislacion || 0, 800);

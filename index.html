@@ -269,7 +269,7 @@ footer a{color:#cfcfcf}
   <div class="frame abs fx">
     <div class="fc dark">
       <div class="num" id="cTotal" data-n="4538">0</div>
-      <div class="lab">Señales de FP</div>
+      <div class="lab">Señales de FP<br><span class="pend"></span></div>
       <div class="srcs"><span>BOE</span><span>BOC</span><span>SCE</span><span>Erasmus+</span><span>Centros</span><span>Prensa</span></div>
       <a class="bar" href="/radar/">Abrir el radar <span>↗</span></a>
     </div>
@@ -319,7 +319,7 @@ footer a{color:#cfcfcf}
       <div class="tc light">
         <div class="av" id="av"><i>BOE</i><i>BOC</i><i>SCE</i><i>EU+</i><i>CIFP</i><i>IES</i><i>PRENSA</i><i>DUAL</i></div>
         <div class="n"><span id="t1" data-n="4538">0</span></div>
-        <div class="l">señales de FP desde febrero de 2026</div>
+        <div class="l">señales de FP desde febrero de 2026<br><span class="pend"></span></div>
       </div>
       <div class="tc dk">
         <svg class="badge" viewBox="0 0 140 110" aria-hidden="true">
@@ -397,6 +397,7 @@ footer a{color:#cfcfcf}
     document.getElementById('k3').textContent = fmt(s.alertas); document.getElementById('k4').textContent = fmt(rows.length);
     document.getElementById('cTotal').dataset.n = s.total; document.getElementById('c30').dataset.n = rows.length;
     document.getElementById('t1').dataset.n = s.total;
+    if (s.pendientes) document.querySelectorAll('.pend').forEach(function(e){ e.textContent = fmt(s.pendientes) + ' pendientes de verificación'; });
     if (data.hasta) { var p = data.hasta.split('-'); document.getElementById('feedFecha').textContent = p[2] + '/' + p[1]; }
     var top = rows.slice().sort(function(a, b){ return (b.fecha > a.fecha) - (b.fecha < a.fecha) || b.ios - a.ios; }).slice(0, 14);
     var html = top.map(function(r){
