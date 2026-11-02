@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FP Radar · FP al día</title>
-<meta name="description" content="FP Radar: señales de la Formación Profesional en España y Canarias de los últimos 30 días, de FP al día.">
+<meta name="description" content="FP Radar: normas, convocatorias, plazos y noticias de la Formación Profesional en toda España, de los últimos 30 días.">
 <link rel="canonical" href="https://fpaldia.es/radar/">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
 <style>
@@ -248,6 +248,18 @@ body {
   text-transform:uppercase;
 }
 
+.legend {
+  font-family:'Inter Tight',system-ui,sans-serif;
+  font-size:12px;
+  line-height:1.45;
+  color:var(--t2);
+  margin-bottom:10px;
+}
+
+.legend b {
+  color:var(--t1);
+}
+
 .controls {
   display:flex;
   align-items:center;
@@ -476,6 +488,7 @@ tbody td {
   border-radius:1px;
 }
 
+/* Etiquetas (Iván, 02/11/2026): alerta en rojo; comunidad y tema, neutros. El esquema de colores de la página no cambia. */
 .ios-fill.hi { background:var(--green); }
 .ios-fill.mid { background:var(--amber); }
 .ios-fill.lo { background:var(--t3); }
@@ -563,9 +576,9 @@ tbody td {
 }
 
 .pl-a {
-  background:rgba(20,184,166,.1);
-  color:var(--teal);
-  border:1px solid rgba(20,184,166,.2);
+  background:var(--s3);
+  color:var(--t1);
+  border:1px solid var(--border2);
 }
 
 .priority-badge {
@@ -770,9 +783,9 @@ body.embed .t-wrap {
 <div class="topbar">
   <div class="topbar-ticker">
     <span class="topbar-item">TOTAL <span id="tk-total">—</span></span>
-    <span class="topbar-item">IOS MEDIA <span id="tk-ios">—</span></span>
+    <span class="topbar-item">RELEVANCIA MEDIA <span id="tk-ios">—</span></span>
     <span class="topbar-item">ALERTAS <span id="tk-alertas">—</span></span>
-    <span class="topbar-item">LEGISLACIÓN <span id="tk-legislacion">—</span></span>
+    <span class="topbar-item">NORMATIVA <span id="tk-legislacion">—</span></span>
     <span class="topbar-item">CERTIFICADOS <span id="tk-certificados">—</span></span>
     <span class="topbar-item">CANARIAS <span id="tk-canarias">—</span></span>
     <span class="topbar-item">RESTO DE ESPAÑA <span id="tk-nacional">—</span></span>
@@ -787,7 +800,7 @@ body.embed .t-wrap {
   <div class="h-left">
     <span class="h-title"><a href="/" title="fpaldia.es">FP RADAR</a></span>
     <span class="h-sep">|</span>
-    <span class="h-sub">Sistema de Inteligencia Estratégica</span>
+    <span class="h-sub">Inteligencia de mercado de la FP en España</span>
     <span class="live-badge"><span class="dot"></span>ÚLTIMOS 30 DÍAS</span>
   </div>
   <div class="h-right">
@@ -807,19 +820,19 @@ body.embed .t-wrap {
       <div class="sb-foot"><span class="sb-sub" id="sc-pend">acumulado</span></div>
     </div>
     <div class="sb-item">
-      <div class="sb-label">IOS media</div>
+      <div class="sb-label">Relevancia media</div>
       <div class="sb-val cyan" id="sc-ios">—</div>
-      <div class="sb-foot"><span class="sb-sub">índice oportunidad</span></div>
+      <div class="sb-foot"><span class="sb-sub">índice IOS, 0 a 100</span></div>
     </div>
     <div class="sb-item alert">
       <div class="sb-label">Alertas</div>
       <div class="sb-val red" id="sc-alertas">—</div>
-      <div class="sb-foot"><span class="sb-sub">señales prioritarias</span></div>
+      <div class="sb-foot"><span class="sb-sub">normas, convocatorias y plazos · 30 días</span></div>
     </div>
     <div class="sb-item legislacion">
-      <div class="sb-label">Legislación</div>
+      <div class="sb-label">Normativa</div>
       <div class="sb-val orange" id="sc-legislacion">—</div>
-      <div class="sb-foot"><span class="sb-sub">BOC, BOE, Decretos</span></div>
+      <div class="sb-foot"><span class="sb-sub">menciona BOE, BOC o decretos</span></div>
     </div>
     <div class="sb-item">
       <div class="sb-label">Certificados</div>
@@ -838,15 +851,17 @@ body.embed .t-wrap {
     </div>
   </div>
 
+  <p class="legend"><b>Alerta:</b> norma nueva, convocatoria o plazo; los detalles se confirman en la fuente. <b>Relevancia:</b> índice propio de FP Radar (IOS), de fórmula no pública; se puntúan por separado las noticias del radar semanal y las automáticas. Las alertas y la relevancia alta orientan lo que entra en FP al día.</p>
+
   <div class="controls">
     <div class="ctrl-block">
-      <button class="ctrl-btn active" onclick="setTab('TODOS',this)">ALL</button>
-      <button class="ctrl-btn" onclick="setTab('ALERTAS',this)">⚑ ALR</button>
-      <button class="ctrl-btn" onclick="setTab('LEGISLACION',this)">📜 LEG</button>
-      <button class="ctrl-btn" onclick="setTab('CERTIFICADOS',this)">📄 CERT</button>
+      <button class="ctrl-btn active" onclick="setTab('TODOS',this)">Todas</button>
+      <button class="ctrl-btn" onclick="setTab('ALERTAS',this)">Alertas</button>
+      <button class="ctrl-btn" onclick="setTab('LEGISLACION',this)">Normativa</button>
+      <button class="ctrl-btn" onclick="setTab('CERTIFICADOS',this)">Certificados</button>
     </div>
     <div class="search-box">
-      <span class="search-pfx">SRH›</span>
+      <span class="search-pfx">Buscar</span>
       <input type="text" id="searchInput" placeholder="filtrar señales…" oninput="renderTable()">
     </div>
     <select id="comunidadSel" aria-label="Comunidad" onchange="renderTable()" style="background:var(--bg2,#0d1117);color:inherit;border:1px solid #2a3442;font:inherit;font-size:11px;padding:7px 8px;margin-left:8px;max-width:190px"><option value="">Todas las comunidades</option></select>
@@ -908,10 +923,9 @@ function esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function chipAlerta(a) {
+function chipAlerta(a, plazo) {
   if(!a) return '<span class="ch-nil">—</span>';
-  var cls = a === 'DUAL CANARIAS' ? 'ch-dc' : a === 'DUAL NACIONAL' ? 'ch-dn' : a === 'FP CANARIAS' ? 'ch-fc' : 'ch-fn';
-  return '<span class="chip '+cls+'">'+esc(a)+'</span>';
+  return '<span class="chip ch-dc">'+esc(a)+(plazo ? ' · hasta '+plazo.split('-').reverse().slice(0,2).join('/') : '')+'</span>';
 }
 
 function esLegislacion(texto) {
@@ -926,16 +940,12 @@ function esCertificado(texto) {
 }
 
 function chipExtra(row) {
-  var chips = [];
-  if(row.leg) chips.push('<span class="chip ch-leg">📜 LEG</span>');
-  if(row.cert) chips.push('<span class="chip ch-cert">📄 CERT</span>');
-  return chips.join(' ');
+  return row.tema ? '<span class="pill pl-a">'+esc(row.tema)+'</span>' : '';
 }
 
 function pillAmbito(a) {
   if(!a) return '<span class="ch-nil">—</span>';
-  var cls = a === 'Canarias' ? 'pl-c' : a === 'Nacional' ? 'pl-n' : 'pl-a';
-  return '<span class="pill '+cls+'">'+esc(a)+'</span>';
+  return '<span class="pill pl-a">'+esc(a)+'</span>';
 }
 
 function iosBar(val) {
@@ -997,8 +1007,8 @@ function renderTable() {
   var com = (document.getElementById('comunidadSel') || {}).value;
   if(com) rows = rows.filter(function(r) { return r.comunidad === com; });
   if(activeTab === 'ALERTAS') rows = rows.filter(function(r) { return r.alerta !== ''; });
-  else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return r.leg; });
-  else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return r.cert; });
+  else if(activeTab === 'LEGISLACION') rows = rows.filter(function(r) { return r.tema === 'Normativa' || r.alerta === 'Norma'; });
+  else if(activeTab === 'CERTIFICADOS') rows = rows.filter(function(r) { return r.tema === 'Certificados'; });
   
   if(q) rows = rows.filter(function(r) { return (r.titular + ' ' + r.medio + ' ' + r.resumen + ' ' + r.comunidad).toLowerCase().indexOf(q) !== -1; });
   
@@ -1014,17 +1024,16 @@ function renderTable() {
           '<th>#</th>' +
           '<th>FECHA</th>' +
           '<th>SEÑAL</th>' +
-          '<th title="Índice propio de FP Radar, de fórmula no pública (0–100)">IOS</th>' +
+          '<th title="Índice propio de FP Radar (IOS), de fórmula no pública, de 0 a 100">RELEVANCIA</th>' +
           '<th>COMUNIDAD</th>' +
           '<th>ALERTA</th>' +
-          '<th>EXTRA</th>' +
+          '<th>TEMA</th>' +
           '</tr></thead><tbody>';
   
   for(var i = 0; i < rows.length; i++) {
     var r = rows[i];
     var rowClass = '';
     if(r.alerta) rowClass = 'has-alert';
-    else if(r.leg) rowClass = 'has-legislacion';
     
     var sn = esc(r.titular.substring(0, 120)) + (r.titular.length > 120 ? '…' : '');
     var tip = ((r.medio ? r.medio + ' · ' : '') + r.resumen).replace(/"/g, '&quot;');
@@ -1034,9 +1043,9 @@ function renderTable() {
     h += '<td class="td-idx c-idx">' + (i+1) + '</td>';
     h += '<td class="td-date c-date">' + r.fecha + '</td>';
     h += '<td class="td-text c-text"><span class="td-inner">' + senal + '</span></td>';
-    h += '<td class="c-ios" data-l="IOS">' + iosBar(r.ios) + '</td>';
+    h += '<td class="c-ios" data-l="RELEVANCIA">' + iosBar(r.ios) + '</td>';
     h += '<td class="c-amb">' + pillAmbito(r.comunidad) + '</td>';
-    h += '<td class="c-alr">' + chipAlerta(r.alerta) + '</td>';
+    h += '<td class="c-alr">' + chipAlerta(r.alerta, r.plazo) + '</td>';
     h += '<td class="c-ext">' + chipExtra(r) + '</td>';
     h += '</tr>';
   }
