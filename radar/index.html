@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FP Radar · FP al día</title>
-<meta name="description" content="FP Radar: normas, convocatorias, plazos y noticias de la Formación Profesional en toda España, de los últimos 30 días.">
+<meta name="description" content="FP Radar: normas, convocatorias, plazos y noticias seleccionadas de la Formación Profesional en toda España, de los últimos 30 días.">
 <link rel="canonical" href="https://fpaldia.es/radar/">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
 <style>
@@ -783,7 +783,7 @@ body.embed .t-wrap {
 <div class="topbar">
   <div class="topbar-ticker">
     <span class="topbar-item">TOTAL <span id="tk-total">—</span></span>
-    <span class="topbar-item">RELEVANCIA MEDIA <span id="tk-ios">—</span></span>
+    <span class="topbar-item">RELEVANCIA ALTA <span id="tk-ios">—</span></span>
     <span class="topbar-item">ALERTAS <span id="tk-alertas">—</span></span>
     <span class="topbar-item">NORMATIVA <span id="tk-legislacion">—</span></span>
     <span class="topbar-item">CERTIFICADOS <span id="tk-certificados">—</span></span>
@@ -820,9 +820,9 @@ body.embed .t-wrap {
       <div class="sb-foot"><span class="sb-sub" id="sc-pend">acumulado</span></div>
     </div>
     <div class="sb-item">
-      <div class="sb-label">Relevancia media</div>
+      <div class="sb-label">Relevancia alta</div>
       <div class="sb-val cyan" id="sc-ios">—</div>
-      <div class="sb-foot"><span class="sb-sub">índice IOS, 0 a 100</span></div>
+      <div class="sb-foot"><span class="sb-sub">80 o más · 30 días</span></div>
     </div>
     <div class="sb-item alert">
       <div class="sb-label">Alertas</div>
@@ -851,7 +851,7 @@ body.embed .t-wrap {
     </div>
   </div>
 
-  <p class="legend"><b>Alerta:</b> norma nueva, convocatoria o plazo. <b>Relevancia:</b> cuánto importa la noticia para la FP, de 0 a 100.</p>
+  <p class="legend"><b>Alerta:</b> norma nueva, convocatoria o plazo. <b>Relevancia:</b> de 0 a 100, cuánto destaca la noticia frente a otras de su tipo.</p>
 
   <div class="controls">
     <div class="ctrl-block">
@@ -976,7 +976,7 @@ function setTab(tab, btn) {
 function renderStats(stats, rows) {
   animateCount(document.getElementById('sc-total'), stats.total || 0, 900);
   if(stats.pendientes) document.getElementById('sc-pend').textContent = stats.pendientes.toLocaleString('es-ES') + ' pendientes de verificación';
-  animateCount(document.getElementById('sc-ios'), stats.iosMedia || 0, 850);
+  animateCount(document.getElementById('sc-ios'), stats.relevanciaAlta || 0, 850);
   animateCount(document.getElementById('sc-alertas'), stats.alertas || 0, 800);
   animateCount(document.getElementById('sc-legislacion'), stats.legislacion || 0, 800);
   animateCount(document.getElementById('sc-certificados'), stats.certificados || 0, 800);
@@ -984,7 +984,7 @@ function renderStats(stats, rows) {
   animateCount(document.getElementById('sc-nacional'), stats.nacional || 0, 880);
   
   document.getElementById('tk-total').textContent = stats.total || 0;
-  document.getElementById('tk-ios').textContent = stats.iosMedia || 0;
+  document.getElementById('tk-ios').textContent = stats.relevanciaAlta || 0;
   document.getElementById('tk-alertas').textContent = stats.alertas || 0;
   document.getElementById('tk-legislacion').textContent = stats.legislacion || 0;
   document.getElementById('tk-certificados').textContent = stats.certificados || 0;
@@ -1024,7 +1024,7 @@ function renderTable() {
           '<th>#</th>' +
           '<th>FECHA</th>' +
           '<th>SEÑAL</th>' +
-          '<th title="Índice propio de FP Radar (IOS), de fórmula no pública, de 0 a 100">RELEVANCIA</th>' +
+          '<th title="De 0 a 100, cuánto destaca la noticia frente a otras de su tipo">RELEVANCIA</th>' +
           '<th>COMUNIDAD</th>' +
           '<th>ALERTA</th>' +
           '<th>TEMA</th>' +

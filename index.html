@@ -252,7 +252,7 @@ footer a{color:#cfcfcf}
       <div class="pv-head"><b>FP RADAR</b><span class="pv-live">ÚLTIMOS 30 DÍAS</span></div>
       <div class="pv-kpi">
         <div><small>SEÑALES</small><strong id="k1" style="color:#f59e0b">—</strong></div>
-        <div><small>RELEVANCIA MEDIA</small><strong id="k2" style="color:#06b6d4">—</strong></div>
+        <div><small>RELEVANCIA ALTA</small><strong id="k2" style="color:#06b6d4">—</strong></div>
         <div><small>ALERTAS</small><strong id="k3" style="color:#ef4444">—</strong></div>
         <div><small>30 DÍAS</small><strong id="k4" style="color:#10b981">—</strong></div>
       </div>
@@ -392,8 +392,8 @@ footer a{color:#cfcfcf}
   // Datos en vivo de FP Radar
   fetch('/radar/radar.json', {cache:'no-cache'}).then(function(r){ return r.json(); }).then(function(data){
     var s = data.stats || {}, rows = data.rows || [];
-    document.getElementById('pvTicker').innerHTML = ['TOTAL ' + fmt(s.total), 'RELEVANCIA MEDIA ' + s.iosMedia, 'ALERTAS ' + fmt(s.alertas), 'NORMATIVA ' + fmt(s.legislacion), 'CERTIFICADOS ' + fmt(s.certificados), 'CANARIAS ' + fmt(s.canarias), 'RESTO DE ESPAÑA ' + fmt(s.nacional)].map(function(x){ return '<span>' + x + '</span>'; }).join('');
-    document.getElementById('k1').textContent = fmt(s.total); document.getElementById('k2').textContent = s.iosMedia;
+    document.getElementById('pvTicker').innerHTML = ['TOTAL ' + fmt(s.total), 'RELEVANCIA ALTA ' + s.relevanciaAlta, 'ALERTAS ' + fmt(s.alertas), 'NORMATIVA ' + fmt(s.legislacion), 'CERTIFICADOS ' + fmt(s.certificados), 'CANARIAS ' + fmt(s.canarias), 'RESTO DE ESPAÑA ' + fmt(s.nacional)].map(function(x){ return '<span>' + x + '</span>'; }).join('');
+    document.getElementById('k1').textContent = fmt(s.total); document.getElementById('k2').textContent = s.relevanciaAlta;
     document.getElementById('k3').textContent = fmt(s.alertas); document.getElementById('k4').textContent = fmt(rows.length);
     document.getElementById('cTotal').dataset.n = s.total; document.getElementById('c30').dataset.n = rows.length;
     document.getElementById('t1').dataset.n = s.total;
