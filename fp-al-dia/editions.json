@@ -242,6 +242,98 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-03",
+   "headline": "Consejo Canario de FP (28-oct): 48.300 alumnos, +6.500 y +17,5% desde 2023, ~2.600 grupos…",
+   "items": [
+    {
+     "trend": "warn",
+     "titular": "Consejo Canario de FP (28-oct): 48.300 alumnos, +6.500 y +17,5% desde 2023, ~2.600 grupos…",
+     "ambito": "Canarias",
+     "por_que": "Cambio normativo: conviene ver cómo afecta a centros, docentes y alumnado.",
+     "fuente": "canariasenpleno.com",
+     "url": "https://www.canariasenpleno.com/formacion-profesional-canarias-alumnos/",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "up",
+     "titular": "El alumnado del Ciclo Formativo del Grado Medio visita ExpoFuturo",
+     "ambito": "Canarias",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/10/29/el-alumnado-del-ciclo-formativo-del-grado-medio-visita-expofuturo/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "warn",
+     "titular": "Educación convoca en el BOE plazas para docentes en el exterior: requisitos y cómo pedirlo",
+     "ambito": "España",
+     "por_que": "Cambio normativo: conviene ver cómo afecta a centros, docentes y alumnado.",
+     "fuente": "Diario Que! · que.es",
+     "url": "https://www.que.es/2026/10/31/plazas-docentes-exterior-boe/",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "warn",
+     "titular": "Convocatorias Erasmus+ VET-HED 26-27 · IES JOSE MARIA PEREZ PULIDO",
+     "ambito": "Canarias",
+     "por_que": "Hay plazo abierto: revisa requisitos y fechas antes de que cierre.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iesjosemariaperezpulido/2026/10/31/4363/",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "up",
+     "titular": "La FER y CaixaBank Dualiza acreditan a nuevos tutores de empresa para reforzar la…",
+     "ambito": "España",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/la-rioja/noticia-fer-caixabank-dualiza-acreditan-nuevos-tutores-empresa-reforzar-calidad-fp-dual-rioja-20261102095724.html",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "El 'Consejo Canario de Formación Profesional' analiza la evolución de estas enseñanzas y…",
+     "ambito": "Canarias",
+     "por_que": "Movimiento en la FP que conviene tener en el radar.",
+     "fuente": "La Voz de Tenerife Norte · elperiodicodeycodendaute.es",
+     "url": "https://www.elperiodicodeycodendaute.es/el-consejo-canario-de-formacion-profesional-analiza-la-evolucion-de-estas-ensenanzas-y-su-situacion-actual-en-las-islas/",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "Plazas de movilidad Erasmus+ previstas para el curso 2026-2027 · IES SIETE PALMAS",
+     "ambito": "Canarias",
+     "por_que": "Oportunidad de movilidad europea para alumnado y profesorado de FP.",
+     "fuente": "Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/medusa/edublog/iessietepalmas/2026/10/29/plazas-de-movilidad-erasmus-previstas-para-el-curso-2026-2027/",
+     "tema": "Erasmus+"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "SCE: listas de empleo de docentes interinos para los PFAE y otros programas de empleo",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "3/11",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "PFAE 2026: subvenciones a entidades para proyectos de formación en alternancia (34,6 M€)",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/198/3416.html",
+      "fecha": "2026-10-02",
+      "hasta": "3/11",
+      "tramite": null
+     }
+    ]
+   }
   }
  ]
 }
