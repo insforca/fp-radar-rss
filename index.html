@@ -284,7 +284,7 @@ footer a{color:#cfcfcf}
   <div class="growth abs fx">Martes y viernes <i>✓</i></div>
   <div class="avail abs fx">Nueva edición<br><i></i>cada semana</div>
   <div class="out abs fx">
-    <div class="h"><span>Última edición</span><b>FP al día</b><span id="edFecha">[27.10]</span></div>
+    <div class="h"><span>Última edición</span><b>FP al día</b><span id="edFecha">[03.11]</span></div>
     <a class="card" href="/fp-al-dia/">
       <img src="/marca/fp-al-dia-portada.png" alt="Última edición de FP al día">
       <span class="arrow">↗</span>
@@ -332,9 +332,9 @@ footer a{color:#cfcfcf}
           <text x="70" y="66" text-anchor="middle" fill="#fff" font-family="Inter Tight" font-weight="700" font-size="22">2026</text>
           <text x="70" y="82" text-anchor="middle" fill="#FFC400" font-family="Archivo" font-stretch="118%" font-size="8" letter-spacing="1.2">FP AL DÍA</text>
         </svg>
-        <div class="n"><span id="t2" data-n="3">0</span></div>
+        <div class="n"><span id="t2" data-n="4">0</span></div>
         <div class="l">herramientas en desarrollo</div>
-        <div class="note">Para docentes (qué certificados puedes impartir), radar a medida para centros y tendencias del sector.</div>
+        <div class="note">Para docentes (qué certificados puedes impartir), calendario de la FP, radar a medida para centros y tendencias del sector.</div>
       </div>
       <a class="tc yl" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">
         <span class="k">NEWSLETTER · GRATIS</span>
@@ -444,6 +444,11 @@ footer a{color:#cfcfcf}
     });
   }, {threshold:.35}).observe(document.getElementById('panel'));
 })();
+// La fecha de la última edición sale de las ediciones publicadas; si no carga, queda la escrita arriba
+fetch('/fp-al-dia/editions.json').then(function(r){ return r.json(); }).then(function(d){
+  var f = d.editions.map(function(e){ return e.date; }).sort().pop().split('-');
+  document.getElementById('edFecha').textContent = '[' + f[2] + '.' + f[1] + ']';
+}).catch(function(){});
 </script>
 </body>
 </html>
