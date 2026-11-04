@@ -32,6 +32,7 @@
     <section><h2>2. Título</h2><button type="button" data-copia="titulo">Copiar título</button><pre id="titulo"></pre></section>
     <section><h2>3. Texto, con el enlace</h2><button type="button" data-copia="texto">Copiar texto</button><pre id="texto"></pre></section>
     <section><h2>4. Portada</h2><a class="boton" href="portada.png" download="fp_al_dia_portada.png">Descargar el logo</a></section>
+    <section><h2>5. Al publicar, en el cuadro de la publicación</h2><button type="button" data-copia="publicacion">Copiar publicación</button><pre id="publicacion"></pre></section>
   </div>
 </main>
 <script>
@@ -39,7 +40,14 @@
     var b = atob(valor.replace(/-/g, '+').replace(/_/g, '/'));
     return new TextDecoder().decode(Uint8Array.from(b, function (c) { return c.charCodeAt(0); }));
   }
-  function copiar(texto) {
+  // El artículo se copia también con formato, para que la noticia llegue enlazada. Ese HTML solo va al portapapeles: nunca se pinta en la página.
+  function copiar(texto, conFormato) {
+    if (conFormato && navigator.clipboard && navigator.clipboard.write && window.ClipboardItem && window.isSecureContext) {
+      return navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([conFormato], { type: 'text/html' }),
+        'text/plain': new Blob([texto], { type: 'text/plain' })
+      })]).catch(function () { return copiar(texto); });
+    }
     if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(texto);
     var t = document.createElement('textarea');
     t.value = texto;
@@ -49,10 +57,14 @@
     t.remove();
     return ok ? Promise.resolve() : Promise.reject(new Error('sin portapapeles'));
   }
+  var html = '';
   try {
     var datos = new URLSearchParams(location.hash.slice(1));
     document.getElementById('titulo').textContent = leer(datos.get('t'));
     document.getElementById('texto').textContent = leer(datos.get('c'));
+    html = datos.get('h') ? leer(datos.get('h')) : '';
+    if (datos.get('p')) document.getElementById('publicacion').textContent = leer(datos.get('p'));
+    else document.getElementById('publicacion').parentNode.style.display = 'none';
   } catch (e) {
     document.getElementById('pasos').style.display = 'none';
     document.getElementById('error').style.display = 'block';
@@ -60,7 +72,7 @@
   document.querySelectorAll('[data-copia]').forEach(function (b) {
     var inicial = b.textContent;
     b.addEventListener('click', function () {
-      copiar(document.getElementById(b.dataset.copia).textContent).then(function () {
+      copiar(document.getElementById(b.dataset.copia).textContent, b.dataset.copia === 'texto' ? html : '').then(function () {
         b.textContent = 'Copiado ✓';
         b.classList.add('hecho');
       }, function () {
