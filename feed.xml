@@ -1,491 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>FP Radar :: Inteligencia FP España</title>
-    <link>https://insforca.github.io/fp-radar-rss/</link>
-    <description>Señales de mercado para Formación Profesional en España. Foco: Canarias, hostelería y turismo de lujo. Sistema: Radar FP · Powered by SureThing.</description>
+    <title>FP Radar: la FP en España, desde Canarias</title>
+    <link>https://fpaldia.es/radar/</link>
+    <description>Señales de Formación Profesional en toda España: convocatorias, normativa, FP Dual y empleo.</description>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 05 Nov 2026 07:00:19 +0000</lastBuildDate>
-    <atom:link href="https://insforca.github.io/fp-radar-rss/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Thu, 05 Nov 2026 08:00:00 +0000</lastBuildDate>
+    <atom:link href="https://fpaldia.es/feed.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[IOS 89][Hecansa/preinscripcion/Dual Intensiva] Hecansa abre preinscripcion FP Dual Intensiva 2026/27: plazo cierra 26 junio 2026. Ciclos: Direccion de Cocina, Guest Ex</title>
-      <link>https://hecansa.com/preinscripcion.php</link>
-      <guid>https://hecansa.com/preinscripcion.php</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 89 | Radar FP | Hecansa/preinscripcion/Dual Intensiva&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa abre preinscripcion FP Dual Intensiva 2026/27: plazo cierra 26 junio 2026. Ciclos: Direccion de Cocina, Guest Ex&lt;/p&gt;&lt;p&gt;&lt;a href='https://hecansa.com/preinscripcion.php'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>8/06/2026 0:00:00</pubDate>
+      <title>Las pymes del Vinalopó exigen una FP Dual a medida para poder asumir la formación de alumnos</title>
+      <link>https://www.todoalicante.es/economia/pymes-vinalopo-exigen-dual-medida-poder-asumir-20261105162800-nt.html</link>
+      <guid>https://www.todoalicante.es/economia/pymes-vinalopo-exigen-dual-medida-poder-asumir-20261105162800-nt.html</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Comunitat Valenciana · Todo Alicante.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Comunitat Valenciana</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 84][Tutor de empresa/Dual/formacion] Camara de Comercio promociona activamente el curso Tutor de Empresa de FP Dual, dirigido a profesionales, responsables d</title>
-      <link>https://www.instagram.com/p/Db7y5jJln7o/</link>
-      <guid>https://www.instagram.com/p/Db7y5jJln7o/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 84 | Radar FP | Tutor de empresa/Dual/formacion&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Camara de Comercio promociona activamente el curso Tutor de Empresa de FP Dual, dirigido a profesionales, responsables d&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/Db7y5jJln7o/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>17/08/2026 0:00:00</pubDate>
+      <title>La FP Dual riojana reconoce la formación de sus tutores de empresa</title>
+      <link>https://harodigital.com/educacion/la-fp-dual-riojana-reconoce-la-formacion-de-sus-tutores-de-empresa/</link>
+      <guid>https://harodigital.com/educacion/la-fp-dual-riojana-reconoce-la-formacion-de-sus-tutores-de-empresa/</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;La Rioja · Haro Digital.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>La Rioja</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Wed, 04 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 83][Vacio practico/abuso] Faro de Vigo denuncia malos tratos FP Dual hosteleria: domingos/festivos, 12h entre turno, tareas repetitivas, mano de o</title>
-      <link>https://www.farodevigo.es/gran-vigo/2026/04/26/horario-nocturno-domingos-festivos-o-129515001.amp.html</link>
-      <guid>https://www.farodevigo.es/gran-vigo/2026/04/26/horario-nocturno-domingos-festivos-o-129515001.amp.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 83 | Radar FP | Vacio practico/abuso&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Faro de Vigo denuncia malos tratos FP Dual hosteleria: domingos/festivos, 12h entre turno, tareas repetitivas, mano de o&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.farodevigo.es/gran-vigo/2026/04/26/horario-nocturno-domingos-festivos-o-129515001.amp.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>26/04/2026 0:00:00</pubDate>
+      <title>La FER y CaixaBank Dualiza acreditan a nuevos tutores de empresa para la FP Dual</title>
+      <link>https://sie.fer.es/esp/Servicios/Comunicacion/Sala_Prensa/La_FER_CaixaBank_Dualiza_acreditan_nuevos_tutores_empresa_FP_Dual/webDoc_37454.htm</link>
+      <guid>https://sie.fer.es/esp/Servicios/Comunicacion/Sala_Prensa/La_FER_CaixaBank_Dualiza_acreditan_nuevos_tutores_empresa_FP_Dual/webDoc_37454.htm</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;La Rioja · Federación de Empresas de La Rioja.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>La Rioja</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Tue, 03 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 83][Modelo validado] Hecansa FP Dual Intensiva: modelo de empresa integrado 50% teórico/50% empresa. Remuneración contratos en alternancia. C</title>
-      <link>https://hecansa.com/formacion.php</link>
-      <guid>https://hecansa.com/formacion.php</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 83 | Radar FP | Modelo validado&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa FP Dual Intensiva: modelo de empresa integrado 50% teórico/50% empresa. Remuneración contratos en alternancia. C&lt;/p&gt;&lt;p&gt;&lt;a href='https://hecansa.com/formacion.php'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>20/04/2026 0:00:00</pubDate>
+      <title>El Gobierno Vasco destina un millón de euros a la formación profesional dual intensiva en…</title>
+      <link>https://www.euskadi.eus/gobierno-vasco/-/noticia/2026/el-gobierno-vasco-destina-millon-euros-formacion-profesional-dual-intensiva-centros-concertados-consejo-gobierno-03-11-2026/</link>
+      <guid>https://www.euskadi.eus/gobierno-vasco/-/noticia/2026/el-gobierno-vasco-destina-millon-euros-formacion-profesional-dual-intensiva-centros-concertados-consejo-gobierno-03-11-2026/</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;País Vasco · Euskadi.eus.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>País Vasco</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Tue, 03 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 79][Evento Dual/empresas] Camara Lanzarote jornada Alianzas que forman 28-abr Arrecife. FP Dual Intensiva hosteleria/turismo 26/27: 50% empresa, c</title>
-      <link>https://www.biosferadigital.com/articulo/economia/camara-convoca-empresas-docentes-jornada-alianzas-que-forman/20260424155722159887.amp.html</link>
-      <guid>https://www.biosferadigital.com/articulo/economia/camara-convoca-empresas-docentes-jornada-alianzas-que-forman/20260424155722159887.amp.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 79 | Radar FP | Evento Dual/empresas&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Camara Lanzarote jornada Alianzas que forman 28-abr Arrecife. FP Dual Intensiva hosteleria/turismo 26/27: 50% empresa, c&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.biosferadigital.com/articulo/economia/camara-convoca-empresas-docentes-jornada-alianzas-que-forman/20260424155722159887.amp.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>24/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 79][Hecansa/GastroCanarias/Dual] Hecansa celebra foro debate futuro hosteleria en GastroCanarias Tenerife. FP Dual Intensiva 2026/27 aula + practicas cin</title>
-      <link>https://www.eldia.es/tenerife/2026/05/21/hecansa-reune-gastrocanarias-profesionales-hosteleria-130515351.html</link>
-      <guid>https://www.eldia.es/tenerife/2026/05/21/hecansa-reune-gastrocanarias-profesionales-hosteleria-130515351.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 79 | Radar FP | Hecansa/GastroCanarias/Dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa celebra foro debate futuro hosteleria en GastroCanarias Tenerife. FP Dual Intensiva 2026/27 aula + practicas cin&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.eldia.es/tenerife/2026/05/21/hecansa-reune-gastrocanarias-profesionales-hosteleria-130515351.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>21/05/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 77][Hecansa/hosteleria/plazas] Hecansa oferta 280+ plazas ciclos formativos hosteleria turismo 2026/27. Empresa publica Consejeria Turismo Empleo. Cade</title>
-      <link>https://cadenaser.com/canarias/2026/05/11/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo-radio-club-tenerife/</link>
-      <guid>https://cadenaser.com/canarias/2026/05/11/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo-radio-club-tenerife/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 77 | Radar FP | Hecansa/hosteleria/plazas&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa oferta 280+ plazas ciclos formativos hosteleria turismo 2026/27. Empresa publica Consejeria Turismo Empleo. Cade&lt;/p&gt;&lt;p&gt;&lt;a href='https://cadenaser.com/canarias/2026/05/11/hecansa-oferta-mas-de-280-plazas-para-estudiar-ciclos-formativos-de-hosteleria-y-turismo-radio-club-tenerife/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/05/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 75][Dual alemana] FP Dual Alemana hostelería (Hotelfachmann) 9ª edición plazo abierto. Financiación empresa + remuneración 360€/mes. FEDA </title>
-      <link>https://fpdualtenerife.com</link>
-      <guid>https://fpdualtenerife.com</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 75 | Radar FP | Dual alemana&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Dual Alemana hostelería (Hotelfachmann) 9ª edición plazo abierto. Financiación empresa + remuneración 360€/mes. FEDA &lt;/p&gt;&lt;p&gt;&lt;a href='https://fpdualtenerife.com'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>20/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 75][CANARIAS] LinkedIn Pulse (Juan, Hostelería y Turismo Tenerife): 'La FP DUAL en Canarias ya NO es opcional — es modalidad obligator</title>
-      <link>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</link>
-      <guid>https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 75 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;LinkedIn Pulse (Juan, Hostelería y Turismo Tenerife): 'La FP DUAL en Canarias ya NO es opcional — es modalidad obligator&lt;/p&gt;&lt;p&gt;&lt;a href='https://es.linkedin.com/pulse/la-fp-dual-en-canarias-determinaci%C3%B3n-de-resultados-y-juan-oyn7e'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>13/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 71][FP Dual/remuneracion/nacional] FP Dual Obligatoria 2026: alumnado recibe remuneracion obligatoria al hacer 35-65% en empresa. Hasta dic 2028: beca form</title>
-      <link>https://dondeestudiar.eu/blog/formacion-profesional/fp-dual-obligatoria-2026/</link>
-      <guid>https://dondeestudiar.eu/blog/formacion-profesional/fp-dual-obligatoria-2026/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 71 | Radar FP | FP Dual/remuneracion/nacional&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Dual Obligatoria 2026: alumnado recibe remuneracion obligatoria al hacer 35-65% en empresa. Hasta dic 2028: beca form&lt;/p&gt;&lt;p&gt;&lt;a href='https://dondeestudiar.eu/blog/formacion-profesional/fp-dual-obligatoria-2026/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>1/06/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 68][institucional/dual] Cámara de Comercio de Gran Canaria promociona curso 'Formación a Tutores/as de Empresa' (FP Dual), cofinanciado por Euro</title>
-      <link>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</link>
-      <guid>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 68 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Cámara de Comercio de Gran Canaria promociona curso 'Formación a Tutores/as de Empresa' (FP Dual), cofinanciado por Euro&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 66][Balance FP Canarias] Canarias consolida apuesta FP: +10% alumnado, +11.5% oferta, red mas cercana territorio. Poli Suarez visita jornadas Con</title>
-      <link>https://www.magisnet.com/2026/05/canarias-consolida-su-apuesta-por-la-fp-mas-alumnado-mas-oferta-y-una-red-mas-cercana-al-territorio/</link>
-      <guid>https://www.magisnet.com/2026/05/canarias-consolida-su-apuesta-por-la-fp-mas-alumnado-mas-oferta-y-una-red-mas-cercana-al-territorio/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 66 | Radar FP | Balance FP Canarias&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Canarias consolida apuesta FP: +10% alumnado, +11.5% oferta, red mas cercana territorio. Poli Suarez visita jornadas Con&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.magisnet.com/2026/05/canarias-consolida-su-apuesta-por-la-fp-mas-alumnado-mas-oferta-y-una-red-mas-cercana-al-territorio/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/05/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 65][dual/hosteleria] Hecansa anuncia ciclo Guest Experience y Restauración en Modalidad Dual Intensiva, septiembre 2026 a noviembre 2027, sal</title>
-      <link>https://hecansa.com/es/oferta-formativa/programa-guest-experiencie-y-restauracion/6.html</link>
-      <guid>https://hecansa.com/es/oferta-formativa/programa-guest-experiencie-y-restauracion/6.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 65 | Radar FP | dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa anuncia ciclo Guest Experience y Restauración en Modalidad Dual Intensiva, septiembre 2026 a noviembre 2027, sal&lt;/p&gt;&lt;p&gt;&lt;a href='https://hecansa.com/es/oferta-formativa/programa-guest-experiencie-y-restauracion/6.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>7/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 65][Dual/hosteleria/portal nacional] La Confederacion Espanola de Hosteleria (CEHE) lanza un portal oficial de empleo que conecta a profesionales, empresas y</title>
-      <link>https://x.com/CEHEhosteleria/status/2090763345167286766</link>
-      <guid>https://x.com/CEHEhosteleria/status/2090763345167286766</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 65 | Radar FP | Dual/hosteleria/portal nacional&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;La Confederacion Espanola de Hosteleria (CEHE) lanza un portal oficial de empleo que conecta a profesionales, empresas y&lt;/p&gt;&lt;p&gt;&lt;a href='https://x.com/CEHEhosteleria/status/2090763345167286766'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>19/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 65][CANARIAS] Cámara de Comercio de Gran Canaria: Curso Formación Tutores/as de Empresa FP Dual Canarias (#EuropaSeSiente). Contenidos</title>
-      <link>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</link>
-      <guid>https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 65 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Cámara de Comercio de Gran Canaria: Curso Formación Tutores/as de Empresa FP Dual Canarias (#EuropaSeSiente). Contenidos&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.camaragrancanaria.org/empleo/programa-fp-pyme/diciembre-2025-curso-formacion-a-tutoresas-de-empresa/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>13/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 64][dual/hosteleria] FP Dual Alemana en Hostelería (FEDA/Tenerife) abre ventana de reclutamiento para fase sept-2026/ago-2028, beca mensual m</title>
-      <link>https://fpdualtenerith.com/</link>
-      <guid>https://fpdualtenerith.com/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 64 | Radar FP | dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Dual Alemana en Hostelería (FEDA/Tenerife) abre ventana de reclutamiento para fase sept-2026/ago-2028, beca mensual m&lt;/p&gt;&lt;p&gt;&lt;a href='https://fpdualtenerith.com/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 64][formacion_empleo/pfae_docentes] Servicio Canario de Empleo: convocatoria extraordinaria de listas de empleo de personal docente, dirección-docencia y co</title>
-      <link>https://sede.gobiernodecanarias.org/sede/tramites/11110</link>
-      <guid>https://sede.gobiernodecanarias.org/sede/tramites/11110</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 64 | Radar FP | formacion_empleo/pfae_docentes&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Servicio Canario de Empleo: convocatoria extraordinaria de listas de empleo de personal docente, dirección-docencia y co&lt;/p&gt;&lt;p&gt;&lt;a href='https://sede.gobiernodecanarias.org/sede/tramites/11110'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>26/10/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 64][institucional/dual] Curso oficial del Gobierno de Canarias para la formación de tutores/as de empresa de FP Dual — quinta fuente distinta en</title>
-      <link>https://www.asolan.com/2020/01/16/formacion-profesional-dual-curso-oficial-del-gobierno-de-canarias-para-los-tutores-de-empresa-2/</link>
-      <guid>https://www.asolan.com/2020/01/16/formacion-profesional-dual-curso-oficial-del-gobierno-de-canarias-para-los-tutores-de-empresa-2/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 64 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Curso oficial del Gobierno de Canarias para la formación de tutores/as de empresa de FP Dual — quinta fuente distinta en&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.asolan.com/2020/01/16/formacion-profesional-dual-curso-oficial-del-gobierno-de-canarias-para-los-tutores-de-empresa-2/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 63][CANARIAS] Ashotel circular 023/2026: 9ª convocatoria FP Dual Alemana en hostelería Tenerife (FEDA Madrid / AHK Spanien). Titulació</title>
-      <link>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</link>
-      <guid>https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 63 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Ashotel circular 023/2026: 9ª convocatoria FP Dual Alemana en hostelería Tenerife (FEDA Madrid / AHK Spanien). Titulació&lt;/p&gt;&lt;p&gt;&lt;a href='https://ashotel.es/circular/otras-entidades-feda-comienza-la-la-9a-convocatoria-de-la-fp-dual-alemana-en-hosteleria-023-2026/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>13/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 62][institucional/dual] Nueva convocatoria de formación virtual para tutores/as de empresa en FP Dual, 12 horas, aula virtual mañana/tarde, inic</title>
-      <link>https://www.instagram.com/p/DVat59yDOVO/</link>
-      <guid>https://www.instagram.com/p/DVat59yDOVO/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 62 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Nueva convocatoria de formación virtual para tutores/as de empresa en FP Dual, 12 horas, aula virtual mañana/tarde, inic&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/DVat59yDOVO/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>7/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 61][Dual/consolidacion/Canarias] Gobierno de Canarias (Direccion General de Relaciones con las Camaras de Comercio) confirma mas de 30 cursos de formacio</title>
-      <link>https://www.facebook.com/CANAL4TENERIFE/posts/gobierno-de-canarias-direcci%C3%B3n-general-de-relaciones-con-las-camaras</link>
-      <guid>https://www.facebook.com/CANAL4TENERIFE/posts/gobierno-de-canarias-direcci%C3%B3n-general-de-relaciones-con-las-camaras</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 61 | Radar FP | Dual/consolidacion/Canarias&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Gobierno de Canarias (Direccion General de Relaciones con las Camaras de Comercio) confirma mas de 30 cursos de formacio&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.facebook.com/CANAL4TENERIFE/posts/gobierno-de-canarias-direcci%C3%B3n-general-de-relaciones-con-las-camaras'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>10/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 60][Dual/convenio empresas/nacional] El Ministerio de Educacion, FP y Deportes firma un convenio con 35 empresas para impulsar la formacion dual, presentado </title>
-      <link>https://www.instagram.com/p/DbZQXPfnaOH/</link>
-      <guid>https://www.instagram.com/p/DbZQXPfnaOH/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 60 | Radar FP | Dual/convenio empresas/nacional&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;El Ministerio de Educacion, FP y Deportes firma un convenio con 35 empresas para impulsar la formacion dual, presentado &lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/DbZQXPfnaOH/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>29/07/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 58][dual/hosteleria] Educación y Turismo del Gobierno de Canarias desarrollan una normativa que permite a las empresas hosteleras cofinanciar</title>
-      <link>https://www3.gobiernodecanarias.org/noticias/educacion-y-turismo-revolucionan-la-fp-en-hosteleria-2/</link>
-      <guid>https://www3.gobiernodecanarias.org/noticias/educacion-y-turismo-revolucionan-la-fp-en-hosteleria-2/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 58 | Radar FP | dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Educación y Turismo del Gobierno de Canarias desarrollan una normativa que permite a las empresas hosteleras cofinanciar&lt;/p&gt;&lt;p&gt;&lt;a href='https://www3.gobiernodecanarias.org/noticias/educacion-y-turismo-revolucionan-la-fp-en-hosteleria-2/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>21/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 58][Tutor de empresa/Dual/RRHH] Fundacion Monlau confirma que su equipo de RRHH ha completado la formacion para tutores de empresa de FP Dual Intensiva,</title>
-      <link>https://www.instagram.com/p/DcOCLKWFT-D/</link>
-      <guid>https://www.instagram.com/p/DcOCLKWFT-D/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 58 | Radar FP | Tutor de empresa/Dual/RRHH&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Fundacion Monlau confirma que su equipo de RRHH ha completado la formacion para tutores de empresa de FP Dual Intensiva,&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/DcOCLKWFT-D/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>20/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 58][formacion_empleo/pfae] Servicio Canario de Empleo abre la convocatoria PFAE 2026: 34,6 M€ (fondos del Ministerio de Trabajo), 92 proyectos de 1</title>
-      <link>https://www3.gobiernodecanarias.org/noticias/empleo-destina-346-millones-a-la-nueva-convocatoria-de-los-programas-de-formacion-en-alternancia/</link>
-      <guid>https://www3.gobiernodecanarias.org/noticias/empleo-destina-346-millones-a-la-nueva-convocatoria-de-los-programas-de-formacion-en-alternancia/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 58 | Radar FP | formacion_empleo/pfae&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Servicio Canario de Empleo abre la convocatoria PFAE 2026: 34,6 M€ (fondos del Ministerio de Trabajo), 92 proyectos de 1&lt;/p&gt;&lt;p&gt;&lt;a href='https://www3.gobiernodecanarias.org/noticias/empleo-destina-346-millones-a-la-nueva-convocatoria-de-los-programas-de-formacion-en-alternancia/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>19/10/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][institucional/dual] Cámara de Comercio de Tenerife mantiene activo el Programa FP PYME: asesoramiento gratuito sobre FP Dual y formación del</title>
-      <link>https://camaratenerife.com/formacion-y-empleo/programas-de-empleo/programa-fp-pyme/</link>
-      <guid>https://camaratenerife.com/formacion-y-empleo/programas-de-empleo/programa-fp-pyme/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Cámara de Comercio de Tenerife mantiene activo el Programa FP PYME: asesoramiento gratuito sobre FP Dual y formación del&lt;/p&gt;&lt;p&gt;&lt;a href='https://camaratenerife.com/formacion-y-empleo/programas-de-empleo/programa-fp-pyme/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][institucional/hosteleria] Gobierno de Canarias amplía la oferta de FP en Lanzarote con nuevos ciclos y dobles titulaciones en Hostelería (Direcció</title>
-      <link>https://www3.gobiernodecanarias.org/noticias/lanzarote-refuerza-su-oferta-de-fp-con-nuevos-ciclos-y-dobles-titulaciones-en-sectores-clave-de-la-isla/</link>
-      <guid>https://www3.gobiernodecanarias.org/noticias/lanzarote-refuerza-su-oferta-de-fp-con-nuevos-ciclos-y-dobles-titulaciones-en-sectores-clave-de-la-isla/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | institucional/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Gobierno de Canarias amplía la oferta de FP en Lanzarote con nuevos ciclos y dobles titulaciones en Hostelería (Direcció&lt;/p&gt;&lt;p&gt;&lt;a href='https://www3.gobiernodecanarias.org/noticias/lanzarote-refuerza-su-oferta-de-fp-con-nuevos-ciclos-y-dobles-titulaciones-en-sectores-clave-de-la-isla/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][fp_dual/empresas] Portal de noticias del Gobierno de Canarias (sección FP): titular sobre 9.439 empresas vinculadas a la FP Dual en Canari</title>
-      <link>https://www3.gobiernodecanarias.org/noticias/category/consejerias/educacion-formacion-profesional-actividad-fisica-y-deportes/formacion-profesional/</link>
-      <guid>https://www3.gobiernodecanarias.org/noticias/category/consejerias/educacion-formacion-profesional-actividad-fisica-y-deportes/formacion-profesional/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | fp_dual/empresas&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Portal de noticias del Gobierno de Canarias (sección FP): titular sobre 9.439 empresas vinculadas a la FP Dual en Canari&lt;/p&gt;&lt;p&gt;&lt;a href='https://www3.gobiernodecanarias.org/noticias/category/consejerias/educacion-formacion-profesional-actividad-fisica-y-deportes/formacion-profesional/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>26/10/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][institucional/dual] Curso para el Tutor de Empresa en la FP Dual (nivel avanzado) — sexta semana consecutiva con fuente distinta sobre el mi</title>
-      <link>https://formacion.accionlaboral.com/cursos-subvencionados/curso-para-el-tutor-de-empresa-en-la-fp-dual-nivel-avanzado/</link>
-      <guid>https://formacion.accionlaboral.com/cursos-subvencionados/curso-para-el-tutor-de-empresa-en-la-fp-dual-nivel-avanzado/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Curso para el Tutor de Empresa en la FP Dual (nivel avanzado) — sexta semana consecutiva con fuente distinta sobre el mi&lt;/p&gt;&lt;p&gt;&lt;a href='https://formacion.accionlaboral.com/cursos-subvencionados/curso-para-el-tutor-de-empresa-en-la-fp-dual-nivel-avanzado/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>21/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][institucional/dual] El Gobierno de Canarias abona sus becas a cerca de 3.000 estudiantes de FP Dual con módulos formativos en empresas</title>
-      <link>https://m.facebook.com/Educacion.Gobcan/photos/-el-gobierno-de-canarias-abona-sus-becas-a-cerca-de-3000-estudiantes-de-fp-dual-/902953135347188/</link>
-      <guid>https://m.facebook.com/Educacion.Gobcan/photos/-el-gobierno-de-canarias-abona-sus-becas-a-cerca-de-3000-estudiantes-de-fp-dual-/902953135347188/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;El Gobierno de Canarias abona sus becas a cerca de 3.000 estudiantes de FP Dual con módulos formativos en empresas&lt;/p&gt;&lt;p&gt;&lt;a href='https://m.facebook.com/Educacion.Gobcan/photos/-el-gobierno-de-canarias-abona-sus-becas-a-cerca-de-3000-estudiantes-de-fp-dual-/902953135347188/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 56][Dual/hosteleria/Iberostar] Instituto Canario de Turismo destaca colaboracion en FP Dual con Iberostar: alumna relata sus primeros pasos en el secto</title>
-      <link>https://www.instagram.com/reel/Db78r_OombZ/</link>
-      <guid>https://www.instagram.com/reel/Db78r_OombZ/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 56 | Radar FP | Dual/hosteleria/Iberostar&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Instituto Canario de Turismo destaca colaboracion en FP Dual con Iberostar: alumna relata sus primeros pasos en el secto&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/reel/Db78r_OombZ/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>12/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 55][Hosteleria/FP Dual/Cordoba] Primera Escuela Superior de Hosteleria de Espana abre en Campus Cordoba curso 2026-27. FP Dual, 60 plazas cocineros. Tit</title>
-      <link>https://www.diariocordoba.com/cordoba-ciudad/2026/06/04/primera-escuela-superior-hosteleria-espana-130999428.html</link>
-      <guid>https://www.diariocordoba.com/cordoba-ciudad/2026/06/04/primera-escuela-superior-hosteleria-espana-130999428.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 55 | Radar FP | Hosteleria/FP Dual/Cordoba&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Primera Escuela Superior de Hosteleria de Espana abre en Campus Cordoba curso 2026-27. FP Dual, 60 plazas cocineros. Tit&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.diariocordoba.com/cordoba-ciudad/2026/06/04/primera-escuela-superior-hosteleria-espana-130999428.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>4/06/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 55][Escasez mano obra/debate] Hosteleria gallega defiende regularizacion migrantes para cubrir falta mano de obra: hay que darles futuro y formacion. </title>
-      <link>https://www.farodevigo.es/economia/2026/04/27/hosteleria-gallega-defiende-regularizacion-migrantes-129571976.html</link>
-      <guid>https://www.farodevigo.es/economia/2026/04/27/hosteleria-gallega-defiende-regularizacion-migrantes-129571976.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 55 | Radar FP | Escasez mano obra/debate&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hosteleria gallega defiende regularizacion migrantes para cubrir falta mano de obra: hay que darles futuro y formacion. &lt;/p&gt;&lt;p&gt;&lt;a href='https://www.farodevigo.es/economia/2026/04/27/hosteleria-gallega-defiende-regularizacion-migrantes-129571976.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>27/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 54][fondos_europeos/next-gen-eu] Hecansa ha ejecutado el 73,16% (10.992.590,87 € de 14.928.929,29 €) de los fondos Next Generation EU del periodo 2023-20</title>
-      <link>https://canariastimes.com/canarias/canarias/hecansa-fondos-next-generation-formacion-infraestructuras/</link>
-      <guid>https://canariastimes.com/canarias/canarias/hecansa-fondos-next-generation-formacion-infraestructuras/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 54 | Radar FP | fondos_europeos/next-gen-eu&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Hecansa ha ejecutado el 73,16% (10.992.590,87 € de 14.928.929,29 €) de los fondos Next Generation EU del periodo 2023-20&lt;/p&gt;&lt;p&gt;&lt;a href='https://canariastimes.com/canarias/canarias/hecansa-fondos-next-generation-formacion-infraestructuras/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>2/11/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 52][institucional/dual] Publicadas las instrucciones oficiales del Gobierno de Canarias para la formación de carácter dual en empresa u organism</title>
-      <link>https://www.gobiernodecanarias.org/educacion/web/formacion_profesional/ensenanzas/implantacion_curriculos/formacion-dual-empresas/index.html</link>
-      <guid>https://www.gobiernodecanarias.org/educacion/web/formacion_profesional/ensenanzas/implantacion_curriculos/formacion-dual-empresas/index.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 52 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Publicadas las instrucciones oficiales del Gobierno de Canarias para la formación de carácter dual en empresa u organism&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.gobiernodecanarias.org/educacion/web/formacion_profesional/ensenanzas/implantacion_curriculos/formacion-dual-empresas/index.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 52][Matricula/admision/Canarias] Matricula FP 2026/2027 en Canarias: solicitud de plaza del 1 al 4 de septiembre online via Consejeria de Educacion (Admi</title>
-      <link>https://www.instagram.com/p/Da7XZNCourT/</link>
-      <guid>https://www.instagram.com/p/Da7XZNCourT/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 52 | Radar FP | Matricula/admision/Canarias&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Matricula FP 2026/2027 en Canarias: solicitud de plaza del 1 al 4 de septiembre online via Consejeria de Educacion (Admi&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/Da7XZNCourT/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 52][CANARIAS] SCE Canarias: Concesión definitiva FPED 2025 — 67.561.836,25€ (Grado C: 42,6M€ + especialidades: 24,9M€). Programación 2</title>
-      <link>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</link>
-      <guid>https://educamcanarias.es/programacion-fped-canarias-2025-2026/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 52 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;SCE Canarias: Concesión definitiva FPED 2025 — 67.561.836,25€ (Grado C: 42,6M€ + especialidades: 24,9M€). Programación 2&lt;/p&gt;&lt;p&gt;&lt;a href='https://educamcanarias.es/programacion-fped-canarias-2025-2026/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>13/04/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 49][institucional/dual] CCELPA publica guía práctica en PDF para el desarrollo de la FP Dual en la empresa, dirigida a tutores/as de empresa</title>
-      <link>https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf</link>
-      <guid>https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 49 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CCELPA publica guía práctica en PDF para el desarrollo de la FP Dual en la empresa, dirigida a tutores/as de empresa&lt;/p&gt;&lt;p&gt;&lt;a href='https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>7/09/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 49][fp_canarias/consejo_fp] Consejo Canario de FP (28-oct): 48.300 alumnos, +6.500 y +17,5% desde 2023, ~2.600 grupos; oferta +14,2% en la legislatu</title>
+      <title>Consejo Canario de FP (28-oct): 48.300 alumnos, +6.500 y +17,5% desde 2023, ~2.600 grupos…</title>
       <link>https://www.canariasenpleno.com/formacion-profesional-canarias-alumnos/</link>
       <guid>https://www.canariasenpleno.com/formacion-profesional-canarias-alumnos/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 49 | Radar FP | fp_canarias/consejo_fp&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Consejo Canario de FP (28-oct): 48.300 alumnos, +6.500 y +17,5% desde 2023, ~2.600 grupos; oferta +14,2% en la legislatu&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.canariasenpleno.com/formacion-profesional-canarias-alumnos/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>2/11/2026 0:00:00</pubDate>
+      <description>&lt;p&gt;Canarias.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Canarias</category>
+      <category>Normativa</category>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 49][Hosteleria/Dual/Canarias] Escuela Superior de Hosteleria de Canarias lanza curso gratuito para personas ocupadas del sector hosteleria, con formac</title>
-      <link>https://www.instagram.com/p/Db5aqMxDBgB/</link>
-      <guid>https://www.instagram.com/p/Db5aqMxDBgB/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 49 | Radar FP | Hosteleria/Dual/Canarias&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Escuela Superior de Hosteleria de Canarias lanza curso gratuito para personas ocupadas del sector hosteleria, con formac&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/Db5aqMxDBgB/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>11/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 49][FP Dual/hosteleria/Murcia] FP Murcia 2026/27: 48.400 plazas, Dual Intensiva con beca remunerada para hosteleria. FP semipresencial crece. Ratio gra</title>
-      <link>https://cadenaser.com/murcia/2026/06/01/la-fp-crece-en-la-region-hasta-las-48400-plazas-con-mas-oferta-semipresencial-y-tecnologica-radio-murcia/</link>
-      <guid>https://cadenaser.com/murcia/2026/06/01/la-fp-crece-en-la-region-hasta-las-48400-plazas-con-mas-oferta-semipresencial-y-tecnologica-radio-murcia/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 49 | Radar FP | FP Dual/hosteleria/Murcia&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Murcia 2026/27: 48.400 plazas, Dual Intensiva con beca remunerada para hosteleria. FP semipresencial crece. Ratio gra&lt;/p&gt;&lt;p&gt;&lt;a href='https://cadenaser.com/murcia/2026/06/01/la-fp-crece-en-la-region-hasta-las-48400-plazas-con-mas-oferta-semipresencial-y-tecnologica-radio-murcia/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>1/06/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 48][institucional/dual] CCELPA (Confederación Canaria de Empresarios) mantiene su servicio Impulsa FP Dual de apoyo a empresas para incorporar a</title>
-      <link>https://ccelpa.org/servicios/servicio-fp-dual/</link>
-      <guid>https://ccelpa.org/servicios/servicio-fp-dual/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 48 | Radar FP | institucional/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CCELPA (Confederación Canaria de Empresarios) mantiene su servicio Impulsa FP Dual de apoyo a empresas para incorporar a&lt;/p&gt;&lt;p&gt;&lt;a href='https://ccelpa.org/servicios/servicio-fp-dual/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 46][social/dual] Iniciativa 'Integra la FP Dual en tu Empresa' dirigida a mayores de 45 años en desempleo de larga duración y menores de </title>
-      <link>https://www.instagram.com/p/DS9sRzhj8UI/</link>
-      <guid>https://www.instagram.com/p/DS9sRzhj8UI/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 46 | Radar FP | social/dual&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Iniciativa 'Integra la FP Dual en tu Empresa' dirigida a mayores de 45 años en desempleo de larga duración y menores de &lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/p/DS9sRzhj8UI/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/08/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 46][fp_canarias/insercion] Casi la mitad de los titulados en FP Superior de Canarias trabaja al acabar (44,6% en el mismo trimestre, 62,6% al año) </title>
+      <title>Casi la mitad de los titulados en FP Superior de Canarias trabaja al acabar (44,6% en el…</title>
       <link>https://www.atlanticohoy.com/economia/fp-mejora-su-insercion-laboral-en-canarias-casi-mitad-titulados-trabaja-acabar_1569237_102.html</link>
       <guid>https://www.atlanticohoy.com/economia/fp-mejora-su-insercion-laboral-en-canarias-casi-mitad-titulados-trabaja-acabar_1569237_102.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 46 | Radar FP | fp_canarias/insercion&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Casi la mitad de los titulados en FP Superior de Canarias trabaja al acabar (44,6% en el mismo trimestre, 62,6% al año) &lt;/p&gt;&lt;p&gt;&lt;a href='https://www.atlanticohoy.com/economia/fp-mejora-su-insercion-laboral-en-canarias-casi-mitad-titulados-trabaja-acabar_1569237_102.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>2/11/2026 0:00:00</pubDate>
+      <description>&lt;p&gt;Canarias.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Canarias</category>
+      <category>Datos y política</category>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][dual/remuneracion] FP Dual alemana en hostelería en Tenerife: oferta con remuneración mensual mínima de 360 € frente a cifras de ~760 € net</title>
-      <link>https://fpdualtenerife.com/</link>
-      <guid>https://fpdualtenerife.com/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | dual/remuneracion&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Dual alemana en hostelería en Tenerife: oferta con remuneración mensual mínima de 360 € frente a cifras de ~760 € net&lt;/p&gt;&lt;p&gt;&lt;a href='https://fpdualtenerife.com/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>5/10/2026 0:00:00</pubDate>
+      <title>La CIG-Ensino critica que el nuevo decreto de FP mezcle cambios y retrase los límites en…</title>
+      <link>https://galiciaxa.com/es/news/la-cig-ensino-critica-que-el-nuevo-decreto-de-fp-mezcle-cambios-y-retrase-los-limites-en-las-aulas-virtuales/139484/</link>
+      <guid>https://galiciaxa.com/es/news/la-cig-ensino-critica-que-el-nuevo-decreto-de-fp-mezcle-cambios-y-retrase-los-limites-en-las-aulas-virtuales/139484/</guid>
+      <description>&lt;p&gt;Galicia · GaliciaXa.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Galicia</category>
+      <category>Normativa</category>
+      <pubDate>Sun, 01 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][dual/captacion-empresas] Confederación Empresarial de Lanzarote (proyecto FP Dual Cel) capta empresas para acoger alumnado de FP Dual: &quot;¿Buscas t</title>
-      <link>https://www.instagram.com/fpdualcel/p/Db5aiBRsy49/</link>
-      <guid>https://www.instagram.com/fpdualcel/p/Db5aiBRsy49/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | dual/captacion-empresas&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Confederación Empresarial de Lanzarote (proyecto FP Dual Cel) capta empresas para acoger alumnado de FP Dual: &quot;¿Buscas t&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.instagram.com/fpdualcel/p/Db5aiBRsy49/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>21/09/2026 0:00:00</pubDate>
+      <title>Madrid invierte 2,6 millones en un centro de formación de Paracuellos de Jarama que…</title>
+      <link>https://www.epe.es/es/madrid/20261101/madrid-invierte-2-6-millones-cursos-formacion-paracuellos-jarama-135972412</link>
+      <guid>https://www.epe.es/es/madrid/20261101/madrid-invierte-2-6-millones-cursos-formacion-paracuellos-jarama-135972412</guid>
+      <description>&lt;p&gt;Madrid · El Periódico de España.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Madrid</category>
+      <category>Datos y política</category>
+      <pubDate>Sun, 01 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][Hecansa/viral/papado] Papa Leon XIV visita Gran Canaria: alumnos Hecansa elaboran comida canaria para menu pontificio. Viralidad maxima. Hecan</title>
-      <link>https://www.atlanticohoy.com/sociedad/menu-papa-leon-xiv-comida-canaria-elaborada-alumnos-hecansa_1561822_102.html</link>
-      <guid>https://www.atlanticohoy.com/sociedad/menu-papa-leon-xiv-comida-canaria-elaborada-alumnos-hecansa_1561822_102.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | Hecansa/viral/papado&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Papa Leon XIV visita Gran Canaria: alumnos Hecansa elaboran comida canaria para menu pontificio. Viralidad maxima. Hecan&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.atlanticohoy.com/sociedad/menu-papa-leon-xiv-comida-canaria-elaborada-alumnos-hecansa_1561822_102.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>21/05/2026 0:00:00</pubDate>
+      <title>La industria y la construcción lideran la inserción laboral de la FP en Jaén</title>
+      <link>https://www.ideal.es/jaen/jaen/industria-construccion-lideran-insercion-laboral-jaen-20261030231325-nt.html</link>
+      <guid>https://www.ideal.es/jaen/jaen/industria-construccion-lideran-insercion-laboral-jaen-20261030231325-nt.html</guid>
+      <description>&lt;p&gt;Empleo e inserción laboral ligados a la FP.&lt;/p&gt;&lt;p&gt;Andalucía · Ideal.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Andalucía</category>
+      <category>Datos y política</category>
+      <pubDate>Sun, 01 Nov 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][formacion_empleo/pfae_gj] Convocatoria de Proyectos de Formación en Alternancia con el Empleo-Garantía Juvenil 2026: 7.105.730,75 € para 17 proyec</title>
-      <link>https://radioinsular.es/canarias-destina-71-millones-a-formar-y-emplear-a-255-jovenes-a-traves-de-los-proyectos-de-garantia-juvenil/</link>
-      <guid>https://radioinsular.es/canarias-destina-71-millones-a-formar-y-emplear-a-255-jovenes-a-traves-de-los-proyectos-de-garantia-juvenil/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | formacion_empleo/pfae_gj&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Convocatoria de Proyectos de Formación en Alternancia con el Empleo-Garantía Juvenil 2026: 7.105.730,75 € para 17 proyec&lt;/p&gt;&lt;p&gt;&lt;a href='https://radioinsular.es/canarias-destina-71-millones-a-formar-y-emplear-a-255-jovenes-a-traves-de-los-proyectos-de-garantia-juvenil/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>2/11/2026 0:00:00</pubDate>
+      <title>La FP Dual impulsa la conexión entre empresas y alumnado en Almendralejo</title>
+      <link>https://www.canalextremadura.es/noticias/provinciadebadajoz/la-fp-dual-impulsa-la-conexion-entre-empresas-y-alumnado-en</link>
+      <guid>https://www.canalextremadura.es/noticias/provinciadebadajoz/la-fp-dual-impulsa-la-conexion-entre-empresas-y-alumnado-en</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Extremadura.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Extremadura</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Wed, 28 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][fp_dual/tutor_empresa] CCELPA, proyecto Impulsa FP Dual: programa de formación virtual para tutores/as e instructores/as de empresa de FP Dual;</title>
-      <link>https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/</link>
-      <guid>https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | fp_dual/tutor_empresa&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CCELPA, proyecto Impulsa FP Dual: programa de formación virtual para tutores/as e instructores/as de empresa de FP Dual;&lt;/p&gt;&lt;p&gt;&lt;a href='https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>19/10/2026 0:00:00</pubDate>
+      <title>Hecansa invierte 11 millones de fondos europeos para liderar la FP Dual en Canarias</title>
+      <link>https://www.libertaddigital.com/canarias/2026-10-27/hecansa-invierte-11-millones-de-fondos-europeos-para-liderar-la-fp-dual-en-canarias-7482302/</link>
+      <guid>https://www.libertaddigital.com/canarias/2026-10-27/hecansa-invierte-11-millones-de-fondos-europeos-para-liderar-la-fp-dual-en-canarias-7482302/</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Canarias · Libertad Digital.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Canarias</category>
+      <category>Datos y política</category>
+      <pubDate>Tue, 27 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 45][fp_dual/tutor_empresa] Cámara de Lanzarote: la figura del tutor de empresa se consolida en la FP Dual, con tres ciclos en la isla; octava seman</title>
-      <link>https://camaralanzarote.org/la-figura-del-tutor-se-impone-en-las-empresas-formacion-profesional-dual/</link>
-      <guid>https://camaralanzarote.org/la-figura-del-tutor-se-impone-en-las-empresas-formacion-profesional-dual/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | fp_dual/tutor_empresa&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Cámara de Lanzarote: la figura del tutor de empresa se consolida en la FP Dual, con tres ciclos en la isla; octava seman&lt;/p&gt;&lt;p&gt;&lt;a href='https://camaralanzarote.org/la-figura-del-tutor-se-impone-en-las-empresas-formacion-profesional-dual/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>12/10/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 45][financiacion_publica/convocatorias-estatales-fp] BOE publica cuatro convocatorias estatales por 126,7 M€ para acciones de formación en el Catálogo Nacional: 35 M€ oficio</title>
-      <link>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-31651</link>
-      <guid>https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-31651</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 45 | Radar FP | financiacion_publica/convocatorias-estatales-fp&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;BOE publica cuatro convocatorias estatales por 126,7 M€ para acciones de formación en el Catálogo Nacional: 35 M€ oficio&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.boe.es/diario_boe/txt.php?id=BOE-B-2026-31651'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>11/10/2026 0:00:00</pubDate>
-    </item>
-    <item>
-      <title>[IOS 44][fp_dual/tutor_empresa] CCELPA publica una guía para desarrollar la FP Dual en la empresa, con instrucciones de la resolución de 5-nov-2024 y fu</title>
+      <title>CCELPA publica una guía para desarrollar la FP Dual en la empresa, con instrucciones de la…</title>
       <link>https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf</link>
       <guid>https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 44 | Radar FP | fp_dual/tutor_empresa&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;CCELPA publica una guía para desarrollar la FP Dual en la empresa, con instrucciones de la resolución de 5-nov-2024 y fu&lt;/p&gt;&lt;p&gt;&lt;a href='https://ccelpa.org/wp-content/uploads/2025/12/Guia-para-el-desarrollo-de-la-FPDual-en-la-empresa.pdf'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>26/10/2026 0:00:00</pubDate>
+      <description>&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Normativa</category>
+      <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 44][CANARIAS] Hecansa confirma el éxito de la FP dual intensiva con un alto índice de</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://diariodeavisos.elespanol.com/2026/03/hecansa-fp-dual-intensiva-empleabilidad/&amp;ct=ga&amp;cd=CAEYACoTNTc5MTYxNjQ2NDAxNDg0MjQ0MzIcMDkxYzZhYzcwOTI1NjRhODpjb206ZXM6RVM6Ug&amp;usg=AOvVaw0Il2FB6Oi5LDvdbD2Udk2r</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://diariodeavisos.elespanol.com/2026/03/hecansa-fp-dual-intensiva-empleabilidad/&amp;ct=ga&amp;cd=CAEYACoTNTc5MTYxNjQ2NDAxNDg0MjQ0MzIcMDkxYzZhYzcwOTI1NjRhODpjb206ZXM6RVM6Ug&amp;usg=AOvVaw0Il2FB6Oi5LDvdbD2Udk2r</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 44 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Diario de Avisos - El Español Hecansa imparte en este curso ciclos de grado superior de Formación Profesional Dual Intensiva en Dirección de Cocina y Gestión de Alojamientos ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://diariodeavisos.elespanol.com/2026/03/hecansa-fp-dual-intensiva-empleabilidad/&amp;ct=ga&amp;cd=CAEYACoTNTc5MTYxNjQ2NDAxNDg0MjQ0MzIcMDkxYzZhYzcwOTI1NjRhODpjb206ZXM6RVM6Ug&amp;usg=AOvVaw0Il2FB6Oi5LDvdbD2Udk2r'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>25/03/2026 0:00:00</pubDate>
+      <title>Empresa y formación profesional</title>
+      <link>https://www.foment.com/es/events/empresa-y-formacion-profesional-igualada/</link>
+      <guid>https://www.foment.com/es/events/empresa-y-formacion-profesional-igualada/</guid>
+      <description>&lt;p&gt;Cataluña · Foment del Treball.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Cataluña</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 44][Evento/educación] IV Foro Cultura Gastronomía Salud ULPGC-DISA: FP hostelería reflexiona sector via cine como herramienta educativa.</title>
-      <link>https://www.canarias7.es/gastronomia-c7/formacion-profesional-hosteleria-mira-cine-edicion-foro-20260416130838-nt.html</link>
-      <guid>https://www.canarias7.es/gastronomia-c7/formacion-profesional-hosteleria-mira-cine-edicion-foro-20260416130838-nt.html</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 44 | Radar FP | Evento/educación&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;IV Foro Cultura Gastronomía Salud ULPGC-DISA: FP hostelería reflexiona sector via cine como herramienta educativa.&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.canarias7.es/gastronomia-c7/formacion-profesional-hosteleria-mira-cine-edicion-foro-20260416130838-nt.html'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>16/04/2026 0:00:00</pubDate>
+      <title>Fundación InnovaSur: referente en IA y ciberseguridad para la FP Dual</title>
+      <link>https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/</link>
+      <guid>https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/</guid>
+      <description>&lt;p&gt;FP y competencias digitales.&lt;/p&gt;&lt;p&gt;Vivir Ediciones.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Empresa y Dual</category>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 43][fp_dual/hosteleria] Tenerife Joven y Educa: oferta de formación dual en hostelería con certificado HOTR0608 (servicios de restaurante, bar y</title>
-      <link>https://www.facebook.com/TenerifeJovenyEduca/posts/-te-gustar%C3%ADa-formarte-en-hosteler%C3%ADa-y-abrirte-puertas-dentro-y-fuera-de-canarias/1576683177835987/</link>
-      <guid>https://www.facebook.com/TenerifeJovenyEduca/posts/-te-gustar%C3%ADa-formarte-en-hosteler%C3%ADa-y-abrirte-puertas-dentro-y-fuera-de-canarias/1576683177835987/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 43 | Radar FP | fp_dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Tenerife Joven y Educa: oferta de formación dual en hostelería con certificado HOTR0608 (servicios de restaurante, bar y&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.facebook.com/TenerifeJovenyEduca/posts/-te-gustar%C3%ADa-formarte-en-hosteler%C3%ADa-y-abrirte-puertas-dentro-y-fuera-de-canarias/1576683177835987/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>19/10/2026 0:00:00</pubDate>
+      <title>La VIII Feria de FP Dual de Puertollano reúne a 65 stands para impulsar la inserción…</title>
+      <link>https://surcoclm.com/noticias-por-provincias-clm/ciudad-real/la-viii-feria-de-fp-dual-de-puertollano-reune-a-65-stands-para-impulsar-la-insercion-laboral-de-los-jovenes/</link>
+      <guid>https://surcoclm.com/noticias-por-provincias-clm/ciudad-real/la-viii-feria-de-fp-dual-de-puertollano-reune-a-65-stands-para-impulsar-la-insercion-laboral-de-los-jovenes/</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Castilla-La Mancha.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Castilla-La Mancha</category>
+      <category>Datos y política</category>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 43][dual/hosteleria] RTVC recuerda la primera promoción de FP Dual en régimen intensivo del sector turístico en Canarias, acuerdo entre Hecan</title>
-      <link>https://rtvc.es/el-sector-turistico-se-apunta-a-la-fp-dual/</link>
-      <guid>https://rtvc.es/el-sector-turistico-se-apunta-a-la-fp-dual/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 43 | Radar FP | dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;RTVC recuerda la primera promoción de FP Dual en régimen intensivo del sector turístico en Canarias, acuerdo entre Hecan&lt;/p&gt;&lt;p&gt;&lt;a href='https://rtvc.es/el-sector-turistico-se-apunta-a-la-fp-dual/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>14/09/2026 0:00:00</pubDate>
+      <title>Baleares bate récord de titulados en FP con 6.475 alumnos y una inserción laboral de hasta…</title>
+      <link>https://www.cronicabalear.es/mallorca/2026-10-22/baleares-bate-record-de-titulados-en-fp-con-6475-alumnos-y-una-insercion-laboral-de-hasta-el-71/</link>
+      <guid>https://www.cronicabalear.es/mallorca/2026-10-22/baleares-bate-record-de-titulados-en-fp-con-6475-alumnos-y-una-insercion-laboral-de-hasta-el-71/</guid>
+      <description>&lt;p&gt;Empleo e inserción laboral ligados a la FP.&lt;/p&gt;&lt;p&gt;Baleares.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Baleares</category>
+      <category>Datos y política</category>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 43][fp_dual/hosteleria] FP Dual Alemana en Hostelería (FEDA Madrid, Cabildo de Tenerife y hoteles de la isla): programa vigente de dos años en h</title>
-      <link>https://feda-madrid.com/titulaciones/fp-dual-hosteleria-tenerife-y-malaga/</link>
-      <guid>https://feda-madrid.com/titulaciones/fp-dual-hosteleria-tenerife-y-malaga/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 43 | Radar FP | fp_dual/hosteleria&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;FP Dual Alemana en Hostelería (FEDA Madrid, Cabildo de Tenerife y hoteles de la isla): programa vigente de dos años en h&lt;/p&gt;&lt;p&gt;&lt;a href='https://feda-madrid.com/titulaciones/fp-dual-hosteleria-tenerife-y-malaga/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>12/10/2026 0:00:00</pubDate>
+      <title>La FP concentra el 51 % de los perfiles demandados por empresas de capital extranjero en…</title>
+      <link>https://objetivocastillalamancha.es/region/educacion/fp-concentra-51-perfiles-demandados-empresas-capital-extranjero-castilla-mancha</link>
+      <guid>https://objetivocastillalamancha.es/region/educacion/fp-concentra-51-perfiles-demandados-empresas-capital-extranjero-castilla-mancha</guid>
+      <description>&lt;p&gt;Castilla-La Mancha.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Castilla-La Mancha</category>
+      <category>Convocatoria</category>
+      <pubDate>Thu, 22 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 42][NACIONAL] Cerca de 50 empresas de Mallorca se forman en el marco de la FP Dual ... -</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www.manacornoticias.com/comunicat.php%3Fid%3D34886&amp;ct=ga&amp;cd=CAEYACoUMTU1Njg2Nzc1NDE3ODYzNzgzMTEyGjNmMzljYmYyZDQzZTRiYjM6Y29tOmVzOlVT&amp;usg=AOvVaw2N721hn1VtB-pv6F3C0frN</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www.manacornoticias.com/comunicat.php%3Fid%3D34886&amp;ct=ga&amp;cd=CAEYACoUMTU1Njg2Nzc1NDE3ODYzNzgzMTEyGjNmMzljYmYyZDQzZTRiYjM6Y29tOmVzOlVT&amp;usg=AOvVaw2N721hn1VtB-pv6F3C0frN</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 42 | Radar FP | NACIONAL&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;MANACOR NOTICIAS - Tu web de noticias en Manacor ... tutores de empresa de Formación Profesional Dual Intensiva. cambramallorca.com 31/07/2026 - 18:29:57. Imprimir Enviar. Cerca de 50 empresas de ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://www.manacornoticias.com/comunicat.php%3Fid%3D34886&amp;ct=ga&amp;cd=CAEYACoUMTU1Njg2Nzc1NDE3ODYzNzgzMTEyGjNmMzljYmYyZDQzZTRiYjM6Y29tOmVzOlVT&amp;usg=AOvVaw2N721hn1VtB-pv6F3C0frN'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>31/07/2026 0:00:00</pubDate>
+      <title>Las industrias del plástico de Martos y Austria conectan a través de la Formación Profesional</title>
+      <link>https://www.jaenhoy.es/jaen/industrias-plastico-martos-austria-conectan-formacion-profesional_0_2008310018.html</link>
+      <guid>https://www.jaenhoy.es/jaen/industrias-plastico-martos-austria-conectan-formacion-profesional_0_2008310018.html</guid>
+      <description>&lt;p&gt;Andalucía.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Andalucía</category>
+      <category>Datos y política</category>
+      <pubDate>Wed, 21 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 42][CANARIAS] Fundación InnovaSur: referente en IA y ciberseguridad para la FP Dual -</title>
-      <link>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/&amp;ct=ga&amp;cd=CAEYASoUMTU5NjEwNTQwMzM5NTU3MDAxNzEyHDA5MWM2YWM3MDkyNTY0YTg6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3K8W5iIshem675b9IyGcvT</link>
-      <guid>https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/&amp;ct=ga&amp;cd=CAEYASoUMTU5NjEwNTQwMzM5NTU3MDAxNzEyHDA5MWM2YWM3MDkyNTY0YTg6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3K8W5iIshem675b9IyGcvT</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 42 | Radar FP | CANARIAS&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Vivir Ediciones Canarias · Gobierno de Canarias · Prov. Las Palmas · Cabildo de ... Formación Profesional Dual, según informó la consejería responsable de ...&lt;/p&gt;&lt;p&gt;&lt;a href='https://www.google.com/url?rct=j&amp;sa=t&amp;url=https://vivirediciones.es/fundacion-innovasur-referente-ia-ciberseguridad-fp-dual/&amp;ct=ga&amp;cd=CAEYASoUMTU5NjEwNTQwMzM5NTU3MDAxNzEyHDA5MWM2YWM3MDkyNTY0YTg6Y29tOmVzOkVTOlI&amp;usg=AOvVaw3K8W5iIshem675b9IyGcvT'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>22/10/2026 0:00:00</pubDate>
+      <title>CCELPA, proyecto Impulsa FP Dual: programa de formación virtual para tutores/as e…</title>
+      <link>https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/</link>
+      <guid>https://ccelpa.org/programa-de-formacion-para-tutores-as-e-instructores-as-de-empresa-de-fp-dual/</guid>
+      <description>&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Empresa y Dual</category>
+      <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
     </item>
     <item>
-      <title>[IOS 42][formacion_empleo/pfae] PFAE: la consejera de Turismo y Empleo reconoce siete meses de retraso en las listas de personal y promete bases en 15 d</title>
-      <link>https://educamcanarias.es/listas-pfae-en-tres-meses/</link>
-      <guid>https://educamcanarias.es/listas-pfae-en-tres-meses/</guid>
-      <description>&lt;![CDATA[&lt;p&gt;&lt;strong&gt;IOS: 42 | Radar FP | formacion_empleo/pfae&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;PFAE: la consejera de Turismo y Empleo reconoce siete meses de retraso en las listas de personal y promete bases en 15 d&lt;/p&gt;&lt;p&gt;&lt;a href='https://educamcanarias.es/listas-pfae-en-tres-meses/'&gt;Leer artículo&lt;/a&gt;&lt;/p&gt;]]&gt;</description>
-      <category>Radar FP</category>
-      <pubDate>19/10/2026 0:00:00</pubDate>
+      <title>Gobierno de Canarias: nuevas resoluciones de la Dirección General de FP (jurado de…</title>
+      <link>https://www.gobiernodecanarias.org/efpafd/novedades_consejeria/</link>
+      <guid>https://www.gobiernodecanarias.org/efpafd/novedades_consejeria/</guid>
+      <description>&lt;p&gt;Canarias.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Canarias</category>
+      <category>Convocatoria</category>
+      <pubDate>Mon, 19 Oct 2026 08:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
