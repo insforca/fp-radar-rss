@@ -334,6 +334,155 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-06",
+   "headline": "FSIE exige la retirada de los proyectos de Real Decreto sobre requisitos mínimos y FP",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "FSIE exige la retirada de los proyectos de Real Decreto sobre requisitos mínimos y FP",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "FSIE Madrid · fsiemadrid.es",
+     "url": "https://www.fsiemadrid.es/noticias/fsie-exige-la-retirada-de-los-proyectos-de-real-decreto-sobre-requisitos-minimos-y-fp/",
+     "tema": "Centros"
+    },
+    {
+     "trend": "up",
+     "titular": "Educación: Madrid incorporará a expertos de la empresa como docentes en Formación Profesional",
+     "ambito": "Madrid",
+     "por_que": "",
+     "fuente": "La Razón · larazon.es",
+     "url": "https://www.larazon.es/madrid/educacion-madrid-incorporara-expertos-empresa-como-docentes-formacion-profesional_202611026ae8641bb55c427e2ebc0496.html",
+     "tema": "Profesorado"
+    },
+    {
+     "trend": "eq",
+     "titular": "Denuncian que Canarias incumplirá la Ley de Educación en 2027: faltan 610 millones de euros",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "Diario de Avisos - El Español · diariodeavisos.elespanol.com",
+     "url": "https://diariodeavisos.elespanol.com/2026/11/canarias-ley-educacion-2027-deficit/",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "TR3S60 inicia una nueva edición con 62 becas para impulsar el empleo",
+     "ambito": "Extremadura",
+     "por_que": "",
+     "fuente": "juvenil y retener el ... · comunicacion.unex.es",
+     "url": "https://comunicacion.unex.es/2026/11/03/tr3s60-inicia-una-nueva-edicion-con-62-becas-para-impulsar-el-empleo-juvenil-y-retener-el-talento-en-extremadura/",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "Un total de 21 proyectos de Castilla y León, seleccionados en la convocatoria Erasmus+",
+     "ambito": "Castilla y León",
+     "por_que": "",
+     "fuente": "Comunicación - Junta de Castilla y León · comunicacion.jcyl.es",
+     "url": "https://comunicacion.jcyl.es/web/jcyl/Comunicacion/es/Plantilla100Detalle/1284877983892/NotaPrensa/1285694056579/Comunicacion",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "Inauguración de un nuevo centro de formación profesional Integrem en Nules",
+     "ambito": "Comunitat Valenciana",
+     "por_que": "",
+     "fuente": "... Formación Profesional en Nules. Integrem es una asociaci · elperiodic.com",
+     "url": "https://www.elperiodic.com/nules/inauguracion-nuevo-centro-formacion-profesional-integrem-nules_1100279",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "Educación y ASECOVE suscriben un convenio para impulsar la Formación",
+     "ambito": "Cantabria",
+     "por_que": "",
+     "fuente": "Profesional en el sector · ifomo.es",
+     "url": "https://www.ifomo.es/cantabria/cantabria-educacion-asecove-suscriben-convenio-impulsar-formacion-profesional-sector/20261103114651363407.html",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Fernández Torroba aboga por una región referente en Educación",
+     "ambito": "La Rioja",
+     "por_que": "",
+     "fuente": "El Día de la Rioja · eldiadelarioja.es",
+     "url": "https://www.eldiadelarioja.es/noticia/zf3a3784b-da88-42ca-9140da6aad04cce8/202611/fernandez-torroba-aboga-por-una-region-referente-en-educacion",
+     "tema": "FP"
+    },
+    {
+     "trend": "up",
+     "titular": "Renovado el Centro de Innovación y Capacitación para el Empleo de Paracuellos de…",
+     "ambito": "Madrid",
+     "por_que": "",
+     "fuente": "Cadena SER · cadenaser.com",
+     "url": "https://cadenaser.com/cmadrid/2026/11/03/renovado-el-centro-de-innovacion-y-capacitacion-para-el-empleo-de-paracuellos-de-jarama-cmice-ser-madrid-norte/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "up",
+     "titular": "La Formación Profesional necesita centros de referencia conectados con el empleo real",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "Diario Siglo XXI · diariosigloxxi.com",
+     "url": "https://www.diariosigloxxi.com/texto-diario/mostrar/6074358/formacion-profesional-necesita-centros-referencia-conectados-empleo-real",
+     "tema": "Empleo"
+    }
+   ],
+   "boletines": {
+    "canarias": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Dirección General de Personal y Formación del Profesorado): convoca concurso general de…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/220/3778.html",
+      "fecha": "2026-11-04",
+      "hasta": "31/12",
+      "tramite": null
+     }
+    ],
+    "espana": [],
+    "oposiciones": [
+     {
+      "fuente": "BOE",
+      "titulo": "Concurso de traslados de profesorado",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23130",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Concurso de traslados de profesorado · Navarra",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23148",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Concurso de traslados de profesorado · Extremadura",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23149",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     }
+    ],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución 253/2026: publican los procedimientos selectivos de ingreso y de acceso al Cuerpo de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22809",
+      "fecha": "2026-10-31",
+      "hasta": "16/11"
+     }
+    ]
+   }
   }
  ]
 }
