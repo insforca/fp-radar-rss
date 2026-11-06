@@ -1036,7 +1036,7 @@ function renderTable() {
     if(r.alerta) rowClass = 'has-alert';
     
     var sn = esc(r.titular.substring(0, 120)) + (r.titular.length > 120 ? '…' : '');
-    var tip = ((r.medio ? r.medio + ' · ' : '') + r.resumen).replace(/"/g, '&quot;');
+    var tip = [r.medio, r.resumen].filter(Boolean).join(' · ').replace(/"/g, '&quot;');
     var senal = r.url ? '<a href="'+esc(r.url)+'" target="_blank" rel="noopener" title="'+tip+'">'+sn+'</a>' : '<span title="'+tip+'">'+sn+'</span>';
     
     h += '<tr class="'+rowClass+'">';
