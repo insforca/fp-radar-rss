@@ -220,7 +220,7 @@ footer a{color:#cfcfcf}
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
-</style>
+@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:no-preference){main,.wrap,.poster,body>div{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}</style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
