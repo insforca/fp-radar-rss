@@ -51,3 +51,8 @@
   --texto-l: calc(22 * var(--u));
   --texto-xl: calc(90 * var(--u));
 }
+
+/* Móvil: la unidad pasa a escalar con el ancho de pantalla de 390 px, como en la portada */
+@media (max-width: 720px) {
+  :root { --u: calc(100vw / 390); }
+}
