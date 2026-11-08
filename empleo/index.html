@@ -51,6 +51,29 @@ footer a{color:#cfcfcf;font-weight:600}
   h1{font-size:calc(96*var(--u))}
   .strip{flex-direction:column}
 }
+/* Mural tipo corcho: mismos tonos de la paleta; la textura es un patrón de puntos */
+.list{background-color:#c9c9c9;background-image:radial-gradient(rgba(0,0,0,.08) 1px,transparent 1.5px),radial-gradient(rgba(255,255,255,.12) 1px,transparent 1.5px);background-size:9px 9px,13px 13px;background-position:0 0,4px 6px;color:var(--ink)}
+.list .search{background:#fff;border:1px solid var(--frame);color:var(--ink);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.list .search::placeholder{color:var(--grey)}
+.list .filtros button{background:#fff;color:var(--ink);border:1px solid var(--frame)}
+.list .filtros button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.list .filtros button:hover{border-color:var(--ink)}
+.grid{gap:calc(22*var(--u)) calc(18*var(--u))}
+.card{position:relative;background:#fff;color:var(--ink);border:none;border-radius:calc(4*var(--u));box-shadow:0 calc(4*var(--u)) calc(10*var(--u)) rgba(0,0,0,.22);padding:calc(26*var(--u)) calc(22*var(--u)) calc(18*var(--u));min-height:calc(230*var(--u));transform:rotate(var(--giro,0deg))}
+.grid li:nth-child(3n+1) .card{--giro:-.7deg}
+.grid li:nth-child(3n+2) .card{--giro:.5deg}
+.grid li:nth-child(3n) .card{--giro:-.3deg}
+.card:before{content:"";position:absolute;top:calc(8*var(--u));left:50%;width:calc(14*var(--u));height:calc(14*var(--u));margin-left:calc(-7*var(--u));border-radius:50%;background:var(--sol);box-shadow:0 2px 3px rgba(0,0,0,.45),inset 0 -2px 0 rgba(0,0,0,.2)}
+.card:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 calc(10*var(--u)) calc(20*var(--u)) rgba(0,0,0,.28);border:none}
+.card .t{color:var(--ink);font-size:calc(17*var(--u))}
+.card .t:after{color:var(--atl)}
+.card .que{color:#2a2a2a}
+.card .o{color:var(--grey)}
+.card .f{color:var(--grey)}
+.card .f b{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.card .tag{background:var(--ink);color:#fff}
+.vacio{color:var(--ink)}
+.strip{color:var(--ink);border-color:var(--frame)}
 </style>
 </head>
 <body class="claro">
