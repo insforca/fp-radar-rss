@@ -40,7 +40,7 @@ a{color:inherit;text-decoration:none}
 .hero-bg{position:absolute;inset:0;background:var(--paper)}
 .abs{position:absolute}
 .topline{display:contents}
-nav.pill{left:calc(57*var(--u));top:calc(61*var(--u));height:calc(48*var(--u));background:#fff;border-radius:999px;display:flex;align-items:center;padding:calc(4*var(--u));z-index:5}
+nav.pill{left:calc(57*var(--u));top:calc(61*var(--u));view-transition-name:sitio-nav;height:calc(48*var(--u));background:#fff;border-radius:999px;display:flex;align-items:center;padding:calc(4*var(--u));z-index:5}
 nav.pill a{position:relative;z-index:1;font-size:calc(14*var(--u));padding:0 calc(18*var(--u));height:calc(40*var(--u));display:flex;align-items:center;border-radius:999px;transition:color .25s}
 nav.pill a.on{color:#fff}
 nav.pill a{white-space:nowrap}
@@ -220,7 +220,7 @@ footer a{color:#cfcfcf}
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
-@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:no-preference){main,.wrap,.poster,body>div{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}</style>
+@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:no-preference){main,.wrap,.poster,body>div{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}</style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
