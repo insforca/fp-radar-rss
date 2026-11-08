@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Estante de empleo docente FP · beta</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--ui);background:var(--paper);color:var(--ink);min-height:100vh}
+a{color:inherit}
+header{padding:calc(22*var(--u)) calc(40*var(--u)) 0;display:flex;justify-content:space-between;align-items:center;gap:calc(14*var(--u));flex-wrap:wrap}
+.pill{display:inline-flex;gap:calc(4*var(--u));background:var(--ink);border-radius:var(--radio-pildora);padding:calc(6*var(--u))}
+.pill a{color:#fff;text-decoration:none;font-family:var(--wide);font-size:var(--texto-s);letter-spacing:.06em;text-transform:uppercase;padding:calc(8*var(--u)) calc(14*var(--u));border-radius:var(--radio-pildora)}
+.pill a.on{background:#fff;color:var(--ink)}
+.btn{display:inline-flex;background:var(--ink);color:#fff;border-radius:var(--radio-pildora);padding:calc(10*var(--u)) calc(18*var(--u));font-family:var(--wide);font-size:var(--texto-s);text-decoration:none;letter-spacing:.06em;text-transform:uppercase}
+.titulo{padding:calc(40*var(--u)) calc(40*var(--u)) calc(10*var(--u))}
+.titulo .k{font-family:var(--mono);font-size:var(--texto-s);color:var(--grey);text-transform:uppercase;letter-spacing:.08em}
+h1{font-family:var(--wide);font-weight:800;font-size:calc(92*var(--u));line-height:.92;letter-spacing:-.03em;margin:calc(10*var(--u)) 0 0;text-transform:uppercase}
+h1 .sol{background:var(--sol);padding:0 calc(8*var(--u))}
+.lead{max-width:calc(560*var(--u));font-size:calc(18*var(--u));line-height:1.4;margin:calc(18*var(--u)) 0 0}
+.controles{padding:calc(22*var(--u)) calc(40*var(--u));display:flex;flex-wrap:wrap;gap:calc(10*var(--u));align-items:center;border-bottom:2px solid var(--ink)}
+.controles input{flex:1;min-width:calc(240*var(--u));background:#fff;border:2px solid var(--ink);border-radius:var(--radio-pildora);padding:calc(12*var(--u)) calc(18*var(--u));font-family:var(--ui);font-size:calc(15*var(--u));color:var(--ink)}
+.controles input:focus{outline:none;box-shadow:0 0 0 calc(3*var(--u)) var(--sol)}
+.chips{display:flex;flex-wrap:wrap;gap:calc(6*var(--u))}
+.chips button{background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:var(--radio-pildora);padding:calc(7*var(--u)) calc(12*var(--u));font-family:var(--wide);font-size:calc(11*var(--u));letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.chips button.on{background:var(--ink);color:#fff}
+.chips button i{font-style:normal;font-family:var(--mono);opacity:.6;margin-left:calc(4*var(--u))}
+.estante{padding:calc(60*var(--u)) calc(40*var(--u)) calc(60*var(--u))}
+.balda{display:flex;flex-wrap:wrap;gap:calc(10*var(--u)) calc(8*var(--u));align-items:flex-end;min-height:calc(300*var(--u));padding-bottom:calc(16*var(--u));border-bottom:calc(14*var(--u)) solid var(--ink)}
+.cassete{position:relative;width:calc(58*var(--u));height:calc(260*var(--u));background:var(--ink);color:#fff;border:0;padding:0;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.cassete:nth-child(3n+2){background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.cassete:nth-child(3n){background:var(--sol);color:var(--ink)}
+.cassete .lomo{writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--wide);font-weight:700;font-size:calc(12*var(--u));letter-spacing:.04em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-height:calc(230*var(--u))}
+.cassete .etq{position:absolute;top:calc(14*var(--u));left:calc(8*var(--u));right:calc(8*var(--u));height:calc(4*var(--u));background:currentColor;opacity:.4}
+.cassete:hover,.cassete:focus-visible{transform:translateY(calc(-14*var(--u)));outline:none}
+.cassete:focus-visible{box-shadow:0 0 0 calc(3*var(--u)) var(--sol)}
+.vacio{font-family:var(--mono);color:var(--grey);padding:calc(30*var(--u)) 0}
+.hoja{position:fixed;inset:0;background:rgba(20,20,20,.55);display:none;align-items:center;justify-content:center;padding:calc(20*var(--u));z-index:20}
+.hoja.abierta{display:flex}
+.hoja .panel{background:var(--paper);border:3px solid var(--ink);border-radius:calc(4*var(--u));max-width:calc(560*var(--u));width:100%;padding:calc(28*var(--u));position:relative}
+.hoja .cerrar{position:absolute;top:calc(12*var(--u));right:calc(12*var(--u));background:var(--ink);color:#fff;border:0;border-radius:var(--radio-pildora);padding:calc(6*var(--u)) calc(12*var(--u));font-family:var(--wide);font-size:calc(11*var(--u));text-transform:uppercase;cursor:pointer}
+.hoja .zona{display:inline-block;background:var(--sol);font-family:var(--mono);font-size:calc(11*var(--u));text-transform:uppercase;padding:calc(3*var(--u)) calc(9*var(--u));border-radius:var(--radio-pildora)}
+.hoja h2{font-family:var(--wide);font-weight:800;font-size:calc(26*var(--u));line-height:1.1;letter-spacing:-.02em;margin:calc(14*var(--u)) 0 calc(8*var(--u))}
+.hoja .que{font-size:calc(17*var(--u));line-height:1.4}
+.hoja .oficial{font-size:calc(13*var(--u));color:var(--grey);line-height:1.45;margin-top:calc(14*var(--u))}
+.hoja .meta{font-family:var(--mono);font-size:calc(11*var(--u));color:var(--grey);text-transform:uppercase;margin-top:calc(14*var(--u))}
+.hoja .btn{margin-top:calc(18*var(--u))}
+footer{background:var(--ink);color:#cfcfcf;padding:calc(30*var(--u)) calc(40*var(--u));font-size:calc(13*var(--u));line-height:1.6}
+footer a{color:#fff;font-weight:600}
+@media (max-width:720px){
+  header,.titulo,.controles,.estante{padding-left:calc(16*var(--u));padding-right:calc(16*var(--u))}
+  h1{font-size:calc(60*var(--u))}
+  .cassete{width:calc(42*var(--u));height:calc(200*var(--u))}
+}
+</style>
+</head>
+<body class="claro">
+<header>
+  <nav class="pill" aria-label="Secciones">
+    <a href="/">Inicio</a><a href="/fp-al-dia/">Newsletter</a><a href="/radar/">FP Radar</a><a href="/empleo/" class="on">Empleo</a>
+  </nav>
+  <a class="btn" href="mailto:hola@fpaldia.es">Contacto ↗</a>
+</header>
+
+<section class="titulo">
+  <div class="k">(Empleo docente · FP · beta)</div>
+  <h1>Estante<br><span class="sol">de convocatorias</span></h1>
+  <p class="lead">Cada cassete es una convocatoria del BOE de los últimos 30 días. Toca uno para leerlo en claro y ver la fuente oficial.</p>
+</section>
+
+<section class="controles">
+  <input id="buscar" type="search" placeholder="Buscar por comunidad, cuerpo o palabra" aria-label="Buscar">
+  <div class="chips" id="chips"></div>
+</section>
+
+<section class="estante">
+  <div class="balda" id="balda"></div>
+  <p class="vacio" id="vacio" hidden>No hay convocatorias con ese filtro.</p>
+</section>
+
+<div class="hoja" id="hoja" role="dialog" aria-modal="true" aria-labelledby="hojaT">
+  <div class="panel">
+    <button class="cerrar" id="cerrar" type="button">Cerrar</button>
+    <span class="zona" id="hojaZona"></span>
+    <h2 id="hojaT"></h2>
+    <p class="que" id="hojaQue"></p>
+    <p class="oficial" id="hojaOficial"></p>
+    <div class="meta" id="hojaMeta"></div>
+    <a class="btn" id="hojaUrl" target="_blank" rel="noopener">Ver en el BOE ↗</a>
+  </div>
+</div>
+
+<footer>
+  Datos: <a href="https://www.boe.es/" rel="noopener">Agencia Estatal Boletín Oficial del Estado</a>, reutilizados con licencia abierta y citando la fuente.
+  Proyecto informativo de <a href="https://fpaldia.es/">FP al día</a>, sin relación con el BOE ni con las administraciones citadas.
+</footer>
+
+<script>
+const CONVOCATORIAS = [{"fecha": "2026-11-04", "organismo": "MINISTERIO DE EDUCACIÓN, FORMACIÓN PROFESIONAL Y DEPORTES", "titulo": "Resolución de 30 de octubre de 2026, de la Subsecretaría, por la que se convoca concurso de traslados de personal funcionario docente de los Cuerpos de Catedráticos y Profesores de Enseñanza Secundaria, Cuerpo, a extinguir, de Profesores Técnicos de Formación Profesional, Cuerpos de Catedráticos y Profesores de Escuelas Oficiales de Idiomas, Cuerpos de Profesores de Música y Artes Escénicas, Cuerpos de Catedráticos, de Profesores y de Maestros de Taller de Artes Plásticas y Diseño, Cuerpo de Profesores Especialistas en Sectores Singulares de la Formación Profesional y Cuerpo de Maestros, para la provisión de plazas en el ámbito de gestión territorial del Ministerio de Educación, Formación Profesional y Deportes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23130"}, {"fecha": "2026-11-04", "organismo": "MINISTERIO DE EDUCACIÓN, FORMACIÓN PROFESIONAL Y DEPORTES", "titulo": "Resolución de 30 de octubre de 2026, de la Subsecretaría, por la que se convoca concurso de traslados entre personal funcionario de los Cuerpos de Inspectores al Servicio de la Administración Educativa e Inspectores de Educación, para la provisión de plazas en el ámbito de gestión territorial del Ministerio de Educación, Formación Profesional y Deportes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23131"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE CATALUÑA", "titulo": "Resolución de 28 de octubre de 2026, de la Dirección General de Profesorado y Personal de Centros Públicos, del Departamento de Educación y Formación Profesional, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23137"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE GALICIA", "titulo": "Resolución de 20 de octubre de 2026, de la Dirección General de Centros y Recursos Humanos, de la Conselleria de Educación, Ciencia, Universidades y Formación Profesional, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23138"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE CANTABRIA", "titulo": "Resolución de 26 de octubre de 2026, de la Consejería de Educación, Formación Profesional y Universidades, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23141"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE LA REGIÓN DE MURCIA", "titulo": "Resolución de 26 de octubre de 2026, de la Consejería de Educación y Formación Profesional, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23143"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE CANARIAS", "titulo": "Resolución de 26 de octubre de 2026, de la Dirección General de Personal y Formación del Profesorado, de la Consejería de Educación, Formación Profesional, Actividad Física y Deportes, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23147"}, {"fecha": "2026-11-04", "organismo": "COMUNIDAD AUTÓNOMA DE EXTREMADURA", "titulo": "Resolución de 28 de octubre de 2026, de la Dirección General de Personal Docente, de la Consejería de Educación y Formación Profesional, por la que se publica la convocatoria de concursos de traslados de ámbito estatal correspondiente a cuerpos de funcionarios docentes.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23149"}, {"fecha": "2026-10-31", "organismo": "COMUNIDAD FORAL DE NAVARRA", "titulo": "Resolución 253/2026, de 28 de octubre, de la Dirección del Servicio de Selección y Provisión de Personal Docente, del Departamento de Educación, por la que se publican los procedimientos selectivos de ingreso y de acceso al Cuerpo de Profesores de Enseñanza Secundaria, de ingreso a los Cuerpos de Profesores de Escuelas Oficiales de Idiomas y de Profesores Especialistas en Sectores Singulares de Formación Profesional y procedimiento de adquisición de nuevas especialidades.", "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22809"}];
+const TIPOS = [
+  [/concurso de traslados/i, 'Concurso de traslados', 'Profesores que quieren cambiar de centro o de destino.'],
+  [/procedimientos? selectivos?|oposici/i, 'Oposiciones', 'Examen para entrar como profesor en la pública.'],
+  [/bolsa|listas? de (empleo|interinos|sustitut)/i, 'Listas de interinos', 'Para trabajar como sustituto cuando hay vacantes.'],
+  [/concurso de acceso/i, 'Concurso de acceso', 'Plaza concreta, con requisitos propios.'],
+  [/convoca/i, 'Convocatoria', 'Plazas o procesos para profesores.']
+];
+const ZONAS = [['Andalucía',/ANDALUC/],['Aragón',/ARAG/],['Asturias',/ASTURIAS/],['Illes Balears',/BALEAR/],['Canarias',/CANARIAS/],['Cantabria',/CANTABRIA/],['Castilla y León',/CASTILLA Y LEON/],['Castilla-La Mancha',/CASTILLA-LA MANCHA|CASTILLA LA MANCHA/],['Cataluña',/CATALU/],['Comunitat Valenciana',/VALENCIAN/],['Extremadura',/EXTREMADURA/],['Galicia',/GALICIA/],['La Rioja',/RIOJA/],['Madrid',/MADRID/],['Murcia',/MURCIA/],['Navarra',/NAVARRA/],['País Vasco',/VASCO|EUSKADI/]];
+const norm = t => (t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase();
+function zona(c) {
+  const o = norm(c.organismo);
+  if (o.includes('UNIVERSIDAD')) return 'Universidades';
+  if (o.includes('MINISTERIO')) return 'Estatal';
+  const z = ZONAS.find(([, re]) => re.test(o));
+  return z ? z[0] : 'Otros';
+}
+function resumir(c) {
+  const t = TIPOS.find(([re]) => re.test(c.titulo)) || TIPOS[TIPOS.length - 1];
+  return { titulo: t[1] + ' · ' + c.zona, que: t[2] };
+}
+CONVOCATORIAS.forEach(c => { c.zona = zona(c); });
+let activo = 'Todas';
+const balda = document.getElementById('balda');
+const chips = document.getElementById('chips');
+const buscar = document.getElementById('buscar');
+const vacio = document.getElementById('vacio');
+const hoja = document.getElementById('hoja');
+function pintarChips() {
+  const cuenta = {};
+  CONVOCATORIAS.forEach(c => cuenta[c.zona] = (cuenta[c.zona] || 0) + 1);
+  const orden = Object.keys(cuenta).sort((a, b) => cuenta[b] - cuenta[a] || a.localeCompare(b));
+  chips.innerHTML = '';
+  ['Todas', ...orden].forEach(z => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = z === activo ? 'on' : '';
+    b.textContent = z;
+    const n = document.createElement('i'); n.textContent = z === 'Todas' ? CONVOCATORIAS.length : cuenta[z];
+    b.appendChild(n);
+    b.addEventListener('click', () => { activo = z; pintarChips(); pintar(); });
+    chips.appendChild(b);
+  });
+}
+function abrir(c) {
+  const r = resumir(c);
+  document.getElementById('hojaZona').textContent = c.zona;
+  document.getElementById('hojaT').textContent = r.titulo;
+  document.getElementById('hojaQue').textContent = r.que;
+  document.getElementById('hojaOficial').textContent = 'Título oficial: ' + c.titulo;
+  document.getElementById('hojaMeta').textContent = c.organismo + ' · BOE ' + c.fecha;
+  document.getElementById('hojaUrl').href = c.url;
+  hoja.classList.add('abierta');
+  document.getElementById('cerrar').focus();
+}
+function cerrar() { hoja.classList.remove('abierta'); }
+document.getElementById('cerrar').addEventListener('click', cerrar);
+hoja.addEventListener('click', e => { if (e.target === hoja) cerrar(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrar(); });
+function pintar() {
+  const q = norm(buscar.value);
+  const filas = CONVOCATORIAS.filter(c => (activo === 'Todas' || c.zona === activo) && norm(c.titulo + ' ' + c.organismo + ' ' + c.zona).includes(q));
+  balda.innerHTML = '';
+  vacio.hidden = filas.length > 0;
+  filas.forEach(c => {
+    const r = resumir(c);
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cassete';
+    b.setAttribute('aria-label', r.titulo);
+    const etq = document.createElement('span'); etq.className = 'etq';
+    const lomo = document.createElement('span'); lomo.className = 'lomo'; lomo.textContent = r.titulo;
+    b.append(etq, lomo);
+    b.addEventListener('click', () => abrir(c));
+    balda.appendChild(b);
+  });
+}
+buscar.addEventListener('input', pintar);
+pintarChips();
+pintar();
+</script>
+</body>
+</html>
