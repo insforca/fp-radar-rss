@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Publicar una oferta · FP al día · beta</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--ui);background:var(--paper);color:var(--ink);min-height:100vh}
+.wrap{max-width:calc(640*var(--u));margin:0 auto;padding:calc(40*var(--u)) calc(20*var(--u)) calc(80*var(--u))}
+h1{font-family:var(--wide);font-weight:800;font-size:calc(44*var(--u));letter-spacing:-.02em;text-transform:uppercase;line-height:1;margin:0 0 calc(10*var(--u))}
+h1 .sol{background:var(--sol);padding:0 calc(6*var(--u))}
+.lead{font-size:calc(16*var(--u));line-height:1.45;margin:0 0 calc(24*var(--u))}
+fieldset{border:2px solid var(--ink);border-radius:calc(6*var(--u));padding:calc(18*var(--u));margin:0 0 calc(18*var(--u));background:#fff}
+legend{font-family:var(--wide);font-weight:700;font-size:calc(12*var(--u));text-transform:uppercase;letter-spacing:.06em;padding:0 calc(6*var(--u))}
+label{display:block;font-size:calc(13*var(--u));margin:calc(10*var(--u)) 0 calc(4*var(--u))}
+input,textarea,select{width:100%;font:inherit;font-size:calc(15*var(--u));padding:calc(10*var(--u)) calc(12*var(--u));border:1.5px solid var(--ink);border-radius:calc(6*var(--u));background:#fff;color:var(--ink)}
+textarea{min-height:calc(110*var(--u));resize:vertical}
+.ayuda{font-size:calc(12*var(--u));color:var(--grey);margin-top:calc(4*var(--u))}
+.btn{display:inline-flex;background:var(--ink);color:#fff;border:0;border-radius:var(--radio-pildora);padding:calc(12*var(--u)) calc(22*var(--u));font-family:var(--wide);font-size:calc(13*var(--u));letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.btn:disabled{opacity:.4;cursor:default}
+.msg{margin-top:calc(14*var(--u));font-size:calc(14*var(--u));padding:calc(12*var(--u));border-radius:calc(6*var(--u));background:#fff;border:1.5px solid var(--ink)}
+.msg.err{background:var(--sol)}
+.aviso{font-size:calc(12*var(--u));color:var(--grey);margin-top:calc(18*var(--u))}
+.oculto{display:none}
+</style>
+</head>
+<body class="claro">
+<div class="wrap">
+  <h1>Publica tu<br><span class="sol">oferta</span></h1>
+  <p class="lead">Sin perfil ni contraseña. Confirmas un correo de tu entidad, pegas el enlace de tu oferta o el texto, y sale publicada con la etiqueta de correo confirmado.</p>
+
+  <form id="paso1">
+    <fieldset>
+      <legend>1 · Tu entidad</legend>
+      <label for="entidad">Nombre de la entidad</label>
+      <input id="entidad" required maxlength="120" placeholder="Academia XYZ">
+      <label for="correo">Correo de la entidad</label>
+      <input id="correo" type="email" required placeholder="nombre@academia.es">
+      <div class="ayuda">Usa un correo de tu dominio. Te enviamos un enlace para confirmarlo.</div>
+    </fieldset>
+    <button class="btn" type="submit">Enviar enlace</button>
+    <div id="m1" class="msg oculto"></div>
+  </form>
+
+  <form id="paso2" class="oculto">
+    <fieldset>
+      <legend>2 · La oferta</legend>
+      <label for="enlace">Enlace de tu oferta (en tu web)</label>
+      <input id="enlace" type="url" placeholder="https://academia.es/empleo/oferta-x">
+      <div class="ayuda">Si la tienes en tu web, pega el enlace y rellenamos los campos. Si no, escribe los datos abajo.</div>
+      <label for="titulo">Título</label>
+      <input id="titulo" maxlength="140" placeholder="Profesor/a de Informática (FPE)">
+      <label for="localidad">Localidad</label>
+      <input id="localidad" maxlength="80">
+      <label for="contrato">Tipo de contrato</label>
+      <input id="contrato" maxlength="80" placeholder="Indefinido, temporal, a tiempo parcial…">
+      <label for="plazo">Fecha límite (opcional)</label>
+      <input id="plazo" type="date">
+      <label for="descripcion">Descripción (opcional si pegas el enlace)</label>
+      <textarea id="descripcion" maxlength="1500"></textarea>
+    </fieldset>
+    <button class="btn" type="submit">Publicar</button>
+    <div id="m2" class="msg oculto"></div>
+  </form>
+
+  <p class="aviso">No cobramos a los candidatos. Desconfía de cualquier pedido de pago para acceder a una oferta. Puedes denunciar cualquier oferta desde su tarjeta.</p>
+</div>
+
+<script>
+// Pon aquí la URL de la aplicación web (Implementar > Aplicación web) cuando Iván la publique.
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbys_dVOrVkGH_KR-dX1KyMGAY00O-_KSDTynvm_4hTh7GQ1YVHwaUdkXXrpBaatUgr4/exec';
+const params = new URLSearchParams(location.search);
+let token = params.get('token') || '';
+
+function llamar(datos) {
+  return fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(datos) })
+    .then(r => r.json());
+}
+function mostrar(id, texto, error) {
+  const m = document.getElementById(id);
+  m.textContent = texto; m.className = 'msg' + (error ? ' err' : ''); m.classList.remove('oculto');
+}
+
+document.getElementById('paso1').addEventListener('submit', e => {
+  e.preventDefault();
+  llamar({ accion: 'pedir_enlace', entidad: entidad.value, correo: correo.value })
+    .then(r => r.ok ? mostrar('m1', r.mensaje) : mostrar('m1', r.error, true))
+    .catch(() => mostrar('m1', 'No se pudo conectar. Inténtalo de nuevo.', true));
+});
+
+// Si vuelve con el token confirmado, muestra el paso 2
+if (token) document.getElementById('paso2').classList.remove('oculto');
+document.getElementById('paso2').addEventListener('submit', e => {
+  e.preventDefault();
+  llamar({ accion: 'publicar', token, enlace: enlace.value, titulo: titulo.value, localidad: localidad.value,
+           contrato: contrato.value, plazo: plazo.value, descripcion: descripcion.value })
+    .then(r => r.ok ? mostrar('m2', 'Publicada. ' + r.aviso) : mostrar('m2', r.error, true))
+    .catch(() => mostrar('m2', 'No se pudo conectar. Inténtalo de nuevo.', true));
+});
+</script>
+</body>
+</html>
