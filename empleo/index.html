@@ -40,6 +40,8 @@ h1 .sol{color:var(--sol)}
 .filtros button.on{background:#fff;color:var(--ink);border-color:#fff}
 .filtros button i{font-style:normal;font-family:var(--mono);opacity:.6;margin-left:calc(6*var(--u))}
 .tag{font-family:var(--mono);font-size:var(--texto-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--ink);background:var(--sol);border-radius:var(--radio-pildora);padding:calc(3*var(--u)) calc(9*var(--u));align-self:flex-start}
+.que{font-size:var(--texto-m);color:var(--txt);line-height:1.4}
+.card .o{font-size:var(--texto-xs);color:var(--grey);line-height:1.4}
 .tag.estado{background:#fff}
 .vacio{color:var(--grey);padding:calc(30*var(--u))}
 footer{background:var(--black);color:var(--grey);font-size:var(--texto-m);padding:calc(40*var(--u)) calc(57*var(--u)) calc(60*var(--u));border-top:1px solid var(--line);line-height:1.6}
@@ -99,6 +101,17 @@ function zona(c) {
   return z ? z[0] : 'Otros';
 }
 CONVOCATORIAS.forEach(c => c.zona = zona(c));
+const TIPOS = [
+  [/concurso de traslados/i, 'Concurso de traslados', 'Profesores que quieren cambiar de centro o de destino.'],
+  [/procedimientos? selectivos?|oposici/i, 'Oposiciones', 'Examen para entrar como profesor en la pública.'],
+  [/bolsa|listas? de (empleo|interinos|sustitut)/i, 'Listas de interinos', 'Para trabajar como sustituto cuando hay vacantes.'],
+  [/concurso de acceso/i, 'Concurso de acceso', 'Plaza concreta, con requisitos propios.'],
+  [/convoca/i, 'Convocatoria', 'Plazas o procesos para profesores.']
+];
+function resumir(c) {
+  const t = TIPOS.find(([re]) => re.test(c.titulo)) || TIPOS[TIPOS.length - 1];
+  return { titulo: t[1] + ' · ' + c.zona, que: t[2] };
+}
 const lista = document.getElementById('lista');
 const buscar = document.getElementById('buscar');
 const filtros = document.getElementById('filtros');
@@ -133,13 +146,15 @@ function pintar() {
     const a = document.createElement('a');
     a.className = 'card'; a.href = c.url; a.target = '_blank'; a.rel = 'noopener';
     const tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = c.zona;
-    const t = document.createElement('div'); t.className = 't'; t.textContent = c.titulo;
-    const o = document.createElement('div'); o.className = 'o'; o.textContent = c.organismo;
+    const r = resumir(c);
+    const t = document.createElement('div'); t.className = 't'; t.textContent = r.titulo;
+    const q = document.createElement('div'); q.className = 'que'; q.textContent = r.que;
+    const o = document.createElement('div'); o.className = 'o'; o.textContent = 'Título oficial: ' + c.titulo;
     const f = document.createElement('div'); f.className = 'f';
     const fe = document.createElement('span'); fe.textContent = 'BOE ' + c.fecha;
     const b = document.createElement('b'); b.textContent = 'Ver fuente';
     f.append(fe, b);
-    a.append(tag, t, o, f); li.appendChild(a); lista.appendChild(li);
+    a.append(tag, t, q, o, f); li.appendChild(a); lista.appendChild(li);
   });
   if (!filas.length) { const p = document.createElement('li'); p.className = 'vacio'; p.textContent = 'No hay convocatorias con ese filtro.'; lista.appendChild(p); }
 }
