@@ -797,7 +797,7 @@ body.embed .t-wrap {
 <div class="topbar">
   <div class="topbar-ticker">
     <span class="topbar-item">TOTAL <span id="tk-total">—</span></span>
-    <span class="topbar-item">DESTACADAS <span id="tk-ios">—</span></span>
+    <span class="topbar-item">RELEVANCIA MEDIA <span id="tk-ios">—</span></span>
     <span class="topbar-item">ALERTAS <span id="tk-alertas">—</span></span>
     <span class="topbar-item">NORMATIVA <span id="tk-legislacion">—</span></span>
     <span class="topbar-item">CERTIFICADOS <span id="tk-certificados">—</span></span>
@@ -833,9 +833,9 @@ body.embed .t-wrap {
       <div class="sb-foot"><span class="sb-sub" id="sc-pend">acumulado</span></div>
     </div>
     <div class="sb-item">
-      <div class="sb-label">Señales destacadas</div>
+      <div class="sb-label">Relevancia media</div>
       <div class="sb-val cyan" id="sc-ios">—</div>
-      <div class="sb-foot"><span class="sb-sub">relevancia de 80 o más · 30 días</span></div>
+      <div class="sb-foot"><span class="sb-sub">de 0 a 100 · 30 días</span></div>
     </div>
     <div class="sb-item alert">
       <div class="sb-label">Alertas</div>
@@ -989,7 +989,7 @@ function setTab(tab, btn) {
 function renderStats(stats, rows) {
   animateCount(document.getElementById('sc-total'), stats.total || 0, 900);
   if(stats.pendientes) document.getElementById('sc-pend').textContent = stats.pendientes.toLocaleString('es-ES') + ' pendientes de verificación';
-  animateCount(document.getElementById('sc-ios'), stats.relevanciaAlta || 0, 850);
+  animateCount(document.getElementById('sc-ios'), stats.relevanciaMedia || 0, 850);
   animateCount(document.getElementById('sc-alertas'), stats.alertas || 0, 800);
   animateCount(document.getElementById('sc-legislacion'), stats.legislacion || 0, 800);
   animateCount(document.getElementById('sc-certificados'), stats.certificados || 0, 800);
@@ -997,7 +997,7 @@ function renderStats(stats, rows) {
   animateCount(document.getElementById('sc-nacional'), stats.nacional || 0, 880);
   
   document.getElementById('tk-total').textContent = stats.total || 0;
-  document.getElementById('tk-ios').textContent = stats.relevanciaAlta || 0;
+  document.getElementById('tk-ios').textContent = stats.relevanciaMedia || 0;
   document.getElementById('tk-alertas').textContent = stats.alertas || 0;
   document.getElementById('tk-legislacion').textContent = stats.legislacion || 0;
   document.getElementById('tk-certificados').textContent = stats.certificados || 0;
