@@ -21,6 +21,8 @@ textarea{min-height:calc(110*var(--u));resize:vertical}
 .ayuda{font-size:calc(12*var(--u));color:var(--grey);margin-top:calc(4*var(--u))}
 .btn{display:inline-flex;background:var(--ink);color:#fff;border:0;border-radius:var(--radio-pildora);padding:calc(12*var(--u)) calc(22*var(--u));font-family:var(--wide);font-size:calc(13*var(--u));letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
 .btn:disabled{opacity:.4;cursor:default}
+form{margin-bottom:calc(28*var(--u))}
+form:last-of-type{margin-bottom:0}
 .msg{margin-top:calc(14*var(--u));font-size:calc(14*var(--u));padding:calc(12*var(--u));border-radius:calc(6*var(--u));background:#fff;border:1.5px solid var(--ink)}
 .msg.err{background:var(--sol)}
 .aviso{font-size:calc(12*var(--u));color:var(--grey);margin-top:calc(18*var(--u))}
@@ -92,8 +94,22 @@ document.getElementById('paso1').addEventListener('submit', e => {
     .catch(() => mostrar('m1', 'No se pudo conectar. Inténtalo de nuevo.', true));
 });
 
-// Si vuelve con el token confirmado, muestra el paso 2
-if (token) document.getElementById('paso2').classList.remove('oculto');
+// Si llega desde el enlace del correo, verifica el token y muestra el paso 2
+if (token) {
+  document.getElementById('paso1').classList.add('oculto');
+  llamar({ accion: 'verificar', token })
+    .then(r => {
+      if (r.ok) {
+        document.getElementById('paso2').classList.remove('oculto');
+        mostrar('m2', 'Correo confirmado (' + r.correo + '). Ya puedes publicar tu oferta.');
+      } else {
+        document.getElementById('paso1').classList.remove('oculto');
+        mostrar('m1', r.error + ' Pide un enlace nuevo.', true);
+        token = '';
+      }
+    })
+    .catch(() => { mostrar('m1', 'No se pudo verificar el enlace. Inténtalo de nuevo.', true); });
+}
 document.getElementById('paso2').addEventListener('submit', e => {
   e.preventDefault();
   llamar({ accion: 'publicar', token, enlace: enlace.value, titulo: titulo.value, localidad: localidad.value,
