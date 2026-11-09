@@ -339,7 +339,7 @@ footer a{color:#cfcfcf}
         </svg>
         <div class="n"><span id="t2" data-n="4">0</span></div>
         <div class="l">herramientas en desarrollo</div>
-        <div class="note">1 · Qué certificados puedes impartir (docentes). 2 · Calendario de la FP. 3 · Radar a medida para centros. 4 · Empleo docente de FP.</div>
+        <div class="note">Para docentes (qué certificados puedes impartir), calendario de la FP, radar a medida para centros y tendencias del sector.</div>
       </div>
       <a class="tc yl" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">
         <span class="k">NEWSLETTER · GRATIS</span>
@@ -444,7 +444,7 @@ footer a{color:#cfcfcf}
     es.forEach(function(e){
       if (!e.isIntersecting || done) return; done = true;
       count(document.getElementById('t1'), +document.getElementById('t1').dataset.n, 1400);
-      count(document.getElementById('t2'), 4, 1000);
+      count(document.getElementById('t2'), 3, 1000);
       if (!RM) document.querySelectorAll('#av i').forEach(function(a, i){ a.animate([{transform:'scale(.4)', opacity:0},{transform:'none', opacity:1}], {duration:500, delay:i*70, easing:'cubic-bezier(.3,1.4,.5,1)', fill:'both'}); });
     });
   }, {threshold:.35}).observe(document.getElementById('panel'));
