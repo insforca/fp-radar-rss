@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Gestión de ofertas · FP al día</title>
+<style>
+  body { margin: 0; padding: 16px; font: 16px/1.4 Arial, sans-serif; color: #17202a; background: #f5f7fa; }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 20px; color: #0057b8; }
+  section { background: #fff; border-radius: 10px; padding: 14px; margin-bottom: 12px; }
+  input, select, textarea, button { font: inherit; width: 100%; box-sizing: border-box; padding: 10px; margin-top: 6px; border: 1px solid #ccd3dc; border-radius: 8px; }
+  button { background: #0057b8; color: #fff; border: 0; cursor: pointer; }
+  button.peligro { background: #b03a2e; }
+  button.sec { background: #5f6b7a; }
+  .fila { border-top: 1px solid #e3e8ef; padding: 10px 0; }
+  .fila small { color: #5f6b7a; display: block; }
+  .acciones { display: flex; gap: 8px; margin-top: 8px; }
+  .acciones button { width: auto; flex: 1; }
+  #msg { font-weight: bold; }
+  .oculta, .eliminada { opacity: .55; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Gestión de ofertas</h1>
+
+  <section>
+    <label for="clave">Clave de administración</label>
+    <input id="clave" type="password" autocomplete="off">
+    <p><small>La clave no se guarda: la pides cada vez que abres esta página.</small></p>
+    <button id="cargar" type="button">Cargar ofertas</button>
+    <p id="msg"></p>
+  </section>
+
+  <section id="lista" hidden></section>
+
+  <section id="motivo" hidden>
+    <h2 id="motivo-titulo" style="font-size:17px"></h2>
+    <label for="motivo-sel">Motivo (el correo a la entidad lo explica)</label>
+    <select id="motivo-sel">
+      <option value="plazo_vencido">El plazo ya ha terminado</option>
+      <option value="fuera_de_ambito">No es oferta de docencia ni de FP</option>
+      <option value="enlace_no_valido">El enlace no funciona o no lleva a la oferta</option>
+      <option value="duplicada">La oferta ya estaba publicada</option>
+      <option value="info_insuficiente">Falta información necesaria</option>
+      <option value="denuncia_verificada">Denuncias comprobadas</option>
+      <option value="otro">Otro (escribe una nota)</option>
+    </select>
+    <label for="nota">Nota (obligatoria si eliges «Otro»)</label>
+    <textarea id="nota" rows="3"></textarea>
+    <div class="acciones">
+      <button id="confirmar" class="peligro" type="button">Confirmar</button>
+      <button id="cancelar" class="sec" type="button">Cancelar</button>
+    </div>
+  </section>
+</main>
+<script>
+  var EXEC = 'https://script.google.com/macros/s/AKfycbys_dVOrVkGH_KR-dX1KyMGAY00O-_KSDTynvm_4hTh7GQ1YVHwaUdkXXrpBaatUgr4/exec';
+  var $ = function (id) { return document.getElementById(id); };
+  var pendiente = null;
+
+  function llamar(params) {
+    var q = Object.keys(params).map(function (k) { return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); }).join('&');
+    return fetch(EXEC + '?' + q, { redirect: 'follow' }).then(function (r) { return r.json(); });
+  }
+  function mostrar(texto, error) { $('msg').textContent = texto; $('msg').style.color = error ? '#b03a2e' : '#1e8449'; }
+
+  function pintar(ofertas) {
+    var lista = $('lista');
+    lista.hidden = false;
+    lista.innerHTML = '';
+    if (!ofertas.length) { lista.textContent = 'No hay ofertas.'; return; }
+    ofertas.forEach(function (o) {
+      var f = document.createElement('div');
+      f.className = 'fila ' + o.estado;
+      f.innerHTML = '<b></b><small></small><small></small><small></small>';
+      f.querySelector('b').textContent = o.titulo + ' · ' + o.entidad + ' [' + o.estado + ']';
+      f.querySelectorAll('small')[0].textContent = o.fecha + ' · ' + o.correo + ' · denuncias: ' + o.denuncias;
+      f.querySelectorAll('small')[1].textContent = o.enlace || '(sin enlace)';
+      f.querySelectorAll('small')[2].textContent = 'id ' + o.id;
+      if (o.estado === 'publicada') {
+        var a = document.createElement('div'); a.className = 'acciones';
+        var b1 = document.createElement('button'); b1.type = 'button'; b1.className = 'sec'; b1.textContent = 'Ocultar';
+        var b2 = document.createElement('button'); b2.type = 'button'; b2.className = 'peligro'; b2.textContent = 'Eliminar';
+        b1.onclick = function () { abrirMotivo('ocultar', o); };
+        b2.onclick = function () { abrirMotivo('eliminar', o); };
+        a.appendChild(b1); a.appendChild(b2); f.appendChild(a);
+      }
+      lista.appendChild(f);
+    });
+  }
+
+  $('cargar').onclick = function () {
+    mostrar('Cargando…');
+    llamar({ accion: 'admin_listar', clave: $('clave').value }).then(function (r) {
+      if (!r.ok) { mostrar(r.error, true); return; }
+      mostrar('Ofertas cargadas: ' + r.ofertas.length);
+      pintar(r.ofertas);
+    }).catch(function () { mostrar('No se pudo conectar. Inténtalo de nuevo.', true); });
+  };
+
+  function abrirMotivo(accion, o) {
+    pendiente = { accion: accion, id: o.id };
+    $('motivo-titulo').textContent = (accion === 'ocultar' ? 'Ocultar' : 'Eliminar') + ' «' + o.titulo + '»';
+    $('motivo').hidden = false;
+    $('nota').value = '';
+    $('motivo').scrollIntoView({ behavior: 'smooth' });
+  }
+  $('cancelar').onclick = function () { pendiente = null; $('motivo').hidden = true; };
+
+  $('confirmar').onclick = function () {
+    if (!pendiente) return;
+    var motivo = $('motivo-sel').value, nota = $('nota').value.trim();
+    if (motivo === 'otro' && !nota) { mostrar('Para «Otro» escribe una nota.', true); return; }
+    if (!confirm('¿Confirmas? Se enviará un correo a la entidad explicando el motivo.')) return;
+    llamar({ accion: 'admin_' + (pendiente.accion === 'ocultar' ? 'ocultar' : 'eliminar'), clave: $('clave').value, id: pendiente.id, motivo: motivo, nota: nota }).then(function (r) {
+      if (!r.ok) { mostrar(r.error, true); return; }
+      mostrar('Hecho: ' + r.estado + '. Correo enviado a ' + r.correo_enviado_a + '.');
+      pendiente = null; $('motivo').hidden = true;
+      $('cargar').onclick();
+    }).catch(function () { mostrar('No se pudo completar. Comprueba antes si la oferta cambió.', true); });
+  };
+</script>
+</body>
+</html>
