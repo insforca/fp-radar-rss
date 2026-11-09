@@ -76,8 +76,9 @@ const params = new URLSearchParams(location.search);
 let token = params.get('token') || '';
 
 function llamar(datos) {
-  return fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(datos) })
-    .then(r => r.json());
+  const q = new URLSearchParams();
+  Object.keys(datos).forEach(k => q.append(k, datos[k] == null ? '' : String(datos[k])));
+  return fetch(ENDPOINT + '?' + q.toString()).then(r => r.json());
 }
 function mostrar(id, texto, error) {
   const m = document.getElementById(id);
