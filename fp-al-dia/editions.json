@@ -483,6 +483,146 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-10",
+   "headline": "Plan de formación permanente en centros",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "Plan de formación permanente en centros",
+     "ambito": "Galicia",
+     "por_que": "",
+     "fuente": "ANPE Galicia · anpegalicia.es",
+     "url": "https://anpegalicia.es/notices/206619/Plan-de-formaci%C3%B3n-permanente-en-centros---resoluci%C3%B3n-definitiva",
+     "tema": "Centros"
+    },
+    {
+     "trend": "up",
+     "titular": "Educación convoca 153 plazas para docentes en el exterior: 134 de docencia y 19 de…",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "Diario Que! · que.es",
+     "url": "https://www.que.es/2026/11/07/plazas-docentes-exterior-convocatoria-educacion/",
+     "tema": "Profesorado"
+    },
+    {
+     "trend": "eq",
+     "titular": "Educació convoca ayudas para proyectos de emprendimiento y colaboración entre centros",
+     "ambito": "Baleares",
+     "por_que": "",
+     "fuente": "CAIB · caib.es",
+     "url": "https://www.caib.es/pidip2front/ficha_convocatoria.xhtml?lang=es&urlSemantica=educacio-convoca-ayudas-para-proyectos-de-emprendimiento-y-colaboracion-entre-centros-de-fp-y-empresas",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "up",
+     "titular": "Educación pide ayuda a los profesores para salvar los ciclos de FP sin alumnos",
+     "ambito": "Extremadura",
+     "por_que": "",
+     "fuente": "Extremadura 7Dias · extremadura7dias.com",
+     "url": "https://www.extremadura7dias.com/noticia/educacion-pide-ayuda-a-los-profesores-para-salvar-los-ciclos-de-fp-sin-alumnos",
+     "tema": "Profesorado"
+    },
+    {
+     "trend": "eq",
+     "titular": "El Consejo de Ministros autoriza un suplemento de crédito de 112 M€ para la Formación…",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "europapress.es",
+     "url": "https://www.europapress.es/economia/laboral-00346/noticia-gobierno-destina-112-millones-euros-formacion-profesional-empleo-sepe-20261103210016.html",
+     "tema": "Erasmus+"
+    },
+    {
+     "trend": "eq",
+     "titular": "Andalucía dará cerca de hasta 500 euros al mes a alumnos de FP y enseñanzas artísticas",
+     "ambito": "Andalucía",
+     "por_que": "",
+     "fuente": "El Noticiero Digital · elnoticierodigital.com",
+     "url": "https://www.elnoticierodigital.com/andalucia-dara-cerca-de-hasta-500-euros-al-mes-a-alumnos-de-fp-y-ensenanzas-artisticas-con-una-erasmus/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Los programas de empleo de Fabero impulsan la formación y la inserción laboral de 16 personas.",
+     "ambito": "Castilla y León",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "El Bierzo Digital · elbierzodigital.com",
+     "url": "https://www.elbierzodigital.com/los-programas-de-empleo-de-fabero-impulsan-la-formacion-y-la-insercion-laboral-de-16-personas/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "up",
+     "titular": "Turismo y Empleo dispondrá en 2027 de 541 millones de euros de presupuesto Portal de…",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "Estos recursos se destinarán principalmente a formación, ori · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/noticias/turismo-y-empleo-dispondra-en-2027-de-541-millones-de-euros-de-presupuesto/",
+     "tema": "Hostelería"
+    },
+    {
+     "trend": "eq",
+     "titular": "Animan a las empresas de Lleida a implicarse más en la FP dual",
+     "ambito": "Cataluña",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "... Formación Profesional (FP) y reforzar la participación d · segre.com",
+     "url": "https://www.segre.com/es/lleida/261107/animan-empresas-lleida-implicarse-fp-dual_1390369.html",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Canarias exporta su modelo de FP Dual: nueve autonomías estudian el éxito de su plataforma…",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "La Voz de Lanzarote · lavozdelanzarote.com",
+     "url": "https://www.lavozdelanzarote.com/ekonomus/formacion/canarias-exporta-su-modelo-fp-dual-nueve-autonomias-estudian-exito-su-plataforma-digital_247223_102.html",
+     "tema": "Digital"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: publica el Convenio con la Comunitat Valenciana, para el funcionamiento del Centro…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23487",
+      "fecha": "2026-11-09"
+     }
+    ],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Dirección General de Personal y Formación del Profesorado): convoca concurso general de…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/220/3778.html",
+      "fecha": "2026-11-04",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución 253/2026: publican los procedimientos selectivos de ingreso y de acceso al Cuerpo de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22809",
+      "fecha": "2026-10-31",
+      "hasta": "16/11"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: convoca concurso de traslados de personal funcionario docente de los Cuerpos de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23130",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     }
+    ]
+   }
   }
  ]
 }
