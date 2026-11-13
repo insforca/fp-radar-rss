@@ -623,6 +623,139 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-13",
+   "headline": "La Xunta dota a la Formación Profesional de un nuevo marco curricular y crea un sello para…",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "La Xunta dota a la Formación Profesional de un nuevo marco curricular y crea un sello para…",
+     "ambito": "Galicia",
+     "por_que": "",
+     "fuente": "Xunta de Galicia · xunta.gal",
+     "url": "https://www.xunta.gal/es/notas-de-prensa/-/nova/030184/xunta-dota-formacion-profesional-nuevo-marco-curricular-crea-sello-para-las-empresas",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "Castilla-La Mancha adaptará la Ley de FP al tejido empresarial · Noticias La Tribuna de…",
+     "ambito": "Castilla-La Mancha",
+     "por_que": "",
+     "fuente": "La Tribuna de Ciudad Real · latribunadeciudadreal.es",
+     "url": "https://www.latribunadeciudadreal.es/noticia/z306bf5d7-8a28-4d16-8f56e229b0e19dd8/202611/castilla-la-mancha-adaptara-la-ley-de-fp-al-tejido-empresarial",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "eq",
+     "titular": "La alta empleabilidad de la nueva FP Dual - Más de uno Córdoba · Onda Cero Radio",
+     "ambito": "Andalucía",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Onda Cero · ondacero.es",
+     "url": "https://www.ondacero.es/podcast/emisoras/cordoba/mas-de-uno-cordoba/alta-empleabilidad-nueva-dual_202611126af5b7bc185c420007fe2af5.html",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Centros de FP de Baleares podrán solicitar hasta 10.000 euros para proyectos de…",
+     "ambito": "Baleares",
+     "por_que": "",
+     "fuente": "Ultima Hora · ultimahora.es",
+     "url": "https://www.ultimahora.es/noticias/local/2026/11/09/2746019/centros-baleares-podran-solicitar-hasta-10000-euros-para-proyectos-emprendimiento-empresas.html",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "Andalucíaskills 2027: convocatoria · Noticia",
+     "ambito": "Andalucía",
+     "por_que": "",
+     "fuente": "Resolución de la Dirección General de Formación Profesional  · anpeandalucia.es",
+     "url": "https://anpeandalucia.es/notices/83838/Andaluc%C3%ADaskills-2027-convocatoria",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "Castilla y León abre mañana una bolsa de empleo para control pecuario a la que podrán",
+     "ambito": "Castilla y León",
+     "por_que": "",
+     "fuente": "El Alto Jalón · elaltojalon.es",
+     "url": "https://www.elaltojalon.es/texto-diario/mostrar/6088493/castilla-leon-abre-manana-bolsa-empleo-control-pecuario-podran-acceder-titulados-alto-jalon-soriano",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "eq",
+     "titular": "La Villa celebra el II Encuentro Los Barrios +Dual para conectar el alumnado con el sector",
+     "ambito": "España",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Noticias de la Villa · noticiasdelavilla.net",
+     "url": "https://www.noticiasdelavilla.net/la-villa-celebra-el-ii-encuentro-los-barrios-dual-para-conectar-el-alumnado-con-el-sector-empresarial/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "De la FP Superior a la universidad: cómo se conectan ambos modelos",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "formativos · fundacioncyd.org",
+     "url": "https://www.fundacioncyd.org/de-la-fp-superior-a-la-universidad-como-se-conectan-ambos-modelos-formativos/",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "El líder de la FP online en España aterriza en Sevilla con un macrocentro presencial",
+     "ambito": "Andalucía",
+     "por_que": "",
+     "fuente": "Comunicae · comunicae.es",
+     "url": "https://comunicae.es/pt/notas-de-prensa/el-lider-de-la-fp-online-en-espana-aterriza-en",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "El nuevo proyecto 'Hellín por el Empleo II' de inserción laboral llegará a 180 personas",
+     "ambito": "Castilla-La Mancha",
+     "por_que": "Señal del mercado laboral: dónde se mueve el empleo ligado a la FP.",
+     "fuente": "Comarca Monastrell · comarcamonastrell.com",
+     "url": "https://www.comarcamonastrell.com/el-nuevo-proyecto-hellin-por-el-empleo-ii-de-insercion-laboral-llegara-a-180-personas-desempleadas/",
+     "tema": "Empleo"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Dirección General de Personal y Formación del Profesorado): convoca concurso general de…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/220/3778.html",
+      "fecha": "2026-11-04",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución 253/2026: publican los procedimientos selectivos de ingreso y de acceso al Cuerpo de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-22809",
+      "fecha": "2026-10-31",
+      "hasta": "16/11"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: convoca concurso de traslados de personal funcionario docente de los Cuerpos de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23130",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     }
+    ]
+   }
   }
  ]
 }
