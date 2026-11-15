@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Qué puedo impartir? · Buscador de encaje docente · FP al día</title>
+<meta name="description" content="Indica tu titulación, tu competencia docente y tu experiencia y mira qué módulos de certificados de profesionalidad prevé la norma estatal que puedes impartir. Con la cita oficial de cada uno. Gratis y sin registro.">
+<link rel="canonical" href="https://fpaldia.es/impartir/">
+<link rel="icon" type="image/png" href="/marca/fp-al-dia-avatar.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="FP al día">
+<meta property="og:title" content="¿Qué puedo impartir? · Buscador de encaje docente">
+<meta property="og:description" content="Mira qué módulos de certificados de profesionalidad puedes impartir según tu perfil, con la norma citada. Gratis y sin registro.">
+<meta property="og:url" content="https://fpaldia.es/impartir/">
+<meta property="og:image" content="https://fpaldia.es/impartir/og-impartir.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="¿Qué puedo impartir? Buscador de encaje docente · FP al día">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fpaldia.es/impartir/og-impartir.jpg">
+<meta name="twitter:image:alt" content="¿Qué puedo impartir? Buscador de encaje docente · FP al día">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,600..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/impartir/estilo.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=alCargarTurnstile" async defer></script>
+<script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script src="/impartir/app.js" defer></script>
+</head>
+<body>
+<a class="saltar" href="#app">Ir al buscador</a>
+
+<div class="topline">
+  <nav class="pill-nav" aria-label="Secciones">
+    <a href="/">Inicio</a><a href="/fp-al-dia/">Newsletter</a><a href="/radar/">FP Radar</a><a href="/empleo/">Empleo</a><a href="/impartir/" class="on" aria-current="page">Impartir</a>
+  </nav>
+  <a class="contact" href="mailto:hola@fpaldia.es">Contacto ↗</a>
+</div>
+
+<header class="hero">
+  <p class="kicker">(Certificados de profesionalidad · formadores)</p>
+  <h1>¿Qué puedo <span class="sol">impartir?</span></h1>
+  <p class="sub">Buscador de encaje docente · FP al día</p>
+  <p class="lead">Indica tu titulación, tu competencia docente y tu experiencia. Te decimos qué módulos prevé la norma estatal que puedes impartir, con la cita oficial de cada uno.</p>
+  <div class="etiquetas">
+    <span class="etq sol">Piloto</span>
+    <span class="etq">Hostelería y Turismo</span>
+    <span class="etq">Informática y Comunicaciones</span>
+    <span class="etq">Servicios Socioculturales y a la Comunidad</span>
+    <span class="etq">Gratis · sin registro</span>
+  </div>
+</header>
+
+<section class="avisos" aria-label="Antes de empezar">
+  <ul>
+    <li>El resultado es orientativo: no es una acreditación ni una resolución.</li>
+    <li>Confírmalo con el centro o con el servicio público de empleo antes de solicitar nada.</li>
+    <li>Aplicamos solo las reglas estatales. Cada comunidad autónoma puede pedir más.</li>
+  </ul>
+</section>
+
+<main id="app" tabindex="-1">
+  <ol class="pasos" id="pasos" aria-label="Pasos">
+    <li data-paso="1" aria-current="step">Titulaciones</li>
+    <li data-paso="2">Competencia docente</li>
+    <li data-paso="3">Experiencia</li>
+    <li data-paso="4">Resultado</li>
+  </ol>
+
+  <noscript><p class="error"><b>Esta herramienta necesita JavaScript.</b> Actívalo en tu navegador para calcular tu resultado.</p></noscript>
+
+  <!-- Paso 1 -->
+  <section class="panel" id="paso-1" aria-labelledby="t1">
+    <h2 id="t1" tabindex="-1">1 · Tus titulaciones</h2>
+    <p class="ayuda">Busca tu título en la lista oficial y añádelo. Puedes añadir varios: universitario, de FP, certificados de profesionalidad…</p>
+    <div class="combo" id="combo-tit">
+      <label for="buscar-tit">Busca tu titulación</label>
+      <input type="text" id="buscar-tit" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="lista-tit" autocomplete="off" placeholder="Ej.: licenciado, técnico superior hostelería, HOTA0308…" aria-describedby="ayuda-tit">
+      <ul id="lista-tit" role="listbox" aria-label="Titulaciones" hidden></ul>
+    </div>
+    <p class="fuente" id="ayuda-tit">Escribe al menos 2 letras. Si no está, puedes escribirla a mano.</p>
+    <ul class="elegidos" id="elegidos-tit" aria-label="Titulaciones añadidas"></ul>
+    <div id="nota-libre" class="nota rev" hidden></div>
+    <div class="acciones">
+      <span></span>
+      <button type="button" class="btn pri" data-ir="2">Siguiente: competencia docente →</button>
+    </div>
+  </section>
+
+  <!-- Paso 2 -->
+  <section class="panel" id="paso-2" aria-labelledby="t2" hidden>
+    <h2 id="t2" tabindex="-1">2 · Competencia docente</h2>
+    <p class="ayuda">Para impartir certificados de profesionalidad hace falta la habilitación docente o una exención (RD 659/2023, art. 168). Marca lo que tengas.</p>
+    <fieldset>
+      <legend>Habilitación docente</legend>
+      <div class="grupo">
+        <label class="opc"><input type="checkbox" name="acreditada" value="ssc_c_017_5b"><span>Certificado SSC_C_017_5B<small>Habilitación para la docencia en grados A, B y C (RD 86/2026)</small></span></label>
+        <label class="opc"><input type="checkbox" name="acreditada" value="ssce0110"><span>Certificado SSCE0110<small>Docencia de la formación profesional para el empleo (equivale al anterior)</small></span></label>
+        <label class="opc"><input type="checkbox" name="acreditada" value="formador_ocupacional"><span>Certificado de Formador Ocupacional<small>Saldrá «revisa»: hay que confirmar que hoy se reconozca</small></span></label>
+        <label class="opc"><input type="checkbox" name="en_curso" value="ssc_c_017_5b"><span>Estoy cursando la habilitación (SSC_C_017_5B o SSCE0110)<small>Los módulos saldrán «Puedes si lo acreditas»</small></span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Exenciones (art. 168.5)</legend>
+      <div class="grupo">
+        <label class="opc"><input type="checkbox" name="exenciones" value="pedagogia"><span>Título en Pedagogía</span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="psicopedagogia"><span>Título en Psicopedagogía</span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="magisterio"><span>Título de Maestro (Magisterio)</span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="posgrado_afin"><span>Posgrado oficial en Pedagogía, Psicopedagogía o Magisterio</span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="master_profesorado"><span>Máster universitario de profesorado<small>Exime junto con un título universitario oficial</small></span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="cap"><span>CAP (Certificado de Aptitud Pedagógica)<small>Exime junto con un título universitario oficial</small></span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="especializacion_didactica"><span>Título de Especialización Didáctica<small>Exime junto con un título universitario oficial</small></span></label>
+        <label class="opc"><input type="checkbox" name="exenciones" value="curso_equivalente"><span>Otro curso de formación pedagógica equivalente<small>Saldrá «revisa»: la equivalencia la decide la administración</small></span></label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Experiencia docente</legend>
+      <label for="horas">Horas de docencia en formación profesional en los últimos 10 años</label>
+      <p class="fuente" id="ayuda-horas">Con 600 h o más estás exento de la habilitación (art. 168.5).</p>
+      <input type="number" id="horas" min="0" max="20000" step="1" inputmode="numeric" placeholder="0" aria-describedby="ayuda-horas" style="max-width:200px">
+    </fieldset>
+    <div class="acciones">
+      <button type="button" class="btn sec" data-ir="1">← Atrás</button>
+      <button type="button" class="btn pri" data-ir="3">Siguiente: experiencia →</button>
+    </div>
+  </section>
+
+  <!-- Paso 3 -->
+  <section class="panel" id="paso-3" aria-labelledby="t3" hidden>
+    <h2 id="t3" tabindex="-1">3 · Experiencia profesional</h2>
+    <p class="ayuda">Añade tu experiencia por unidad de competencia (UC) o por puesto de trabajo (código CNO-11), con los años. Sirve para el bloque «En tu familia» y, sin titulación, para la vía solo por experiencia.</p>
+    <div class="combo" id="combo-exp">
+      <label for="buscar-exp">Busca una unidad de competencia o un puesto</label>
+      <input type="text" id="buscar-exp" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="lista-exp" autocomplete="off" placeholder="Ej.: recepción, UC0263_3, camarero, 44221010…" aria-describedby="ayuda-exp">
+      <ul id="lista-exp" role="listbox" aria-label="Unidades de competencia y puestos" hidden></ul>
+    </div>
+    <p class="fuente" id="ayuda-exp">Lista de las tres familias del piloto. La experiencia por puesto siempre queda «a comprobar».</p>
+    <ul class="elegidos" id="elegidos-exp" aria-label="Experiencia añadida"></ul>
+
+    <details class="nota" id="idiomas">
+      <summary><b>Idiomas</b> (opcional: solo cuentan si la tabla del módulo los pide)</summary>
+      <div class="fila" style="margin-top:12px">
+        <label>Acreditación
+          <select id="comp-tipo">
+            <option value="eoi_aptitud">Certificado de aptitud de la Escuela Oficial de Idiomas</option>
+            <option value="eoi_nivel_avanzado">Nivel Avanzado de la Escuela Oficial de Idiomas</option>
+            <option value="ciclo_licenciatura_idioma">Ciclo de la licenciatura en el idioma</option>
+            <option value="otro_certificado_idioma">Otro certificado oficial de idioma</option>
+          </select>
+        </label>
+        <label>Idioma
+          <select id="comp-idioma">
+            <option>inglés</option><option>francés</option><option>alemán</option><option>italiano</option><option>portugués</option><option>chino</option><option>árabe</option><option>ruso</option><option>japonés</option>
+          </select>
+        </label>
+      </div>
+      <button type="button" class="btn sec chico" id="comp-anadir" style="margin-top:10px">Añadir idioma</button>
+      <ul class="elegidos" id="elegidos-comp" aria-label="Idiomas añadidos"></ul>
+    </details>
+
+    <div class="resumen-perfil" id="resumen-perfil" style="margin-top:20px"></div>
+    <p class="fuente">Comprobación de seguridad de Cloudflare: evita que un programa copie la base de datos.</p>
+    <div class="ts" id="turnstile"></div>
+    <div id="error-calc" role="alert"></div>
+    <div class="acciones">
+      <button type="button" class="btn sec" data-ir="2">← Atrás</button>
+      <button type="button" class="btn sol" id="calcular">Ver qué puedo impartir →</button>
+    </div>
+    <p class="estado" id="estado-calc" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- Paso 4 -->
+  <section class="panel" id="paso-4" aria-labelledby="t4" hidden>
+    <h2 id="t4" tabindex="-1">4 · Lo que puedes impartir</h2>
+    <p class="ayuda" id="res-aviso"></p>
+    <div id="resultado"></div>
+    <div class="fin-res">
+      <button type="button" class="btn sec" data-ir="1">← Cambiar mis datos</button>
+      <button type="button" class="btn sec" id="nueva">Nueva consulta</button>
+    </div>
+  </section>
+</main>
+
+<section class="cta" aria-labelledby="cta-t">
+  <div>
+    <h2 id="cta-t">FP al día, en tu correo</h2>
+    <p>La newsletter de FP de los martes y los viernes: normativa, convocatorias y novedades como esta herramienta.</p>
+    <a class="btn sol" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis ↗</a>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <span>FP al día · Hecho en Canarias · 2026. Sin relación con el SEPE ni con las administraciones citadas.</span>
+    <span><a href="/impartir/terminos/">Términos de uso</a> · <a href="/impartir/privacidad/">Privacidad</a> · <a href="/fp-al-dia/">Newsletter</a> · <a href="/radar/">FP Radar</a> · <a href="mailto:hola@fpaldia.es">hola@fpaldia.es</a></span>
+  </div>
+</footer>
+</body>
+</html>
