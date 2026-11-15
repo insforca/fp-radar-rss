@@ -6,7 +6,7 @@
   // Sitekey pública del widget «eFPear impartir» (fpaldia.es, creado el 15/11/2026); en local, la clave de PRUEBA de Cloudflare.
   const TURNSTILE_SITEKEY = /^(localhost|127.0.0.1)$/.test(location.hostname) ? "1x00000000000000000000AA" : "0x4AAAAAAGCHICdwivgVzqoz";
   const API_LOCAL = "http://127.0.0.1:8787"; // npm run dev en codigo/encaje/worker
-  const API_PRODUCCION = ""; // pendiente: URL del Worker publicado (https://…)
+  const API_PRODUCCION = "https://efpear-encaje.efpear-encaje.workers.dev";
   const CORREO = "hola@fpaldia.es";
   const ESPERA_MS = 20000;
 
