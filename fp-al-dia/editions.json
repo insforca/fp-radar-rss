@@ -756,6 +756,146 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-17",
+   "headline": "Convocatoria de ayudas e la red estatal de centros de excelencia de la FP",
+   "items": [
+    {
+     "trend": "warn",
+     "titular": "Convocatoria de ayudas e la red estatal de centros de excelencia de la FP",
+     "ambito": "Andalucía",
+     "por_que": "Hay plazo abierto: revisa requisitos y fechas antes de que cierre.",
+     "fuente": "ANPE Andalucía · anpeandalucia.es",
+     "url": "https://anpeandalucia.es/notices/187668/Convocatoria-de-ayudas-e-la-red-estatal-de-centros-de-excelencia-de-la-FP",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "La Xunta premiará con un sello a las empresas de piedra más comprometidas con la FP Dual",
+     "ambito": "Galicia",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Focus Piedra · focuspiedra.com",
+     "url": "https://www.focuspiedra.com/la-xunta-premiara-con-un-sello-a-las-empresas-de-piedra-mas-comprometidas-con-la-fp-dual/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "up",
+     "titular": "Educación propone a los sindicatos 2.108 plazas en las oposiciones para Secundaria y FP",
+     "ambito": "Murcia",
+     "por_que": "Afecta directamente a las condiciones del profesorado de FP.",
+     "fuente": "Cadena SER · cadenaser.com",
+     "url": "https://cadenaser.com/murcia/2026/11/13/educacion-propone-a-los-sindicatos-2108-plazas-en-las-oposiciones-para-secundaria-y-fp-radio-murcia/?outputType=amp",
+     "tema": "Profesorado"
+    },
+    {
+     "trend": "eq",
+     "titular": "Abierta la convocatoria para la incorporación de nuevos centros educativos a la Red",
+     "ambito": "Extremadura",
+     "por_que": "",
+     "fuente": "Juntaex.es",
+     "url": "https://www.juntaex.es/w/20261114-abierta-la-convocatoria-para-la-incorporacion-de-nuevos-centros-educativos-a-la-red-de-bibliotecas-escolares-de-extremadura?inheritRedirect=true",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "25 empresas se reunirán con estudiantes de FP en Álava · Noticias de Vitoria-Gasteiz y Álava.",
+     "ambito": "País Vasco",
+     "por_que": "",
+     "fuente": "Norte Exprés · nortexpres.com",
+     "url": "https://nortexpres.com/25-empresas-se-reuniran-con-estudiantes-de-fp-en-alava/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "No hay ningún alumno que termine FP sin una opción. Muchos eligen un grado",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "COPE · cope.es",
+     "url": "https://www.cope.es/programas/mediodia-cope/noticias/no-hay-alumno-termine-fp-opcion-eligen-grado-universitario-otros-quedan-han-hecho-practicas-resto-pendiente-mercado-recibiendo-ofertas-empleo-20261116_3475873.html",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "Galicia proporciona a la Formación Profesional un nuevo marco curricular y crea un sello",
+     "ambito": "Galicia",
+     "por_que": "",
+     "fuente": "Industry Talks · industrytalks.es",
+     "url": "https://industrytalks.es/galicia-proporciona-a-la-formacion-profesional-un-nuevo-marco-curricular-y-crea-un-sello-para-las-empresas-comprometidas-con-la-doble-fp/",
+     "tema": "FP"
+    },
+    {
+     "trend": "eq",
+     "titular": "De pionera en formación adaptada a una FP inclusiva conectada con el empleo",
+     "ambito": "Madrid",
+     "por_que": "",
+     "fuente": "Noroeste Madrid · noroestemadrid.com",
+     "url": "https://www.noroestemadrid.com/2026/11/de-pionera-en-formacion-adaptada-a-una-fp-inclusiva-conectada-con-el-empleo-fundacion-juan-xxiii-abre-nova-fp23/",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "eq",
+     "titular": "Trece proyectos recibirán más de 707.000 euros para impulsar el empleo y el…",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "Lancelot Digital · lancelotdigital.com",
+     "url": "https://www.lancelotdigital.com/lanzarote/trece-proyectos-recibiran-mas-de-707-000-euros-para-impulsar-el-empleo-y-el-emprendimiento-en-lanzarote",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "up",
+     "titular": "Madrid suspende un acto de su consejera de Educación ante una protesta de docentes",
+     "ambito": "Madrid",
+     "por_que": "",
+     "fuente": "El Boletín · elboletin.com",
+     "url": "https://www.elboletin.com/madrid-suspende-un-acto-de-su-consejera-de-educacion-ante-una-protesta-de-docentes/",
+     "tema": "Profesorado"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [
+     {
+      "fuente": "BOE",
+      "titulo": "Orden EFD/1217/2026: aprueba el Reglamento de Funcionamiento de la Comisión Estatal Estratégica de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23894",
+      "fecha": "2026-11-16"
+     }
+    ],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Dirección General de Personal y Formación del Profesorado): convoca concurso general de…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/220/3778.html",
+      "fecha": "2026-11-04",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: convoca concurso de traslados de personal funcionario docente de los Cuerpos de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23130",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución 252/2026: publica la convocatoria de concursos de traslados de ámbito estatal…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-23148",
+      "fecha": "2026-11-04",
+      "hasta": "26/11"
+     }
+    ]
+   }
   }
  ]
 }
