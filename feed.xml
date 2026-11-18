@@ -5,8 +5,17 @@
     <link>https://fpaldia.es/radar/</link>
     <description>Señales de Formación Profesional en toda España: convocatorias, normativa, FP Dual y empleo.</description>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 16 Nov 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://fpaldia.es/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Luz verde a trece proyectos para favorecer el empleo y el emprendimiento</title>
+      <link>https://www.canarias7.es/canarias/lanzarote/luz-verde-trece-proyectos-favorecer-empleo-emprendimiento-20261117070500-nt_amp.html</link>
+      <guid>https://www.canarias7.es/canarias/lanzarote/luz-verde-trece-proyectos-favorecer-empleo-emprendimiento-20261117070500-nt_amp.html</guid>
+      <description>&lt;p&gt;Canarias · Canarias7.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Canarias</category>
+      <category>Datos y política</category>
+      <pubDate>Tue, 17 Nov 2026 08:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>La Xunta premiará con un sello a las empresas de piedra más comprometidas con la FP Dual</title>
       <link>https://www.focuspiedra.com/la-xunta-premiara-con-un-sello-a-las-empresas-de-piedra-mas-comprometidas-con-la-fp-dual/</link>
@@ -176,15 +185,6 @@
       <category>Galicia</category>
       <category>Normativa</category>
       <pubDate>Sun, 01 Nov 2026 08:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Hecansa invierte 11 millones de fondos europeos para liderar la FP Dual en Canarias</title>
-      <link>https://www.libertaddigital.com/canarias/2026-10-27/hecansa-invierte-11-millones-de-fondos-europeos-para-liderar-la-fp-dual-en-canarias-7482302/</link>
-      <guid>https://www.libertaddigital.com/canarias/2026-10-27/hecansa-invierte-11-millones-de-fondos-europeos-para-liderar-la-fp-dual-en-canarias-7482302/</guid>
-      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Canarias · Libertad Digital.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
-      <category>Canarias</category>
-      <category>Datos y política</category>
-      <pubDate>Tue, 27 Oct 2026 08:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
