@@ -23,8 +23,10 @@
 <meta name="twitter:image:alt" content="¿Qué puedo impartir? Buscador de encaje docente · FP al día">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,600..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fuentes/FPalDiaTextoA.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/impartir/estilo.css">
+<script src="/nav.js" defer></script>
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=alCargarTurnstile" async defer></script>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script src="/impartir/app.js" defer></script>
@@ -33,7 +35,7 @@
 <a class="saltar" href="#app">Ir al buscador</a>
 
 <div class="topline">
-  <nav class="pill-nav" aria-label="Secciones">
+  <nav class="pill-nav" id="nav" aria-label="Secciones"><span class="slider" aria-hidden="true"></span>
     <a href="/">Inicio</a><a href="/fp-al-dia/">Newsletter</a><a href="/radar/">FP Radar</a><a href="/empleo/">Empleo</a><a href="/impartir/" class="on" aria-current="page">Impartir</a>
   </nav>
   <a class="contact" href="mailto:hola@fpaldia.es">Contacto ↗</a>

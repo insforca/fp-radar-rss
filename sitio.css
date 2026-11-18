@@ -1,0 +1,47 @@
+/* fpaldia.es · base común (v3, 18/11/2026, DEC-11). Fuente propia, menú deslizante, transiciones y botones.
+   La publica codigo/radar_web.py en /sitio.css. FP Radar no la usa (su aspecto no cambia). */
+@font-face{font-family:"FP al dia Texto A";src:url(/fuentes/FPalDiaTextoA.woff2) format("woff2");font-weight:400 600;font-display:swap}
+:root{
+  --paper:#dadada;--ink:#111;--sol:#FFC400;--atl:#0057B8;--rojo:#C60B1E;
+  --t2:#4a5462;--t3:rgba(17,17,17,.62);--hair:rgba(17,17,17,.10);--hair2:rgba(17,17,17,.18);--raised:#f2f2f2;
+  --wide:'Archivo',sans-serif;--ui:"FP al dia Texto A",system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.5 var(--ui);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--atl);outline-offset:2px}
+
+/* Menú común: pastilla negra que se desliza (nav.js) y que no se mueve entre páginas */
+@view-transition{navigation:auto}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}
+@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){main{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}.pill-nav .slider{transition:none}}
+.topline{max-width:1040px;margin:0 auto;padding:0 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pill-nav{view-transition-name:sitio-nav;position:relative;display:inline-flex;align-items:center;background:#fff;border-radius:999px;padding:4px;max-width:100%;margin:10px 0}
+.pill-nav a{position:relative;z-index:1;font:600 14px/1 var(--ui);color:#111;text-decoration:none;padding:0 18px;height:40px;display:flex;align-items:center;border-radius:999px;white-space:nowrap;transition:color .25s}
+.pill-nav a.on{background:#111;color:#fff}
+.pill-nav.js a.on{background:none;color:#111}
+.pill-nav.js a.sobre{color:#fff}
+.pill-nav .slider{position:absolute;z-index:0;top:4px;left:4px;width:0;height:40px;background:#111;border-radius:999px;transition:left .35s cubic-bezier(.2,.8,.2,1),width .35s cubic-bezier(.2,.8,.2,1),opacity .2s}
+@media (max-width:720px){
+  .topline{justify-content:center}
+  .pill-nav{width:100%;margin:6px 0;padding:2px;justify-content:space-between}
+  .pill-nav a{flex:1 1 0;min-width:0;justify-content:center;padding:0 4px;font-size:12px;height:30px}
+  .pill-nav .slider{height:30px;top:2px}
+}
+@media (max-width:380px){.pill-nav a{flex:1 1 auto;padding:0 3px;font-size:11.5px}}
+
+/* Botones: radio de control, frase normal, encogen al pulsar */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 20px;border-radius:10px;border:1.5px solid transparent;font:600 15px/1 var(--ui);text-decoration:none;cursor:pointer;
+  transition:background-color .14s var(--ease),border-color .14s var(--ease),transform 90ms var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn.sol{background:var(--sol);color:var(--ink)}
+.btn.sol:hover{background:#f2b900}
+.btn.pri{background:var(--ink);color:#fff}
+.btn.pri:hover{background:#333}
+.btn.sec{background:transparent;color:var(--ink);border-color:var(--hair2)}
+.btn.sec:hover{background:var(--raised)}

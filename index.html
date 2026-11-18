@@ -18,7 +18,8 @@
 <link rel="icon" type="image/png" href="/marca/fp-al-dia-avatar.png">
 <link rel="alternate" type="application/rss+xml" title="FP al día" href="https://fpaldia.es/fp-al-dia/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fuentes/FPalDiaTextoA.woff2" as="font" type="font/woff2" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --u:min(calc(100vw / 1440), 1.333px);
@@ -220,7 +221,37 @@ footer a{color:#cfcfcf}
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important}
 }
-@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:no-preference){main,.wrap,.poster,body>div{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}</style>
+@view-transition{navigation:auto}::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}@keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:no-preference){main,.wrap,.poster,body>div{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}
+/* v3 (18/11/2026): fuente propia y pasada «unslop» (ver DEC-11). Mismo diseño; fuera vidrio, bucles y mayúsculas espaciadas. */
+@font-face{font-family:"FP al dia Texto A";src:url(/fuentes/FPalDiaTextoA.woff2) format("woff2");font-weight:400 600;font-display:swap}
+:root{--ui:"FP al dia Texto A",system-ui,sans-serif}
+.btn{transition:background-color .14s cubic-bezier(.2,.8,.2,1),color .14s cubic-bezier(.2,.8,.2,1),transform 90ms cubic-bezier(.2,.8,.2,1)}
+.btn:hover{transform:none;box-shadow:none;background:#333}
+.btn:active{transform:scale(.97)}
+.p-left .cta .btn:hover{background:#e8e8e8}
+.p-left .cta .btn.alt:hover{background:rgba(255,255,255,.08)}
+.preview:hover .pv{transform:translateY(calc(-2*var(--u)))}
+.pv-cta{font-weight:600}
+.plate{background:#111;backdrop-filter:none;-webkit-backdrop-filter:none;justify-content:flex-start;gap:calc(14*var(--u))}
+.plate .nm{font-weight:800}
+.growth{background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.out .card img{transform:scale(1.15)}
+.out .card:hover img{transform:scale(1.15)}
+.out .arrow{background:rgba(17,17,17,.6);backdrop-filter:none;-webkit-backdrop-filter:none;transition:background-color .14s}
+.out .card:hover .arrow{transform:none;background:#111}
+.about .k{letter-spacing:0}
+.strip{font-size:calc(14*var(--u))}
+.strip .mid i{animation:none}
+.tc{transition:none}
+.tc:hover{transform:none}
+.tc.yl{transition:background-color .14s}
+.tc.yl:hover{background:#004a9c}
+.tc.yl .k{letter-spacing:0;font-size:calc(13*var(--u))}
+.tc.yl .go{font-weight:600}
+.av i{font-weight:600;letter-spacing:0}
+.fc .bar{transition:background-color .14s}
+.fc .bar:hover{transform:none;background:#f0f0f0}
+</style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -247,7 +278,7 @@ footer a{color:#cfcfcf}
   <div class="yr abs fx">(’26)</div>
 
   <div class="about abs fx">
-    <div class="k"><i></i>(SOBRE)</div>
+    <div class="k"><i></i>Sobre FP al día</div>
     <p>Una newsletter de FP los martes y los viernes. Por dentro, un radar que ordena todo lo que se publica sobre Formación Profesional.</p>
     <a class="btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">Suscríbete gratis ↗</a>
   </div>
@@ -269,7 +300,6 @@ footer a{color:#cfcfcf}
   <div class="plate abs fx" aria-hidden="true">
     <svg class="mark" viewBox="0 0 30 30"><path d="M3 26 15 4l5 9-7 13z" fill="#fff"/><path d="M17 26l5-9 5 9z" fill="#FFC400"/></svg>
     <span class="nm">FP RADAR</span>
-    <span class="menu"><i></i><i></i></span>
   </div>
 
   <div class="frame abs fx">
@@ -300,7 +330,7 @@ footer a{color:#cfcfcf}
 </section>
 
 <!-- ═════════ BARRA ═════════ -->
-<div class="strip wide"><span>EST <span class="g">2026</span></span><a class="mid" href="#manifiesto"><i>↓</i>SCROLL</a><span class="g">FP EN DETALLE</span></div>
+<div class="strip"><span>Desde <span class="g">2026</span></span><a class="mid" href="#manifiesto"><i>↓</i>Qué es</a><span class="g">La FP en detalle</span></div>
 
 <!-- ═════════ MANIFIESTO ═════════ -->
 <section class="statement" id="manifiesto">
@@ -313,8 +343,6 @@ footer a{color:#cfcfcf}
   <div class="panel" id="panel">
     <div class="p-left">
       <h2>Datos que<br>se convierten<br>en nuevas<br>herramientas</h2>
-      <div class="tile a" aria-hidden="true">✳</div>
-      <div class="tile b" aria-hidden="true"><span><i></i><i></i><i></i><i></i></span></div>
       <p>FP Radar registra cada día lo que se publica sobre Formación Profesional. Con esos datos preparamos herramientas para docentes, centros y empresas de FP Dual.</p>
       <div class="cta">
         <a class="btn" href="/radar/">Explorar FP Radar ↗</a>
@@ -335,7 +363,7 @@ footer a{color:#cfcfcf}
             <path d="M116 40c6-2 10-7 10-12-6 0-10 4-11 9M120 56c6 0 11-4 12-9-6-1-11 2-13 7M115 72c6 2 11 0 14-5-5-2-11 0-14 4M107 84c5 3 11 3 14-1-5-3-10-3-14 0"/>
           </g>
           <text x="70" y="44" text-anchor="middle" fill="#ddd" font-family="Archivo" font-stretch="110%" font-size="6.5" letter-spacing="1">EN DESARROLLO</text>
-          <text x="70" y="66" text-anchor="middle" fill="#fff" font-family="Inter Tight" font-weight="700" font-size="22">2026</text>
+          <text x="70" y="66" text-anchor="middle" fill="#fff" font-family="FP al dia Texto A" font-weight="600" font-size="22">2026</text>
           <text x="70" y="82" text-anchor="middle" fill="#FFC400" font-family="Archivo" font-stretch="118%" font-size="8" letter-spacing="1.2">FP AL DÍA</text>
         </svg>
         <div class="n"><span id="t2" data-n="4">0</span></div>
@@ -343,7 +371,7 @@ footer a{color:#cfcfcf}
         <div class="note">1 · Qué certificados puedes impartir (docentes). 2 · Calendario de la FP. 3 · Radar a medida para centros. 4 · Empleo docente de FP.</div>
       </div>
       <a class="tc yl" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201" target="_blank" rel="noopener">
-        <span class="k">NEWSLETTER · GRATIS</span>
+        <span class="k">Newsletter · gratis</span>
         <h3>Recíbela los martes y los viernes</h3>
         <span class="go">Suscríbete ↗</span>
       </a>
@@ -446,7 +474,7 @@ footer a{color:#cfcfcf}
       if (!e.isIntersecting || done) return; done = true;
       count(document.getElementById('t1'), +document.getElementById('t1').dataset.n, 1400);
       count(document.getElementById('t2'), 4, 1000);
-      if (!RM) document.querySelectorAll('#av i').forEach(function(a, i){ a.animate([{transform:'scale(.4)', opacity:0},{transform:'none', opacity:1}], {duration:500, delay:i*70, easing:'cubic-bezier(.3,1.4,.5,1)', fill:'both'}); });
+      if (!RM) document.querySelectorAll('#av i').forEach(function(a, i){ a.animate([{transform:'scale(.4)', opacity:0},{transform:'none', opacity:1}], {duration:500, delay:i*70, easing:'cubic-bezier(.2,.8,.2,1)', fill:'both'}); });
     });
   }, {threshold:.35}).observe(document.getElementById('panel'));
 })();

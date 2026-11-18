@@ -1,52 +1,53 @@
 <!doctype html>
 <!-- Página de ayuda para «Seguir por RSS» (fpaldia.es/fp-al-dia/rss/). Sustituye a feed.xsl: Chrome está
-     retirando XSLT y avisa en rojo al abrir el feed (28/10/2026). -->
+     retirando XSLT y avisa en rojo al abrir el feed (28/10/2026). v3 (18/11/2026): marca del sitio, fuente propia
+     y menú común (DEC-11). Publica codigo/radar_web.py. -->
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Seguir FP al día por RSS</title>
+<link rel="icon" type="image/png" href="/marca/fp-al-dia-avatar.png">
 <link rel="alternate" type="application/rss+xml" title="FP al día" href="https://fpaldia.es/fp-al-dia/feed.xml">
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400..800&family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link rel="preload" href="/fuentes/FPalDiaTextoA.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/sitio.css">
+<script src="/nav.js" defer></script>
 <style>
-:root{--atl:#0057B8;--sol:#FFC400;--picon:#0E1621;--gris:#55606E;--linea:#E3E8EF}
-*{box-sizing:border-box}
-body{margin:0;background:#F5F7FA;color:var(--picon);font:16px/1.6 'Inter Tight',system-ui,sans-serif}
-.wrap{max-width:720px;margin:0 auto;padding:24px 16px 48px}
-.head{background:var(--atl);color:#fff;border-radius:16px;padding:22px 20px}
-.head h1{margin:0 0 6px;font-size:24px;font-family:'Archivo',sans-serif;font-stretch:112%;letter-spacing:-.01em}
-.head p{margin:0;opacity:.92}
-.box{background:#fff;border:1px solid var(--linea);border-radius:14px;padding:18px 20px;margin:16px 0}
-.box h2{margin:0 0 8px;font-size:17px}
-.btn{display:block;text-align:center;padding:12px;border-radius:12px;font-weight:800;text-decoration:none;margin:8px 0}
-.li{background:#0A66C2;color:#fff}
-.wa{background:#25D366;color:#fff}
-.mail{background:var(--sol);color:var(--picon)}
-code{display:block;background:#F0F3F7;border-radius:8px;padding:10px;word-break:break-all;font-size:14px}
-.small{color:var(--gris);font-size:14px}
-.item{background:#fff;border:1px solid var(--linea);border-radius:12px;padding:14px 16px;margin:10px 0}
-.item a{color:var(--picon);font-weight:700;text-decoration:none}
-.item a:hover{color:var(--atl)}
-.item p{margin:6px 0 0;color:var(--gris);font-size:14px}
+.wrap{max-width:720px;margin:0 auto;padding:16px 16px 64px}
+h1{font:800 clamp(40px,8vw,64px)/.94 var(--wide);letter-spacing:-.03em;text-transform:uppercase;margin:32px 0 0}
+h1 span{background:var(--ink);color:var(--sol);padding:0 .08em}
+.lead{font-size:18px;line-height:28px;color:var(--t2);margin:16px 0 0}
+.box{background:#fff;border:1px solid var(--hair);border-radius:16px;padding:24px;margin:24px 0 0}
+.box h2{font:600 20px/1.2 var(--wide);letter-spacing:-.01em;margin:0 0 16px}
+.acciones{display:grid;gap:8px}
+.acciones .btn{width:100%}
+code{display:block;background:var(--raised);border-radius:8px;padding:12px;word-break:break-all;font:400 14px/20px var(--mono)}
+.small{color:var(--t2);font-size:14px;line-height:20px;margin:16px 0 8px}
+.mas{margin:16px 0 0;font-size:14px;color:var(--t2)}
 </style>
 <script data-goatcounter="https://fpaldia.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
-<div class="wrap">
-  <div class="head">
-    <h1>Seguir FP al día por RSS</h1>
-    <p>Las noticias de FP de Canarias y España, martes y viernes.</p>
-  </div>
-  <div class="box">
-    <h2>¿Cómo lo sigo?</h2>
-    <a class="btn li" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201">Suscríbete en LinkedIn</a>
-    <a class="btn wa" href="https://chat.whatsapp.com/EraM00Gx2GlJQ0YQKhS345">Únete al grupo de WhatsApp de FP en Canarias</a>
-    <a class="btn mail" href="https://blogtrottr.com/?subscribe=https://fpaldia.es/fp-al-dia/feed.xml">Recíbelo por email</a>
+<div class="topline">
+  <nav class="pill-nav" id="nav" aria-label="Secciones"><span class="slider" aria-hidden="true"></span><a href="/">Inicio</a><a href="/fp-al-dia/" class="on">Newsletter</a><a href="/radar/">FP Radar</a><a href="/empleo/">Empleo</a><a href="/impartir/">Impartir</a></nav>
+</div>
+<main class="wrap">
+  <h1>Seguir por <span>RSS</span></h1>
+  <p class="lead">Las noticias de FP de Canarias y España, los martes y los viernes.</p>
+  <section class="box" aria-labelledby="como">
+    <h2 id="como">¿Cómo lo sigo?</h2>
+    <div class="acciones">
+      <a class="btn sol" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7520414000409395201">Suscríbete en LinkedIn</a>
+      <a class="btn sec" href="https://chat.whatsapp.com/EraM00Gx2GlJQ0YQKhS345">Únete al grupo de WhatsApp de FP en Canarias</a>
+      <a class="btn sec" href="https://blogtrottr.com/?subscribe=https://fpaldia.es/fp-al-dia/feed.xml">Recíbelo por email</a>
+    </div>
     <p class="small">Si usas un lector de RSS (Feedly, Inoreader, NetNewsWire…), copia esta dirección:</p>
     <code>https://fpaldia.es/fp-al-dia/feed.xml</code>
-    <p class="small"><a href="https://fpaldia.es/fp-al-dia/">Ir a la última edición</a> · <a href="https://fpaldia.es/radar/">FP Radar</a></p>
-  </div>
-  </div>
+    <p class="mas"><a href="/fp-al-dia/">Ir a la última edición</a> · <a href="/radar/">FP Radar</a></p>
+  </section>
+</main>
 </body>
 </html>

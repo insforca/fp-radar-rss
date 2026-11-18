@@ -1,3 +1,5 @@
+@font-face{font-family:"FP al dia Texto A";src:url(/fuentes/FPalDiaTextoA.woff2) format("woff2");font-weight:400 600;font-display:swap}
+
 /* Tokens de la portada de FP al día (landing.html), extraídos el 08/11/2026.
    Uso compartido: portada, jobboard y páginas nuevas. Los valores de la portada son oscuros; la edición y el radar usan la paleta clara de abajo. */
 :root {
@@ -16,7 +18,7 @@
 
   /* Tipografía */
   --wide: 'Archivo', sans-serif;
-  --ui: 'Inter Tight', system-ui, sans-serif;
+  --ui: "FP al dia Texto A", system-ui, sans-serif;   /* fuente propia (DEC-11, 18/11/2026) */
   --mono: 'JetBrains Mono', ui-monospace, monospace;
 
   /* Escala: 1 unidad = 1px a 1440 px de ancho, con tope */
