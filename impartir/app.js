@@ -1,5 +1,6 @@
-/* «¿Qué puedo impartir?» · FP al día. Sin frameworks. El perfil va solo al Worker y no se guarda:
-   ni en el navegador ni en el servidor. El ticket de /detalle vive solo en memoria. */
+/* «¿Qué puedo impartir?» · FP al día (v2). Sin frameworks. El perfil va solo al Worker y no se guarda:
+   ni en el navegador ni en el servidor. El ticket de /detalle vive solo en memoria. La imagen para
+   compartir se dibuja en el navegador (canvas) y no se sube a ningún sitio. */
 "use strict";
 (function () {
   // --- Configuración: lo único que hay que cambiar al publicar ---
@@ -9,13 +10,16 @@
   const API_PRODUCCION = "https://efpear-encaje.efpear-encaje.workers.dev";
   const CORREO = "hola@fpaldia.es";
   const ESPERA_MS = 20000;
+  const ARCHIVO_IMAGEN = "mi-resultado-fpaldia.png";
 
   const esLocal = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
   const API = esLocal ? API_LOCAL : API_PRODUCCION;
+  const sinMovimiento = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const $ = (s, r) => (r || document).querySelector(s);
   const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
   const norm = (s) => String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const plural = (n, uno, varios) => n + " " + (n === 1 ? uno : varios);
   function el(tag, attrs, ...hijos) {
     const e = document.createElement(tag);
     for (const [k, v] of Object.entries(attrs || {})) {
@@ -29,11 +33,7 @@
     return e;
   }
 
-  const ESTADOS = {
-    puedes: "Puedes",
-    puedes_si_lo_acreditas: "Puedes si lo acreditas",
-    revisa: "Revisa",
-  };
+  const ESTADOS = { puedes: "Puedes", puedes_si_lo_acreditas: "Puedes si lo acreditas", revisa: "Revisa" };
   const AYUDA_ESTADO = {
     puedes: "La norma estatal lo prevé para tu perfil.",
     puedes_si_lo_acreditas: "Encajas cuando termines la habilitación docente.",
@@ -42,9 +42,9 @@
 
   // --- Estado (solo en memoria) ---
   const S = {
-    paso: 1, tit: [], exp: [], comp: [],
-    widget: null, token: null, ticket: null, caduca: 0, perfil: null, res: null,
-    filtro: "todos", detalles: new Map(), bloqueadoHasta: 0, sig: 1,
+    tit: [], exp: [], comp: [],
+    widget: null, token: null, ticket: null, caduca: 0, perfil: null, res: null, etiquetas: [],
+    filtro: "todos", detalles: new Map(), bloqueadoHasta: 0, sig: 1, ocupado: false,
   };
   let LISTAS = null;
 
@@ -57,10 +57,9 @@
   }
   function notaCorreo(texto) {
     return el("div", { class: "nota rev" },
-      el("b", { text: "No está en la lista oficial: con este título el resultado no se compara y saldrá «revisa»." }),
-      el("div", { class: "correo" },
-        el("a", { class: "btn sec chico", href: enlaceCorreo(texto) }, "Avisar de que falta ↗"),
-        el("span", null, "o escribe a ", el("code", { text: CORREO }))));
+      "No está en la lista: saldrá «revisa». ",
+      el("a", { href: enlaceCorreo(texto) }, "Avísanos para añadirla ↗"),
+      " · ", el("code", { text: CORREO }));
   }
 
   // --- Opciones de los buscadores ---
@@ -114,7 +113,7 @@
       vis.forEach((x, i) => {
         const li = el("li", { id: lista.id + "-" + i, role: "option", "aria-selected": "false", class: x.libre ? "libre" : null,
           onmousedown: (ev) => { ev.preventDefault(); elegir(i); } },
-          x.libre ? [el("b", { text: "No está: usar «" + x.etiqueta + "»" }), el("small", { text: "Saldrá «revisa». Podrás avisarnos para añadirla." })]
+          x.libre ? [el("b", { text: "No está: usar «" + x.etiqueta + "»" }), el("small", { text: "Saldrá «revisa»." })]
             : [x.etiqueta, el("small", { text: x.detalle || "" })]);
         lista.append(li);
       });
@@ -134,50 +133,54 @@
     });
   }
 
-  // --- Paso 1: titulaciones ---
+  // --- Titulaciones ---
   function pintarTitulaciones() {
     const ul = $("#elegidos-tit");
     ul.textContent = "";
     S.tit.forEach((t, i) => {
       const o = t.op;
       const nombre = o.libre ? "«" + o.etiqueta + "»" : o.etiqueta;
-      const li = el("li", { class: "elegido" + (o.libre ? " libre" : "") },
+      const li = el("li", { class: "elegido" + (o.libre ? " libre" : "") + (t.n === S.nuevo ? " nuevo" : "") },
         el("div", { class: "cab" },
-          el("span", { class: "nom" }, el("small", { text: o.libre ? "Escrita a mano" : (o.detalle || "") }), nombre),
-          el("button", { type: "button", class: "quitar", "aria-label": "Quitar " + nombre, onclick: () => { S.tit.splice(i, 1); pintarTitulaciones(); $("#buscar-tit").focus(); } }, "Quitar")));
+          el("span", { class: "nom", text: nombre }),
+          el("button", { type: "button", class: "quitar", "aria-label": "Quitar " + nombre, onclick: () => { S.tit.splice(i, 1); pintarTitulaciones(); marcarCambio(); $("#buscar-tit").focus(); } }, "Quitar")));
       const extra = el("div", { class: "extra" });
       const id = "t" + t.n;
       if (o.extra === "denominacion") {
-        extra.append(el("label", { for: id + "-den" }, "Nombre exacto del título (opcional)",
+        extra.append(el("label", { for: id + "-den" }, "Nombre del título (opcional)",
           el("input", { type: "text", id: id + "-den", value: t.v.denominacion || "", placeholder: o.tipo === "univ_grado" ? "Ej.: Graduado en Turismo" : o.tipo === "univ_diplomado" ? "Ej.: Diplomado en Turismo" : "Ej.: Licenciado en Biología",
-            oninput: (ev) => { t.v.denominacion = ev.target.value; } })));
+            oninput: (ev) => { t.v.denominacion = ev.target.value; marcarCambio(); } })));
       } else if (o.extra === "area") {
-        const areas = (LISTAS.areas[o.familia] || []);
+        const areas = LISTAS.areas[o.familia] || [];
         if (areas.length) {
-          const sel = el("select", { id: id + "-area", onchange: (ev) => { t.v.area = ev.target.value; } },
-            el("option", { value: "" }, "No lo sé / otra"), areas.map((a) => el("option", { value: a, selected: t.v.area === a }, a)));
-          extra.append(el("label", { for: id + "-area" }, "Área profesional (opcional)", sel));
+          extra.append(el("label", { for: id + "-area" }, "Área (opcional)",
+            el("select", { id: id + "-area", onchange: (ev) => { t.v.area = ev.target.value; marcarCambio(); } },
+              el("option", { value: "" }, "No lo sé / otra"), areas.map((a) => el("option", { value: a, selected: t.v.area === a }, a)))));
         } else {
-          extra.append(el("label", { for: id + "-area" }, "Área profesional (opcional)",
-            el("input", { type: "text", id: id + "-area", value: t.v.area || "", oninput: (ev) => { t.v.area = ev.target.value; } })));
+          extra.append(el("label", { for: id + "-area" }, "Área (opcional)",
+            el("input", { type: "text", id: id + "-area", value: t.v.area || "", oninput: (ev) => { t.v.area = ev.target.value; marcarCambio(); } })));
         }
       } else if (o.extra === "extranjera") {
-        extra.append(el("label", { for: id + "-idi" }, "Idioma del país donde la cursaste",
-          el("select", { id: id + "-idi", onchange: (ev) => { t.v.idioma = ev.target.value; } },
+        extra.append(el("label", { for: id + "-idi" }, "Idioma del país",
+          el("select", { id: id + "-idi", onchange: (ev) => { t.v.idioma = ev.target.value; marcarCambio(); } },
             ["inglés", "francés", "alemán", "italiano", "portugués", "otro"].map((x) => el("option", { selected: t.v.idioma === x }, x)))));
-        extra.append(el("label", { class: "opc" }, el("input", { type: "checkbox", checked: !!t.v.homologada, onchange: (ev) => { t.v.homologada = ev.target.checked; } }), "Está homologada en España"));
+        extra.append(el("label", { class: "opc" }, el("input", { type: "checkbox", checked: !!t.v.homologada, onchange: (ev) => { t.v.homologada = ev.target.checked; marcarCambio(); } }), "Homologada en España"));
       }
       if (extra.childNodes.length) li.append(extra);
       if (o.libre) li.append(notaCorreo(o.etiqueta));
       ul.append(li);
     });
+    S.nuevo = null; // el marcador solo pasa una vez, sobre la última añadida
   }
   function anadirTitulacion(op) {
     if (!op.libre && S.tit.some((t) => t.op === op)) return;
     const v = {};
     if (op.extra === "extranjera") v.idioma = "inglés";
+    S.nuevo = S.sig;
     S.tit.push({ op, v, n: S.sig++ });
     pintarTitulaciones();
+    limpiarError("#error-calc");
+    marcarCambio();
   }
   function titulacionesPerfil() {
     return S.tit.map(({ op, v }) => {
@@ -193,7 +196,7 @@
     });
   }
 
-  // --- Paso 3: experiencia e idiomas ---
+  // --- Experiencia e idiomas (bloque «Afina tu resultado») ---
   function pintarExperiencia() {
     const ul = $("#elegidos-exp");
     ul.textContent = "";
@@ -202,10 +205,10 @@
       ul.append(el("li", { class: "elegido" },
         el("div", { class: "cab" },
           el("span", { class: "nom" }, el("small", { text: e.op.detalle }), e.op.etiqueta),
-          el("button", { type: "button", class: "quitar", "aria-label": "Quitar " + e.op.etiqueta, onclick: () => { S.exp.splice(i, 1); pintarExperiencia(); pintarResumen(); $("#buscar-exp").focus(); } }, "Quitar")),
-        el("label", { class: "anios", for: id }, "Años de experiencia",
+          el("button", { type: "button", class: "quitar", "aria-label": "Quitar " + e.op.etiqueta, onclick: () => { S.exp.splice(i, 1); pintarExperiencia(); $("#buscar-exp").focus(); } }, "Quitar")),
+        el("label", { class: "anios", for: id }, "Años",
           el("input", { type: "number", id, min: "0.5", max: "60", step: "0.5", inputmode: "decimal", value: e.anios || "", required: true,
-            oninput: (ev) => { e.anios = ev.target.value; pintarResumen(); } }))));
+            oninput: (ev) => { e.anios = ev.target.value; } }))));
     });
   }
   function pintarIdiomas() {
@@ -215,14 +218,19 @@
     S.comp.forEach((c, i) => {
       ul.append(el("li", { class: "elegido" }, el("div", { class: "cab" },
         el("span", { class: "nom" }, nombres[c.tipo] + " · " + c.idioma),
-        el("button", { type: "button", class: "quitar", onclick: () => { S.comp.splice(i, 1); pintarIdiomas(); pintarResumen(); } }, "Quitar"))));
+        el("button", { type: "button", class: "quitar", "aria-label": "Quitar " + c.idioma, onclick: () => { S.comp.splice(i, 1); pintarIdiomas(); } }, "Quitar"))));
     });
   }
 
-  // --- Perfil (lo único que sale del navegador) ---
+  // --- Perfil (lo único que sale del navegador; mismo formato que la v1) ---
   function competenciaPerfil() {
     const marc = (n) => $$('input[name="' + n + '"]:checked').map((x) => x.value);
-    const cd = { acreditada: marc("acreditada"), en_curso: marc("en_curso"), exenciones: marc("exenciones") };
+    const habil = ($('input[name="habil"]:checked') || {}).value;
+    const cd = {
+      acreditada: (habil === "si" ? ["ssc_c_017_5b"] : []).concat(marc("acreditada")),
+      en_curso: habil === "cursando" ? ["ssc_c_017_5b"] : [],
+      exenciones: marc("exenciones"),
+    };
     const h = parseInt($("#horas").value, 10);
     if (h > 0) cd.horas_docencia_fp_10_anios = Math.min(h, 20000);
     return cd;
@@ -235,48 +243,25 @@
       complementos: S.comp.map((c) => ({ tipo: c.tipo, idioma: c.idioma })),
     };
   }
-  function pintarResumen() {
-    const r = $("#resumen-perfil");
-    r.textContent = "";
-    const cd = competenciaPerfil();
-    const n = cd.acreditada.length + cd.en_curso.length + cd.exenciones.length + (cd.horas_docencia_fp_10_anios ? 1 : 0);
-    r.append(el("b", { text: "Vas a consultar con:" }), el("ul", null,
-      el("li", { text: S.tit.length ? S.tit.length + " titulación(es): " + S.tit.map((t) => t.op.etiqueta).join("; ") : "Sin titulación" }),
-      el("li", { text: n ? "Competencia docente: " + n + " opción(es) marcada(s)" : "Sin competencia docente marcada" }),
-      el("li", { text: S.exp.length ? S.exp.length + " experiencia(s)" : "Sin experiencia profesional" }),
-      S.comp.length ? el("li", { text: S.comp.length + " idioma(s)" }) : null));
-  }
+  function marcarCambio() { if (S.res) $("#res-cambiado").hidden = false; }
 
-  // --- Navegación entre pasos ---
-  function irA(n) {
-    if (n === 4 && !S.res) n = 3;
-    S.paso = n;
-    for (let i = 1; i <= 4; i++) $("#paso-" + i).hidden = i !== n;
-    $$("#pasos li").forEach((li) => {
-      const p = Number(li.dataset.paso);
-      if (p === n) li.setAttribute("aria-current", "step"); else li.removeAttribute("aria-current");
-      li.classList.toggle("hecho", p < n);
-    });
-    if (n === 3) { pintarResumen(); prepararTurnstile(); }
-    const h = $("#t" + n);
-    h.focus({ preventScroll: true });
-    $("#app").scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  // --- Turnstile (en la misma pantalla, discreto) ---
+  /** El script de Turnstile carga aparte (async): se espera a que exista para pintar el widget. */
+  function esperarTurnstile() {
+    let n = 0;
+    const tic = () => {
+      prepararTurnstile();
+      if (S.widget !== null) return;
+      if (++n < 75) setTimeout(tic, 200);
+      else mostrarError("#error-calc", "No se ha podido cargar la comprobación de seguridad.", "Si usas un bloqueador de contenido, desactívalo para esta página (challenges.cloudflare.com) y recárgala.");
+    };
+    tic();
   }
-
-  // --- Turnstile ---
-  window.alCargarTurnstile = function () { if (S.paso === 3) prepararTurnstile(); };
   function prepararTurnstile() {
-    if (S.widget !== null) return;
-    if (!window.turnstile) {
-      setTimeout(() => {
-        if (S.widget === null && !window.turnstile && S.paso === 3) {
-          mostrarError("#error-calc", "No se ha podido cargar la comprobación de seguridad.", "Puede que un bloqueador de contenido impida cargar Cloudflare Turnstile (challenges.cloudflare.com). Desactívalo para esta página y recárgala.");
-        }
-      }, 8000);
-      return;
-    }
-    S.widget = window.turnstile.render("#turnstile", {
-      sitekey: TURNSTILE_SITEKEY, language: "es", action: "evaluar",
+    if (S.widget !== null || !window.turnstile || typeof window.turnstile.render !== "function") return;
+    try {
+      S.widget = window.turnstile.render("#turnstile", {
+      sitekey: TURNSTILE_SITEKEY, language: "es", action: "evaluar", size: innerWidth < 360 ? "compact" : "flexible", // el flexible mide 300 px como mínimo
       callback: (t) => { S.token = t; limpiarError("#error-calc"); },
       "expired-callback": () => { S.token = null; },
       "error-callback": () => {
@@ -284,11 +269,23 @@
         mostrarError("#error-calc", "La comprobación de seguridad ha fallado.", "Recarga la página y vuelve a intentarlo.");
         return true;
       },
-    });
+      });
+    } catch (e) {
+      S.widget = false; // no se reintenta
+      mostrarError("#error-calc", "No se ha podido cargar la comprobación de seguridad.", "Recarga la página y vuelve a intentarlo.");
+    }
   }
   function renovarTurnstile() {
     S.token = null;
-    if (S.widget !== null && window.turnstile) window.turnstile.reset(S.widget);
+    if (S.widget !== null && S.widget !== false && window.turnstile) window.turnstile.reset(S.widget);
+  }
+  /** Espera a que Turnstile dé un token (se resuelve solo en modo gestionado). */
+  async function token() {
+    for (let i = 0; i < 60 && !S.token; i++) {
+      if (i === 0) prepararTurnstile();
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    return S.token;
   }
 
   // --- Errores ---
@@ -299,9 +296,9 @@
   }
   function limpiarError(sel) { $(sel).textContent = ""; }
 
-  /** Llama al Worker. Devuelve {ok, estado, datos} o lanza {titulo, texto, estado, codigo}. */
+  /** Llama al Worker. Devuelve los datos o lanza {titulo, texto, estado, codigo}. */
   async function llamar(ruta, cuerpo, cabeceras) {
-    if (!API) throw { titulo: "El buscador aún no está disponible.", texto: "Estamos terminando de ponerlo en marcha. Vuelve en unos días." };
+    if (!API) throw { titulo: "El buscador aún no está disponible.", texto: "Vuelve en unos días." };
     const ctl = new AbortController();
     const reloj = setTimeout(() => ctl.abort(), ESPERA_MS);
     let r;
@@ -331,144 +328,172 @@
       texto: msg || "Inténtalo de nuevo en unos minutos (código " + r.status + ").", estado: r.status, codigo,
     };
   }
-  function bloquear(boton, seg, estadoSel) {
+  function bloquear(seg, estadoSel) {
     S.bloqueadoHasta = Date.now() + seg * 1000;
-    boton.disabled = true;
+    const botones = [$("#calcular"), $("#recalcular")];
+    botones.forEach((b) => { b.disabled = true; });
     const tic = () => {
       const quedan = Math.ceil((S.bloqueadoHasta - Date.now()) / 1000);
-      if (quedan <= 0) { boton.disabled = false; $(estadoSel).textContent = "Ya puedes volver a consultar."; return; }
+      if (quedan <= 0) { botones.forEach((b) => { b.disabled = false; }); $(estadoSel).textContent = "Ya puedes volver a consultar."; return; }
       $(estadoSel).textContent = "Podrás volver a consultar en " + quedan + " s.";
       setTimeout(tic, 1000);
     };
     tic();
   }
 
-  // --- Calcular (/evaluar) ---
-  async function calcular() {
-    const boton = $("#calcular");
-    limpiarError("#error-calc");
-    if (Date.now() < S.bloqueadoHasta) return;
+  // --- Calcular (/evaluar): desde el buscador o desde «Afina tu resultado» ---
+  async function calcular(desde) {
+    const boton = desde === "afina" ? $("#recalcular") : $("#calcular");
+    const errSel = desde === "afina" ? "#error-afina" : "#error-calc";
+    const estSel = desde === "afina" ? "#estado-compartir" : "#estado-calc";
+    limpiarError("#error-calc"); limpiarError("#error-afina");
+    if (S.ocupado || Date.now() < S.bloqueadoHasta) return;
     const sinAnios = S.exp.find((e) => !(Number(e.anios) > 0));
     if (sinAnios) {
-      mostrarError("#error-calc", "Falta un dato.", "Indica los años de experiencia de «" + sinAnios.op.etiqueta + "».");
+      $("#afina").open = true;
+      mostrarError("#error-afina", "Falta un dato.", "Indica los años de «" + sinAnios.op.etiqueta + "».");
       const inp = $("#e" + sinAnios.n); if (inp) inp.focus();
       return;
     }
     if (!S.tit.length && !S.exp.length) {
-      mostrarError("#error-calc", "Falta un dato.", "Añade al menos una titulación (paso 1) o una experiencia profesional.");
-      $("#buscar-exp").focus();
+      mostrarError(errSel, "Elige tu titulación.", "Búscala arriba y añádela.");
+      $("#buscar-tit").focus();
       return;
     }
-    if (!S.token) {
-      mostrarError("#error-calc", "Falta la comprobación de seguridad.", window.turnstile ? "Espera a que la casilla de Cloudflare se marque (o márcala) y vuelve a pulsar." : "Se está cargando. Si no aparece, recarga la página.");
-      return;
-    }
-    const perfil = construirPerfil();
-    const token = S.token;
+    S.ocupado = true;
     boton.disabled = true;
     boton.setAttribute("aria-busy", "true");
-    $("#estado-calc").textContent = "Calculando tu resultado…";
+    $(estSel).textContent = "Calculando tu resultado…";
     try {
-      const d = await llamar("/evaluar", perfil, { "X-Turnstile-Token": token });
+      const tk = await token();
+      if (!tk) throw { titulo: "Falta la comprobación de seguridad.", texto: window.turnstile ? "Marca la casilla de Cloudflare y vuelve a pulsar." : "No se ha podido cargar Cloudflare Turnstile. Si usas un bloqueador de contenido, desactívalo para esta página y recárgala." };
+      const perfil = construirPerfil();
+      const d = await llamar("/evaluar", perfil, { "X-Turnstile-Token": tk });
       S.res = d; S.perfil = perfil; S.ticket = d.ticket; S.caduca = Date.now() + (d.ticket_segundos || 900) * 1000;
+      S.etiquetas = S.tit.map((t) => (t.op.libre ? "Otra titulación" : t.op.etiqueta));
       S.detalles = new Map(); S.filtro = "todos";
       delete d.ticket;
-      $("#estado-calc").textContent = "";
+      $(estSel).textContent = "";
       pintarResultado();
-      irA(4);
+      mostrarResultado();
       try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "impartir-consulta", title: "Consulta de encaje docente", event: true }); } catch (e) { /* sin analítica */ }
     } catch (e) {
-      $("#estado-calc").textContent = "";
-      mostrarError("#error-calc", e.titulo || "No hemos podido hacer la consulta.", e.texto || "");
-      if (e.estado === 429) bloquear(boton, e.seg, "#estado-calc");
+      $(estSel).textContent = "";
+      mostrarError(errSel, e.titulo || "No hemos podido hacer la consulta.", e.texto || "");
+      if (e.estado === 429) bloquear(e.seg, estSel);
     } finally {
+      S.ocupado = false;
       boton.removeAttribute("aria-busy");
       if (Date.now() >= S.bloqueadoHasta) boton.disabled = false;
       renovarTurnstile(); // cada token sirve una sola vez
     }
   }
+  function mostrarResultado() {
+    const sec = $("#res");
+    sec.hidden = false;
+    $("#res-cambiado").hidden = true;
+    sec.scrollIntoView({ block: "start", behavior: sinMovimiento() ? "auto" : "smooth" });
+    $("#res-t").focus({ preventScroll: true });
+  }
 
   // --- Resultado ---
-  function contar(bloques) {
-    const c = { puedes: 0, puedes_si_lo_acreditas: 0, revisa: 0 };
-    for (const b of bloques) for (const m of b.modulos) if (c[m.estado] != null) c[m.estado]++;
-    return c;
+  function cuentas(g) {
+    const todos = (g.en_tu_familia || []).concat(g.en_el_resto || []);
+    const c = {};
+    for (const k of Object.keys(ESTADOS)) c[k] = { modulos: 0, certificados: 0 };
+    const fam = new Map();
+    for (const b of todos) {
+      const vistos = new Set();
+      const f = fam.get(b.familia) || { familia: b.familia, certificados: 0, modulos: 0 };
+      f.certificados++;
+      for (const m of b.modulos) {
+        if (!c[m.estado]) continue;
+        c[m.estado].modulos++;
+        f.modulos++;
+        if (!vistos.has(m.estado)) { vistos.add(m.estado); c[m.estado].certificados++; }
+      }
+      fam.set(b.familia, f);
+    }
+    return { todos, c, familias: [...fam.values()].sort((a, b) => b.modulos - a.modulos) };
   }
+  function titular(c) {
+    const cert = (n) => plural(n, "certificado", "certificados");
+    if (c.puedes.modulos) return "Puedes impartir " + plural(c.puedes.modulos, "módulo", "módulos") + " de " + cert(c.puedes.certificados);
+    if (c.puedes_si_lo_acreditas.modulos) return "Podrás impartir " + plural(c.puedes_si_lo_acreditas.modulos, "módulo", "módulos") + " de " + cert(c.puedes_si_lo_acreditas.certificados) + " al acreditarte";
+    if (c.revisa.modulos) return "Tienes " + plural(c.revisa.modulos, "módulo", "módulos") + " por revisar en " + cert(c.revisa.certificados);
+    return "Con estos datos no sale ningún módulo";
+  }
+
   function pintarResultado() {
     const g = S.res;
+    const { todos, c } = cuentas(g);
+    $("#res-t").textContent = titular(c);
+    const cif = $("#cifras");
+    cif.textContent = "";
+    [["puedes", "ok"], ["puedes_si_lo_acreditas", "acr"], ["revisa", "rev"]].forEach(([k, cls]) => {
+      cif.append(el("div", { class: "cifra " + cls },
+        el("b", { text: c[k].modulos }), el("span", { text: ESTADOS[k] }),
+        el("small", { text: "en " + plural(c[k].certificados, "certificado", "certificados") })));
+    });
+    $("#compartir").disabled = !todos.length;
+
     const caja = $("#resultado");
     caja.textContent = "";
-    $("#res-aviso").textContent = g.aviso || "";
-    const todos = (g.en_tu_familia || []).concat(g.en_el_resto || []);
-    const c = contar(todos);
     const numCita = new Map((g.citas_comunes || []).map((x, i) => [x.id, i + 1]));
-
-    caja.append(el("div", { class: "res-cab" },
-      el("div", { class: "cifra ok" }, el("b", { text: c.puedes }), el("span", { text: "módulos: Puedes" })),
-      el("div", { class: "cifra acr" }, el("b", { text: c.puedes_si_lo_acreditas }), el("span", { text: "Puedes si lo acreditas" })),
-      el("div", { class: "cifra rev" }, el("b", { text: c.revisa }), el("span", { text: "Revisa" })),
-      el("div", { class: "cifra" }, el("b", { text: todos.length }), el("span", { text: "certificados" }))));
 
     const cd = g.competencia_docente;
     if (cd) {
-      const tit = { ok: "Tienes la competencia docente", en_curso: "Competencia docente en curso", revisa: "Competencia docente: revisa", falta: "Te falta la competencia docente" }[cd.estado] || "Competencia docente";
+      const tit = { ok: "Tienes la competencia docente", en_curso: "Habilitación en curso", revisa: "Competencia docente: revisa", falta: "Te falta la habilitación docente" }[cd.estado] || "Competencia docente";
       const citas = Array.isArray(cd.citas) && cd.citas.length ? cd.citas : (cd.cita ? [{ fuente: cd.fuente, cita: cd.cita }] : []);
-      caja.append(el("div", { class: "cd" }, el("h3", { text: tit }), el("p", { text: cd.motivo || "" }),
+      caja.append(el("details", { class: "cd plegable" }, el("summary", null, el("b", { text: tit }), " · ", cd.motivo || ""),
         cd.fuente ? el("p", { class: "fuente", text: "Regla " + (cd.regla || "") + " · " + cd.fuente }) : null,
-        citas.length ? el("details", null, el("summary", null, "Ver la norma"),
-          citas.map((x) => el("div", { class: "detalle", style: "margin-top:8px" }, el("blockquote", { text: "«" + x.cita + "»" }), el("p", { class: "fuente", text: x.fuente })))) : null));
+        citas.map((x) => el("div", { class: "detalle", style: "margin-top:8px" }, el("blockquote", { text: "«" + x.cita + "»" }), el("p", { class: "fuente", text: x.fuente })))));
     }
 
-    const avisos = (g.avisos || []).slice();
-    if (avisos.length || (g.sin_comparar || []).length) {
-      const ul = el("ul", { class: "lista-avisos", "aria-label": "Avisos" });
-      avisos.forEach((a) => ul.append(el("li", { text: a })));
-      caja.append(ul);
-      (g.sin_comparar || []).forEach((s) => caja.append(el("div", null, el("p", { style: "margin:0 0 4px" }, el("b", { text: "«" + s.texto + "»: " }), s.motivo || ""), notaCorreo(s.texto))));
-    }
+    const avisos = g.avisos || [];
+    if (avisos.length) caja.append(el("ul", { class: "lista-avisos", "aria-label": "Avisos" }, avisos.map((a) => el("li", { text: a }))));
+    (g.sin_comparar || []).forEach((s) => caja.append(el("div", null, el("p", { style: "margin:0 0 4px" }, el("b", { text: "«" + s.texto + "»: " }), s.motivo || ""), notaCorreo(s.texto))));
 
     if (!todos.length) {
-      caja.append(el("div", { class: "nota", style: "margin-top:16px" }, el("b", { text: "Con estos datos no sale ningún módulo de las tres familias del piloto." }),
-        el("p", { style: "margin:6px 0 0" }, "Revisa tu titulación y tu competencia docente, o añade tu experiencia. Si tu familia no está en el piloto, la iremos añadiendo: suscríbete a la newsletter para enterarte.")));
+      caja.append(el("p", { class: "nota" }, "Revisa tu titulación o tu habilitación, o añade experiencia arriba. Si tu familia no está en el piloto, la iremos añadiendo."));
       return;
     }
 
     if ((g.citas_comunes || []).length) {
-      caja.append(el("div", { class: "comunes" }, el("h3", { text: "Frases de la norma que se repiten" }),
-        el("p", { class: "fuente", style: "margin:0 0 8px" }, "Las mostramos una vez. Cada módulo indica cuál le corresponde."),
+      caja.append(el("details", { class: "comunes plegable" }, el("summary", null, "Frases de la norma que se repiten (" + g.citas_comunes.length + ")"),
         el("ol", null, g.citas_comunes.map((x) => el("li", null,
-          el("b", { text: "Frase " + numCita.get(x.id) }), " · abre " + x.modulos + " módulos de " + x.certificados + " certificado(s)",
+          el("b", { text: "Frase " + numCita.get(x.id) }), " · " + plural(x.modulos, "módulo", "módulos") + " de " + plural(x.certificados, "certificado", "certificados"),
           el("blockquote", { text: "«" + x.texto + "»" }))))));
     }
 
     const filtro = el("div", { class: "filtro", role: "group", "aria-label": "Filtrar por estado" });
     [["todos", "Todos"], ["puedes", ESTADOS.puedes], ["puedes_si_lo_acreditas", ESTADOS.puedes_si_lo_acreditas], ["revisa", ESTADOS.revisa]].forEach(([k, t]) => {
-      const n = k === "todos" ? c.puedes + c.puedes_si_lo_acreditas + c.revisa : c[k];
+      const n = k === "todos" ? c.puedes.modulos + c.puedes_si_lo_acreditas.modulos + c.revisa.modulos : c[k].modulos;
       if (k !== "todos" && !n) return;
       filtro.append(el("button", { type: "button", "aria-pressed": S.filtro === k ? "true" : "false", onclick: () => { S.filtro = k; pintarResultado(); $('.filtro button[aria-pressed="true"]').focus(); } }, t + " (" + n + ")"));
     });
     caja.append(filtro);
 
     const fams = g.familias_experiencia || [];
-    caja.append(bloque("En tu familia", fams.length ? "Certificados de " + fams.join(", ") + ", donde declaras experiencia profesional." : "Añade tu experiencia profesional (paso 3) para ver aquí los certificados de tu familia.", g.en_tu_familia || [], numCita));
-    caja.append(bloque("En el resto", "Lo que te permiten tu titulación o tu competencia docente en las demás familias del piloto.", g.en_el_resto || [], numCita));
+    if (fams.length) caja.append(bloque("En tu familia", "Donde declaras experiencia: " + fams.join(", ") + ".", g.en_tu_familia || [], numCita));
+    caja.append(bloque(fams.length ? "En el resto" : "Por certificado", null, g.en_el_resto || [], numCita));
   }
 
   function bloque(titulo, texto, certs, numCita) {
-    const sec = el("section", { class: "bloque" }, el("h3", { text: titulo }), el("p", { text: texto }));
+    const sec = el("section", { class: "bloque" }, el("h3", { text: titulo }), texto ? el("p", { text: texto }) : null);
     const filtrados = certs.map((b) => ({ b, mods: b.modulos.filter((m) => S.filtro === "todos" || m.estado === S.filtro) })).filter((x) => x.mods.length);
-    if (certs.length && !filtrados.length) sec.append(el("p", { text: "Ningún módulo con este filtro." }));
+    if (!filtrados.length) sec.append(el("p", { text: certs.length ? "Ningún módulo con este filtro." : "Nada en este bloque." }));
     for (const { b, mods } of filtrados) {
-      const cuentas = el("span", { class: "cuentas" });
+      const cuentasB = el("span", { class: "cuentas" });
       for (const k of Object.keys(ESTADOS)) {
         const n = mods.filter((m) => m.estado === k).length;
-        if (n) cuentas.append(el("span", { class: "est " + k, text: n + " · " + ESTADOS[k] }));
+        if (n) cuentasB.append(el("span", { class: "est " + k, text: n + " · " + ESTADOS[k] }));
       }
       const d = el("details", { class: "cert" },
         el("summary", null,
           el("span", { class: "cn", text: b.codigo + " · " + b.denominacion }),
           el("span", { class: "cm", text: ["Nivel " + b.nivel, b.familia, b.area].filter(Boolean).join(" · ") }),
-          cuentas));
+          cuentasB));
       let hecho = false;
       d.addEventListener("toggle", () => {
         if (!d.open || hecho) return;
@@ -517,7 +542,7 @@
       pintarDetalle(panel, det.modulo);
       try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "impartir-detalle", title: "Ver la norma", event: true }); } catch (e) { /* sin analítica */ }
     } catch (e) {
-      if (e.codigo === "verificacion") { pintarCaducado(panel, e.texto); }
+      if (e.codigo === "verificacion") pintarCaducado(panel, e.texto);
       else {
         panel.textContent = "";
         panel.append(el("div", { class: "error", style: "margin:0" }, el("b", { text: e.titulo || "No hemos podido abrir la norma." }), e.texto || ""));
@@ -528,8 +553,8 @@
     panel.textContent = "";
     panel.append(el("div", { class: "error", style: "margin:0" },
       el("b", { text: "Tu consulta ha caducado." }),
-      texto || "Por seguridad, cada consulta vale 15 minutos. Vuelve a calcular el resultado (tus datos siguen puestos).",
-      el("div", { style: "margin-top:8px" }, el("button", { type: "button", class: "btn sec chico", onclick: () => irA(3) }, "Volver a calcular"))));
+      texto || "Cada consulta vale 15 minutos. Vuelve a calcular (tus datos siguen puestos).",
+      el("div", { style: "margin-top:8px" }, el("button", { type: "button", class: "btn sec chico", onclick: () => calcular("afina") }, "Volver a calcular"))));
   }
   function pintarDetalle(panel, d) {
     panel.textContent = "";
@@ -562,43 +587,200 @@
       if (partes.length) fila("Experiencia profesional", partes.join(" "));
     }
     if (d.cita_vigencia || d.fuente_vigencia) fila("Vigencia", ...cita(d.cita_vigencia, d.fuente_vigencia));
-    panel.append(dl, el("p", { class: "fuente", style: "margin:10px 0 0", text: "Orientativo: confírmalo con el centro o con el servicio público de empleo. Tu comunidad puede pedir más." }));
+    panel.append(dl);
+  }
+
+  // --- Compartir: imagen 1080×1350 dibujada en el navegador. Solo cifras y familias, nunca citas ni módulos. ---
+  const C = { sol: "#FFC400", tinta: "#111111", papel: "#dadada", gris: "#3a3a3a", ok: "#e3f4ea", okT: "#0b6b3a", acr: "#fff1c7", acrT: "#7a4a00", rev: "#fde8e8", revT: "#8a1c1c" };
+  const ARCHIVO = (peso, px) => peso + " " + px + "px Archivo, 'Arial Black', sans-serif";
+  const INTER = (peso, px) => peso + " " + px + "px 'Inter Tight', Arial, sans-serif";
+
+  function lineas(ctx, texto, ancho, max) {
+    const palabras = String(texto).split(/\s+/);
+    const out = [];
+    let l = "";
+    for (const p of palabras) {
+      const prueba = l ? l + " " + p : p;
+      if (ctx.measureText(prueba).width <= ancho || !l) l = prueba;
+      else { out.push(l); l = p; }
+    }
+    if (l) out.push(l);
+    if (out.length > max) {
+      const corte = out.slice(0, max);
+      let u = corte[max - 1];
+      while (u.length > 1 && ctx.measureText(u + "…").width > ancho) u = u.slice(0, -1);
+      corte[max - 1] = u.replace(/\s+\S*$/, "") + "…";
+      return corte;
+    }
+    return out;
+  }
+  function cargarImagen(src) {
+    return new Promise((res) => {
+      const i = new Image();
+      const t = setTimeout(() => res(null), 3000);
+      i.onload = () => { clearTimeout(t); res(i); };
+      i.onerror = () => { clearTimeout(t); res(null); };
+      i.src = src;
+    });
+  }
+  function rect(ctx, x, y, w, h, r, color) {
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(x, y, w, h, r); else ctx.rect(x, y, w, h);
+    ctx.fill();
+  }
+
+  async function dibujarImagen() {
+    const W = 1080, H = 1350, M = 72, A = W - 2 * M;
+    try {
+      await Promise.all([
+        document.fonts.load(ARCHIVO(800, 100), "¿QUÉ"), document.fonts.load(INTER(700, 34), "a"),
+        document.fonts.load(INTER(600, 26), "a"), document.fonts.load(INTER(500, 24), "a"),
+      ]);
+      await document.fonts.ready;
+    } catch (e) { /* se dibuja con la fuente de reserva */ }
+    const logo = await cargarImagen("/marca/fp-al-dia-avatar.png");
+    const cv = document.createElement("canvas");
+    cv.width = W; cv.height = H;
+    const ctx = cv.getContext("2d");
+    const { c, familias } = cuentas(S.res);
+
+    // Fondo y marca de agua diagonal
+    ctx.fillStyle = C.papel; ctx.fillRect(0, 0, W, H);
+    ctx.save();
+    ctx.translate(W / 2, H / 2); ctx.rotate(-Math.PI / 7);
+    ctx.font = ARCHIVO(800, 30); ctx.fillStyle = "rgba(17,17,17,0.04)"; ctx.textBaseline = "middle";
+    const marca = "FP AL DÍA · FPALDIA.ES/IMPARTIR · ";
+    const paso = ctx.measureText(marca).width;
+    for (let y = -H, fila = 0; y < H; y += 110, fila++) {
+      for (let x = -W * 1.2 - (fila % 2) * paso / 2; x < W * 1.2; x += paso) ctx.fillText(marca, x, y);
+    }
+    ctx.restore();
+    ctx.textBaseline = "alphabetic";
+
+    // Cabecera
+    let y = M;
+    if (logo) { ctx.save(); rect(ctx, M, y, 76, 76, 16, "#fff"); ctx.clip(); ctx.drawImage(logo, M, y, 76, 76); ctx.restore(); }
+    const xT = logo ? M + 96 : M;
+    ctx.fillStyle = C.tinta; ctx.font = ARCHIVO(800, 30); ctx.fillText("FP AL DÍA", xT, y + 34);
+    ctx.fillStyle = C.gris; ctx.font = INTER(500, 24); ctx.fillText("Buscador de encaje docente", xT, y + 66);
+
+    // Título
+    y += 76 + 110;
+    ctx.fillStyle = C.tinta; ctx.font = ARCHIVO(800, 104); ctx.fillText("¿QUÉ PUEDO", M - 4, y);
+    const t2 = "IMPARTIR?";
+    const w2 = ctx.measureText(t2).width;
+    rect(ctx, M - 4, y + 18, w2 + 28, 112, 0, C.tinta);
+    ctx.fillStyle = C.sol; ctx.fillText(t2, M + 10, y + 110);
+    y += 130 + 62;
+
+    // Titulaciones (el texto de la lista)
+    ctx.fillStyle = C.gris; ctx.font = INTER(600, 26); ctx.fillText(S.etiquetas.length > 1 ? "Con mis titulaciones:" : "Con mi titulación:", M, y);
+    y += 44;
+    ctx.fillStyle = C.tinta; ctx.font = INTER(700, 34);
+    const tits = S.etiquetas.slice(0, 3);
+    for (const t of tits) for (const l of lineas(ctx, t, A, tits.length > 1 ? 1 : 2)) { ctx.fillText(l, M, y); y += 44; }
+    if (S.etiquetas.length > 3) { ctx.font = INTER(500, 26); ctx.fillText("y " + (S.etiquetas.length - 3) + " más", M, y); y += 40; }
+    y += 18;
+
+    // Cifras por estado
+    const anchoC = (A - 2 * 18) / 3, altoC = 184;
+    [["puedes", C.ok, C.okT, "Puedo"], ["puedes_si_lo_acreditas", C.acr, C.acrT, "Si lo acredito"], ["revisa", C.rev, C.revT, "Por revisar"]].forEach(([k, fondo, texto, etq], i) => {
+      const x = M + i * (anchoC + 18);
+      rect(ctx, x, y, anchoC, altoC, 18, fondo);
+      ctx.fillStyle = texto; ctx.font = ARCHIVO(800, 76); ctx.fillText(String(c[k].modulos), x + 22, y + 82);
+      ctx.font = INTER(700, 25); ctx.fillText(etq, x + 22, y + 122);
+      ctx.font = INTER(500, 22); ctx.fillText("módulos · " + plural(c[k].certificados, "cert.", "cert."), x + 22, y + 156);
+    });
+    y += altoC + 56;
+
+    // Reparto por familia
+    ctx.fillStyle = C.tinta; ctx.font = ARCHIVO(800, 30); ctx.fillText("POR FAMILIA", M, y);
+    y += 22;
+    const maxM = Math.max(1, ...familias.map((f) => f.modulos));
+    const filas = familias.slice(0, 4);
+    const alto = Math.min(78, (H - 150 - 70 - y) / Math.max(1, filas.length));
+    for (const f of filas) {
+      y += alto;
+      const dcha = plural(f.certificados, "cert.", "cert.") + " · " + plural(f.modulos, "módulo", "módulos");
+      ctx.font = INTER(500, 24); const wD = ctx.measureText(dcha).width;
+      ctx.fillStyle = C.gris; ctx.fillText(dcha, W - M - wD, y - 22);
+      ctx.fillStyle = C.tinta; ctx.font = INTER(700, 27);
+      ctx.fillText(lineas(ctx, f.familia, A - wD - 24, 1)[0], M, y - 22);
+      rect(ctx, M, y - 8, A, 12, 6, "rgba(17,17,17,0.12)");
+      rect(ctx, M, y - 8, Math.max(12, A * f.modulos / maxM), 12, 6, C.tinta);
+    }
+    if (familias.length > 4) { y += 36; ctx.font = INTER(500, 22); ctx.fillStyle = C.gris; ctx.fillText("y " + (familias.length - 4) + " familias más", M, y); }
+
+    // Aviso y marca de agua de abajo
+    ctx.fillStyle = C.gris; ctx.font = INTER(500, 24);
+    ctx.fillText("Resultado orientativo según la norma estatal", M, H - 150);
+    ctx.fillStyle = C.tinta; ctx.fillRect(0, H - 110, W, 110);
+    ctx.fillStyle = C.sol; ctx.font = ARCHIVO(800, 38); ctx.fillText("FP al día · fpaldia.es/impartir", M, H - 42);
+
+    return new Promise((res, rej) => cv.toBlob((b) => (b ? res(b) : rej(new Error("toBlob"))), "image/png"));
+  }
+
+  async function compartir() {
+    const boton = $("#compartir"), estado = $("#estado-compartir");
+    if (!S.res) return;
+    boton.disabled = true; boton.setAttribute("aria-busy", "true");
+    estado.textContent = "Preparando la imagen…";
+    try {
+      const blob = await dibujarImagen();
+      const archivo = new File([blob], ARCHIVO_IMAGEN, { type: "image/png" });
+      let compartido = false;
+      if (navigator.canShare && navigator.share && navigator.canShare({ files: [archivo] })) {
+        try {
+          await navigator.share({ files: [archivo], title: "Mi resultado · ¿Qué puedo impartir?", text: "Lo que puedo impartir según la norma estatal. Hazlo tú en fpaldia.es/impartir" });
+          compartido = true;
+          estado.textContent = "Imagen compartida.";
+        } catch (e) {
+          if (e && e.name === "AbortError") { estado.textContent = ""; return; }
+        }
+      }
+      if (!compartido) {
+        const url = URL.createObjectURL(blob);
+        const a = el("a", { href: url, download: ARCHIVO_IMAGEN, hidden: true });
+        document.body.append(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+        estado.textContent = "Imagen descargada: " + ARCHIVO_IMAGEN + ".";
+      }
+      try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: "impartir-compartir", title: "Compartir resultado", event: true }); } catch (e) { /* sin analítica */ }
+    } catch (e) {
+      estado.textContent = "No hemos podido crear la imagen. Prueba con otro navegador.";
+    } finally { boton.disabled = false; boton.removeAttribute("aria-busy"); }
   }
 
   // --- Arranque ---
-  function nuevaConsulta() {
-    S.tit = []; S.exp = []; S.comp = []; S.res = null; S.ticket = null; S.perfil = null; S.detalles = new Map();
-    $$("#paso-2 input[type=checkbox]").forEach((x) => { x.checked = false; });
-    $("#horas").value = "";
-    pintarTitulaciones(); pintarExperiencia(); pintarIdiomas();
-    $("#resultado").textContent = "";
-    irA(1);
-  }
-
   async function iniciar() {
-    $$("[data-ir]").forEach((b) => b.addEventListener("click", () => irA(Number(b.dataset.ir))));
-    $("#calcular").addEventListener("click", calcular);
-    $("#nueva").addEventListener("click", nuevaConsulta);
+    $("#calcular").addEventListener("click", () => calcular("buscador"));
+    $("#recalcular").addEventListener("click", () => calcular("afina"));
+    $("#compartir").addEventListener("click", compartir);
+    $("#cambiar").addEventListener("click", () => {
+      $("#buscador").scrollIntoView({ block: "start", behavior: sinMovimiento() ? "auto" : "smooth" });
+      $("#buscar-tit").focus({ preventScroll: true });
+    });
     $("#comp-anadir").addEventListener("click", () => {
       const c = { tipo: $("#comp-tipo").value, idioma: $("#comp-idioma").value };
       if (!S.comp.some((x) => x.tipo === c.tipo && x.idioma === c.idioma)) S.comp.push(c);
-      pintarIdiomas(); pintarResumen();
+      pintarIdiomas();
     });
-    $("#paso-2").addEventListener("change", pintarResumen);
+    $("#buscador").addEventListener("change", (ev) => { if (ev.target.closest(".habil, #mas-cd")) marcarCambio(); });
+    esperarTurnstile();
     try {
       const r = await fetch("/impartir/listas.json", { cache: "no-cache" });
       if (!r.ok) throw new Error(String(r.status));
       LISTAS = await r.json();
     } catch (e) {
-      mostrarError("#nota-libre", "No se ha podido cargar la lista de titulaciones.", "Recarga la página. Si sigue sin cargar, escríbenos a " + CORREO + ".");
-      $("#nota-libre").hidden = false;
+      mostrarError("#error-listas", "No se ha podido cargar la lista de titulaciones.", "Recarga la página. Si sigue igual, escríbenos a " + CORREO + ".");
       return;
     }
     const opTit = opcionesTitulacion(LISTAS), opExp = opcionesExperiencia(LISTAS);
     combo($("#buscar-tit"), $("#lista-tit"), () => opTit, anadirTitulacion, true);
     combo($("#buscar-exp"), $("#lista-exp"), () => opExp, (op) => {
       if (!S.exp.some((e) => e.op === op)) S.exp.push({ op, anios: "", n: S.sig++ });
-      pintarExperiencia(); pintarResumen();
+      pintarExperiencia();
       const ult = S.exp.find((e) => e.op === op);
       const inp = ult && $("#e" + ult.n);
       if (inp) { inp.focus(); return "foco"; }
