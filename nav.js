@@ -29,3 +29,28 @@
   window.addEventListener("resize", function () { mover(actual); });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { mover(actual); });
 })();
+
+// Entrada de la página, con los mismos valores que la portada (landing.html): el menú baja, el titular
+// sube desde su línea y los bloques entran uno tras otro. Sin movimiento si la persona lo ha pedido.
+(function () {
+  if (!document.body || !document.body.animate) return;
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var suave = "cubic-bezier(.2,.8,.2,1)";
+  // Al terminar, cada animación se quita: el elemento vuelve a su estilo normal, sin transform residual.
+  function limpia(a) { if (a && a.finished) a.finished.then(function () { a.cancel(); }, function () {}); return a; }
+  var nav = document.getElementById("nav");
+  if (nav) limpia(nav.animate([{ transform: "translateY(-20px)", opacity: 0 }, { transform: "none", opacity: 1 }], { duration: 700, easing: "ease-out", fill: "both" }));
+  var h1 = document.querySelector("h1");
+  if (h1) limpia(h1.animate([{ transform: "translateY(.35em)", clipPath: "inset(0 0 100% 0)" }, { transform: "none", clipPath: "inset(0 0 0 0)" }], { duration: 1000, delay: 120, easing: suave, fill: "both" }));
+  var vistos = [];
+  document.querySelectorAll("header > *, .hero > *, .wrap > *, main > *, body > section, body > .strip, body > .cta, body > footer").forEach(function (el) {
+    if (el === h1 || el.contains(nav) || el.contains(h1) || el.tagName === "NOSCRIPT" || el.tagName === "SCRIPT" || el.tagName === "STYLE") return;
+    if (vistos.some(function (v) { return v.contains(el) || el.contains(v); })) return;
+    if (!el.offsetParent && getComputedStyle(el).position !== "fixed") return;   // ocultos
+    vistos.push(el);
+  });
+  vistos.sort(function (a, b) { return a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1; });
+  vistos.slice(0, 12).forEach(function (el, i) {
+    limpia(el.animate([{ transform: "translateY(14px)", opacity: 0 }, { transform: "none", opacity: 1 }], { duration: 800, delay: 250 + i * 55, easing: suave, fill: "both" }));
+  });
+})();

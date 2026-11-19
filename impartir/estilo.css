@@ -267,7 +267,7 @@ body{font-size:16px}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
 ::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}
 @keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:no-preference){.hero,main,.texto{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}
+/* La entrada de la página la hace /nav.js, con los valores de la portada. */
 @media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
 .topline{padding:0 16px}
 .pill-nav{view-transition-name:sitio-nav;position:relative;display:inline-flex;align-items:center;gap:0;background:#fff;border:0;border-radius:999px;padding:4px;max-width:100%;margin:10px 0}

@@ -18,7 +18,7 @@ a{color:inherit}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.35s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
 ::view-transition-old(sitio-nav),::view-transition-new(sitio-nav){animation:none}
 @keyframes entrar{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:no-preference){main{animation:entrar .35s cubic-bezier(.2,.8,.2,1) both}}
+/* La entrada de la página la hace nav.js, con los valores de la portada. */
 @media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}.pill-nav .slider{transition:none}}
 .topline{max-width:1040px;margin:0 auto;padding:0 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .pill-nav{view-transition-name:sitio-nav;position:relative;display:inline-flex;align-items:center;background:#fff;border-radius:999px;padding:4px;max-width:100%;margin:10px 0}
