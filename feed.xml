@@ -5,8 +5,17 @@
     <link>https://fpaldia.es/radar/</link>
     <description>Señales de Formación Profesional en toda España: convocatorias, normativa, FP Dual y empleo.</description>
     <language>es-ES</language>
-    <lastBuildDate>Fri, 20 Nov 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://fpaldia.es/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>El Gobierno endurece la creación de centros de FP privada y fija las ratios en 4 niños en 0-1</title>
+      <link>https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-endurece-creacion-centros-fp-privada-fija-ratios-ninos-anos-20261124124817.html</link>
+      <guid>https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-endurece-creacion-centros-fp-privada-fija-ratios-ninos-anos-20261124124817.html</guid>
+      <description>&lt;p&gt;Nacional · Europa Press.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>España</category>
+      <category>Normativa</category>
+      <pubDate>Tue, 24 Nov 2026 08:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>CORVE simplifica la incorporación de alumnos de FP dual a sus empresas asociadas</title>
       <link>https://www.posventa.com/texto-diario/mostrar/6097565/corve-simplifica-incorporacion-alumnos-fp-dual-empresas-asociadas</link>
@@ -175,15 +184,6 @@
       <category>La Rioja</category>
       <category>Empresa y Dual</category>
       <pubDate>Wed, 04 Nov 2026 08:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>El Gobierno Vasco destina un millón de euros a la formación profesional dual intensiva en…</title>
-      <link>https://www.euskadi.eus/gobierno-vasco/-/noticia/2026/el-gobierno-vasco-destina-millon-euros-formacion-profesional-dual-intensiva-centros-concertados-consejo-gobierno-03-11-2026/</link>
-      <guid>https://www.euskadi.eus/gobierno-vasco/-/noticia/2026/el-gobierno-vasco-destina-millon-euros-formacion-profesional-dual-intensiva-centros-concertados-consejo-gobierno-03-11-2026/</guid>
-      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;País Vasco · Euskadi.eus.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
-      <category>País Vasco</category>
-      <category>Empresa y Dual</category>
-      <pubDate>Tue, 03 Nov 2026 08:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
