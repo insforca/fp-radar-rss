@@ -1220,6 +1220,162 @@
      }
     ]
    }
+  },
+  {
+   "date": "2026-11-27",
+   "headline": "El Gobierno endurece la creación de centros de FP privada y fija las ratios en 4 niños en 0-1",
+   "items": [
+    {
+     "trend": "eq",
+     "titular": "El Gobierno endurece la creación de centros de FP privada y fija las ratios en 4 niños en 0-1",
+     "ambito": "España",
+     "por_que": "",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-endurece-creacion-centros-fp-privada-fija-ratios-ninos-anos-20261124124817.html",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "La futura Ley de FP de C-LM adaptará la formación a las necesidades reales de las…",
+     "ambito": "Castilla-La Mancha",
+     "por_que": "",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/castilla-lamancha/noticia-futura-ley-fp-lm-adaptara-formacion-necesidades-reales-empresas-region-20261125212049.html",
+     "tema": "Normativa"
+    },
+    {
+     "trend": "eq",
+     "titular": "La Región convocará 2.158 plazas docentes para Secundaria y FP en 2027 MurciaEconomía: El…",
+     "ambito": "Murcia",
+     "por_que": "",
+     "fuente": "La Consejería de Educación y Formación Profesional pondrá en · murciaeconomia.com",
+     "url": "https://murciaeconomia.com/art/110064/la-region-convocara-2158-plazas-docentes-para-secundaria-y-fp-en-2027",
+     "tema": "Profesorado"
+    },
+    {
+     "trend": "eq",
+     "titular": "Consellería de Educación, Ciencia, Universidades y Formación Profesional",
+     "ambito": "Galicia",
+     "por_que": "",
+     "fuente": "Xunta de Galicia · xunta.gal",
+     "url": "https://www.xunta.gal/dog/Publicados/2026/20261123/AnuncioG0761-161126-0002_es.html",
+     "tema": "Convocatoria"
+    },
+    {
+     "trend": "eq",
+     "titular": "Cerca de 70 tutores de empresa se forman en Huelva para guiar al alumnado de FP Dual",
+     "ambito": "Andalucía",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Huelva Ya · huelvaya.es",
+     "url": "https://huelvaya.es/2026/11/26/huelva-tutores-empresa-formacion-fp-dual/",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "Junta y CaixaBank organizan unas jornadas para reforzar el papel de las empresas en la FP Dual",
+     "ambito": "Andalucía",
+     "por_que": "Conecta centros y empresas: pista para quien busca alumnado en formación.",
+     "fuente": "Huelva Información · huelvainformacion.es",
+     "url": "https://www.huelvainformacion.es/huelva/junta-caixabank-organizan-jornadas-reforzar-papel-empresas-fp-dual_0_2008592452.html",
+     "tema": "FP Dual"
+    },
+    {
+     "trend": "eq",
+     "titular": "El modelo de HECANSA que roza el pleno en empleo: el 95% de sus alumnos recibe una…",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "COPE · cope.es",
+     "url": "https://www.cope.es/emisoras/canarias/noticias/modelo-hecansa-roza-pleno-empleo-95-alumnos-recibe-oferta-laboral-20261124_3480831.amp.html",
+     "tema": "Empleo"
+    },
+    {
+     "trend": "eq",
+     "titular": "La empresa de FP privada que planea un ERE y sustituir a tutores por IA - Levante-EMV",
+     "ambito": "Comunitat Valenciana",
+     "por_que": "",
+     "fuente": "Levante-EMV · levante-emv.com",
+     "url": "https://www.levante-emv.com/comunitat-valenciana/2026/11/25/empresa-fp-privada-planea-ere-136830135.html",
+     "tema": "Digital"
+    },
+    {
+     "trend": "eq",
+     "titular": "El CIFP Villa de Agüimes, en Gran Canaria, lleva la lucha contra la violencia de género al…",
+     "ambito": "Canarias",
+     "por_que": "",
+     "fuente": "Portal de Noticias del Gobierno de Canarias · gobiernodecanarias.org",
+     "url": "https://www3.gobiernodecanarias.org/noticias/el-cifp-villa-de-aguimes-en-gran-canaria-lleva-la-lucha-contra-la-violencia-de-genero-al-lenguaje-juvenil-actual/",
+     "tema": "Centros"
+    },
+    {
+     "trend": "eq",
+     "titular": "Entregados los Premios Extraordinarios de FP, enseñanzas especiales y de adultos a los…",
+     "ambito": "Cantabria",
+     "por_que": "",
+     "fuente": "Europa Press · europapress.es",
+     "url": "https://www.europapress.es/cantabria/educafp-01324/noticia-entregados-premios-extraordinarios-fp-ensenanzas-especiales-adultos-42-mejores-expedientes-20261126202817.html",
+     "tema": "FP"
+    }
+   ],
+   "boletines": {
+    "canarias": [],
+    "espana": [
+     {
+      "fuente": "BOE",
+      "titulo": "Real Decreto 1047/2026: regulan los centros asociados, los centros de segunda oportunidad en el…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24916",
+      "fecha": "2026-11-27"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Real Decreto 1048/2026: califica como Centro de Referencia Nacional de Industrias Extractivas de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24917",
+      "fecha": "2026-11-27"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Real Decreto 1049/2026: califica como Centro de Referencia Nacional de Confección en Textil y Piel…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24918",
+      "fecha": "2026-11-27"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Real Decreto 1052/2026: modifican el Real Decreto 132/2010, de 12 de febrero, por el que se…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24921",
+      "fecha": "2026-11-27"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: publica el Convenio con la Comunidad de Madrid, para el funcionamiento, como Centros de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24985",
+      "fecha": "2026-11-27"
+     },
+     {
+      "fuente": "BOE",
+      "titulo": "Resolución: publica el Convenio con el Instituto Fuenllana FP, para la realización de la fase de…",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-24998",
+      "fecha": "2026-11-27"
+     }
+    ],
+    "oposiciones": [],
+    "abiertas": [
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Dirección General de Personal y Formación del Profesorado): convoca concurso general de…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/220/3778.html",
+      "fecha": "2026-11-04",
+      "hasta": "31/12",
+      "tramite": null
+     },
+     {
+      "fuente": "BOC",
+      "titulo": "Resolución (Servicio Canario de Empleo): aprueban las bases específicas y se convoca procedimiento…",
+      "url": "https://www.gobiernodecanarias.org/boc/2026/208/3589.html",
+      "fecha": "2026-10-19",
+      "hasta": "31/12",
+      "tramite": null
+     }
+    ]
+   }
   }
  ]
 }
