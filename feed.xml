@@ -5,8 +5,17 @@
     <link>https://fpaldia.es/radar/</link>
     <description>Señales de Formación Profesional en toda España: convocatorias, normativa, FP Dual y empleo.</description>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 24 Nov 2026 08:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 08:00:00 +0000</lastBuildDate>
     <atom:link href="https://fpaldia.es/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cerca de 70 tutores de empresa se forman en Huelva para guiar al alumnado de FP Dual</title>
+      <link>https://huelvaya.es/2026/11/26/huelva-tutores-empresa-formacion-fp-dual/</link>
+      <guid>https://huelvaya.es/2026/11/26/huelva-tutores-empresa-formacion-fp-dual/</guid>
+      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Andalucía · Huelva Ya.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
+      <category>Andalucía</category>
+      <category>Empresa y Dual</category>
+      <pubDate>Thu, 26 Nov 2026 08:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>El Gobierno endurece la creación de centros de FP privada y fija las ratios en 4 niños en 0-1</title>
       <link>https://www.europapress.es/sociedad/educacion-00468/noticia-gobierno-endurece-creacion-centros-fp-privada-fija-ratios-ninos-anos-20261124124817.html</link>
@@ -174,15 +183,6 @@
       <category>Andalucía</category>
       <category>Innovación y experiencias</category>
       <pubDate>Mon, 09 Nov 2026 08:00:00 +0000</pubDate>
-    </item>
-    <item>
-      <title>Las pymes del Vinalopó exigen una FP Dual a medida para poder asumir la formación de alumnos</title>
-      <link>https://www.todoalicante.es/economia/pymes-vinalopo-exigen-dual-medida-poder-asumir-20261105162800-nt.html</link>
-      <guid>https://www.todoalicante.es/economia/pymes-vinalopo-exigen-dual-medida-poder-asumir-20261105162800-nt.html</guid>
-      <description>&lt;p&gt;Relación entre centros y empresas: FP Dual y prácticas.&lt;/p&gt;&lt;p&gt;Comunitat Valenciana · Todo Alicante.&lt;/p&gt;&lt;p&gt;&lt;a href="https://fpaldia.es/radar/"&gt;Ver más señales en FP Radar&lt;/a&gt; · &lt;a href="https://fpaldia.es/newsletter/"&gt;Recibir FP al día&lt;/a&gt;&lt;/p&gt;</description>
-      <category>Comunitat Valenciana</category>
-      <category>Empresa y Dual</category>
-      <pubDate>Thu, 05 Nov 2026 08:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
